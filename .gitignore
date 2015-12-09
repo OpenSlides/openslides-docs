@@ -1,0 +1,9 @@
+_build/*
+*.swp
+.DS_Store
+.idea
+*~
+
+# Virtual Environment
+.virtualenv/*
+.venv/*
