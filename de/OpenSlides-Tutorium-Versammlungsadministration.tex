@@ -1,0 +1,661 @@
+%% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,a4paper,ngerman,bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading,dvipsnames,table]{scrbook}
+\usepackage{lmodern}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\inputencoding{utf8}
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{pdftitle={Tutorium â€“ Administration einer Versammlung},
+ pdfauthor={OpenSlides Team},
+ pdfsubject={OpenSlides Handbuch, Administration},
+ pdfkeywords={OpenSlides, Handbuch, Tutorium, Administration, Versammlung},
+ linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false}
+\inputencoding{latin9}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\newcommand{\noun}[1]{\textsc{#1}}
+\DeclareRobustCommand*{\lyxarrow}{%
+\@ifstar
+{\leavevmode\,$\triangleleft$\,\allowbreak}
+{\leavevmode\,$\triangleright$\,\allowbreak}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\code}[1]{\texttt{#1}}
+
+\@ifundefined{date}{}{\date{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% that links to image floats jumps
+% to the beginning of the float and 
+% not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a PDF-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% Linkfläche für Querverweise vergrößern und automatisch benennen,
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\@ifpackageloaded{babel}{
+ \addto\extrasngerman{%
+  \renewcommand*{\equationautorefname}[1]{}%
+  \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+ }
+}{}
+
+% provides caption formatting
+\usepackage[labelfont={bf,sf}]{caption}[2004/07/16]
+
+% enables calculation of values,
+\usepackage{calc}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed before their
+% corresponding section starts
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+
+\makeatother
+
+\begin{document}
+
+\chapter{Tutorium \textendash{} Administration einer Versammlung}
+
+Dieses Tutorial ist auf dem Stand von \noun{OpenSlides} 2.0.x.
+
+In diesem Tutorial sehen Sie am Beispiel der Mitgliederversammlung
+eines Kleingartenvereins, wie Sie \noun{OpenSlides} im Präsentationsmodus
+bedienen.
+
+Zunächst lernen Sie, OpenSlides allgemein einzurichten und Folien
+auf dem Projektor zu zeigen. Anschließend können Sie die einzelnen
+Tutorials für Tagesordnung, Teilnehmerverwaltung, Anträge, Wahlen
+und Dateien durcharbeiten.
+
+Alle Tutorials gehen von folgenden Rahmenbedingungen aus:
+
+Der Verein \quotedblbase Schreberverein Nord e.\,V.\textquotedblleft{}
+hält am 2.~März~2017 seine jährliche Mitgliederversammlung ab. Auf
+der Versammlung werden verschiedene Berichte gehalten und über eine
+Satzungsänderung abgestimmt. Außerdem finden Wahlen zum Vorstand und
+zum Beirat statt.
+
+Auf den nächsten Seiten folgen die einzelnen Tutorials. 
+
+\section{Einrichtung von \protect\noun{OpenSlides}}
+
+Zunächst müssen Sie \noun{OpenSlides} auf dem Server installieren,
+den Server starten und einige Einstellungen für Ihre Veranstaltung
+vornehmen. Danach können Sie Ihre ersten Folien einrichten und auf
+dem Projektor zeigen.
+
+\subsection{Installation und Start des Servers}
+
+Installieren Sie \noun{OpenSlides} wie in \ref{sec:Installation}
+beschrieben. Starten Sie anschließend den Server wie in \ref{sec:Start-des-Servers}
+erläutert. Sie sehen jetzt die Login-Seite von \noun{OpenSlides}
+in Ihrem Browser. Loggen Sie sich als Administrator ein, indem Sie
+als Benutzernamen \textsf{admin} und als Passwort \textsf{admin} eingeben
+und auf \textsf{Anmelden} klicken.
+
+\begin{center}
+\includegraphics[width=0.74\columnwidth]{clipart/Login-Bildschirm}
+\par\end{center}
+
+Anschließend sollten Sie sofort das Administrator-Passwort ändern.
+Klicken Sie dazu oben rechts in der Kopfzeile
+
+\includegraphics[scale=0.7]{clipart/Kopfzeile}
+
+auf \textsf{Administrator} und dann auf \textsf{Passwort ändern}.
+Geben Sie in die entsprechenden Felder Ihr altes Passwort \textsf{admin}
+und anschließend Ihr neues Passwort ein. Wiederholen Sie das neue
+Passwort im dritten Formularfeld. Bestätigen Sie die Eingabe mit \textsf{Speichern}.
+Weitere Informationen zur Benutzerverwaltung finden Sie in \ref{sec:An--und-Abmelden}. 
+
+\subsection{Konfiguration des Systems}
+
+Geben Sie die Rahmendaten Ihrer Veranstaltung ins System ein. Wechseln
+Sie dazu zum Menüpunkt \textsf{Einstellungen\lyxarrow{}Allgemein}
+und geben Sie die Veranstaltungsdaten wie folgt ein:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Einstellungen-Allgemein}
+\par\end{center}
+
+Das Impressum verweist voreingestellt auf \noun{OpenSlides}. Es erscheint
+als Fußzeile in der Startseite. Der Text im Feld \textsf{Diesen Text
+auf der Login-Seite anzeigen} erscheint auf dem Login-Fenster, wenn
+sich die Teilnehmer einloggen:
+
+\begin{center}
+\includegraphics[width=0.74\columnwidth]{clipart/Login-Bildschirm-angepasst}
+\par\end{center}
+
+Alle Änderungen in den \textsf{Einstellungen} werden sofort gespeichert.
+Alle Einstellungen sind im Detail in \ref{sec:Einstellungen-=0000DCbersicht}
+beschrieben.
+
+\subsection{Technische Einrichtung im Veranstaltungsraum}
+
+Im Präsentationsmodus Single schließen Sie den Projektor an Ihren
+Computer an und schieben ein zweites Browserfenster mit der Projektoransicht
+auf den Projektor. In den anderen Modi richten Sie ein Netzwerk ein,
+schließen Sie einen beliebigen Computer an den Projektor an und öffnen
+im Vollbildmodus die Seite mit der Projektoransicht. Die Projektoransicht
+bekommen Sie in einem neuen Browsertab zu sehen, indem Sie auf die
+Live-Vorschau klicken. Diese ist auch unter der URL \code{/projector/}
+zu finden.
+
+\newpage{}
+
+\section{Tagesordnung verwalten}
+
+In diesem Teil lernen Sie, wie Sie Einträge in der Tagesordnung erstellen
+und verwalten.
+
+\subsection{Konfiguration der Tagesordnung}
+
+Gehen Sie zunächst im Menüpunkt \textsf{Konfiguration\lyxarrow{}Tagesordnung\lyxarrow{}Allgemein}
+zum Unterpunkt \textsf{Beginn der Veranstaltung}. Hier können Sie
+den genauen Beginn der Veranstaltung einstellen. Zum Beispiel: \textsf{02.03.2017
+10:00}
+
+Die weiteren Einstellungen der Tagesordnung sind in \ref{subsec:Einstellungen-Tagesordnung}
+beschrieben.
+
+\subsection{Eingabe der Tagesordnung}
+
+Die Tagesordnung enthält nach einer Neuinstallation noch keine Einträge.
+Legen Sie zunächst einige Einträge an. Klicken Sie dazu im Menüpunkt
+\textsf{Tagesordnung} oben rechts auf \includegraphics[scale=0.7]{clipart/Neu-Symbol}
+und geben Sie einen Eintrag wie folgt ein:
+
+\newpage{}
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/TOP-erstellen-ändern}
+\par\end{center}
+
+Wie sie sehen, können Sie den Text frei formatieren und dort auch
+Bilder einfügen. Im Feld \textsf{Anhang} können Sie aus allen in \noun{OpenSlides}
+verfügbaren Dateien einen Anhang wählen. Mehr zu Dateien ist in \ref{sec:Dateien}
+beschrieben.\\
+Klicken Sie abschließend auf \textsf{Speichern}.
+
+Erweitern Sie nun die Tagesordnung um Einträge mit folgenden Titeln:
+\begin{itemize}
+\item Bericht des Vorstands
+\item Satzungsänderung
+\item Gartenfest
+\item Sonstiges
+\item Wahlen der Vereinsämter
+\end{itemize}
+Klicken Sie abschließend auf den Knopf \includegraphics[scale=0.7]{clipart/Tagesordnung-nummerieren}
+und die Tagesordnung wird nummeriert. Die Übersicht über die Einträge
+sieht nun so aus:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Tagesordnung-Übersicht}
+\par\end{center}
+
+Sie können nun nachträglich die Reihenfolge der Einträge verändern
+und auch Tagesordnungspunkte zu Unterpunkten verschieben. Klicken
+Sie dazu oben auf den Knopf \includegraphics[scale=0.7]{clipart/Tagesordnung-sortieren}
+und ziehen Sie dann mit gedrückter linker Maustaste den Punkt \textsf{Sonstiges}
+an die letzte Stelle. Den Punkt \textsf{Gartenfest} ziehen Sie unter
+\textsf{Bericht des Vorstands} und schieben ihn etwas nach rechts,
+bis er dort einrastet. Gehen sie durch Drücken des Knopfes \includegraphics[scale=0.7]{clipart/Zurück-Übersicht}
+zurück zu Übersicht und drücken Sie \includegraphics[scale=0.7]{clipart/Tagesordnung-nummerieren}
+um die Nummerierung zu aktualisieren. Die Übersicht sieht nun so aus:
+
+\newpage{}
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Tagesordnung-Übersicht-editiert}
+\par\end{center}
+
+\subsection{Einrichtung eigener Folien}
+
+Eigene Folien werden verwendet, um Dinge außerhalb der offiziellen
+Tagesordnung zu behandeln. Technisch sind sie jedoch dasselbe wie
+ein Tagesordnungspunkt.
+
+Um z.\,B. den Teilnehmern mitzuteilen, dass es eine Kaffeepause gibt,
+erstellen Sie einen neuen Tagesordnungspunkt:
+
+\newpage{}
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Eigene-Folie}
+\par\end{center}
+
+Dabei ist es wichtig, dass die Option \textsf{Als Tagesordnungspunkt
+anzeigen} \emph{nicht} ausgewählt ist.
+
+Eigene Folien werden in der Übersicht rosa unterlegt, um anzuzeigen,
+dass sie nicht Teil der offiziellen Tagesordnung sind.
+
+\subsection{Projektion der Tagesordnung}
+
+Die komplette Tagesordnung wird projiziert, wenn Sie auf das Symbol\\
+\includegraphics[scale=0.7]{clipart/Tagesordnung-projizieren} drücken.
+Durch Drücken von \includegraphics[scale=0.7]{clipart/Untermenü-Symbol}
+neben dem Symbol, können Sie wählen, ob alle Tagesordnungspunkte oder
+nur die Hauptpunkte angezeigt werden, also in unserem Fall ohne den
+Punkt \textsf{Gartenfreunde}. Eigene Folie werden in der Tagesordnung
+nicht projiziert.
+
+Einzelne Tagesordnungspunkte werden projiziert, indem Sie auf das
+Symbol \includegraphics[scale=0.7]{clipart/Projektorsymbol} vor dem
+entsprechenden Eintrag klicken. So können Sie eigene Folien projizieren.
+
+\subsection{Ändern von Tagesordnungspunkten}
+
+Der Inhalt von Tagesordnungspunkten kann jederzeit geändert werden,
+insbesondere während der Veranstaltung. Dazu zeigen sie mit der Maus
+auf einen Tagesordnungspunkt und es erscheint ein Kontextmenü:
+
+\begin{center}
+\includegraphics[scale=0.95]{clipart/TOP-mit-Menü}
+\par\end{center}
+
+Ändern Sie zum Beispiel den Inhalt des Tagesordnungspunktes \textsf{Bericht
+des Vorstandes}, indem Sie dort auf \textsf{Bearbeiten} klicken und
+einen Text zum Tagesordnungspunkt eingeben.
+
+Als Alternative für das Bearbeiten können Sie im Kontextmenü auf \textsf{Quick-Edit}
+klicken und so oft benötigte Dinge wie die \textsf{Dauer} ändern.
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/TOP-QuickEdit}
+\par\end{center}
+
+\subsection{Redelisten\label{subsec:Redelisten}}
+
+\noun{OpenSlides} verfügt bei jedem Tagesordnungseintrag über eine
+Redelistenfunktion. Um eine Redeliste zu erstellen oder zu bearbeiten,
+klicken Sie im Kontextmenü des jeweiligen Tagesordnungspunkts auf
+\textsf{Redeliste}. Alternativ klicken Sie auf den Tagesordnungspunkt
+und dann auf \includegraphics[scale=0.7]{clipart/Redeliste-Symbol}.
+
+Setzen Sie sich selbst auf die Redeliste, indem sie auf \includegraphics[scale=0.7]{clipart/Redeliste+Mich}
+klicken. Wenn Sie Teilnehmer angelegt haben, wie es in \ref{subsec:Anlegen-eines-Teilnehmers}
+beschrieben ist, können Sie jeden Teilnehmer auf die Redeliste setzen.
+
+Projizieren Sie die Redeliste nun durch Klicken auf \includegraphics[scale=0.7]{clipart/Projektorsymbol-Redeliste}.
+Durch Drücken von \includegraphics[scale=0.7]{clipart/Rede-beginnen}
+starten Sie Ihre Rede. Ihr Name wird nun im Projektor angezeigt. Um
+die Rede zu beenden, klicken Sie auf \includegraphics[scale=0.7]{clipart/Aktuelle-Rede-beenden}.
+Gibt es mehrere Redner, kann man mit Klicken auf \includegraphics[scale=0.7]{clipart/Nächste-Rede-beginnen}
+die aktuelle Rede beenden und die nächste beginnen.
+
+In der Rubrik \textsf{Letzte Redner/innen} können sie sich die letzten
+Redner als Liste anzeigen lassen. Ein Teil dieser Liste wird auch
+projiziert, je nach den Einstellungen. Für Details dazu siehe \ref{subsec:Einstellungen-Tagesordnung}.
+
+Jede Redeliste ist erst einmal offen. Das heißt, dass sich jeder angemeldete
+Teilnehmer auf die Redeliste setzen kann. Um die Redeliste zu schließen,
+damit das nicht mehr möglich ist, klicken Sie auf den Knopf \includegraphics[scale=0.7]{clipart/Redeliste-schließen}.
+Der Knopf ändert sich nun zu \includegraphics[scale=0.7]{clipart/Redeliste-öffnen}
+und der neue Zustand wird im Projektor rot angezeigt:
+
+\begin{center}
+\includegraphics[scale=0.7]{clipart/Redeliste-ist-geschlossen}
+\par\end{center}
+
+Wie man die Redeliste modifiziert und einen Countdown mit einer Rede
+verknüpft ist in \ref{subsec:Rednerliste-verwalten} erklärt.
+
+Weitere Details zur Tagesordnung finden Sie in \ref{sec:Tagesordnung}.
+
+\newpage{}
+
+\section{Teilnehmer verwalten}
+
+In diesem Teil lernen Sie, wie Sie die Teilnehmer Ihrer Veranstaltungen
+im System erfassen. Im Präsentationsmodus brauchen Sie grundsätzlich
+nur diejenigen Teilnehmer erfassen, die das System verwalten, Anträge
+stellen oder unterstützen, auf Redelisten stehen oder bei Wahlen kandidieren.
+
+\subsection{Anlegen eines Teilnehmers\label{subsec:Anlegen-eines-Teilnehmers}}
+
+Sie können die Teilnehmer einzeln eintragen oder, wie in \ref{sec:Teilnehmer}
+beschrieben, importieren. Eingetragenen Personen, die das System verwalten
+sollen, müssen die entsprechenden Berechtigungen zugewiesen werden.
+
+Zum Anlegen eines neuen Teilnehmers wechseln Sie zum Menü \textsf{Teilnehmende}
+und klicken Sie oben rechts auf \includegraphics[scale=0.7]{clipart/Neu-Teilnehmer-Symbol}.
+Geben Sie als Beispiel diesen neuen Teilnehmer ein:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Teilnehmer-anlegen}
+\par\end{center}
+
+Wiederholen Sie diese Schritte und geben Sie folgende weitere Teilnehmer
+und Teilnehmerinnen ein: Peter Müller, Prof. Dr. Franziska Meyer,
+Luise Schmidt und Dr. Hans Schulze.
+
+Die Angabe des \textsf{Titels} und der \textsf{Gliederungsebene} ist
+optional. Über die \textsf{Gruppe} wird festgelegt, welche Berechtigungen
+der Teilnehmer hat, also ob er z.\,B. wählen und Anträge stellen
+darf. Mehr zu Gruppen ist in \ref{subsec:Gruppen} beschrieben.
+
+\subsection{Bearbeiten eines Teilnehmers}
+
+Im Menü \textsf{Teilnehmende} ist eine Liste mit allen Teilnehmern
+zu sehen:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Teilnehmerliste}
+\par\end{center}
+
+Klicken Sie zum Bearbeiten beispielsweise beim Teilnehmer \quotedblbase Max~Mustermann\textquotedblleft{}
+unterhalb des Namens auf \textsf{Bearbeiten} und weisen ihm zusätzlich
+die Gruppe \textsf{Mitarbeitende} zu.
+
+In der Teilnehmerliste kann jederzeit eingestellt werden, ob ein Teilnehmer
+anwesend ist. Dies ist für Wahlen und die Dokumentation der Veranstaltung
+wichtig.
+
+\subsection{Passwort eines Teilnehmers}
+
+Beim Anlegen eines Teilnehmers wird automatisch ein zufälliges Erst-Passwort
+gesetzt, falls man nicht selbst ein Passwort angibt. Sie können das
+Erst-Passwort der PDF-Datei entnehmen, die durch Klick auf das Symbol
+\includegraphics[scale=0.7]{clipart/PDF-Teilnehmer} und dann auf
+\textsf{Zugangsdatenliste} angezeigt wird. Dieses PDF ist so ausgelegt,
+dass man es ausdrucken und so jedem Teilnehmer seine Zugangsdaten
+mitteilen kann.
+
+Bitten Sie jeden, dem Sie sein Erst-Passwort aushändigen, dieses nach
+dem ersten Login zu ändern.
+
+Um als Administrator das Passwort von zum Beispiel Max Mustermann
+neu zu setzen, klicken Sie in der Teilnehmerliste unterhalb des Namens
+auf \textsf{Bearbeiten} und tragen Sie im Feld \textsf{Voreingestelltes
+Passwort} ein neues Passwort ein. Anschließend klicken Sie auf \textsf{Reset}
+und dann erst auf \textsf{Speichern}.
+
+Detaillierte, weitere Informationen zur Teilnehmerverwaltung finden
+Sie in \ref{sec:Teilnehmer}.
+
+\newpage{}
+
+\section{Countdowns und Mitteilungen\label{sec:Countdowns-und-Mitteilungen}}
+
+Unterhalb der Live-Vorschau gibt es die Rubriken \textsf{Countdown}
+und \textsf{Mitteilungen}. Um z.\,B. mitzuteilen, wo es das Mittagessen
+gibt, klicken Sie auf \includegraphics[scale=0.7]{clipart/Neue-Mitteilung}
+und rechts oben in der Mitteilung auf \includegraphics[scale=0.7]{clipart/Bearbeiten-Symbol}.
+Geben Sie nun den Text ,,Das Mittagessen gibt es in 5 Minuten im
+Foyer, 1.~Stock, Aufgang B.`` ein und klicken anschließend auf \includegraphics[scale=0.7]{clipart/Haken-Symbol}.
+Klicken Sie nun auf \includegraphics[scale=0.7]{clipart/Projektorsymbol},
+wird die Mitteilung so angezeigt:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Mitteilung-Essen}
+\par\end{center}
+
+Um nun die 5\,min als Countdown laufen zu lassen, klicken Sie auf\\
+\includegraphics[scale=0.7]{clipart/Neuer-Countdown} und dann auf
+\includegraphics[scale=0.7]{clipart/Bearbeiten-Symbol}. Geben Sie
+als \textsf{Beschreibung} ,,Mittagessen startet in`` und als \textsf{Startzeit}
+,,5:00`` ein und klicken anschließend auf das Symbol \includegraphics[scale=0.7]{clipart/Haken-Symbol}.
+Klicken Sie nun auf \includegraphics[scale=0.7]{clipart/Projektorsymbol}
+um den Countdown anzuzeigen. Mit dem Klick auf \includegraphics[scale=0.7]{clipart/Projektorsymbol-laufend}
+der aktuellen Mitteilung wird diese wieder von Projektor entfernt.
+Klicken Sie auf \includegraphics[scale=0.7]{clipart/Countdown-Start-Symbol}
+um den Countdown zu starten.
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Countdown-Beispiel}
+\par\end{center}
+
+Die Zeit des Countdowns wird unter 30\,s orange eingefärbt. Nach
+dem Ablauf wird die Zeit rot eingefärbt und läuft negativ.
+
+Besonders sinnvoll sind Countdowns für Reden. Um für jede Rede einen
+Countdown mitlaufen zu lassen, wechseln Sie in das Menü \textsf{Einstellungen\lyxarrow{}Tagesordnung}
+und wählen dort die Option \textsf{Countdown mit der Redeliste verkoppeln}
+aus. Nun werden alle Countdowns automatisch gestartet, wenn eine Rede
+begonnen wird. Welchen Countdown Sie projizieren oder ob sie ihn überhaupt
+einen projizieren, haben Sie in der Hand.
+
+\newpage{}
+
+\section{Anträge verwalten und behandeln}
+
+In diesem Teil lernen Sie, Anträge in das System einzugeben und zu
+verwalten sowie, wie Sie während der Veranstaltung einen Antrag behandeln
+und eine Abstimmung durchführen.
+
+\subsection{Eingabe eines bereits vorliegenden Antrags}
+
+Vor Beginn der Veranstaltung liegen bereits Anträge an die Versammlung
+vor, welche ins System gebracht werden sollen. Wechseln Sie zum Menü
+\textsf{Anträge} und klicken auf \includegraphics[scale=0.7]{clipart/Neu-Symbol}.
+
+Geben Sie als Beispiel einen Antrag, mit dem die Vereinssatzung so
+geändert werden soll, dass der Beirat mehr Mitglieder hat, wie folgt
+ein:
+
+\newpage{}
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Antrag-ausfüllen}
+\par\end{center}
+
+Wie sie sehen, gibt es im Textfeld schon eine Einleitung ,,Die Versammlung
+möge beschließen,``. Diese können Sie ändern oder abschalten, siehe
+dazu \ref{subsec:Einstellungen-Antr=0000E4ge}. Dass Sie den Antrag
+als Tagesordnungspunkt anzeigen, ist optional.
+
+Erstellen Sie auf gleiche Weise eine weiteren Antrag mit dem Titel
+,,Änderung der Geschäftsordnung``.
+
+Die Antragsseite sieht nun wie folgt aus:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Antragsliste}
+\par\end{center}
+
+Anträge können auch während der Veranstaltung angelegt werden.
+
+\subsection{Behandlung eines Antrags}
+
+Angenommen die Versammlungsleitung ruft den Antrag zur Satzungsänderung
+auf. Klicken Sie zunächst in der Antragsübersicht auf \includegraphics[scale=0.7]{clipart/Projektorsymbol}
+vor dem Antrag. Dieser wird nun projiziert:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Antrag-projiziert}
+\par\end{center}
+
+Um schnell zur Antragsverwaltung zu wechseln, können Sie auf den Titel
+des Antrags klicken.
+
+Nach Abschluss der Diskussion ruft der Vorsitzende zur Abstimmung
+auf. Klicken Sie im rechten Kasten auf \textsf{Neue Abstimmung} und
+tragen Sie das Abstimmungsergebnis wie folgt in das Formular ein:
+
+Der Vorsitzende stellt fest, dass der Antrag angenommen ist. Klicken
+Sie deshalb auf der im rechten unteren Kasten unter \quotedblbase Antrag
+verwalten\textquotedblleft{} auf \textsf{Annehmen}.
+
+Das Projektorbild sieht nun wie folgt aus:
+
+\newpage{}
+
+\section{Wahlen durchführen}
+
+In diesem Teil lernen Sie, wie Sie Wahlen auf Ihrer Versammlung mit
+\noun{OpenSlides} begleiten.
+
+\subsection{Anlegen von Wahlen}
+
+Vor Veranstaltungsbeginn sind die anstehenden Wahlen vorzubereiten.
+Gehen Sie dazu ins Menü \textsf{Wahlen}. Legen Sie nun eine neue Wahl
+an indem sie oben auf \includegraphics[scale=0.7]{clipart/Neu-Symbol}
+klicken. Geben Sie nun eine Wahl wie folgt ein:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Wahl-eingeben}
+\par\end{center}
+
+Geben Sie auf die gleiche Weise eine weitere Wahl ein: 
+\begin{description}
+\item [{Name:}] Beirat
+\item [{Beschreibung:}] Der Beirat unterstützt den Vorstand.
+\item [{Anzahl~der~zur~Wahl~stehenden~Posten:}] 7
+\end{description}
+Die Wahlübersicht sieht nun so aus:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Wahlübersicht}
+\par\end{center}
+
+\subsection{Durchführung einer Wahl}
+
+Klicken Sie in der Wahlübersicht auf \includegraphics[scale=0.7]{clipart/Projektorsymbol}
+vor \textsf{Vorstand}. Die Wahl wird nun projiziert. Nun klicken Sie
+auf den Namen der Wahl \textsf{Vorstand}.
+
+Setzen Sie sich mit \includegraphics[scale=0.7]{clipart/Redeliste+Mich}
+auf die Kandidatenliste. Es können alle bei \noun{OpenSlides} angelegten
+Teilnehmer hinzugefügt werden. Wählen Sie nun aus der Liste 4~weitere
+Kandidaten aus.
+
+Wir gehen nun davon aus, dass die Kandidatenliste feststeht. Damit
+sich die Kandidaten vorstellen können, klicken Sie oben auf \includegraphics[scale=0.7]{clipart/Redeliste-Symbol}.
+Die Redeliste ist technisch identisch zu der Redeliste eines Tagesordnungspunkts,
+die in \ref{subsec:Redelisten} behandelt wurde. Wie Sie sehen, sind
+bereits alle Kandidaten auf der Redeliste. Sie können noch weitere
+Redner hinzufügen.
+
+Um die Wahl zu beginnen, klicken Sie unten auf \includegraphics[scale=0.7]{clipart/Neuer-Wahlgang}.
+Dadurch hat sich die Phase der Wahl automatisch auf \textsf{Im Wahlvorgang}
+geändert. Das Projektorbild sieht nun so aus:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Wahl-Projektor}
+\par\end{center}
+
+Da die Wahl von Personen eine geheime Wahl ist, müssen Stimmzettel
+erstellt werden. Klicken Sie dafür auf \includegraphics[scale=0.7]{clipart/Stimmzettel-drucken}.
+Der Stimmzettel sieht so aus:
+
+\begin{center}
+\includegraphics[scale=0.95]{clipart/Wahlzettel}
+\par\end{center}
+
+und kann ausgedruckt und verteilt werden.
+
+Wir nehmen nun an, dass die Wahl ausgezählt wurde und die Ergebnisse
+vorliegen. Tragen Sie daher nun die Ergebnisse dieses 1.\ Wahlgangs
+ein, indem Sie auf \includegraphics[scale=0.7]{clipart/Stimmen-eingeben}
+klicken. In die Eingabemaske tragen Sie als Beispiel bei Administrator
+23, bei Frau Meyer 38, bei Herrn Mustermann 17, bei Herrn Müller 20,
+bei Frau Schmidt 22, bei \textsf{Gültige Stimmen} 109, bei \textsf{Ungültige
+Stimmen} 1 und bei \textsf{Abgegebene Stimmen} 110 ein.
+
+Wir nehmen an, dass 50~Personen an der Wahl teilgenommen haben und
+dass die Satzung vorsieht, dass die Personen gewählt sind, die mindestens
+die Hälfte der Stimmen bekommen hat, wie Personen an der Wahl teilgenommen
+haben. Es wurde also im 1.\ Wahlgang nur Frau Meyer gewählt. Klicken
+Sie daher nur bei ihr auf das Symbol \includegraphics[scale=0.7]{clipart/Gewählt-Symbol}
+vor ihrem Namen. Um die Wahl zu veröffentlichen, klicken Sie auf \includegraphics[scale=0.7]{clipart/Wahl-veröffentlichen}.
+Im Projektor wird erst einmal nur die Kandidatenliste angezeigt, in
+der Frau Meyer als Gewählte mit einem Stern markiert ist:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Wahl-Projektor-Ergebnis}
+\par\end{center}
+
+Sie können nun entscheiden, ob auch die Stimmenanzahl veröffentlicht
+wird. Da das gewünscht ist, klicken Sie nun auf \includegraphics[scale=0.7]{clipart/Wahl-projizieren}.
+Es wird nun dies projiziert:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Wahl-Projektor-Ergebnis-Detail}
+\par\end{center}
+
+Als Erklärung können Sie nun vielleicht eine Mitteilung mit dem Inhalt
+,,Es haben 50 Personen teilgenommen, zur Wahl notwendig waren daher
+25 Stimmen.`` anzeigen, wie Sie es in \ref{sec:Countdowns-und-Mitteilungen}
+gelernt haben.
+
+Da der Vorstand aus 3~Personen bestehen muss, ist ein zweiter Wahlgang
+notwendig. Klicken Sie daher auf \includegraphics[scale=0.7]{clipart/Neuer-Wahlgang}
+und \includegraphics[scale=0.7]{clipart/Stimmzettel-drucken}. Geben
+Sie fiktive Ergebnisse ein und markieren Herrn Mustermann und Administrator
+als gewählt. Zuletzt klicken Sie auf \includegraphics[scale=0.7]{clipart/Wahl-veröffentlichen}
+und \includegraphics[scale=0.7]{clipart/Wahl-projizieren} und ändern
+oben die Phase auf \textsf{Abgeschlossen}. Wenn Sie oben auf \includegraphics[scale=0.7]{clipart/PDF-Symbol}
+klicken, erhalten Sie ein PDF mit dem Wahlergebnis, das Sie für die
+Nachbereitung der Veranstaltung verwenden können.
+
+Auf die gleiche Weise können Sie nun auch die die Wahl des Beirats
+durchführen. Sie werden feststellen, dass als Wahlmethode automatisch
+eine Ja-Nein-Enthaltungs-Wahl bezüglich eines jeden Kandidaten ausgewählt
+wird, wenn es weniger oder gleich viele Kandidaten wie Plätze gibt:
+
+\begin{center}
+\includegraphics[scale=0.95]{clipart/Wahlzettel-Enthaltung}
+\par\end{center}
+
+Mehr zu Wahlen und deren Einstellungen erfahren Sie im Detail in \ref{subsec:Einstellungen-Wahlen}.
+
+\newpage{}
+
+\section{Dateien hochladen und verwalten}
+
+Wie man Dateien, zum Beispiel Bilder, bei \noun{OpenSlides} hochlädt
+und projiziert, ist in \ref{sec:Dateien} erklärt.
+
+\section{Nach einer Veranstaltung}
+
+Am Ende der Versammlung können Sie sich für das Protokoll einige Dokumente
+direkt aus \noun{OpenSlides} holen. Klicken Sie jeweils im Menü \textsf{Tagesordnung},
+\textsf{Anträge}, \textsf{Wahlen} und \textsf{Teilnehmende} rechts
+oben auf \includegraphics[scale=0.7]{clipart/PDF-Symbol}. Mehr zur
+Nachbereitung ist in \ref{sec:Nachbereitung} beschrieben.
+
+Alle weiteren Funktionen von \noun{OpenSlides} und Details zu den
+im Tutorium behandelten Funktionen, finden Sie in \ref{chap:Einzelne-Funktionen}.
+Wie Sie Anpassungen an \noun{OpenSlides} vornehmen, erfahren Sie
+in \ref{chap:Weitere-Anpassungen-von}.
+
+Viel Spaß weiterhin mit \noun{OpenSlides}!
+\end{document}

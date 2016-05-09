@@ -1,0 +1,341 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+% that links to image floats jumps
+% to the beginning of the float and 
+% not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a PDF-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% Linkfläche für Querverweise vergrößern und automatisch benennen,
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\@ifpackageloaded{babel}{
+ \addto\extrasngerman{%
+  \renewcommand*{\equationautorefname}[1]{}%
+  \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+ }
+}{}
+
+% provides caption formatting
+\usepackage[labelfont={bf,sf}]{caption}[2004/07/16]
+
+% enables calculation of values,
+\usepackage{calc}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed before their
+% corresponding section starts
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+\end_preamble
+\options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading,dvipsnames,table
+\use_default_options false
+\master OpenSlides-Handbuch.lyx
+\begin_modules
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "OpenSlides Handbuch"
+\pdf_author "OpenSlides Team"
+\pdf_subject "OpenSlides Handbuch"
+\pdf_keywords "OpenSlides, Handbuch"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\notefontcolor #0000ff
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Weitere Anpassungen von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Weitere-Anpassungen-von"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Eigenes Logo einfügen
+\end_layout
+
+\begin_layout Standard
+Um das Logo zu ändern, muss die Datei 
+\series bold
+logo-projector.png
+\series default
+ im Unterordner
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+~
+\backslash
+Lib
+\backslash
+site-packages
+\backslash
+openslides
+\backslash
+core
+\backslash
+static
+\backslash
+img
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+des Verzeichnisses, in dem 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ installiert ist, durch eine Datei gleichen Namens ersetzt werden.
+\end_layout
+
+\begin_layout Section
+Plugins
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ kann mit Hilfe von Plugins erweitert werden.
+ Plugins dienen dazu bestimmte Funktionen hinzuzufügen, die standardmäßig
+ nicht verfügbar sind.
+ Ein Beispiel ist das in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Das-Plugin-CSV"
+
+\end_inset
+
+ beschriebene Plugin 
+\emph on
+CSV Export Plugin for OpenSlides
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Plugins werden installiert, indem man den Dateiordner des Plugins komplett
+ in den Unterordner
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+~
+\backslash
+openslides
+\backslash
+plugins
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+des Verzeichnisses, in dem 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ installiert ist, kopiert.
+ Falls 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ läuft, muss es geschlossen und der Server neu gestartet werden, wie es
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Start-des-Servers"
+
+\end_inset
+
+ beschrieben ist.
+ In der Menüleiste von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ erscheint danach ein neues Icon des entsprechenden Plugins.
+\end_layout
+
+\begin_layout Standard
+Wie man Plugins für 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ programmiert, ist in ?? beschrieben.
+\end_layout
+
+\begin_layout Section
+Eigene Datenbank anbinden
+\end_layout
+
+\begin_layout Standard
+Dieses Handbuch ist noch nicht fertiggestellt.
+ Wenn Sie Interesse haben, uns zu unterstützen, schreiben Sie uns einfach
+ eine E-Mail:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "users-de@openslides.org"
+target "users-de@openslides.org"
+type "mailto:"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Eigenen Webserver einsetzen
+\end_layout
+
+\begin_layout Section
+Template anpassen
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,280 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+% that links to image floats jumps
+% to the beginning of the float and 
+% not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a PDF-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% Linkfläche für Querverweise vergrößern und automatisch benennen,
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\@ifpackageloaded{babel}{
+ \addto\extrasngerman{%
+  \renewcommand*{\equationautorefname}[1]{}%
+  \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+ }
+}{}
+
+% provides caption formatting
+\usepackage[labelfont={bf,sf}]{caption}[2004/07/16]
+
+% enables calculation of values,
+\usepackage{calc}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed before their
+% corresponding section starts
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+\end_preamble
+\options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading,dvipsnames,table
+\use_default_options false
+\master OpenSlides-Handbuch.lyx
+\begin_modules
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "OpenSlides Handbuch"
+\pdf_author "OpenSlides Team"
+\pdf_subject "OpenSlides Handbuch"
+\pdf_keywords "OpenSlides, Handbuch"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\notefontcolor #0000ff
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Einführung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ ist ein freies, webbasiertes Präsentations- und Versammlungssystem zur
+ Darstellung und Steuerung von Tagesordnung, Anträgen und Wahlen einer Veranstal
+tung, insbesondere bei Einsatz eines oder mehrerer Projektoren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ wurde vor allem für Mitgliederversammlungen, Delegiertenversammlungen,
+ Hauptversammlungen oder Parteitage entwickelt.
+ Mit 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ können alle Inhalte der Veranstaltung zeitaktuell anhand des Verlaufs der
+ Veranstaltung angepasst und an die Leinwand projiziert werden.
+ Dies betrifft vor allem die Tagesordnung und aktuelle Informationen für
+ die Anwesenden.
+ Zusätzlich gibt es Funktionen für die Teilnehmerverwaltung, Anträge, Abstimmung
+en und Wahlen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ kann in drei Modi betrieben werden: 
+\end_layout
+
+\begin_layout Description
+Präsentationsmodus: Im Präsentationsmodus steuern ein oder mehrere Veranstalter
+ (zum Beispiel Vorstandsmitglieder eines Vereins oder einer Partei) das
+ Programm allein.
+ Sie bearbeiten diese Inhalte interaktiv und bestimmen, was auf dem Projektor
+ gezeigt wird.
+ Alle Anwesenden können die Veranstaltung auf der Leinwand verfolgen.
+\end_layout
+
+\begin_layout Description
+Präsentationsmodus
+\begin_inset space ~
+\end_inset
+
+Single: Der Unterschied zum normalen Präsentationsmodus ist, dass nur eine
+ einzige Person das gesamte System bedient 
+\emph on
+und
+\emph default
+ der Projektor auch an ihrem Computer angeschlossen ist.
+\end_layout
+
+\begin_layout Description
+Teilnehmermodus: Im Teilnehmermodus können sich zusätzlich zur Versammlungsleitu
+ng die anwesenden Teilnehmer mit dem eigenen Laptop oder Smartphone über
+ Netzwerk (zum Beispiel WLAN) anmelden und eigene Inhalte bearbeiten, zum
+ Beispiel einen Antrag stellen oder einen Kandidaten zur Wahl vorschlagen.
+ Eine umfangreiche Rechteverwaltung garantiert die notwendige Sicherheit
+ des Systems.
+ Die Versammlungsleitung hat in der Regel weitgehende, die Versammlungsteilnehme
+r nur eingeschränkte Zugriffsrechte.
+\end_layout
+
+\begin_layout Standard
+Außer beim Präsentationsmodus Single benötigt man ein Computernetzwerk,
+ zum Beispiel mit mehreren LAN-Anschlüssen oder einem WLAN im Raum.
+ Ein Computer fungiert hier als Server für 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+.
+ Alle anderen Computer müssen auf dessen IP-Adresse zugreifen können.
+ Der Computer, an dem der Projektor angeschlossen ist, kann auch ein eigenständi
+ger Computer sein, der über das Netzwerk auf den Server zugreift.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ ist webbasiert, das heißt, es muss bei den Benutzern und Teilnehmern keine
+ neue Software installiert werden.
+ Das Programm wird ausschließlich über den eigenen Browser bedient.
+ Alle gängigen aktuellen Browser werden unterstützt.
+ Lediglich die Veranstaltungsleitung muss auf einem einzigen Computer, dem
+ Server, 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ installieren und starten.
+\end_layout
+
+\end_body
+\end_document

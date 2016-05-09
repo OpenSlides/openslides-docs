@@ -1,0 +1,285 @@
+%% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,a4paper,ngerman,bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading,dvipsnames,table]{scrbook}
+\usepackage{lmodern}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{color}
+\definecolor{note_fontcolor}{rgb}{0, 0, 1}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{pdftitle={OpenSlides Handbuch},
+ pdfauthor={OpenSlides Team},
+ pdfsubject={OpenSlides Handbuch},
+ pdfkeywords={OpenSlides, Handbuch},
+ linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\newcommand{\noun}[1]{\textsc{#1}}
+%% The greyedout annotation environment
+\newenvironment{lyxgreyedout}
+  {\textcolor{note_fontcolor}\bgroup\ignorespaces}
+  {\ignorespacesafterend\egroup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\code}[1]{\texttt{#1}}
+
+\@ifundefined{date}{}{\date{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% that links to image floats jumps
+% to the beginning of the float and 
+% not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a PDF-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% Linkfläche für Querverweise vergrößern und automatisch benennen,
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\@ifpackageloaded{babel}{
+ \addto\extrasngerman{%
+  \renewcommand*{\equationautorefname}[1]{}%
+  \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+ }
+}{}
+
+% provides caption formatting
+\usepackage[labelfont={bf,sf}]{caption}[2004/07/16]
+
+% enables calculation of values,
+\usepackage{calc}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed before their
+% corresponding section starts
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+
+\makeatother
+
+\begin{document}
+
+\chapter{Erste Schritte}
+
+In diesem Kapitel werden die ersten Schritte bei \noun{OpenSlides}
+erklärt.
+
+\section{Installation\label{sec:Installation}}
+
+\noun{OpenSlides} muss nur auf einem Computer installiert werden.
+Dieser fungiert im Netzwerk als Server. Im Präsentationsmodus Single
+gibt es kein Netzwerk. \noun{OpenSlides} muss dann auf dem einen
+verwendeten Computer installiert werden.
+
+Die aktuelle Version von \noun{OpenSlides}, für die dieses Handbuch
+gültig ist, ist Version 2.0.
+
+\subsection{Verwendung der Windows-Version (Portable Version mit openslides.exe)}
+
+Laden Sie die aktuelle \noun{OpenSlides} Version für Windows von
+\href{http://openslides.org}{http://openslides.org} herunter. Extrahieren
+Sie das zip-Archiv (z. B. \code{openslides-N.N-portable.zip}) in
+einen beliebigen Ordner. \noun{OpenSlides} muss nun nicht weiter
+installiert werden. Alle notwendigen Programmelemente sind in dem
+Ordner enthalten.
+
+\subsection{Verwendung der Linux/MacOS-Version}
+
+Laden Sie die aktuelle \noun{OpenSlides} Version für Linux/MacOS
+von\\
+\href{http://openslides.org}{http://openslides.org} oder über den
+Python Package Index (PyPI) (\code{\$ pip install openslides}) herunter.
+Die Installationsanleitung für diese Version finden Sie in der beiliegenden
+README.rst. Folgen Sie den Anweisungen der Anleitung. 
+
+\section{Konfiguration}
+
+Nach der Installation ist \noun{OpenSlides} bereits vorkonfiguriert.
+Die beim ersten Start erzeugte (leere) Datenbank enthält einige Voreinstellungen.
+Die Konfiguration kann im laufenden Programm unter dem Tab \quotedblbase Konfiguration\textquotedblleft{}
+vorgenommen werden. Weitere Einstellungsmöglichkeiten für erfahrene
+Benutzer sind in der Datei \code{settings.py} möglich. Diese Datei
+liegt nicht im extrahierten \noun{OpenSlides} Verzeichnis, sondern
+in einem Benutzerverzeichnis, das abhängig von Ihrem Betriebssystem
+ist. Unter Windows (außer bei der Portable Version) ist es standardmäßig
+
+\code{\$HOME\textbackslash{}AppData\textbackslash{}Local\textbackslash{}openslides}
+
+, unter Linux/MacOS ist es standardmäßig
+
+\code{\textasciitilde{}/.config/openslides}
+
+\section{Start des Servers und Öffnen des Browsers\label{sec:Start-des-Servers}}
+
+\subsection{Verwendung der Windows-Version (Portable Version mit openslides.exe)}
+
+Wenn Sie die Windows-Version (Portable Version mit openslides.exe)
+verwenden, brauchen Sie nur die Datei \code{openslides.exe} auszuführen.
+Mit dieser wird der eine grafische Oberfläche gestartet, mit der Sie
+den \noun{OpenSlides}-Server konfigurieren, starten und jederzeit
+beenden können:
+
+\begin{center}
+\includegraphics[scale=0.7]{clipart/OpenSlides-Server-before-Start}
+\par\end{center}
+
+Zum Starten klicken Sie einfach auf den Knopf \textsf{Start~server}
+und ihr Webbrowser öffnet sich.
+
+Falls Sie Ihren Administrator-Zugang vergessen haben, können Sie mit
+Klick auf \textsf{Reset~admin} einen neuen Admin-Nutzer erstellen,
+dessen Name und Passwort. \textsf{admin} ist.
+
+In \textsf{Settings} können Sie optional den Webhost und Port einstellen;
+mehr dazu siehe ??. Mit \textsf{Backup~database} und \textsf{Sync~database}
+können Sie Sitzungen speichern bzw.\ laden; mehr dazu siehe ??.
+
+\subsection{Verwendung der Linux/MacOS-Version}
+
+Starten Sie den Server, indem Sie in der Kommandozeile eingeben:
+
+\code{\$ openslides}
+
+Wenn Sie eine virtuelle Arbeitsumgebung (virtualenv) verwenden, müssen
+Sie diese zuvor aktivieren:
+
+\code{\$ source .venv/bin/activate}
+
+Damit wird der Server gestartet und ihr Browser mit der richtigen
+URL geöffnet.
+
+\noun{OpenSlides} kann jederzeit im Fenster der Kommandozeile mit
+der Tastenkombination \textsf{Strg+C} beendet werden. Alle eingegebenen
+Daten bleiben in der Datenbank gespeichert.
+
+Weitere Startoptionen können Sie mit folgender Eingabe sehen:
+
+\code{\$ openslides \textendash help}
+
+\subsection{Öffnen des Browsers}
+
+Bei Start des Servers wird automatisch der Browser mit der richtigen
+URL geöffnet.
+
+Falls dies wegen Ihrer Browsereinstellungen nicht gelingt, rufen Sie
+das \noun{OpenSlides}-Webinterface auf, indem Sie in die Adresszeile
+die IP-Adresse des Servers eintragen. Sie hat oft die Form \code{http://192.168.x.y/},
+wobei x und y für eine bestimmte Zahl mit ein bis drei Ziffern stehen.
+Am Computer, auf dem \noun{OpenSlides} gestartet wurde, kann \noun{OpenSlides}
+auch über \code{http://localhost:8000} aufgerufen werden.
+
+\subsection{Erster Login}
+
+Der erste Login als Administrator ist mit dem Benutzernamen \textsf{admin}
+und dem Passwort \textsf{admin} möglich. Sie sollten das Passwort
+nach dem ersten Start ändern, siehe \ref{subsec:Benutzername-oder-Passwort},
+um Unbefugten keinen Zugriff auf Ihre Daten zu gewähren.
+
+\begin{lyxgreyedout}
+\textbf{Hinweis:} \noun{OpenSlides} benötigt Cookies um die Identität
+des Nutzers festzustellen, solange er eingeloggt ist. Beim Ausloggen
+wird das Cookie wieder gelöscht.%
+\end{lyxgreyedout}
+
+\newpage{}
+
+\section{Arbeiten mit \protect\noun{OpenSlides}}
+
+Nach dem ersten Einloggen sieht \noun{OpenSlides} so aus:
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Übersicht-nach-Start}
+\par\end{center}
+
+In der Kopfzeile kann man durch Klicken auf das Logo jederzeit auf
+die Startseite zurückkehren. In der Zeile rechts können Sie mit anderen
+Nutzern chatten, siehe ??, Ihr Profile bearbeiten und ihr Passwort
+ändern, siehe \ref{sec:An--und-Abmelden} und die Menüsprache von
+\noun{OpenSlides} ändern.
+
+In der Menüleiste können Sie über die Menüpunkte alle Inhalte in \noun{OpenSlides}
+eingeben und verwalten.
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Menüleiste}
+\par\end{center}
+\begin{itemize}
+\item Im Menüpunkt \textbf{Startseite} können Sie die Teilnehmer willkommen
+heißen und kurz erklären, wie man \noun{OpenSlides} nutzt.
+\item Im Menüpunkt \textbf{Tagesordnung} können Sie die Tagesordnung der
+Veranstaltung im Vorfeld oder live anlegen, entsprechende Folien vorbereiten
+und die Rednerliste verwalten. Mehr zur Tagesordnung siehe \ref{sec:Tagesordnung}.
+\item Unter \textbf{Anträge} verwalten Sie die gestellten Anträge und die
+dazugehörigen Abstimmungen. Mehr dazu siehe \ref{sec:Antr=0000E4ge}.
+\item Der Punkt \textbf{Wahlen} verwaltet die Wahlämter mit den Kandidaten
+sowie die jeweiligen Wahlergebnisse. Mehr zur dazu siehe \ref{sec:Wahlen}.
+\item Der Menüpunkt \textbf{Teilnehmer/innen} ermöglicht einen Zugriff auf
+die Personenprofile. Mehr zur dazu siehe \ref{sec:Teilnehmer}.
+\item Unter dem Punkt \textbf{Dateien} können Sie eigene Dateien auf den
+Server laden und zum Download anbieten. PDF-Dateien können auch auf
+dem Projektor angezeigt werden. Mehr zur dazu siehe \ref{sec:Dateien}.
+\item Im Menüpunkt \textbf{Einstellungen} können die grundlegenden Einstellungen
+für die Veranstaltung vorgenommen werden. Mehr zur dazu siehe \ref{sec:Einstellungen-=0000DCbersicht}.
+\end{itemize}
+Wenn Sie auf das Symbol \includegraphics[scale=0.5]{clipart/Projektorsymbol-Leiste}
+klicken, wird neben dem Begrüßungstext der aktuell projizierte Inhalt
+angezeigt (Live-Vorschau):
+
+\begin{center}
+\includegraphics[width=1\columnwidth]{clipart/Übersicht-nach-Start-Projektor}
+\par\end{center}
+
+Damit haben Sie immer im Blick was die Teilnehmer gerade sehen und
+können während der Sitzung arbeiten. Das Projektorbild in voller Größe
+bekommen Sie in einem neuen Browsertab zu sehen, indem Sie auf die
+Live-Vorschau klicken. Sie ist auch unter der URL \code{/projector/}
+zu finden. Loggen Sie sich an dem Computer, an dem der Projektor angeschlossen
+ist, in \noun{OpenSlides} ein und rufen Sie den Link oder die URL
+auf. Legen Sie die Anzeige in einem eigenen Browserfenster auf den
+Projektor und projizieren Sie sie so auf die Leinwand. In vielen Browsern
+kann mit der Taste \textsf{F11} in den Vollbildmodus gewechselt werden.
+Im \emph{Präsentationsmodus Single} müssen Sie die Bildschirmanzeige
+auf Erweiterung/erweiterter Desktop stellen und das Browserfenster
+mit dem Projektorbild auf den Projektor schieben.
+
+Das Projektorbild aktualisiert sich vollkommen automatisch. Sollte
+die Aktualisierung auf Grund eines Fehlers, zum Beispiel einer Unterbrechung
+der Verbindung zum Server, aussetzen, kann das Projektorbild an dem
+Computer, an dem der Projektor angeschlossen ist, regelmäßig mit der
+Taste \textsf{F5} zurückgesetzt werden. Um dem Kopf des Projektorfensters
+nach einer Änderung in der Konfiguration zu aktualisieren, muss ebenfalls
+das Browserfenster zurückgesetzt werden.
+
+Unterhalb der Live-Vorschau gibt es die Rubriken \textsf{Countdown}
+und \textsf{Mitteilungen}. Mehr dazu siehe \ref{sec:Countdown-und-Mitteilungen}.
+\end{document}

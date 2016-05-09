@@ -1,0 +1,200 @@
+%% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,a4paper,ngerman,intoc,bibliography=totoc,index=totoc,BCOR7.5mm,captions=tableheading,titlepage,dvipsnames]{scrbook}
+\usepackage{lmodern}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{color}
+\definecolor{note_fontcolor}{rgb}{0, 0, 1}
+\usepackage{babel}
+\usepackage{array}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{pdftitle={OpenSlides Handbuch},
+ pdfauthor={OpenSlides Team},
+ pdfsubject={OpenSlides Handbuch},
+ pdfkeywords={OpenSlides Handbuch},
+ linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\newcommand{\noun}[1]{\textsc{#1}}
+\DeclareRobustCommand*{\lyxarrow}{%
+\@ifstar
+{\leavevmode\,$\triangleleft$\,\allowbreak}
+{\leavevmode\,$\triangleright$\,\allowbreak}}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+%% The greyedout annotation environment
+\newenvironment{lyxgreyedout}
+  {\textcolor{note_fontcolor}\bgroup\ignorespaces}
+  {\ignorespacesafterend\egroup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\code}[1]{\texttt{#1}}
+
+\@ifundefined{date}{}{\date{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% Linkfläche für Querverweise vergrößern und automatisch benennen,
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\@ifpackageloaded{babel}{
+ \addto\extrasngerman{%
+  \renewcommand*{\equationautorefname}[1]{}%
+  \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+ }
+}{}
+
+
+% provides caption formatting
+\usepackage[labelfont={bf,sf}]{caption}[2004/07/16]
+
+% enables calculation of values,
+\usepackage{calc}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed before their
+% corresponding section starts
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+
+\makeatother
+
+\begin{document}
+
+\title{\noun{OpenSlides} Handbuch}
+
+\author{vom \noun{OpenSlides} Team\thanks{Wenn Sie Anmerkungen haben oder Fehler gefunden haben, senden Sie
+bitte eine Mail an die deutsche Dokumentations-Mailingliste: \protect\href{mailto:users-de@openslides.org?subject=OpenSlides Handbuch}{users-de@openslides.org}\protect \\
+Dazu müssen Sie sich vorher \protect\href{http://mail.openslides.org/listinfo/users-de/}{an der Liste anmelden}.}\\
+\\
+für \noun{OpenSlides} Version 2.0}
+
+\maketitle
+\tableofcontents{}
+
+\include{OpenSlides-Einführung}
+
+\include{OpenSlides-Erste-Schritte}
+
+\include{OpenSlides-Tutorium-Versammlungsadministration}
+
+\include{OpenSlides-Einzelne-Funktionen}
+
+\include{OpenSlides-Weitere-Anpassungen}
+
+\chapter{Sonstiges}
+
+Dieses Handbuch ist noch nicht fertiggestellt. Wenn Sie Interesse
+haben, uns zu unterstützen, schreiben Sie uns einfach eine E-Mail:
+
+\href{mailto:users-de@openslides.org}{users-de@openslides.org}
+
+\section{Datenschutz}
+
+\newpage{}
+
+\appendix
+
+\chapter{Voreinstellungen der Teilnehmer-Gruppen\label{chap:Voreinstellungen-der-Teilnehmer-}}
+
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=1\columnwidth]{clipart/Gruppe-Gäste}
+\par\end{centering}
+\caption{Voreinstellung der Gruppe ,,Gäste``.}
+\end{figure}
+
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=1\columnwidth]{clipart/Gruppe-registrierte-Nutzer}
+\par\end{centering}
+\caption{Voreinstellung der Gruppe ,,Registrierte Nutzer``.}
+\end{figure}
+
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=1\columnwidth]{clipart/Gruppe-Delegierte}
+\par\end{centering}
+\caption{Voreinstellung der Gruppe ,,Delegierte``.}
+\end{figure}
+
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[width=1\columnwidth]{clipart/Gruppe-Mitarbeitende}
+\par\end{centering}
+\caption{Voreinstellung der Gruppe ,,Mitarbeitende``.}
+\end{figure}
+
+
+\chapter{CSV-Beispieldateien}
+
+\section{Beispiel für Teilnehmer CSV-Datei\label{chap:Beispiel-f=0000FCr-Teilnehmer}}
+
+Dies ist als Beispiel der Inhalt einer CSV-Datei für den Import von
+4~Teilnehmern:
+
+\textsf{title,first\_name,last\_name,structure\_level,groups,comment,is\_active}\\
+\textsf{Prof. Dr.,Max,Käßmann,,3,,1}\\
+\textsf{,John,Doe,,4,abc,1}\\
+\textsf{,Fred,Bloggs,,,,}\\
+\textsf{,´usan,Oltrán,Vorstand,\textquotedbl{}3,4\textquotedbl{},kommt
+15 Minuten später,0}
+
+\section{Beispiel für Antrag CSV-Datei\label{chap:Beispiel-f=0000FCr-Antrag}}
+
+Dies ist als Beispiel der Inhalt einer CSV-Datei für den Import von
+3~Anträgen:
+
+\textsf{identifier,title,text,reason,submitter,category}\\
+\textsf{Kat A-1,Satzungsänderung,\textquotedbl{}Die Mitgliederversammlung
+möge beschließen, in §8 Absatz 1 der Vereinssatzung die Zahl fünf
+durch sieben zu ersetzen.\textquotedbl{},\textquotedbl{}Die vielen
+Aufgaben erfordern eine Erweiterung des Beirates auf sieben Mitglieder.\textquotedbl{},Dr.
+Hans Schulze,Kategorie A}\\
+\textsf{B1,Titel 2,Text 2,Begründung 2,Antragsteller 2,Kategorie B}\\
+\textsf{,Titel 3,Text 3,Begründung 3,,}
+
+\chapter{Impressum}
+
+Copyright 2012\textendash 2016
+\begin{description}
+\item [{\noun{OpenSlides}-Autorenteam:}] 
+
+\begin{itemize}
+\item Norman Jäckel
+\item Anja Jäckel
+\item Emanuel Schütze
+\item Uwe Stöhr
+\end{itemize}
+\end{description}
+Das \noun{OpenSlides}-Handbuch ist unter der \href{http://creativecommons.org/licenses/by-sa/3.0/}{Creative Commons CC BY-SA 3.0}
+lizensiert.
+\begin{thebibliography}{1}
+\bibitem{Django}\href{https://docs.djangoproject.com}{Dokumentation von Django}
+\end{thebibliography}
+
+\end{document}

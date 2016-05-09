@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.nongnu.org/elyxer/"/>
+<meta name="create-date" content="2016-06-10"/>
+<link rel="stylesheet" href="http://elyxer.nongnu.org/lyx.css" type="text/css" media="all"/>
+<title>Tutorium – Administration einer Versammlung</title>
+</head>
+<body>
+<div id="globalWrapper">
+<h1 class="Chapter">
+<a class="toc" name="toc-Chapter-1">1</a> Tutorium – Administration einer Versammlung
+</h1>
+<div class="Standard">
+Dieses Tutorial ist auf dem Stand von <span class="noun">OpenSlides</span> 2.0.x.
+</div>
+<div class="Standard">
+In diesem Tutorial sehen Sie am Beispiel der Mitgliederversammlung eines Kleingartenvereins, wie Sie <span class="noun">OpenSlides</span> im Präsentationsmodus bedienen.
+</div>
+<div class="Standard">
+Zunächst lernen Sie, OpenSlides allgemein einzurichten und Folien auf dem Projektor zu zeigen. Anschließend können Sie die einzelnen Tutorials für Tagesordnung, Teilnehmerverwaltung, Anträge, Wahlen und Dateien durcharbeiten.
+</div>
+<div class="Standard">
+Alle Tutorials gehen von folgenden Rahmenbedingungen aus:
+</div>
+<div class="Standard">
+Der Verein „Schreberverein Nord e. V.“ hält am 2. März 2017 seine jährliche Mitgliederversammlung ab. Auf der Versammlung werden verschiedene Berichte gehalten und über eine Satzungsänderung abgestimmt. Außerdem finden Wahlen zum Vorstand und zum Beirat statt.
+</div>
+<div class="Standard">
+Auf den nächsten Seiten folgen die einzelnen Tutorials. 
+</div>
+<h2 class="Section">
+<a class="toc" name="toc-Section-1.1">1.1</a> Einrichtung von <span class="noun">OpenSlides</span>
+</h2>
+<div class="Standard">
+Zunächst müssen Sie <span class="noun">OpenSlides</span> auf dem Server installieren, den Server starten und einige Einstellungen für Ihre Veranstaltung vornehmen. Danach können Sie Ihre ersten Folien einrichten und auf dem Projektor zeigen.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.1.1">1.1.1</a> Installation und Start des Servers
+</h3>
+<div class="Standard">
+Installieren Sie <span class="noun">OpenSlides</span> wie in <a class="Reference" href="#sec:Installation">↓</a> beschrieben. Starten Sie anschließend den Server wie in <a class="Reference" href="#sec:Start-des-Servers">↓</a> erläutert. Sie sehen jetzt die Login-Seite von <span class="noun">OpenSlides</span> in Ihrem Browser. Loggen Sie sich als Administrator ein, indem Sie als Benutzernamen <span class="sans">admin</span> und als Passwort <span class="sans">admin</span> eingeben und auf <span class="sans">Anmelden</span> klicken.\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Login-Bildschirm.jpg" alt="figure clipart/Login-Bildschirm.jpg" style="width: 74%; max-width: 450px; height: auto; max-height: 414px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Anschließend sollten Sie sofort das Administrator-Passwort ändern. Klicken Sie dazu oben rechts in der Kopfzeile
+</div>
+<div class="Standard">
+<img class="embedded" src="clipart/Kopfzeile.jpg" alt="figure clipart/Kopfzeile.jpg" style="width: 201px; max-width: 288px; height: 28px; max-height: 40px;"/>
+
+</div>
+<div class="Standard">
+auf <span class="sans">Administrator</span> und dann auf <span class="sans">Passwort ändern</span>. Geben Sie in die entsprechenden Felder Ihr altes Passwort <span class="sans">admin</span> und anschließend Ihr neues Passwort ein. Wiederholen Sie das neue Passwort im dritten Formularfeld. Bestätigen Sie die Eingabe mit <span class="sans">Speichern</span>. Weitere Informationen zur Benutzerverwaltung finden Sie in <a class="Reference" href="#sec:An--und-Abmelden">↓</a>. 
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.1.2">1.1.2</a> Konfiguration des Systems
+</h3>
+<div class="Standard">
+Geben Sie die Rahmendaten Ihrer Veranstaltung ins System ein. Wechseln Sie dazu zum Menüpunkt <span class="sans">Einstellungen\SpecialChar menuseparatorAllgemein</span> und geben Sie die Veranstaltungsdaten wie folgt ein:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Einstellungen-Allgemein.jpg" alt="figure clipart/Einstellungen-Allgemein.jpg" style="width: 100%; max-width: 868px; height: auto; max-height: 1016px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Das Impressum verweist voreingestellt auf <span class="noun">OpenSlides</span>. Es erscheint als Fußzeile in der Startseite. Der Text im Feld <span class="sans">Diesen Text auf der Login-Seite anzeigen</span> erscheint auf dem Login-Fenster, wenn sich die Teilnehmer einloggen:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Login-Bildschirm-angepasst.jpg" alt="figure clipart/Login-Bildschirm-angepasst.jpg" style="width: 74%; max-width: 450px; height: auto; max-height: 414px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Alle Änderungen in den <span class="sans">Einstellungen</span> werden sofort gespeichert. Alle Einstellungen sind im Detail in <a class="Reference" href="#sec:Einstellungen-Übersicht">↓</a> beschrieben.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.1.3">1.1.3</a> Technische Einrichtung im Veranstaltungsraum
+</h3>
+<div class="Standard">
+Im Präsentationsmodus Single schließen Sie den Projektor an Ihren Computer an und schieben ein zweites Browserfenster mit der Projektoransicht auf den Projektor. In den anderen Modi richten Sie ein Netzwerk ein, schließen Sie einen beliebigen Computer an den Projektor an und öffnen im Vollbildmodus die Seite mit der Projektoransicht. Die Projektoransicht bekommen Sie in einem neuen Browsertab zu sehen, indem Sie auf die Live-Vorschau klicken. Diese ist auch unter der URL <span class="code">/projector/</span> zu finden.
+</div>
+<div class="Standard">
+<p><br/>
+</p>
+
+</div>
+<h2 class="Section">
+<a class="toc" name="toc-Section-1.2">1.2</a> Tagesordnung verwalten
+</h2>
+<div class="Standard">
+In diesem Teil lernen Sie, wie Sie Einträge in der Tagesordnung erstellen und verwalten.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.2.1">1.2.1</a> Konfiguration der Tagesordnung
+</h3>
+<div class="Standard">
+Gehen Sie zunächst im Menüpunkt <span class="sans">Konfiguration\SpecialChar menuseparatorTagesordnung\SpecialChar menuseparatorAllgemein</span> zum Unterpunkt <span class="sans">Beginn der Veranstaltung</span>. Hier können Sie den genauen Beginn der Veranstaltung einstellen. Zum Beispiel: <span class="sans">02.03.2017 10:00</span>
+</div>
+<div class="Standard">
+Die weiteren Einstellungen der Tagesordnung sind in <a class="Reference" href="#subsec:Einstellungen-Tagesordnung">↓</a> beschrieben.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.2.2">1.2.2</a> Eingabe der Tagesordnung
+</h3>
+<div class="Standard">
+Die Tagesordnung enthält nach einer Neuinstallation noch keine Einträge. Legen Sie zunächst einige Einträge an. Klicken Sie dazu im Menüpunkt <span class="sans">Tagesordnung</span> oben rechts auf <img class="embedded" src="clipart/Neu-Symbol.jpg" alt="figure clipart/Neu-Symbol.jpg" style="width: 42px; max-width: 61px; height: 21px; max-height: 30px;"/>
+ und geben Sie einen Eintrag wie folgt ein:
+</div>
+<div class="Standard">
+<p><br/>
+</p>
+\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/TOP-erstellen-ändern.jpg" alt="figure clipart/TOP-erstellen-ändern.jpg" style="width: 100%; max-width: 650px; height: auto; max-height: 592px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Wie sie sehen, können Sie den Text frei formatieren und dort auch Bilder einfügen. Im Feld <span class="sans">Anhang</span> können Sie aus allen in <span class="noun">OpenSlides</span> verfügbaren Dateien einen Anhang wählen. Mehr zu Dateien ist in <a class="Reference" href="#sec:Dateien">↓</a> beschrieben.<br/>
+Klicken Sie abschließend auf <span class="sans">Speichern</span>.
+</div>
+<div class="Standard">
+Erweitern Sie nun die Tagesordnung um Einträge mit folgenden Titeln:
+</div>
+<ul>
+<li>
+Bericht des Vorstands
+</li>
+<li>
+Satzungsänderung
+</li>
+<li>
+Gartenfest
+</li>
+<li>
+Sonstiges
+</li>
+<li>
+Wahlen der Vereinsämter
+</li>
+
+</ul>
+<div class="Standard">
+Klicken Sie abschließend auf den Knopf <img class="embedded" src="clipart/Tagesordnung-nummerieren.jpg" alt="figure clipart/Tagesordnung-nummerieren.jpg" style="width: 99px; max-width: 142px; height: 23px; max-height: 34px;"/>
+ und die Tagesordnung wird nummeriert. Die Übersicht über die Einträge sieht nun so aus:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Tagesordnung-Übersicht.jpg" alt="figure clipart/Tagesordnung-Übersicht.jpg" style="width: 100%; max-width: 910px; height: auto; max-height: 505px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Sie können nun nachträglich die Reihenfolge der Einträge verändern und auch Tagesordnungspunkte zu Unterpunkten verschieben. Klicken Sie dazu oben auf den Knopf <img class="embedded" src="clipart/Tagesordnung-sortieren.jpg" alt="figure clipart/Tagesordnung-sortieren.jpg" style="width: 123px; max-width: 176px; height: 21px; max-height: 30px;"/>
+ und ziehen Sie dann mit gedrückter linker Maustaste den Punkt <span class="sans">Sonstiges</span> an die letzte Stelle. Den Punkt <span class="sans">Gartenfest</span> ziehen Sie unter <span class="sans">Bericht des Vorstands</span> und schieben ihn etwas nach rechts, bis er dort einrastet. Gehen sie durch Drücken des Knopfes <img class="embedded" src="clipart/Zurück-Übersicht.jpg" alt="figure clipart/Zurück-Übersicht.jpg" style="width: 105px; max-width: 151px; height: 21px; max-height: 30px;"/>
+ zurück zu Übersicht und drücken Sie <img class="embedded" src="clipart/Tagesordnung-nummerieren.jpg" alt="figure clipart/Tagesordnung-nummerieren.jpg" style="width: 99px; max-width: 142px; height: 23px; max-height: 34px;"/>
+ um die Nummerierung zu aktualisieren. Die Übersicht sieht nun so aus:
+</div>
+<div class="Standard">
+<p><br/>
+</p>
+\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Tagesordnung-Übersicht-editiert.jpg" alt="figure clipart/Tagesordnung-Übersicht-editiert.jpg" style="width: 100%; max-width: 910px; height: auto; max-height: 505px;"/>
+
+</div>
+
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.2.3">1.2.3</a> Einrichtung eigener Folien
+</h3>
+<div class="Standard">
+Eigene Folien werden verwendet, um Dinge außerhalb der offiziellen Tagesordnung zu behandeln. Technisch sind sie jedoch dasselbe wie ein Tagesordnungspunkt.
+</div>
+<div class="Standard">
+Um z. B. den Teilnehmern mitzuteilen, dass es eine Kaffeepause gibt, erstellen Sie einen neuen Tagesordnungspunkt:
+</div>
+<div class="Standard">
+<p><br/>
+</p>
+\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Eigene-Folie.jpg" alt="figure clipart/Eigene-Folie.jpg" style="width: 100%; max-width: 650px; height: auto; max-height: 592px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Dabei ist es wichtig, dass die Option <span class="sans">Als Tagesordnungspunkt anzeigen</span> <i>nicht</i> ausgewählt ist.
+</div>
+<div class="Standard">
+Eigene Folien werden in der Übersicht rosa unterlegt, um anzuzeigen, dass sie nicht Teil der offiziellen Tagesordnung sind.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.2.4">1.2.4</a> Projektion der Tagesordnung
+</h3>
+<div class="Standard">
+Die komplette Tagesordnung wird projiziert, wenn Sie auf das Symbol<br/>
+<img class="embedded" src="clipart/Tagesordnung-projizieren.jpg" alt="figure clipart/Tagesordnung-projizieren.jpg" style="width: 96px; max-width: 138px; height: 23px; max-height: 34px;"/>
+ drücken. Durch Drücken von <img class="embedded" src="clipart/Untermenü-Symbol.jpg" alt="figure clipart/Untermenü-Symbol.jpg" style="width: 18px; max-width: 26px; height: 23px; max-height: 34px;"/>
+ neben dem Symbol, können Sie wählen, ob alle Tagesordnungspunkte oder nur die Hauptpunkte angezeigt werden, also in unserem Fall ohne den Punkt <span class="sans">Gartenfreunde</span>. Eigene Folie werden in der Tagesordnung nicht projiziert.
+</div>
+<div class="Standard">
+Einzelne Tagesordnungspunkte werden projiziert, indem Sie auf das Symbol <img class="embedded" src="clipart/Projektorsymbol.jpg" alt="figure clipart/Projektorsymbol.jpg" style="width: 23px; max-width: 34px; height: 21px; max-height: 30px;"/>
+ vor dem entsprechenden Eintrag klicken. So können Sie eigene Folien projizieren.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.2.5">1.2.5</a> Ändern von Tagesordnungspunkten
+</h3>
+<div class="Standard">
+Der Inhalt von Tagesordnungspunkten kann jederzeit geändert werden, insbesondere während der Veranstaltung. Dazu zeigen sie mit der Maus auf einen Tagesordnungspunkt und es erscheint ein Kontextmenü:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/TOP-mit-Menü.jpg" alt="figure clipart/TOP-mit-Menü.jpg" style="width: 253px; max-width: 267px; height: 52px; max-height: 55px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Ändern Sie zum Beispiel den Inhalt des Tagesordnungspunktes <span class="sans">Bericht des Vorstandes</span>, indem Sie dort auf <span class="sans">Bearbeiten</span> klicken und einen Text zum Tagesordnungspunkt eingeben.
+</div>
+<div class="Standard">
+Als Alternative für das Bearbeiten können Sie im Kontextmenü auf <span class="sans">Quick-Edit</span> klicken und so oft benötigte Dinge wie die <span class="sans">Dauer</span> ändern.\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/TOP-QuickEdit.jpg" alt="figure clipart/TOP-QuickEdit.jpg" style="width: 100%; max-width: 796px; height: auto; max-height: 208px;"/>
+
+</div>
+
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.2.6">1.2.6</a> Redelisten<a class="Label" name="subsec:Redelisten"> </a>
+</h3>
+<div class="Standard">
+<span class="noun">OpenSlides</span> verfügt bei jedem Tagesordnungseintrag über eine Redelistenfunktion. Um eine Redeliste zu erstellen oder zu bearbeiten, klicken Sie im Kontextmenü des jeweiligen Tagesordnungspunkts auf <span class="sans">Redeliste</span>. Alternativ klicken Sie auf den Tagesordnungspunkt und dann auf <img class="embedded" src="clipart/Redeliste-Symbol.jpg" alt="figure clipart/Redeliste-Symbol.jpg" style="width: 60px; max-width: 86px; height: 21px; max-height: 30px;"/>
+.
+</div>
+<div class="Standard">
+Setzen Sie sich selbst auf die Redeliste, indem sie auf <img class="embedded" src="clipart/Redeliste+Mich.jpg" alt="figure clipart/Redeliste+Mich.jpg" style="width: 102px; max-width: 147px; height: 23px; max-height: 34px;"/>
+ klicken. Wenn Sie Teilnehmer angelegt haben, wie es in <a class="Reference" href="#subsec:Anlegen-eines-Teilnehmers">1.3.1↓</a> beschrieben ist, können Sie jeden Teilnehmer auf die Redeliste setzen.
+</div>
+<div class="Standard">
+Projizieren Sie die Redeliste nun durch Klicken auf <img class="embedded" src="clipart/Projektorsymbol-Redeliste.jpg" alt="figure clipart/Projektorsymbol-Redeliste.jpg" style="width: 61px; max-width: 88px; height: 21px; max-height: 30px;"/>
+. Durch Drücken von <img class="embedded" src="clipart/Rede-beginnen.jpg" alt="figure clipart/Rede-beginnen.jpg" style="width: 41px; max-width: 59px; height: 21px; max-height: 30px;"/>
+ starten Sie Ihre Rede. Ihr Name wird nun im Projektor angezeigt. Um die Rede zu beenden, klicken Sie auf <img class="embedded" src="clipart/Aktuelle-Rede-beenden.jpg" alt="figure clipart/Aktuelle-Rede-beenden.jpg" style="width: 114px; max-width: 164px; height: 21px; max-height: 30px;"/>
+. Gibt es mehrere Redner, kann man mit Klicken auf <img class="embedded" src="clipart/Nächste-Rede-beginnen.jpg" alt="figure clipart/Nächste-Rede-beginnen.jpg" style="width: 115px; max-width: 165px; height: 21px; max-height: 30px;"/>
+ die aktuelle Rede beenden und die nächste beginnen.
+</div>
+<div class="Standard">
+In der Rubrik <span class="sans">Letzte Redner/innen</span> können sie sich die letzten Redner als Liste anzeigen lassen. Ein Teil dieser Liste wird auch projiziert, je nach den Einstellungen. Für Details dazu siehe <a class="Reference" href="#subsec:Einstellungen-Tagesordnung">↓</a>.
+</div>
+<div class="Standard">
+Jede Redeliste ist erst einmal offen. Das heißt, dass sich jeder angemeldete Teilnehmer auf die Redeliste setzen kann. Um die Redeliste zu schließen, damit das nicht mehr möglich ist, klicken Sie auf den Knopf <img class="embedded" src="clipart/Redeliste-schließen.jpg" alt="figure clipart/Redeliste-schließen.jpg" style="width: 49px; max-width: 70px; height: 21px; max-height: 30px;"/>
+. Der Knopf ändert sich nun zu <img class="embedded" src="clipart/Redeliste-öffnen.jpg" alt="figure clipart/Redeliste-öffnen.jpg" style="width: 76px; max-width: 109px; height: 21px; max-height: 30px;"/>
+ und der neue Zustand wird im Projektor rot angezeigt:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Redeliste-ist-geschlossen.jpg" alt="figure clipart/Redeliste-ist-geschlossen.jpg" style="width: 309px; max-width: 442px; height: 66px; max-height: 95px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Wie man die Redeliste modifiziert und einen Countdown mit einer Rede verknüpft ist in <a class="Reference" href="#subsec:Rednerliste-verwalten">↓</a> erklärt.
+</div>
+<div class="Standard">
+Weitere Details zur Tagesordnung finden Sie in <a class="Reference" href="#sec:Tagesordnung">↓</a>.
+</div>
+<div class="Standard">
+<p><br/>
+</p>
+
+</div>
+<h2 class="Section">
+<a class="toc" name="toc-Section-1.3">1.3</a> Teilnehmer verwalten
+</h2>
+<div class="Standard">
+In diesem Teil lernen Sie, wie Sie die Teilnehmer Ihrer Veranstaltungen im System erfassen. Im Präsentationsmodus brauchen Sie grundsätzlich nur diejenigen Teilnehmer erfassen, die das System verwalten, Anträge stellen oder unterstützen, auf Redelisten stehen oder bei Wahlen kandidieren.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.3.1">1.3.1</a> Anlegen eines Teilnehmers<a class="Label" name="subsec:Anlegen-eines-Teilnehmers"> </a>
+</h3>
+<div class="Standard">
+Sie können die Teilnehmer einzeln eintragen oder, wie in <a class="Reference" href="#sec:Teilnehmer">↓</a> beschrieben, importieren. Eingetragenen Personen, die das System verwalten sollen, müssen die entsprechenden Berechtigungen zugewiesen werden.
+</div>
+<div class="Standard">
+Zum Anlegen eines neuen Teilnehmers wechseln Sie zum Menü <span class="sans">Teilnehmende</span> und klicken Sie oben rechts auf <img class="embedded" src="clipart/Neu-Teilnehmer-Symbol.jpg" alt="figure clipart/Neu-Teilnehmer-Symbol.jpg" style="width: 46px; max-width: 67px; height: 21px; max-height: 30px;"/>
+. Geben Sie als Beispiel diesen neuen Teilnehmer ein:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Teilnehmer-anlegen.jpg" alt="figure clipart/Teilnehmer-anlegen.jpg" style="width: 100%; max-width: 650px; height: auto; max-height: 556px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Wiederholen Sie diese Schritte und geben Sie folgende weitere Teilnehmer und Teilnehmerinnen ein: Peter Müller, Prof. Dr. Franziska Meyer, Luise Schmidt und Dr. Hans Schulze.
+</div>
+<div class="Standard">
+Die Angabe des <span class="sans">Titels</span> und der <span class="sans">Gliederungsebene</span> ist optional. Über die <span class="sans">Gruppe</span> wird festgelegt, welche Berechtigungen der Teilnehmer hat, also ob er z. B. wählen und Anträge stellen darf. Mehr zu Gruppen ist in <a class="Reference" href="#subsec:Gruppen">↓</a> beschrieben.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.3.2">1.3.2</a> Bearbeiten eines Teilnehmers
+</h3>
+<div class="Standard">
+Im Menü <span class="sans">Teilnehmende</span> ist eine Liste mit allen Teilnehmern zu sehen:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Teilnehmerliste.jpg" alt="figure clipart/Teilnehmerliste.jpg" style="width: 100%; max-width: 910px; height: auto; max-height: 581px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Klicken Sie zum Bearbeiten beispielsweise beim Teilnehmer „Max Mustermann“ unterhalb des Namens auf <span class="sans">Bearbeiten</span> und weisen ihm zusätzlich die Gruppe <span class="sans">Mitarbeitende</span> zu.
+</div>
+<div class="Standard">
+In der Teilnehmerliste kann jederzeit eingestellt werden, ob ein Teilnehmer anwesend ist. Dies ist für Wahlen und die Dokumentation der Veranstaltung wichtig.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.3.3">1.3.3</a> Passwort eines Teilnehmers
+</h3>
+<div class="Standard">
+Beim Anlegen eines Teilnehmers wird automatisch ein zufälliges Erst-Passwort gesetzt, falls man nicht selbst ein Passwort angibt. Sie können das Erst-Passwort der PDF-Datei entnehmen, die durch Klick auf das Symbol <img class="embedded" src="clipart/PDF-Teilnehmer.jpg" alt="figure clipart/PDF-Teilnehmer.jpg" style="width: 50px; max-width: 72px; height: 21px; max-height: 30px;"/>
+ und dann auf <span class="sans">Zugangsdatenliste</span> angezeigt wird. Dieses PDF ist so ausgelegt, dass man es ausdrucken und so jedem Teilnehmer seine Zugangsdaten mitteilen kann.
+</div>
+<div class="Standard">
+Bitten Sie jeden, dem Sie sein Erst-Passwort aushändigen, dieses nach dem ersten Login zu ändern.
+</div>
+<div class="Standard">
+Um als Administrator das Passwort von zum Beispiel Max Mustermann neu zu setzen, klicken Sie in der Teilnehmerliste unterhalb des Namens auf <span class="sans">Bearbeiten</span> und tragen Sie im Feld <span class="sans">Voreingestelltes Passwort</span> ein neues Passwort ein. Anschließend klicken Sie auf <span class="sans">Reset</span> und dann erst auf <span class="sans">Speichern</span>.
+</div>
+<div class="Standard">
+Detaillierte, weitere Informationen zur Teilnehmerverwaltung finden Sie in <a class="Reference" href="#sec:Teilnehmer">↓</a>.
+</div>
+<div class="Standard">
+<p><br/>
+</p>
+
+</div>
+<h2 class="Section">
+<a class="toc" name="toc-Section-1.4">1.4</a> Countdowns und Mitteilungen<a class="Label" name="sec:Countdowns-und-Mitteilungen"> </a>
+</h2>
+<div class="Standard">
+Unterhalb der Live-Vorschau gibt es die Rubriken <span class="sans">Countdown</span> und <span class="sans">Mitteilungen</span>. Um z. B. mitzuteilen, wo es das Mittagessen gibt, klicken Sie auf <img class="embedded" src="clipart/Neue-Mitteilung.jpg" alt="figure clipart/Neue-Mitteilung.jpg" style="width: 133px; max-width: 190px; height: 21px; max-height: 30px;"/>
+ und rechts oben in der Mitteilung auf <img class="embedded" src="clipart/Bearbeiten-Symbol.jpg" alt="figure clipart/Bearbeiten-Symbol.jpg" style="width: 22px; max-width: 32px; height: 21px; max-height: 30px;"/>
+. Geben Sie nun den Text „Das Mittagessen gibt es in 5 Minuten im Foyer, 1. Stock, Aufgang B.“ ein und klicken anschließend auf <img class="embedded" src="clipart/Haken-Symbol.jpg" alt="figure clipart/Haken-Symbol.jpg" style="width: 27px; max-width: 39px; height: 21px; max-height: 30px;"/>
+. Klicken Sie nun auf <img class="embedded" src="clipart/Projektorsymbol.jpg" alt="figure clipart/Projektorsymbol.jpg" style="width: 23px; max-width: 34px; height: 21px; max-height: 30px;"/>
+, wird die Mitteilung so angezeigt:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Mitteilung-Essen.jpg" alt="figure clipart/Mitteilung-Essen.jpg" style="width: 100%; max-width: 1452px; height: auto; max-height: 897px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Um nun die 5 min als Countdown laufen zu lassen, klicken Sie auf<br/>
+<img class="embedded" src="clipart/Neuer-Countdown.jpg" alt="figure clipart/Neuer-Countdown.jpg" style="width: 144px; max-width: 206px; height: 21px; max-height: 30px;"/>
+ und dann auf <img class="embedded" src="clipart/Bearbeiten-Symbol.jpg" alt="figure clipart/Bearbeiten-Symbol.jpg" style="width: 22px; max-width: 32px; height: 21px; max-height: 30px;"/>
+. Geben Sie als <span class="sans">Beschreibung</span> „Mittagessen startet in“ und als <span class="sans">Startzeit</span> „5:00“ ein und klicken anschließend auf das Symbol <img class="embedded" src="clipart/Haken-Symbol.jpg" alt="figure clipart/Haken-Symbol.jpg" style="width: 27px; max-width: 39px; height: 21px; max-height: 30px;"/>
+. Klicken Sie nun auf <img class="embedded" src="clipart/Projektorsymbol.jpg" alt="figure clipart/Projektorsymbol.jpg" style="width: 23px; max-width: 34px; height: 21px; max-height: 30px;"/>
+ um den Countdown anzuzeigen. Mit dem Klick auf <img class="embedded" src="clipart/Projektorsymbol-laufend.jpg" alt="figure clipart/Projektorsymbol-laufend.jpg" style="width: 23px; max-width: 34px; height: 21px; max-height: 30px;"/>
+ der aktuellen Mitteilung wird diese wieder von Projektor entfernt. Klicken Sie auf <img class="embedded" src="clipart/Countdown-Start-Symbol.jpg" alt="figure clipart/Countdown-Start-Symbol.jpg" style="width: 25px; max-width: 37px; height: 23px; max-height: 34px;"/>
+ um den Countdown zu starten.\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Countdown-Beispiel.jpg" alt="figure clipart/Countdown-Beispiel.jpg" style="width: 100%; max-width: 1452px; height: auto; max-height: 288px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Die Zeit des Countdowns wird unter 30 s orange eingefärbt. Nach dem Ablauf wird die Zeit rot eingefärbt und läuft negativ.
+</div>
+<div class="Standard">
+Besonders sinnvoll sind Countdowns für Reden. Um für jede Rede einen Countdown mitlaufen zu lassen, wechseln Sie in das Menü <span class="sans">Einstellungen\SpecialChar menuseparatorTagesordnung</span> und wählen dort die Option <span class="sans">Countdown mit der Redeliste verkoppeln</span> aus. Nun werden alle Countdowns automatisch gestartet, wenn eine Rede begonnen wird. Welchen Countdown Sie projizieren oder ob sie ihn überhaupt einen projizieren, haben Sie in der Hand.
+</div>
+<div class="Standard">
+<p><br/>
+</p>
+
+</div>
+<h2 class="Section">
+<a class="toc" name="toc-Section-1.5">1.5</a> Anträge verwalten und behandeln
+</h2>
+<div class="Standard">
+In diesem Teil lernen Sie, Anträge in das System einzugeben und zu verwalten sowie, wie Sie während der Veranstaltung einen Antrag behandeln und eine Abstimmung durchführen.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.5.1">1.5.1</a> Eingabe eines bereits vorliegenden Antrags
+</h3>
+<div class="Standard">
+Vor Beginn der Veranstaltung liegen bereits Anträge an die Versammlung vor, welche ins System gebracht werden sollen. Wechseln Sie zum Menü <span class="sans">Anträge</span> und klicken auf <img class="embedded" src="clipart/Neu-Symbol.jpg" alt="figure clipart/Neu-Symbol.jpg" style="width: 42px; max-width: 61px; height: 21px; max-height: 30px;"/>
+.
+</div>
+<div class="Standard">
+Geben Sie als Beispiel einen Antrag, mit dem die Vereinssatzung so geändert werden soll, dass der Beirat mehr Mitglieder hat, wie folgt ein:
+</div>
+<div class="Standard">
+<p><br/>
+</p>
+\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Antrag-ausfüllen.jpg" alt="figure clipart/Antrag-ausfüllen.jpg" style="width: 100%; max-width: 650px; height: auto; max-height: 845px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Wie sie sehen, gibt es im Textfeld schon eine Einleitung „Die Versammlung möge beschließen,“. Diese können Sie ändern oder abschalten, siehe dazu <a class="Reference" href="#subsec:Einstellungen-Anträge">↓</a>. Dass Sie den Antrag als Tagesordnungspunkt anzeigen, ist optional.
+</div>
+<div class="Standard">
+Erstellen Sie auf gleiche Weise eine weiteren Antrag mit dem Titel „Änderung der Geschäftsordnung“.
+</div>
+<div class="Standard">
+Die Antragsseite sieht nun wie folgt aus:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Antragsliste.jpg" alt="figure clipart/Antragsliste.jpg" style="width: 100%; max-width: 910px; height: auto; max-height: 303px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Anträge können auch während der Veranstaltung angelegt werden.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.5.2">1.5.2</a> Behandlung eines Antrags
+</h3>
+<div class="Standard">
+Angenommen die Versammlungsleitung ruft den Antrag zur Satzungsänderung auf. Klicken Sie zunächst in der Antragsübersicht auf <img class="embedded" src="clipart/Projektorsymbol.jpg" alt="figure clipart/Projektorsymbol.jpg" style="width: 23px; max-width: 34px; height: 21px; max-height: 30px;"/>
+ vor dem Antrag. Dieser wird nun projiziert:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Antrag-projiziert.jpg" alt="figure clipart/Antrag-projiziert.jpg" style="width: 100%; max-width: 1325px; height: auto; max-height: 317px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Um schnell zur Antragsverwaltung zu wechseln, können Sie auf den Titel des Antrags klicken.
+</div>
+<div class="Standard">
+Nach Abschluss der Diskussion ruft der Vorsitzende zur Abstimmung auf. Klicken Sie im rechten Kasten auf <span class="sans">Neue Abstimmung</span> und tragen Sie das Abstimmungsergebnis wie folgt in das Formular ein:
+</div>
+<div class="Standard">
+Der Vorsitzende stellt fest, dass der Antrag angenommen ist. Klicken Sie deshalb auf der im rechten unteren Kasten unter „Antrag verwalten“ auf <span class="sans">Annehmen</span>.
+</div>
+<div class="Standard">
+Das Projektorbild sieht nun wie folgt aus:
+</div>
+<div class="Standard">
+<p><br/>
+</p>
+
+</div>
+<h2 class="Section">
+<a class="toc" name="toc-Section-1.6">1.6</a> Wahlen durchführen
+</h2>
+<div class="Standard">
+In diesem Teil lernen Sie, wie Sie Wahlen auf Ihrer Versammlung mit <span class="noun">OpenSlides</span> begleiten.
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.6.1">1.6.1</a> Anlegen von Wahlen
+</h3>
+<div class="Standard">
+Vor Veranstaltungsbeginn sind die anstehenden Wahlen vorzubereiten. Gehen Sie dazu ins Menü <span class="sans">Wahlen</span>. Legen Sie nun eine neue Wahl an indem sie oben auf <img class="embedded" src="clipart/Neu-Symbol.jpg" alt="figure clipart/Neu-Symbol.jpg" style="width: 42px; max-width: 61px; height: 21px; max-height: 30px;"/>
+ klicken. Geben Sie nun eine Wahl wie folgt ein:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Wahl-eingeben.jpg" alt="figure clipart/Wahl-eingeben.jpg" style="width: 100%; max-width: 650px; height: auto; max-height: 573px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Geben Sie auf die gleiche Weise eine weitere Wahl ein: 
+</div>
+<div class="Description">
+<span class="Description-entry">Name:</span> Beirat
+</div>
+<div class="Description">
+<span class="Description-entry">Beschreibung:</span> Der Beirat unterstützt den Vorstand.
+</div>
+<div class="Description">
+<span class="Description-entry">Anzahl der zur Wahl stehenden Posten:</span> 7
+</div>
+<div class="Standard">
+Die Wahlübersicht sieht nun so aus:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Wahlübersicht.jpg" alt="figure clipart/Wahlübersicht.jpg" style="width: 100%; max-width: 910px; height: auto; max-height: 289px;"/>
+
+</div>
+
+</div>
+<h3 class="Subsection">
+<a class="toc" name="toc-Subsection-1.6.2">1.6.2</a> Durchführung einer Wahl
+</h3>
+<div class="Standard">
+Klicken Sie in der Wahlübersicht auf <img class="embedded" src="clipart/Projektorsymbol.jpg" alt="figure clipart/Projektorsymbol.jpg" style="width: 23px; max-width: 34px; height: 21px; max-height: 30px;"/>
+ vor <span class="sans">Vorstand</span>. Die Wahl wird nun projiziert. Nun klicken Sie auf den Namen der Wahl <span class="sans">Vorstand</span>.
+</div>
+<div class="Standard">
+Setzen Sie sich mit <img class="embedded" src="clipart/Redeliste+Mich.jpg" alt="figure clipart/Redeliste+Mich.jpg" style="width: 102px; max-width: 147px; height: 23px; max-height: 34px;"/>
+ auf die Kandidatenliste. Es können alle bei <span class="noun">OpenSlides</span> angelegten Teilnehmer hinzugefügt werden. Wählen Sie nun aus der Liste 4 weitere Kandidaten aus.
+</div>
+<div class="Standard">
+Wir gehen nun davon aus, dass die Kandidatenliste feststeht. Damit sich die Kandidaten vorstellen können, klicken Sie oben auf <img class="embedded" src="clipart/Redeliste-Symbol.jpg" alt="figure clipart/Redeliste-Symbol.jpg" style="width: 60px; max-width: 86px; height: 21px; max-height: 30px;"/>
+. Die Redeliste ist technisch identisch zu der Redeliste eines Tagesordnungspunkts, die in <a class="Reference" href="#subsec:Redelisten">1.2.6↑</a> behandelt wurde. Wie Sie sehen, sind bereits alle Kandidaten auf der Redeliste. Sie können noch weitere Redner hinzufügen.
+</div>
+<div class="Standard">
+Um die Wahl zu beginnen, klicken Sie unten auf <img class="embedded" src="clipart/Neuer-Wahlgang.jpg" alt="figure clipart/Neuer-Wahlgang.jpg" style="width: 95px; max-width: 137px; height: 21px; max-height: 30px;"/>
+. Dadurch hat sich die Phase der Wahl automatisch auf <span class="sans">Im Wahlvorgang</span> geändert. Das Projektorbild sieht nun so aus:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Wahl-Projektor.jpg" alt="figure clipart/Wahl-Projektor.jpg" style="width: 100%; max-width: 1328px; height: auto; max-height: 419px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Da die Wahl von Personen eine geheime Wahl ist, müssen Stimmzettel erstellt werden. Klicken Sie dafür auf <img class="embedded" src="clipart/Stimmzettel-drucken.jpg" alt="figure clipart/Stimmzettel-drucken.jpg" style="width: 114px; max-width: 164px; height: 21px; max-height: 30px;"/>
+. Der Stimmzettel sieht so aus:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Wahlzettel.jpg" alt="figure clipart/Wahlzettel.jpg" style="width: 304px; max-width: 321px; height: 337px; max-height: 355px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+und kann ausgedruckt und verteilt werden.
+</div>
+<div class="Standard">
+Wir nehmen nun an, dass die Wahl ausgezählt wurde und die Ergebnisse vorliegen. Tragen Sie daher nun die Ergebnisse dieses 1. Wahlgangs ein, indem Sie auf <img class="embedded" src="clipart/Stimmen-eingeben.jpg" alt="figure clipart/Stimmen-eingeben.jpg" style="width: 107px; max-width: 154px; height: 21px; max-height: 30px;"/>
+ klicken. In die Eingabemaske tragen Sie als Beispiel bei Administrator 23, bei Frau Meyer 38, bei Herrn Mustermann 17, bei Herrn Müller 20, bei Frau Schmidt 22, bei <span class="sans">Gültige Stimmen</span> 109, bei <span class="sans">Ungültige Stimmen</span> 1 und bei <span class="sans">Abgegebene Stimmen</span> 110 ein.
+</div>
+<div class="Standard">
+Wir nehmen an, dass 50 Personen an der Wahl teilgenommen haben und dass die Satzung vorsieht, dass die Personen gewählt sind, die mindestens die Hälfte der Stimmen bekommen hat, wie Personen an der Wahl teilgenommen haben. Es wurde also im 1. Wahlgang nur Frau Meyer gewählt. Klicken Sie daher nur bei ihr auf das Symbol <img class="embedded" src="clipart/Gewählt-Symbol.jpg" alt="figure clipart/Gewählt-Symbol.jpg" style="width: 16px; max-width: 23px; height: 15px; max-height: 22px;"/>
+ vor ihrem Namen. Um die Wahl zu veröffentlichen, klicken Sie auf <img class="embedded" src="clipart/Wahl-veröffentlichen.jpg" alt="figure clipart/Wahl-veröffentlichen.jpg" style="width: 96px; max-width: 138px; height: 21px; max-height: 30px;"/>
+. Im Projektor wird erst einmal nur die Kandidatenliste angezeigt, in der Frau Meyer als Gewählte mit einem Stern markiert ist:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Wahl-Projektor-Ergebnis.jpg" alt="figure clipart/Wahl-Projektor-Ergebnis.jpg" style="width: 100%; max-width: 1328px; height: auto; max-height: 419px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Sie können nun entscheiden, ob auch die Stimmenanzahl veröffentlicht wird. Da das gewünscht ist, klicken Sie nun auf <img class="embedded" src="clipart/Wahl-projizieren.jpg" alt="figure clipart/Wahl-projizieren.jpg" style="width: 77px; max-width: 110px; height: 21px; max-height: 30px;"/>
+. Es wird nun dies projiziert:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Wahl-Projektor-Ergebnis-Detail.jpg" alt="figure clipart/Wahl-Projektor-Ergebnis-Detail.jpg" style="width: 100%; max-width: 1328px; height: auto; max-height: 671px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Als Erklärung können Sie nun vielleicht eine Mitteilung mit dem Inhalt „Es haben 50 Personen teilgenommen, zur Wahl notwendig waren daher 25 Stimmen.“ anzeigen, wie Sie es in <a class="Reference" href="#sec:Countdowns-und-Mitteilungen">1.4↑</a> gelernt haben.
+</div>
+<div class="Standard">
+Da der Vorstand aus 3 Personen bestehen muss, ist ein zweiter Wahlgang notwendig. Klicken Sie daher auf <img class="embedded" src="clipart/Neuer-Wahlgang.jpg" alt="figure clipart/Neuer-Wahlgang.jpg" style="width: 95px; max-width: 137px; height: 21px; max-height: 30px;"/>
+ und <img class="embedded" src="clipart/Stimmzettel-drucken.jpg" alt="figure clipart/Stimmzettel-drucken.jpg" style="width: 114px; max-width: 164px; height: 21px; max-height: 30px;"/>
+. Geben Sie fiktive Ergebnisse ein und markieren Herrn Mustermann und Administrator als gewählt. Zuletzt klicken Sie auf <img class="embedded" src="clipart/Wahl-veröffentlichen.jpg" alt="figure clipart/Wahl-veröffentlichen.jpg" style="width: 96px; max-width: 138px; height: 21px; max-height: 30px;"/>
+ und <img class="embedded" src="clipart/Wahl-projizieren.jpg" alt="figure clipart/Wahl-projizieren.jpg" style="width: 77px; max-width: 110px; height: 21px; max-height: 30px;"/>
+ und ändern oben die Phase auf <span class="sans">Abgeschlossen</span>. Wenn Sie oben auf <img class="embedded" src="clipart/PDF-Symbol.jpg" alt="figure clipart/PDF-Symbol.jpg" style="width: 42px; max-width: 61px; height: 21px; max-height: 30px;"/>
+ klicken, erhalten Sie ein PDF mit dem Wahlergebnis, das Sie für die Nachbereitung der Veranstaltung verwenden können.
+</div>
+<div class="Standard">
+Auf die gleiche Weise können Sie nun auch die die Wahl des Beirats durchführen. Sie werden feststellen, dass als Wahlmethode automatisch eine Ja-Nein-Enthaltungs-Wahl bezüglich eines jeden Kandidaten ausgewählt wird, wenn es weniger oder gleich viele Kandidaten wie Plätze gibt:\begin_inset Separator latexpar\end_inset
+</div>
+<div class="Standard">
+<div class="center">
+<img class="embedded" src="clipart/Wahlzettel-Enthaltung.jpg" alt="figure clipart/Wahlzettel-Enthaltung.jpg" style="width: 312px; max-width: 329px; height: 251px; max-height: 265px;"/>
+
+</div>
+
+</div>
+<div class="Standard">
+Mehr zu Wahlen und deren Einstellungen erfahren Sie im Detail in <a class="Reference" href="#subsec:Einstellungen-Wahlen">↓</a>.
+</div>
+<div class="Standard">
+<p><br/>
+</p>
+
+</div>
+<h2 class="Section">
+<a class="toc" name="toc-Section-1.7">1.7</a> Dateien hochladen und verwalten
+</h2>
+<div class="Standard">
+Wie man Dateien, zum Beispiel Bilder, bei <span class="noun">OpenSlides</span> hochlädt und projiziert, ist in <a class="Reference" href="#sec:Dateien">↓</a> erklärt.
+</div>
+<h2 class="Section">
+<a class="toc" name="toc-Section-1.8">1.8</a> Nach einer Veranstaltung
+</h2>
+<div class="Standard">
+Am Ende der Versammlung können Sie sich für das Protokoll einige Dokumente direkt aus <span class="noun">OpenSlides</span> holen. Klicken Sie jeweils im Menü <span class="sans">Tagesordnung</span>, <span class="sans">Anträge</span>, <span class="sans">Wahlen</span> und <span class="sans">Teilnehmende</span> rechts oben auf <img class="embedded" src="clipart/PDF-Symbol.jpg" alt="figure clipart/PDF-Symbol.jpg" style="width: 42px; max-width: 61px; height: 21px; max-height: 30px;"/>
+. Mehr zur Nachbereitung ist in <a class="Reference" href="#sec:Nachbereitung">↓</a> beschrieben.
+</div>
+<div class="Standard">
+Alle weiteren Funktionen von <span class="noun">OpenSlides</span> und Details zu den im Tutorium behandelten Funktionen, finden Sie in <a class="Reference" href="#chap:Einzelne-Funktionen">↓</a>. Wie Sie Anpassungen an <span class="noun">OpenSlides</span> vornehmen, erfahren Sie in <a class="Reference" href="#chap:Weitere-Anpassungen-von">↓</a>.
+</div>
+<div class="Standard">
+Viel Spaß weiterhin mit <span class="noun">OpenSlides</span>!
+</div>
+
+</div>
+</body>
+</html>
