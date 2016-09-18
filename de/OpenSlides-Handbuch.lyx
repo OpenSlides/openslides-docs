@@ -1,4 +1,4 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 474
 \begin_document
 \begin_header
@@ -135,7 +135,7 @@ logicalmkup
 \defskip medskip
 \quotes_language german
 \papercolumns 1
-\papersides 2
+\papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
@@ -240,7 +240,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "OpenSlides-Einführung.lyx"
+filename "section_einfuehrung.lyx"
 
 \end_inset
 
@@ -259,7 +259,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "OpenSlides-Erste-Schritte.lyx"
+filename "section_erste-schritte.lyx"
 
 \end_inset
 
@@ -278,7 +278,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "OpenSlides-Tutorium-Versammlungsadministration.lyx"
+filename "section_tutorium-versammlungsadministration.lyx"
 
 \end_inset
 
@@ -297,7 +297,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "OpenSlides-Einzelne-Funktionen.lyx"
+filename "section_einzelne-functionen.lyx"
 
 \end_inset
 
@@ -316,7 +316,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "OpenSlides-Weitere-Anpassungen.lyx"
+filename "section_weitere-anpassung.lyx"
 
 \end_inset
 
@@ -656,7 +656,6 @@ OpenSlides
 
 -Autorenteam:
 \end_layout
-
 
 \begin_deeper
 \begin_layout Itemize
