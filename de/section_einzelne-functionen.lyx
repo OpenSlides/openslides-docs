@@ -1,0 +1,6313 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+% that links to image floats jumps
+% to the beginning of the float and 
+% not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a PDF-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% Linkfläche für Querverweise vergrößern und automatisch benennen,
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\@ifpackageloaded{babel}{
+ \addto\extrasngerman{%
+  \renewcommand*{\equationautorefname}[1]{}%
+  \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+ }
+}{}
+
+% provides caption formatting
+\usepackage[labelfont={bf,sf}]{caption}[2004/07/16]
+
+% enables calculation of values,
+\usepackage{calc}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed before their
+% corresponding section starts
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+\end_preamble
+\options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading,dvipsnames,table
+\use_default_options false
+\master OpenSlides-Handbuch.lyx
+\begin_modules
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "OpenSlides Handbuch"
+\pdf_author "OpenSlides Team"
+\pdf_subject "OpenSlides Handbuch, Funktionen"
+\pdf_keywords "OpenSlides, Handbuch, Funktionen"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 2
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\notefontcolor #0000ff
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Einzelne Funktionen
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Einzelne-Funktionen"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im Folgenden werden die einzelnen Funktionen von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ erläutert.
+ Die Funktionen sind mit wenigen Ausnahmen alle über die Menüpunkte des
+ Webinterfaces zu erreichen.
+\end_layout
+
+\begin_layout Standard
+Die meisten der hier beschriebenen Funktionen sind nur für Administratoren
+ und Mitglieder der Teilnehmergruppe Mitarbeitende verfügbar.
+ Die Funktionen für normale Mitglieder sind im Tutorium 
+\emph on
+Teilnehmer
+\emph default
+ beschrieben, siehe ??.
+\end_layout
+
+\begin_layout Section
+An- und Abmelden – Benutzername und Passwort ändern
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:An--und-Abmelden"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+An- und Abmelden
+\end_layout
+
+\begin_layout Standard
+Beim ersten Aufruf von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ erscheint die Login-Seite.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Login-Bildschirm.jpg
+	lyxscale 50
+	width 66.66col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der erste Benutzername des Administrators ist 
+\family sans
+admin
+\family default
+.
+ Er hat das erste Passwort 
+\family sans
+admin
+\family default
+.
+ Über die Teilnehmerverwaltung
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Mehr zur Teilnehmerverwaltung siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Teilnehmer"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ neu angelegte Teilnehmer haben einen aus dem Vor- und Nachnamen zusammengesetzt
+en Benutzernamen, wobei Groß- und Kleinschreibung zu beachten ist und zwischen
+ den Namen ein Leerzeichen liegt.
+ Beispiel: Ein mit dem Vornamen 
+\family sans
+Max
+\family default
+ und dem Nachnamen 
+\family sans
+Mustermann
+\family default
+ angelegter Teilnehmer hat den Benutzernamen
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+Max
+\begin_inset space ~
+\end_inset
+
+Mustermann
+\end_layout
+
+\begin_layout Standard
+Das voreingestellte Passwort kann über die Teilnehmerverwaltung eingesehen
+ werden.
+ Zum Einloggen geben Sie Ihren Benutzernamen und Ihr Passwort ein und klicken
+ auf 
+\family sans
+Anmelden
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Um die Nutzer zu informieren wie man sich einloggt, kann man einen Text
+ im Menü 
+\family sans
+Einstellungen\SpecialChar \menuseparator
+Allgemein\SpecialChar \menuseparator
+System
+\family default
+ im Feld 
+\family sans
+Diesen Text auf der Login-Seite anzeigen
+\family default
+ eingeben.
+ Dieser erscheint auf dem Login-Fenster, wenn sich die Teilnehmer einloggen:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Login-Bildschirm-angepasst.jpg
+	lyxscale 50
+	width 66.66col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Hinweis:
+\series default
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ benötigt Cookies um die Identität des Nutzers festzustellen, solange er
+ eingeloggt ist.
+ Beim Ausloggen wird das Cookie wieder gelöscht.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Eigenen Benutzernamen oder Passwort ändern
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Benutzername-oder-Passwort"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Klickt man in der Kopfzeile von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ rechts auf den Benutzernamen, kann man das Profil bearbeiten oder das Passwort
+ ändern.
+\end_layout
+
+\begin_layout Standard
+Die eigenen Benutzereinstellungen wie Benutzername und Passwort können über
+ den Button oben rechts geändert werden.
+ Klicken Sie auf den Button, wählen Sie im oberen rechten Menü aus, ob Sie
+ Ihre persönlichen Einstellungen oder Ihr Passwort ändern möchten, und ändern
+ Sie die jeweiligen Einstellungen.
+ Klicken Sie abschließend auf 
+\family sans
+Speichern
+\family default
+.
+\end_layout
+
+\begin_layout Subsection
+Fremde Benutzereinstellungen (insbesondere Benutzername oder Passwort) ändern
+\end_layout
+
+\begin_layout Standard
+Beim Anlegen eines Teilnehmers wird automatisch ein zufälliges Erst-Passwort
+ gesetzt.
+ Sie können das voreingestellte Passwort aus einer PDF-Datei ablesen, die
+ Sie durch Klick auf den Link „Zugangsdatenliste“ im rechten oberen Menü
+ erreichen.
+\end_layout
+
+\begin_layout Standard
+Benutzer mit den entsprechenden Rechten wie Mitarbeiter können alle Benutzer
+ über den Menüpunkt „Teilnehmer/innen“ verwalten und dort auch den Benutzernamen
+ ändern und das Passwort auf ein bestimmtes voreingestelltes Passwort zurücksetz
+en.
+\end_layout
+
+\begin_layout Standard
+Klicken Sie beim jeweiligen Teilnehmer auf das Bearbeiten-Symbol 
+\begin_inset Graphics
+	filename clipart/Bearbeiten-Symbol.jpg
+	scale 67
+
+\end_inset
+
+ und tragen Sie unter „Voreingestelltes Passwort“ ein neues, selbstgewähltes
+ Passwort ein.
+ Anschließend klicken Sie auf 
+\family sans
+Übernehmen
+\family default
+.
+ In einem zweiten Schritt müssen Sie auf den Link „Auf Erst-Passwort zurücksetze
+n“ klicken, um das im System gespeicherte Passwort mit Ihrem neu eingegebenen
+ zu ersetzen.
+ Bestätigen Sie den oben auf der Seite erscheinenden Dialog mit 
+\family sans
+Ja
+\family default
+.
+\end_layout
+
+\begin_layout Section
+Projektorsteuerung
+\end_layout
+
+\begin_layout Standard
+Dieses Handbuch ist noch nicht fertiggestellt.
+ Wenn Sie Interesse haben, uns zu unterstützen, schreiben Sie uns einfach
+ eine E-Mail:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "users-de@openslides.org"
+target "users-de@openslides.org"
+type "mailto:"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Countdown und Mitteilungen
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Countdown-und-Mitteilungen"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unterhalb der Live-Vorschau gibt es die Rubriken 
+\family sans
+Countdown
+\family default
+ und 
+\family sans
+Mitteilungen
+\family default
+.
+\end_layout
+
+\begin_layout Subsection
+Countdowns
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Countdowns"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um einen Countdown laufen zu lassen, klicken Sie auf 
+\begin_inset Graphics
+	filename clipart/Neuer-Countdown.jpg
+	scale 70
+
+\end_inset
+
+ und dann auf 
+\begin_inset Graphics
+	filename clipart/Bearbeiten-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ Geben Sie als 
+\family sans
+Beschreibung
+\family default
+ einen kurzen Text ein, der später unter der Zeit erscheint.
+ Als 
+\family sans
+Startzeit
+\family default
+ geben Sie eine Zeit im Format 
+\family sans
+mm:ss
+\family default
+ (Minuten:Sekunden, z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B: 
+\begin_inset Quotes gld
+\end_inset
+
+5:00
+\begin_inset Quotes grd
+\end_inset
+
+) ein und klicken anschließend auf 
+\begin_inset Graphics
+	filename clipart/Haken-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ Mit Klick auf 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol.jpg
+	scale 70
+
+\end_inset
+
+ wird der Countdown angezeigt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Countdown-Beispiel.jpg
+	lyxscale 25
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es ist möglich mehrere Countdowns gleichzeitig zu projizieren.
+ Die Voreinstellung von 60
+\begin_inset space \thinspace{}
+\end_inset
+
+s für die Länge neuer Countdowns kann im Menü 
+\family sans
+Einstellungen\SpecialChar \menuseparator
+Projektor
+\family default
+ geändert werden, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Projektor"
+
+\end_inset
+
+.
+ Die Zeit der Countdowns wird unter 30
+\begin_inset space \thinspace{}
+\end_inset
+
+s orange eingefärbt.
+ Diese Zeit kann im Menü 
+\family sans
+Einstellungen\SpecialChar \menuseparator
+Tagesordnung
+\family default
+ geändert werden, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Tagesordnung"
+
+\end_inset
+
+.
+ Nach dem Ablauf wird die Zeit rot eingefärbt und läuft negativ.
+\end_layout
+
+\begin_layout Standard
+Um für jede Rede einen Countdown mitlaufen zu lassen, muss im Menü 
+\family sans
+Einstellungen\SpecialChar \menuseparator
+Tagesordnung
+\family default
+ die Option 
+\family sans
+Countdown mit der Redeliste verkoppeln
+\family default
+ ausgewählt sein.
+ Dadurch werden alle existierenden Countdowns automatisch gestartet, wenn
+ eine Rede begonnen wird.
+ Ob, welcher und wie viele Countdowns projiziert werden, kann durch das
+ Klicken auf 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol.jpg
+	scale 70
+
+\end_inset
+
+ festgelegt werden.
+\end_layout
+
+\begin_layout Subsection
+Mitteilungen
+\end_layout
+
+\begin_layout Standard
+Um etwas mitzuteilen, klicken Sie auf 
+\begin_inset Graphics
+	filename clipart/Neue-Mitteilung.jpg
+	scale 70
+
+\end_inset
+
+ und rechts oben in der Mitteilung auf 
+\begin_inset Graphics
+	filename clipart/Bearbeiten-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ Geben Sie nun einen Text ein und klicken anschließend auf das Symbol 
+\begin_inset Graphics
+	filename clipart/Haken-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ Klicken Sie auf 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol.jpg
+	scale 70
+
+\end_inset
+
+, wird die Mitteilung projiziert.
+ Es kann immer nur eine Mitteilung projiziert werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Mitteilung-Essen.jpg
+	lyxscale 25
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tagesordnung
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Tagesordnung"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Verwaltung der Tagesordnung ist im Menü 
+\family sans
+Tagesordnung
+\family default
+ angelegt.
+ Dort wird die Tagesordnung in einer editierbaren Liste angezeigt.
+\end_layout
+
+\begin_layout Subsection
+Tagesordnungspunkte erstellen und bearbeiten
+\end_layout
+
+\begin_layout Standard
+Um einen neuen Tagesordnungspunkt zu erstellen, klickt man oben rechts auf
+ 
+\begin_inset Graphics
+	filename clipart/Neu-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ Der Text der Tagesordnung kann frei formatiert werden und er kann auch
+ Bilder und Weblinks enthalten.
+ Im Feld 
+\family sans
+Anhang
+\family default
+ können Sie aus allen in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ verfügbaren Dateien einen Anhang wählen.
+ Mehr zu Dateien siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Dateien"
+
+\end_inset
+
+.
+ Die Anhänge werden nicht mit projiziert, sie dienen nur für zusätzliche
+ Informationen.
+\end_layout
+
+\begin_layout Standard
+Der Inhalt von Tagesordnungspunkten kann jederzeit geändert werden, insbesondere
+ während der Veranstaltung.
+ Dazu zeigt man mit der Maus auf einen Tagesordnungspunkt und es erscheint
+ ein Kontextmenü:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/TOP-mit-Menü.jpg
+	scale 95
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Klickt man dort auf 
+\family sans
+Bearbeiten
+\family default
+, kann man den Tagesordnungspunkt bearbeiten.
+ Als Alternative für das Bearbeiten kann man im Kontextmenü auf 
+\family sans
+Quick-Edit
+\family default
+ klicken und so oft benötigte Dinge wie die 
+\family sans
+Dauer
+\family default
+ ändern:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/TOP-QuickEdit.jpg
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+Kommentare
+\family default
+ dienen nur als Hinweis und werden nicht projiziert.
+ Sie sind nur für die Versammlungsleitung sichtbar.
+\end_layout
+
+\begin_layout Subsection
+Einrichtung eigener Folien
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Einrichtung-eigener-Folien"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eigene Folien werden verwendet, um Dinge außerhalb der offiziellen Tagesordnung
+ zu behandeln.
+ Technisch sind sie jedoch dasselbe wie ein Tagesordnungspunkt.
+ Das Erstellen einer eigenen Folie funktioniert daher genauso wie das Erstellen
+ eines Tagesordnungspunkts, nur dass es wichtig ist, dass die Option 
+\family sans
+Als Tagesordnungspunkt anzeigen
+\family default
+ 
+\emph on
+nicht
+\emph default
+ ausgewählt ist.
+\end_layout
+
+\begin_layout Standard
+Eigene Folien werden in der Übersicht rosa unterlegt, um anzuzeigen, dass
+ sie nicht Teil der offiziellen Tagesordnung sind.
+\end_layout
+
+\begin_layout Subsection
+Tagesordnungspunkte sortieren und nummerieren
+\end_layout
+
+\begin_layout Standard
+Die Tagesordnungspunkte werden entsprechend der aktuellen Sortierung mit
+ dem Knopf 
+\begin_inset Graphics
+	filename clipart/Tagesordnung-nummerieren.jpg
+	scale 70
+
+\end_inset
+
+ nummeriert.
+ Die Art der Nummerierung kann über die Einstellungen festgelegt werden,
+ siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Tagesordnung"
+
+\end_inset
+
+.
+ So sieht eine Tagesordnung aus, bei der römische Nummerierung und der Präfix
+ 
+\begin_inset Quotes gld
+\end_inset
+
+TOP
+\begin_inset Quotes grd
+\end_inset
+
+ gewählt wurde:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Tagesordnung-speziell-nummeriert.jpg
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Reihenfolge der Tagesordnungspunkte kann jederzeit verändert werden
+ und man kann Tagesordnungspunkte zu Unterpunkten machen.
+ Dazu klickt man oben auf den Knopf 
+\begin_inset Graphics
+	filename clipart/Tagesordnung-sortieren.jpg
+	scale 70
+
+\end_inset
+
+ und zieht mit gedrückter linker Maustaste einen Punkt an die gewünschte
+ Stelle.
+ Um aus einem Punkt einen Unterpunkt zu machen, schiebt man ihn etwas nach
+ rechts, bis er einrastet.
+ Um einen Unterpunkt zu einem Hauptpunkt zu machen, schiebt man ihn nach
+ links.
+ Nach der Änderung der Reihenfolge muss man 
+\begin_inset Graphics
+	filename clipart/Tagesordnung-nummerieren.jpg
+	scale 70
+
+\end_inset
+
+ drücken, um die Nummerierung zu aktualisieren.
+\end_layout
+
+\begin_layout Subsection
+Projektion der Tagesordnung
+\end_layout
+
+\begin_layout Standard
+Die komplette Tagesordnung wird projiziert, wenn man auf das Symbol
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename clipart/Tagesordnung-projizieren.jpg
+	scale 70
+
+\end_inset
+
+ klickt.
+ Durch Drücken von 
+\begin_inset Graphics
+	filename clipart/Untermenü-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ neben dem Symbol, kann man wählen, ob alle Tagesordnungspunkte oder nur
+ die Hauptpunkte angezeigt werden.
+ Eigene Folie werden in der Tagesordnung nicht projiziert.
+\end_layout
+
+\begin_layout Standard
+Einzelne Tagesordnungspunkte werden projiziert, indem man auf das Symbol
+ 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol.jpg
+	scale 70
+
+\end_inset
+
+ vor dem entsprechenden Eintrag klickt.
+ So können eigene Folien projiziert werden.
+\end_layout
+
+\begin_layout Subsection
+Redeliste verwalten
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Rednerliste-verwalten"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ verfügt bei jedem Tagesordnungseintrag über eine Redelistenfunktion.
+ Um eine Redeliste zu erstellen oder zu bearbeiten, klickt man im Kontextmenü
+ des jeweiligen Tagesordnungspunkts auf 
+\family sans
+Redeliste
+\family default
+.
+ Alternativ klickt man auf den Tagesordnungspunkt und dann auf 
+\begin_inset Graphics
+	filename clipart/Redeliste-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Mit einem Klick auf 
+\begin_inset Graphics
+	filename clipart/Redeliste+Mich.jpg
+	scale 70
+
+\end_inset
+
+ kann man sich selbst auf die Redeliste setzen.
+ Administratoren können jeden auf die Redeliste setzen und durch Klicken
+ von 
+\begin_inset Graphics
+	filename clipart/Redner-entfernen.jpg
+	scale 70
+
+\end_inset
+
+ jeden von der Liste nehmen.
+\end_layout
+
+\begin_layout Standard
+Die Redeliste wird durch Klicken auf 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol-Redeliste.jpg
+	scale 70
+
+\end_inset
+
+ projiziert.
+ Durch Drücken von 
+\begin_inset Graphics
+	filename clipart/Rede-beginnen.jpg
+	scale 70
+
+\end_inset
+
+ wird eine Rede gestartet.
+ Der Name des Redners wird nun im Projektor angezeigt.
+\end_layout
+
+\begin_layout Standard
+Um für jede Rede einen Countdown mitlaufen zu lassen, muss in den Einstellungen,
+ siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Tagesordnung"
+
+\end_inset
+
+, die Option 
+\family sans
+Countdown mit der Redeliste verkoppeln
+\family default
+ ausgewählt sein.
+ Dadurch werden alle existierenden Countdowns automatisch gestartet, wenn
+ eine Rede begonnen wird.
+ Ob, welcher und wie viele Countdowns projiziert werden, kann durch das
+ Klicken auf 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol.jpg
+	scale 70
+
+\end_inset
+
+ vor den Countdowns festgelegt werden.
+ Mehr zu Countdowns ist in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Countdowns"
+
+\end_inset
+
+ beschrieben.
+\end_layout
+
+\begin_layout Standard
+Um die Rede zu beenden, klickt man auf 
+\begin_inset Graphics
+	filename clipart/Aktuelle-Rede-beenden.jpg
+	scale 70
+
+\end_inset
+
+ oder 
+\begin_inset Graphics
+	filename clipart/Rede-beenden.jpg
+	scale 70
+
+\end_inset
+
+.
+ Gibt es mehrere Redner, kann man mit Klicken auf 
+\begin_inset Graphics
+	filename clipart/Nächste-Rede-beginnen.jpg
+	scale 70
+
+\end_inset
+
+ die aktuelle Rede beenden und die nächste beginnen.
+\end_layout
+
+\begin_layout Standard
+In der Rubrik 
+\family sans
+Letzte Redner/innen
+\family default
+ kann man sich die letzten Redner als Liste anzeigen lassen.
+ Die letzten x
+\begin_inset space ~
+\end_inset
+
+Redner dieser Liste werden auch projiziert.
+ Die Anzahl der projizierten Redner kann eingestellt werden, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Tagesordnung"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Jede Redeliste ist erst einmal offen.
+ Das heißt, dass sich jeder angemeldete Teilnehmer auf die Redeliste setzen
+ kann.
+ Um die Redeliste zu schließen, damit das nicht mehr möglich ist, klickt
+ man den Knopf 
+\begin_inset Graphics
+	filename clipart/Redeliste-schließen.jpg
+	scale 70
+
+\end_inset
+
+.
+ Der Knopf ändert sich nun zu 
+\begin_inset Graphics
+	filename clipart/Redeliste-öffnen.jpg
+	scale 70
+
+\end_inset
+
+ und der neue Zustand wird im Projektor rot angezeigt.
+\end_layout
+
+\begin_layout Standard
+Die Reihenfolge der Redeliste kann jederzeit geändert werden.
+ Dazu klickt man auf das Symbol 
+\begin_inset Graphics
+	filename clipart/Redner-verschieben.jpg
+	scale 70
+
+\end_inset
+
+ vor dem Rednernamen, hält die Maustaste gedrückt und verschiebt den Redner
+ an die gewünschte Stelle.
+\end_layout
+
+\begin_layout Standard
+Am Ende der Veranstaltung kann man sämtliche Redelisten mit den jeweiligen
+ Redezeiten als CSV-Datei exportieren.
+ Dazu benötigt man das Plugin 
+\emph on
+CSV Export Plugin for OpenSlides
+\emph default
+, das in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Das-Plugin-CSV"
+
+\end_inset
+
+ beschrieben ist.
+\end_layout
+
+\begin_layout Subsection
+Tagesordnung drucken
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Tagesordnung-drucken"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Auf der Übersichtsseite der Tagesordnung kann man durch Klicken auf 
+\begin_inset Graphics
+	filename clipart/PDF-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ die gesamte Tagesordnung mit allen Unterpunkten (ohne eigene Folien) als
+ PDF-Datei abrufen.
+\end_layout
+
+\begin_layout Subsection
+Einstellungen
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Einstellungen-Tagesordnung"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im Menüpunkt 
+\family sans
+Einstellungen\SpecialChar \menuseparator
+Tagesordnung
+\family default
+ kann das Verhalten der Tagesordnung konfiguriert werden.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik Allgemein
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Präfix für Nummerierung von Tagesordnungspunkten
+\family default
+ kann man einen Präfix angeben, der vor der Nummer des Tagesordnungspunkts
+ angezeigt wird; z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+ 
+\begin_inset Quotes gld
+\end_inset
+
+TOP
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Nummerierungssystem für Tagesordnungspunkte
+\family default
+ kann die Nummerierung der Tagesordnungspunkte zwischen arabischen und römischen
+ Nummern umgeschaltet werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Beginn der Veranstaltung
+\family default
+ wird der genaue Beginn der Veranstaltung angegeben.
+ Das Eingabeformat ist dabei 
+\family sans
+TT.MM.JJJJ HH:MM
+\family default
+; also z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+ 
+\begin_inset Quotes gld
+\end_inset
+
+
+\family sans
+02.03.2017
+\begin_inset space ~
+\end_inset
+
+10:00
+\family default
+
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik Redeliste
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Anzahl der dargestellten letzten Redner/innen auf dem Projektor
+\family default
+ kann die Anzahl der letzten Redner eingestellt werden, die als Liste über
+ der Liste der folgenden Redner angezeigt wird.
+ Im Projektor ist diese Liste in grauer Schrift:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Redeliste-Projektor.jpg
+	lyxscale 50
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Countdown in den letzten x Sekunden der Redezeit orange darstellen
+\family default
+ kann man einstellen, die wie viele der letzten Sekunden eines Countdowns
+ in orange dargestellt werden.
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\family sans
+Countdown mit der Redeliste verkoppeln
+\family default
+ werden bei Beginn jeder Rede alle existierenden Countdowns gestartet.
+ Mehr zu Countdowns siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Countdowns"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teilnehmer
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Teilnehmer"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Teilnehmerverwaltung ist im Menü 
+\family sans
+Teilnehmende
+\family default
+ angelegt.
+ Dort werden alle angelegten Teilnehmer in einer editierbaren Liste angezeigt.
+\end_layout
+
+\begin_layout Subsection
+Manuelles Anlegen
+\end_layout
+
+\begin_layout Standard
+Zum manuellen Anlegen eines neuen Teilnehmers klickt man oben rechts auf
+ 
+\begin_inset Graphics
+	filename clipart/Neu-Teilnehmer-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ In der erscheinenden Eingabemaske können folgende Angaben gemacht werden:
+ 
+\end_layout
+
+\begin_layout Description
+Benutzername Benutzername des Teilnehmers, mit dem er sich in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ einloggt.
+\end_layout
+
+\begin_layout Description
+Titel optionaler Titel des Teilnehmers.
+ Dieser wird z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+ in Redelisten vor dem Namen angezeigt
+\end_layout
+
+\begin_layout Description
+Vorname Vorname 
+\end_layout
+
+\begin_layout Description
+Nachname Nachname
+\end_layout
+
+\begin_layout Description
+Gliederungsebene optionale Angabe der Mitgliedschaft in einer Organisation.
+ Bei Veranstaltungen von Vereinen kann man so z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+ für Vorstandsmitglieder 
+\begin_inset Quotes gld
+\end_inset
+
+Vorstand
+\begin_inset Quotes grd
+\end_inset
+
+ eintragen.
+ Die Gliederungsebene wird z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+ in Redelisten nach dem Namen angezeigt
+\end_layout
+
+\begin_layout Description
+Gruppen Gruppe(n), der der Teilnehmer in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ angehört.
+ Man kann nacheinander mehrere Gruppen auswählen.
+ Mehr dazu siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Gruppen"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Voreingestelltes
+\begin_inset space ~
+\end_inset
+
+Passwort Das Erst-Passwort für den Teilnehmer.
+ Wird keines angegeben, wird automatisch eins generiert, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Passwort-und-Zugangsdaten"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Kommentar optionaler Kommentar zum Teilnehmer
+\end_layout
+
+\begin_layout Description
+Über
+\begin_inset space ~
+\end_inset
+
+mich optionale persönliche Informationen zum Teilnehmer
+\end_layout
+
+\begin_layout Description
+Ist
+\begin_inset space ~
+\end_inset
+
+anwesend Anwesenheitsstatus, der später auch direkt in der Teilnehmerliste
+ gesetzt werden kann.
+\end_layout
+
+\begin_layout Description
+Ist
+\begin_inset space ~
+\end_inset
+
+aktiv Option, die bestimmt, ob der Teilnehmer als aktiv behandelt werden
+ soll.
+ Man kann ihn so deaktivieren, ohne ihn zu löschen.
+\end_layout
+
+\begin_layout Standard
+In der Praxis kann es sein, dass man oft nicht mehr angibt als den Namen.
+ Es ist daher auch möglich Teilnehmer anzulegen, indem man oben rechts auf
+ 
+\begin_inset Graphics
+	filename clipart/Importieren-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ klickt.
+ Dort gibt man in das Textfeld nur den Vor- und Nachnamen ein.
+ Mit weiteren Zeilen im Textfeld können auch gleich mehrere Teilnehmer angelegt
+ werden.
+ Abschließend klickt man auf 
+\begin_inset Graphics
+	filename clipart/Importieren-Knopf.jpg
+	scale 70
+
+\end_inset
+
+.
+ In der Teilnehmerliste, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Teilnehmerliste"
+
+\end_inset
+
+, kann man nachträglich weitere Informationen hinzufügen.
+\end_layout
+
+\begin_layout Subsection
+Automatisiertes Anlegen
+\end_layout
+
+\begin_layout Standard
+Teilnehmer können automatisiert aus einer Liste importiert werden.
+ Dazu muss eine CSV-Datei erstellt werden.
+ Dies ist eine Textdatei (die üblicherweise die Endung 
+\family sans
+.csv
+\family default
+ oder seltener 
+\family sans
+.txt
+\family default
+ hat).
+ Ihre erste Zeile muss aus dieser Zeile bestehen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+title,first_name,last_name,structure_level,groups,comment,is_active
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es folgen dann je eine Zeile für jeden Teilnehmer.
+ Ein Eintrag für einen Teilnehmer wäre z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Prof.
+ Dr.,Max,Käßmann,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+3,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Die geschweiften Klammern verhindern, dass aus zwei aufeinanderfolgenden
+ Kommas ein Anführungszeichen gemacht wird.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Jedes Komma trennt die Eigenschaften voneinander.
+ Gibt es eine Eigenschaft nicht, folgen die Kommas direkt aufeinander.
+ Es muss jedoch mindestens der Vor- und Nachname angegeben werden.
+ Bei der Anwesenheit bedeutet '1', dass die Person anwesend ist oder sein
+ wird, ansonsten verwendet man '0' oder nichts.
+\begin_inset Newline newline
+\end_inset
+
+Bei der Gruppe wird nicht deren Name, sondern deren Nummer angegeben.
+ Voreingestellt in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ ist Gruppe
+\begin_inset space ~
+\end_inset
+
+
+\family sans
+3
+\family default
+ für 
+\emph on
+Delegierte
+\emph default
+ und Gruppe
+\begin_inset space ~
+\end_inset
+
+
+\family sans
+4
+\family default
+ für 
+\emph on
+Mitarbeitende
+\emph default
+; Details dazu siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Gruppen"
+
+\end_inset
+
+.
+ Soll ein Teilnehmer in mehreren Gruppen sein, werden diese durch Komma
+ getrennt in Anführungszeichen gesetzt also z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+,Žusan,Oltrán,Vorstand,"3,4",kommt 15 Minuten später,
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Achtung:
+\series default
+ Die Gruppen
+\begin_inset space ~
+\end_inset
+
+1 und 2 werden von OpenSlides automatisch vergeben.
+ Man darf diese Gruppennummern in der der CSV-Datei nicht vergeben, da der
+ Teilnehmer sonst nicht angelegt wird.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zum Importieren klickt man oben rechts auf 
+\begin_inset Graphics
+	filename clipart/Importieren-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ Dort stellt man in der Rubrik 
+\family sans
+Import von CSV-Datei
+\family default
+ die 
+\family sans
+Kodierung
+\family default
+ auf UTF-8.
+ Das stellt sicher, dass Namen mit Akzenten, Umlauten usw.
+\begin_inset space \space{}
+\end_inset
+
+korrekt importiert werden.
+ Dazu muss die CSV-Datei auch mit der Kodierung UTF-8 gespeichert worden
+ sein.
+ (Dafür reicht es bei den meisten Editor-Programmen aus, dass man Unicode
+ für die Kodierung einstellt, falls das nicht schon automatisch die Voreinstellu
+ng ist.) Nun klickt man auf den Knopf 
+\family sans
+Durchsuchen
+\family default
+ und wählt eine CSV-Datei aus.
+ Nach wenigen Sekunden sieht man in der Vorschau was importiert werden wird:
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Den Inhalt der CSV-Datei, die für dieses Bildschirmfoto verwendet wurde,
+ ist in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Beispiel-für-Teilnehmer"
+
+\end_inset
+
+ zu finden.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Import-Teilnehmer-Vorschau.jpg
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und kann die CSV-Datei noch ändern, falls es Fehler gibt.
+ Zum Import drückt man auf den blauen Knopf 
+\family sans
+x
+\begin_inset space ~
+\end_inset
+
+Teilnehmende
+\begin_inset space ~
+\end_inset
+
+importieren
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Der Benutzername, mit dem sich ein importierter Teilnehmer bei 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ einloggt, ist immer 
+\family sans
+Vorname
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+Nachnahme
+\family default
+ (z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+
+\family sans
+ Žusan
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+Oltrán
+\family default
+).
+ Gibt es mehrere Personen mit exakt dem gleichen Namen, hat eine davon den
+ Zusatz '
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+1' (z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+
+\family sans
+ Žusan
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+Oltrán
+\begin_inset space \textvisiblespace{}
+\end_inset
+
+1
+\family default
+).
+\end_layout
+
+\begin_layout Standard
+CSV-Dateien lassen sich übrigens recht einfach mit gängigen Tabellenkalkulations
+programmen wie 
+\noun on
+
+\begin_inset CommandInset href
+LatexCommand href
+name "LibreOffice"
+target "http://www.libreoffice.org/"
+
+\end_inset
+
+
+\noun default
+ oder 
+\noun on
+Excel
+\noun default
+ erstellen.
+ Dazu erstellt man einfach eine Tabelle in dieser Form:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="7">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+title
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+first_name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+last_name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+structure_level
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+groups
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+comment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+is_active
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+John
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Doe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+abc
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und speichert sie als CSV-Datei mit der Kodierung 
+\emph on
+UTF-8
+\emph default
+ und dem Komma als Trennzeichen.
+ Es können so bestehende Mitgliedslisten für 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ aufbereitet werden.
+\end_layout
+
+\begin_layout Subsection
+Teilnehmerliste
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Teilnehmerliste"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Alle Teilnehmer werden in der Teilnehmerliste aufgeführt.
+ Die Liste kann durchsucht werden und man kann sie so modifizieren, dass
+ durch Klicken auf 
+\begin_inset Graphics
+	filename clipart/Teilnehmer-Filter-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ nur Teilnehmer bestimmter Gruppen oder nur anwesende Teilnehmer angezeigt
+ werden.
+ Durch Klicken auf eine Spaltenüberschrift wird die Liste entsprechend sortiert.
+ In der Spalte 
+\family sans
+Anwesend
+\family default
+ kann jederzeit die Anwesenheit eingestellt werden.
+\end_layout
+
+\begin_layout Standard
+Durch das Klicken auf den Namen eines Teilnehmers, werden dessen Daten angezeigt.
+ Durch Klicken unterhalb des Namens kann man den Teilnehmer bearbeiten oder
+ löschen.
+ Für das Bearbeiten erscheint dieselbe Eingabemaske wie beim manuellen Anlegen.
+\end_layout
+
+\begin_layout Standard
+Durch Klicken auf 
+\begin_inset Graphics
+	filename clipart/Teilnehmer-Auswählen-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ können mehrere Teilnehmer ausgewählt und für diese eine bestimmte Operation
+ durchgeführt werden.
+\end_layout
+
+\begin_layout Standard
+Die Teilnehmerliste kann auch als PDF ausgedruckt werden, wenn man auf das
+ Symbol 
+\begin_inset Graphics
+	filename clipart/PDF-Teilnehmer.jpg
+	scale 70
+
+\end_inset
+
+ und dann auf 
+\begin_inset Graphics
+	filename clipart/Teilnehmerliste-Export.jpg
+
+\end_inset
+
+ klickt.
+\end_layout
+
+\begin_layout Subsection
+Passwort und Zugangsdaten
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Passwort-und-Zugangsdaten"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Beim Anlegen eines Teilnehmers wird automatisch ein zufälliges Erst-Passwort
+ gesetzt, falls man nicht manuell ein Passwort angibt.
+ Die Erst-Passwörter aller Teilnehmer sind in einer Datei hinterlegt, die
+ durch Klick auf das Symbol 
+\begin_inset Graphics
+	filename clipart/PDF-Teilnehmer.jpg
+	scale 70
+
+\end_inset
+
+ und dann auf 
+\family sans
+Zugangsdatenliste
+\family default
+ angezeigt wird.
+ Dieses PDF ist so ausgelegt, dass man es ausdrucken und so jedem Teilnehmer
+ seine Zugangsdaten mitteilen kann.
+ Der Inhalt des PDFs kann über die Teilnehmereinstellungen geändert werden,
+ siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Benutzer"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Das Erst-Passwort sollte von jedem Teilnehmer schnellstmöglich geändert
+ werden.
+\end_layout
+
+\begin_layout Standard
+Administratoren haben die Möglichkeit das Passwort jedes Teilnehmers manuell
+ neu zu setzen, indem sie die Benutzerdaten bearbeiten.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Achtung:
+\series default
+ Beim Ändern des Passworts muss es zuerst geändert werden und an schließend
+ auf 
+\family sans
+Reset
+\family default
+ gedrückt gerden.
+ Das ist wichtig, denn ansonsten wird das neue Passwort nicht in die Datenbank
+ eingetragen, obwohl es im PDF mit den Zugangsdaten auftaucht.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Gruppen
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Gruppen"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Über die Zugehörigkeit zu einer Gruppe wird festgelegt, was ein Teilnehmer
+ bei der Veranstaltung und in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ darf.
+ Klick man auf 
+\begin_inset Graphics
+	filename clipart/Gruppen-Symbol.jpg
+	scale 70
+
+\end_inset
+
+, wird eine Liste mit allen aktuell existierenden Gruppen angezeigt.
+\end_layout
+
+\begin_layout Standard
+Klickt man auf den Namen einer Gruppe, werden deren Berechtigungen angezeigt.
+ Um die Gruppeneigenschaften zu ändern, klickt man auf 
+\begin_inset Graphics
+	filename clipart/Bearbeiten-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ Die aktuellen Berechtigungen sind blau unterlegt.
+ Um eine Berechtigung hinzuzufügen, hält man die 
+\family sans
+Strg
+\family default
+-Taste gedrückt und klickt dann auf die entsprechende Berechtigung.
+ Hält man die 
+\family sans
+Strg
+\family default
+-Taste gedrückt und klickt auf eine bereits ausgewählte Berechtigung, wird
+ diese abgewählt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color blue
+Achtung!
+\series default
+: Beim Ändern der Berechtigungen muss die 
+\family sans
+Strg
+\family default
+-Taste immer gedrückt gehalten sein, da sonst alle anderen Berechtigungen
+ automatisch abgewählt werden.
+\color inherit
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Dies ist 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "bug #2120"
+target "https://github.com/OpenSlides/OpenSlides/issues/2120"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Voreinstellungen-der-Teilnehmer-"
+
+\end_inset
+
+ listet die Voreinstellungen der Gruppen auf.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eine neue Gruppe kann durch Klicken auf 
+\begin_inset Graphics
+	filename clipart/Neu-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ erstellt werden.
+\end_layout
+
+\begin_layout Standard
+Die Gruppen 
+\family sans
+Gäste
+\family default
+ und 
+\family sans
+Registrierte
+\begin_inset space ~
+\end_inset
+
+Nutzer
+\family default
+ werden automatisch zugewiesen.
+ Alle angemeldeten Teilnehmer gehören zur Gruppe 
+\family sans
+Registrierte
+\begin_inset space ~
+\end_inset
+
+Nutzer
+\family default
+, alle unangemeldeten und damit anonymen Teilnehmer gehören zur Gruppe 
+\family sans
+Gäste
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Unangemeldete Teilnehmer können die Veranstaltung nur sehen, wenn im Menü
+ 
+\family sans
+Einstellungen\SpecialChar \menuseparator
+Allgemein\SpecialChar \menuseparator
+System
+\family default
+ die Option 
+\family sans
+Erlaube Zugriff für anonyme Gast-Nutzer
+\family default
+ aktiviert ist.
+\end_layout
+
+\begin_layout Subsection
+Einstellungen
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Einstellungen-Benutzer"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im Menü 
+\family sans
+Einstellungen\SpecialChar \menuseparator
+Benutzer
+\family default
+ können Einstellungen für die Benutzerverwaltung vorgenommen werden.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik Sortierung
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\family sans
+Benutzer nach Vornamen sortieren 
+\family default
+werden die Teilnehmer in der Teilnehmerliste nach Vornamen statt nach Nachnamen
+ sortiert.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik PDF
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Titel für das Zugangsdaten- und Begrüßungs-PDF
+\family default
+ wird der Titel eingegeben, der im PDF der Zugangsdaten erscheint, das man
+ an die Teilnehmer austeilen kann.
+ Mehr dazu siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Passwort-und-Zugangsdaten"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Hilfetext für das Zugangsdaten- und Willkommens-PDF
+\family default
+ wird der Text eingegeben, der im PDF der Zugangsdaten erscheint.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+System URL
+\family default
+ wird die URL angegeben, auf der sich die Teilnehmer einloggen können.
+ Dort läuft der 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ Server.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+WLAN-Name (SSID)
+\family default
+ kann der Name eines WLANs angegeben werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+WLAN-Passwort
+\family default
+ kann das Passwort für das WLAN angegeben werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+WLAN-Verschlüsselung
+\family default
+ kann die Verschlüsselung des WLANs angegeben werden.
+\end_layout
+
+\begin_layout Standard
+Die Angaben für das WLAN und die 
+\family sans
+System URL
+\family default
+ erscheinen im PDF der Zugangsdaten und werden auch im QR-Code in diesem
+ PDF berücksichtigt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Anträge
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Anträge"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Manuelles Erstellen von Anträgen
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Manuelles-Erstellen-von"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um einen neuen Antrag zu erstellen, klickt man im Menü 
+\family sans
+Anträge
+\family default
+ oben auf 
+\begin_inset Graphics
+	filename clipart/Neu-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ In der erscheinenden Eingabemaske wird der Antragsteller, der Titel des
+ Antrags, der Antragstext und die Begründung eingetragen.
+\end_layout
+
+\begin_layout Standard
+Wird die Option 
+\family sans
+Als Tagesordnungspunkt anzeigen
+\family default
+ ausgewählt, erscheint die Wahl als Tagesordnungspunkt.
+ Ansonsten erscheint die Wahl in der Tagesordnungsübersicht als eigene Folie.
+ Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einrichtung-eigener-Folien"
+
+\end_inset
+
+ für mehr zu eigenen Folien.
+ Mit der Option 
+\family sans
+Erweiterte Felder anzeigen 
+\family default
+kann außerdem ein Sachgebiet,
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Sachgebiete"
+
+\end_inset
+
+ für Infos zu Sachgebieten.
+\end_layout
+
+\end_inset
+
+ Schlagwörter,
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Schlagwörter "
+
+\end_inset
+
+ für Infos zu Schlagwörtern.
+\end_layout
+
+\end_inset
+
+ die Unterstützer und der Arbeitsablauf
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Arbeitsablauf-und-Status"
+
+\end_inset
+
+ für Infos zu Arbeitsabläufen.
+\end_layout
+
+\end_inset
+
+ angegeben werden.
+\end_layout
+
+\begin_layout Standard
+Klickt man oben auf 
+\begin_inset Graphics
+	filename clipart/PDF-Symbol.jpg
+	scale 70
+
+\end_inset
+
+, wird ein PDF mit der Übersicht aller angelegten Anträge generiert.
+ Den Titel und Inhalt des PDFs kann man über die Einstellungen festlegen,
+ siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Anträge"
+
+\end_inset
+
+.
+ Es erscheint im PDF zuerst die Liste aller Sachgebiete, dann die Liste
+ der Anträge und schlussendlich jeder Antrag komplett mit Begründung.
+ Die Anträge können so auch ausgedruckt und verteilt werden.
+\end_layout
+
+\begin_layout Subsection
+Automatisiertes Erstellen von Anträgen
+\end_layout
+
+\begin_layout Standard
+Anträge können automatisiert aus einer Liste importiert werden.
+ Dazu muss eine CSV-Datei erstellt werden.
+ Dies ist eine Textdatei (die üblicherweise die Endung 
+\family sans
+.csv
+\family default
+ oder seltener 
+\family sans
+.txt
+\family default
+ hat).
+ Ihre erste Zeile muss aus dieser Zeile bestehen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+identifier,title,text,reason,submitter,category
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es folgen dann je eine Zeile für jeden Antrag.
+ Ein Eintrag für einen Antrag wäre z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.:
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+Kat A-1,Satzungsänderung,"Die Mitgliederversammlung möge beschließen, in
+ §8 Absatz 1 der Vereinssatzung die Zahl fünf durch sieben zu ersetzen.",Die
+ vielen Aufgaben erfordern eine Erweiterung des Beirates auf sieben Mitglieder.,D
+r.
+ Hans Schulze,Kategorie A
+\end_layout
+
+\begin_layout Standard
+Jedes Komma trennt die Eigenschaften voneinander.
+ Gibt es eine Eigenschaft nicht, folgen die Kommas direkt aufeinander.
+ Es muss jedoch mindestens der Titel und Text angegeben werden.
+ Enthält eine Eigenschaft ein Komma, muss die Eigenschaft in doppelte Anführungs
+zeichen gesetzt werden.
+ Dies wurde in obigem Beispiel für den Antragstext gemacht.
+ Beim Antragsteller ist es wichtig, dass er mit seinem Titel angegeben wird.
+ In obigem Beisiel ist der Benutzername bei 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ zwar 
+\begin_inset Quotes gld
+\end_inset
+
+Hans Schulze
+\begin_inset Quotes grd
+\end_inset
+
+, hier muss er aber als 
+\begin_inset Quotes gld
+\end_inset
+
+Dr.
+ Hans Schulze
+\begin_inset Quotes grd
+\end_inset
+
+ angegeben werden, wenn er mit diesem Titel in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ angelegt ist.
+\end_layout
+
+\begin_layout Standard
+Zum Importieren klickt man oben rechts auf 
+\begin_inset Graphics
+	filename clipart/Importieren-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ Dort stellt man in der Rubrik 
+\family sans
+Import von CSV-Datei
+\family default
+ die 
+\family sans
+Kodierung
+\family default
+ auf UTF-8.
+ Das stellt sicher, dass Namen mit Akzenten, Umlauten usw.
+\begin_inset space \space{}
+\end_inset
+
+korrekt importiert werden.
+ Dazu muss die CSV-Datei auch mit der Kodierung UTF-8 gespeichert worden
+ sein.
+ (Dafür reicht es bei den meisten Editor-Programmen aus, dass man Unicode
+ für die Kodierung einstellt, falls das nicht schon automatisch die Voreinstellu
+ng ist.) Nun klickt man auf den Knopf 
+\family sans
+Durchsuchen
+\family default
+ und wählt eine CSV-Datei aus.
+ Nach wenigen Sekunden sieht man in der Vorschau was importiert werden wird:
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Den Inhalt der CSV-Datei, die für dieses Bildschirmfoto verwendet wurde,
+ ist in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Beispiel-für-Antrag"
+
+\end_inset
+
+ zu finden.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Import-Anträge-Vorschau.jpg
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und kann die CSV-Datei noch ändern, falls es Fehler gibt.
+ Wie man sieht, werden noch nicht existierende Kategorien und Antragsteller
+ beim Importieren automatisch angelegt.
+ Zum Import drückt man auf den blauen Knopf 
+\family sans
+x
+\begin_inset space ~
+\end_inset
+
+Anträge
+\begin_inset space ~
+\end_inset
+
+importieren
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+Gibt es bereits einen Antrag mit demselben Bezeichner, wird der Antrag nicht
+ importiert.
+ Gibt es einen Antrag mit demselben Titel bereits, wird dieser importiert,
+ da der Antragsteller das nicht wissen kann.
+ Man muss diesem Antrag dann manuell einen geeigneten Titel geben.
+\end_layout
+
+\begin_layout Standard
+CSV-Dateien lassen sich übrigens recht einfach mit gängigen Tabellenkalkulations
+programmen wie 
+\noun on
+
+\begin_inset CommandInset href
+LatexCommand href
+name "LibreOffice"
+target "http://www.libreoffice.org/"
+
+\end_inset
+
+
+\noun default
+ oder 
+\noun on
+Excel
+\noun default
+ erstellen.
+ Dazu erstellt man einfach eine Tabelle in dieser Form:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="6">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="10col%">
+<column alignment="center" valignment="top" width="8col%">
+<column alignment="center" valignment="top" width="22col%">
+<column alignment="center" valignment="top" width="22col%">
+<column alignment="center" valignment="top" width="11col%">
+<column alignment="center" valignment="top" width="10col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+identifier
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+title
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+text
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+reason
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+submitter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+category
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Kat A-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Sat\SpecialChar \-
+zungs\SpecialChar \-
+ände\SpecialChar \-
+rung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Die Mitgliederversammlung möge beschließen, in §8 Absatz 1 der Vereinssatzung
+ die Zahl fünf durch sieben zu ersetzen.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Die vielen Aufgaben erfordern eine Erweiterung des Beirates auf sieben Mitgliede
+r.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Dr.
+ Hans Schulze
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Kate\SpecialChar \-
+gorie
+\begin_inset space ~
+\end_inset
+
+A
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und speichert sie als CSV-Datei mit der Kodierung 
+\emph on
+UTF-8
+\emph default
+ und dem Komma als Trennzeichen.
+ Es können so bestehende Mitgliedslisten für 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ aufbereitet werden.
+\end_layout
+
+\begin_layout Subsection
+Bearbeiten von Anträgen
+\end_layout
+
+\begin_layout Standard
+Der Inhalt von Anträgen kann jederzeit geändert werden, insbesondere während
+ der Veranstaltung.
+ Dazu zeigt man mit der Maus auf einen Antrag und es erscheint ein Kontextmenü:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Antrag-mit-Menü.jpg
+	scale 95
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Klickt man dort auf 
+\family sans
+Bearbeiten
+\family default
+, kann man den Antrag bearbeiten.
+ Als Alternative für das Bearbeiten kann man im Kontextmenü auf 
+\family sans
+Quick-Edit
+\family default
+ klicken und so oft benötigte Dinge ändern:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Antrag-QuickEdit.jpg
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bei Anträgen mit komplexem Arbeitsablauf,
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Komplexer-Arbeitsablauf"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ wird bei jeder Änderung des Antrags eine neue Version angelegt, so dass
+ die Änderungen direkt miteinander verglichen werden können.
+ Für mehr zur Versionierung siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Versionierung"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Strukturierung von Anträgen
+\end_layout
+
+\begin_layout Standard
+Um bei 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ die eingetragenen Anträge zu strukturieren, kann man die Einordnung in
+ Sachgebiete, die automatische Nummerierung und Schlagwörter nutzen.
+\end_layout
+
+\begin_layout Subsubsection
+Nummerierung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ nummeriert alle Anträge automatisch, je nachdem welche Voreinstellungen
+ man vorgenommen hat, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Anträge"
+
+\end_inset
+
+.
+ Beim komplexen Arbeitsablauf erfolgt die Nummerierung erst, wenn der Antrag
+ „
+\emph on
+zugelassen
+\emph default
+“, „
+\emph on
+zurückgezogen
+\emph default
+“ oder „
+\emph on
+verworfen
+\emph default
+“ wurde.
+ Man kann die Nummer beziehungsweise den Bezeichner nachträglich ändern,
+ indem man den Antrag bearbeitet.
+\end_layout
+
+\begin_layout Subsubsection
+Sachgebiete
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Sachgebiete"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Klickt man im Menü 
+\family sans
+Anträge
+\family default
+ oben auf 
+\begin_inset Graphics
+	filename clipart/Sachgebiete.jpg
+	scale 70
+
+\end_inset
+
+, kann man bestehende Sachgebiete bearbeiten oder mit 
+\begin_inset Graphics
+	filename clipart/Neu-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ neue erstellen.
+ Zum Bearbeiten fährt man mit der Maus über den Sachgebietstitel und klickt
+ dann auf das erscheinende Menü.
+\end_layout
+
+\begin_layout Standard
+Beim Erstellen gibt man in das Feld 
+\family sans
+Präfix
+\family default
+ einen Präfix ein, der verwendet wird, wenn in den Einstellungen die Nummerierun
+g 
+\family sans
+pro
+\begin_inset space ~
+\end_inset
+
+Sachgebiet
+\family default
+ eingestellt ist, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Anträge"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Wird einem Antrag nachträglich ein anderes Sachgebiet zugewiesen, wird dessen
+ Nummerierung nicht automatisch verändert um Missverständnisse zu vermeiden.
+ Die Nummerierung kann aber manuell angepasst werden, wenn das notwendig
+ ist.
+\end_layout
+
+\begin_layout Subsubsection
+Schlagwörter
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Schlagwörter "
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Klickt man im Menü 
+\family sans
+Anträge
+\family default
+ oben auf 
+\begin_inset Graphics
+	filename clipart/Schlagwörter.jpg
+	scale 70
+
+\end_inset
+
+, kann man bestehende Schlagwörter bearbeiten oder mit 
+\begin_inset Graphics
+	filename clipart/Neu-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ neue erstellen.
+ Zum Bearbeiten fährt man mit der Maus über den Schlagworttitel und klickt
+ dann auf das erscheinende Menü.
+\end_layout
+
+\begin_layout Standard
+Gibt man in einem Suchfeld von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ den Namen eines Schlagworts ein, erscheinen alle damit verknüpften Anträge.
+ In der Antragsliste erscheint das oder die Schlagwörter hinter dem Titel.
+ In diesem Beispiel wurde das Schlagwort 
+\begin_inset Quotes gld
+\end_inset
+
+Soziales
+\begin_inset Quotes grd
+\end_inset
+
+ verknüpft:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Schlagwort-im-Antrag.jpg
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Arbeitsablauf und Status
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Arbeitsablauf-und-Status"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ bietet zwei Arbeitsabläufe mit verschiedenen Status, in denen sich ein
+ Antrag befinden kann:
+\end_layout
+
+\begin_layout Description
+Einfacher
+\begin_inset space ~
+\end_inset
+
+Arbeitsablauf Dabei kann bei der Verwaltung eines eingereichten Antrags
+ zwischen den Status „
+\emph on
+angenommen
+\emph default
+“, „
+\emph on
+abgelehnt
+\emph default
+“ und „
+\emph on
+nicht entschieden
+\emph default
+“ gewählt werden.
+\end_layout
+
+\begin_layout Description
+Komplexer
+\begin_inset space ~
+\end_inset
+
+Arbeitsablauf Dabei ist der Antrag zunächst im Status „
+\emph on
+veröffentlicht
+\emph default
+“ und es besteht die Option, den Antrag „
+\emph on
+zuzulassen
+\emph default
+“, „
+\emph on
+zurückzuziehen
+\emph default
+“ oder als nicht zulässig zu „
+\emph on
+verwerfen
+\emph default
+“.
+ Ist der Antrag „
+\emph on
+zugelassen
+\emph default
+“, kann danach gewählt werden, ob der Antrag „
+\emph on
+angenommen
+\emph default
+“, „
+\emph on
+abgelehnt
+\emph default
+“, „
+\emph on
+zurückgezogen
+\emph default
+“, „
+\emph on
+vertagt
+\emph default
+“, „
+\emph on
+nicht
+\begin_inset space ~
+\end_inset
+
+befass
+\emph default
+t“, „
+\emph on
+in
+\begin_inset space ~
+\end_inset
+
+einen
+\begin_inset space ~
+\end_inset
+
+Ausschuss
+\begin_inset space ~
+\end_inset
+
+verwiesen
+\emph default
+“ wird oder er ein „
+\emph on
+Review
+\begin_inset space ~
+\end_inset
+
+benötigt
+\emph default
+“.
+\end_layout
+
+\begin_layout Standard
+Der Status eines Antrags kann geändert werden, indem man in der Antragsliste
+ auf den Titels eines Antrags klickt und dann auf 
+\begin_inset Graphics
+	filename clipart/Status-Antrag.jpg
+	scale 70
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In bestimmten Status können die Antragsteller den Antrag noch selbst bearbeiten,
+ in anderen ist dies gesperrt.
+ Ebenso kann der Administrator in bestimmten Status eine Abstimmung ausrufen,
+ siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Abstimmungen-Antrag"
+
+\end_inset
+
+, in anderen nicht.
+ Ist das Unterstützersystem in den Einstellungen aktiviert, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Anträge"
+
+\end_inset
+
+, können Teilnehmer einen Antrag nur im jeweiligen Anfangsstatus unterstützen.
+\end_layout
+
+\begin_layout Standard
+Es folgt eine Übersicht über die beiden Arbeitsabläufe mit allen Status:
+\end_layout
+
+\begin_layout Subsubsection
+Einfacher Arbeitsablauf
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Einfacher_Arbeitsablauf.jpg
+	lyxscale 33
+	width 75col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema des einfachen Arbeitsablaufs.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Berechtigungen beim einfachen Arbeitsablauf.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="middle">
+<column alignment="center" valignment="middle">
+<column alignment="center" valignment="middle" width="12col%">
+<column alignment="center" valignment="middle">
+<column alignment="center" valignment="middle" width="14col%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Status 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Eingereicht
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ange\SpecialChar \-
+nommen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Abgelehnt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nicht entschieden
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Antragsteller darf bearbeiten
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unterstützung möglich 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Abstimmung möglich
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Automatische Versionierung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Automatischer Bezeichner
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Komplexer Arbeitsablauf
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Komplexer-Arbeitsablauf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Komplexer_Arbeitsablauf.jpg
+	lyxscale 33
+	width 75col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema des komplexen Arbeitsablaufs.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Berechtigungen beim komplexen Arbeitsablauf.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="33col%">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Status 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Veröffentlicht 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Zugelassen 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alle anderen 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Antragsteller darf bearbeiten
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unterstützung möglich 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Abstimmung möglich
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Automatische Versionierung
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Neue Version wird automatisch zugelassen 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Automatischer Bezeichner
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nein 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ja
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Experteneinstellung
+\end_layout
+
+\begin_layout Standard
+Es kann eingestellt werden, dass ein Antrag in einem bestimmten Status nur
+ für bestimmte Benutzer sichtbar ist.
+ Die Anpassung kann vor dem ersten Anlegen der Datenbank in der Datei 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+OpenSlides/motion/signals.py
+\end_layout
+
+\end_inset
+
+ in der Funktion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+create_builtin_workflows()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+erfolgen: Dazu beim gewünschten Status beispielsweise die Zeile
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+required_permission_to_see='motion.can_manage_motion',
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+einfügen.
+ Die Anpassung kann aber auch bei bestehender Datenbank erfolgen: Dazu mit
+ einem entsprechenden Tool direkt auf die Datenbank zugreifen und beim gewünscht
+en Status das Feld 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+required_permission_to_see
+\end_layout
+
+\end_inset
+
+ beispielsweise mit der Zeichenkette 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+motion.can_manage_motion
+\end_layout
+
+\end_inset
+
+ überschreiben.
+\end_layout
+
+\begin_layout Subsection
+Versionierung
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Versionierung"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ versioniert Ihre Anträge, wenn sich der Antrag im komplexen Arbeitsablauf
+ und nicht mehr im Status „veröffentlicht“ befindet.
+ Jedes Mal, wenn der Antrag bearbeitet wird, legt 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ eine neue Antragsversion an.
+ Sie können auf der Antragsseite mehrere Versionen miteinander vergleichen.
+ Wählen Sie dazu je einen Knopf links und rechts aus und klicken Sie auf
+ den Button „Unterschied“.
+\end_layout
+
+\begin_layout Standard
+Nur eine der Versionen eines Antrags gilt in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ als zugelassene Version.
+ Diese wird auf dem Projektor angezeigt und in der Antragsseite mit einem
+ grünen Haken markiert.
+ Klicken Sie auf einen grauen Haken-Button, um eine andere Version zuzulassen.
+ Hierbei müssen Sie den entsprechenden Dialog mit „Ja“ bestätigen.
+\end_layout
+
+\begin_layout Standard
+Wenn Sie (bei entsprechender 
+\family sans
+Voreinstellung
+\family default
+, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Anträge"
+
+\end_inset
+
+) einen Antrag bearbeiten, haben Sie mit dem Haken „Keine neue Version erzeugen“
+ die Möglichkeit, die ansonsten erfolgende Versionierung im Einzelfall ausnahmsw
+eise zu umgehen.
+ Dies kann sinnvoll sein, wenn Sie einen Antrag nur redaktionell (trivial)
+ ändern wollen.
+\end_layout
+
+\begin_layout Standard
+Im einfachen Arbeitsablauf ist das Versionierungssystem deaktiviert.
+\end_layout
+
+\begin_layout Subsection
+Projizierung
+\end_layout
+
+\begin_layout Standard
+Um einen Antrag anzuzeigen, klicken Sie entweder auf dem Dashboard im Widget
+ „Anträge“ auf den Projektor-Button 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol.jpg
+	scale 70
+
+\end_inset
+
+ vor dem Antrag oder auf der Seite eines Antrags auf den Projektor-Button
+ in der oberen Zeile rechts.
+\end_layout
+
+\begin_layout Standard
+Zu jedem Antrag können Sie über einen Link („Neuer Tagesordnungseintrag“)
+ in der oberen Leiste des betreffenden Antrags („Mehr Aktionen“) auch einen
+ eigenen Eintrag in der Tagesordnung erstellen, der direkt mit der Antragsfolie
+ verknüpft ist.
+ Dies empfiehlt sich, wenn ein einzelner Antrag an einer bestimmten Stelle
+ der Tagesordnung behandelt werden und dazu eine Redeliste verwendet soll.
+\end_layout
+
+\begin_layout Subsection
+Abstimmungen
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Abstimmungen-Antrag"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ruft der Versammlungsleiter eine Abstimmung über einen Antrag aus, können
+ Sie diese mit dem Button „Neue Abstimmung“ auf der betreffenden Antragsseite
+ (im Kasten rechts) in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ aufnehmen.
+ Tragen Sie die entsprechenden Abstimmungsergebnisse in die Tabelle ein.
+ Wenn Sie 
+\family sans
+-1
+\family default
+ eintragen, wird das Wort „Mehrheit“ ausgegeben.
+ 
+\family sans
+-2
+\family default
+ steht für „Nicht erfasst“.
+ Sollten Sie bei den abgegebenen Stimmen einen Wert eintragen, berechnet
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ automatisch die prozentualen Anteile der übrigen Stimmzahlen.
+ Klicken Sie am Ende auf 
+\family sans
+Speichern
+\family default
+ oder 
+\family sans
+Übernehmen
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+In der Abstimmungsansicht können Sie außerdem eventuell benötigte Abstimmungszet
+tel als PDF 
+\begin_inset Graphics
+	filename clipart/PDF-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ abrufen.
+ Nachträglich können Sie Abstimmungsergebnisse eingeben oder korrigieren,
+ indem Sie auf der Antragsseite neben der Abstimmung auf den Bearbeiten-Button
+ 
+\begin_inset Graphics
+	filename clipart/Bearbeiten-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ klicken.
+\end_layout
+
+\begin_layout Subsection
+Einstellungen
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Einstellungen-Anträge"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im Menü 
+\family sans
+Einstellungen\SpecialChar \menuseparator
+Anträge
+\family default
+ können Einstellungen für die Antragsverwaltung vorgenommen werden.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik Allgemein
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Arbeitsablauf von neuen Anträgen
+\family default
+ kann man wählen zwischen
+\end_layout
+
+\begin_layout Description
+Simple
+\begin_inset space ~
+\end_inset
+
+Workflow Dieser Arbeitsablauf bietet keine Versionierung und nur die Status
+ Annehmen/Ablehnen/Nicht
+\begin_inset space ~
+\end_inset
+
+entscheiden.
+ Für mehr zu Arbeitsabläufen siehe siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Arbeitsablauf-und-Status"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Complex
+\begin_inset space ~
+\end_inset
+
+Workflow Dieser Arbeitsablauf bietet mehrere Status, bei denen zum Teil
+ die automatische Versionierung aktiviert ist.
+ Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Versionierung"
+
+\end_inset
+
+ für mehr zur Versionierung.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Bezeichner
+\family default
+ kann man festlegen wie Anträge bezeichnet werden:
+\end_layout
+
+\begin_layout Description
+pro
+\begin_inset space ~
+\end_inset
+
+Sachgebiet
+\begin_inset space ~
+\end_inset
+
+nummerieren nur auf gültigen Stimmen beruht.
+\end_layout
+
+\begin_layout Description
+fortlaufend
+\begin_inset space ~
+\end_inset
+
+nummerieren jeder neu angelegte Antrag wird fortlaufen nummeriert
+\end_layout
+
+\begin_layout Description
+manuell
+\begin_inset space ~
+\end_inset
+
+setzen es wird kein automatischer Bezeichner gesetzt
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Antragseinleitung
+\family default
+ kann ein Text als voreingestellte Einleitung für Anträge eingestellt werden.
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\family sans
+Einreichen von neuen Anträgen stoppen für Nutzer ohne Verwaltungsrechte
+ 
+\family default
+kann Teilnehmern, die nicht in der Gruppe 
+\emph on
+Mitarbeitende
+\emph default
+ sind, das Recht auf das Anlagen neuer Anträge genommen werden.
+ Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Gruppen"
+
+\end_inset
+
+ für Teilnehmergruppen.
+ Dies ist sinnvoll, wenn der Antragsschluss bereits verstrichen ist oder
+ die Versammlungsleitung einen Antragsschluss verkündet.
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\family sans
+Erlaubt Versionierung zu deaktivieren 
+\family default
+wird es ermöglicht, beim Ändern von Anträgen die automatische Versionierung
+ im Einzelfall zu deaktivieren.
+ Dies kann sinnvoll sein, wenn Anträge nur redaktionell geändert werden,
+ aber ansonsten die Versionierung aktiv bleiben soll.
+ Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Versionierung"
+
+\end_inset
+
+ für mehr zur Versionierung.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik Unterstützer/innen
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Mindestanzahl erforderlicher Unterstützer/innen für einen Antrag
+\family default
+ kann festgelegt werden, wie viele Personen einen Antrag unterstützen müssen,
+ damit er zur Abstimmung zugelassen wird.
+ Wird '0' eingetragen, wird das Unterstützersystem deaktiviert.
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\family sans
+Entferne alle Unterstützer eines Antrags, wenn ein Antragsteller seinen
+ Antrag im Anfangsstadium bearbeitet 
+\family default
+werden alle Unterstützer von Antrag entfernt, wenn er bearbeitet wird.
+ Der Grund ist, dass bisherige Unterstützer eine geänderte Fassung nicht
+ automatisch auch unterstützen.
+ Durch diese Option wird sichergestellt, dass sie auch die geänderte Fassung
+ explizit unterstützen.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik Abstimmung und Stimmzettel
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Die 100%-Basis eines Wahlergebnisses besteht aus
+\family default
+ kann man wählen, ob die prozentuale Berechnung des Wahlergebnisses
+\end_layout
+
+\begin_layout Description
+Nur
+\begin_inset space ~
+\end_inset
+
+gültige
+\begin_inset space ~
+\end_inset
+
+Stimmen nur auf gültigen Stimmen beruht.
+\end_layout
+
+\begin_layout Description
+Alle
+\begin_inset space ~
+\end_inset
+
+abgegebenen
+\begin_inset space ~
+\end_inset
+
+Stimmen auf allen abgegebenen Stimmen beruht.
+\end_layout
+
+\begin_layout Description
+Deaktiviert deaktiviert ist.
+ Es werden dann nur die Anzahlen der Stimmen als Ergebnis einer Wahl projiziert.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Anzahl der Stimmzettel (Vorauswahl)
+\family default
+ kann die Anzahl der Stimmzettel eingestellt werden, die 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ als PDF erstellt:
+\end_layout
+
+\begin_layout Description
+Anzahl
+\begin_inset space ~
+\end_inset
+
+aller
+\begin_inset space ~
+\end_inset
+
+Delegierten es werden so viele Stimmzettel erstellt, wie es in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ eingerichtete Teilnehmer gibt, die in der Gruppe 
+\emph on
+Delegierte
+\emph default
+ sind.
+ Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Gruppen"
+
+\end_inset
+
+ für Teilnehmergruppen.
+\end_layout
+
+\begin_layout Description
+Anzahl
+\begin_inset space ~
+\end_inset
+
+aller
+\begin_inset space ~
+\end_inset
+
+Teilnehmer/innen es werden so viele Stimmzettel erstellt, wie es in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ eingerichtete Teilnehmer gibt.
+\end_layout
+
+\begin_layout Description
+Verwende
+\begin_inset space ~
+\end_inset
+
+die
+\begin_inset space ~
+\end_inset
+
+folgende
+\begin_inset space ~
+\end_inset
+
+benutzerdefinierte
+\begin_inset space ~
+\end_inset
+
+Anzahl Es werden so viele Stimmzettel erstellt wie im Feld 
+\family sans
+Benutzerdefinierte Anzahl von Stimmzetteln
+\family default
+ angegeben ist.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Benutzerdefinierte Anzahl von Stimmzetteln
+\family default
+ wird die Anzahl der zu erstellenden Stimmzettel angegeben.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik PDF
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Titel für PDF-Dokument (alle Anträge)
+\family default
+ wird der Titel eingegeben, der im PDF mit der Übersicht aller Anträge erscheint.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Einleitungstext für PDF-Dokument (alle Anträge)
+\family default
+ wird der Text eingegeben, der im PDF mit der Übersicht aller Anträge erscheint.
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\family sans
+Absatznummerierung anzeigen (nur im PDF) 
+\family default
+können die Absätze im PDF für den Antrag nummeriert werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Wahlen
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Wahlen"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Anlegen von Wahlen
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Anlegen-von-Wahlen"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eine neue Wahl wird angelegt, indem man oben auf 
+\begin_inset Graphics
+	filename clipart/Neu-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ klickt.
+ In der erscheinenden Eingabemaske wird der Titel der Wahl, eine optionale
+ Beschreibung, die Anzahl der zu wählenden Posten und ein optionaler Hinweis
+ für den Stimmzettel eingegeben.
+ Mit dem Hinweis kann z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+ der Wahlmodus erklärt werden.
+\end_layout
+
+\begin_layout Standard
+Wird die Option 
+\family sans
+Als Tagesordnungspunkt anzeigen
+\family default
+ ausgewählt, erscheint die Wahl als Tagesordnungspunkt.
+ Ansonsten erscheint die Wahl in der Tagesordnungsübersicht als eigene Folie.
+ Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einrichtung-eigener-Folien"
+
+\end_inset
+
+ für mehr zu eigenen Folien.
+\end_layout
+
+\begin_layout Standard
+Klickt man oben auf 
+\begin_inset Graphics
+	filename clipart/PDF-Symbol.jpg
+	scale 70
+
+\end_inset
+
+, wird ein PDF mit der Übersicht aller angelegten Wahlen generiert.
+ Den Titel und Inhalt des PDFs kann man über die Einstellungen festlegen,
+ siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Wahlen"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Durchführung einer Wahl
+\end_layout
+
+\begin_layout Standard
+Klickt man in der Wahlübersicht auf 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol.jpg
+	scale 70
+
+\end_inset
+
+ vor der entsprechenden Wahl, wird diese projiziert.
+ Zur Durchführung einer Wahl klickt man in der Übersicht auf deren Namen.
+\end_layout
+
+\begin_layout Standard
+In der Rubrik 
+\family sans
+Kandidaten/innen
+\family default
+ kann man sich mit 
+\begin_inset Graphics
+	filename clipart/Redeliste+Mich.jpg
+	scale 70
+
+\end_inset
+
+ selbst auf die Kandidatenliste setzen.
+ Administratoren können zusätzlich alle bei 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ angelegten Teilnehmer auf die Liste setzen.
+ Um in der Auswahlliste schnell eine Person zu finden, gibt man dort die
+ ersten Buchstaben des Namens der Person ein.
+ Egal wie viele Kandidaten es bereits gibt, durch Klicken oben auf 
+\begin_inset Graphics
+	filename clipart/PDF-Symbol.jpg
+	scale 70
+
+\end_inset
+
+, kann man einen Vorschlagszettel generieren.
+ Er enthält alle bereits feststehenden Kandidaten und 7
+\begin_inset space ~
+\end_inset
+
+leere Felder, so dass man das PDF ausdrucken und verteilen kann:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Wahlvorschlagszettel.jpg
+	lyxscale 50
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Steht die Kandidatenliste fest, kann man oben auf 
+\begin_inset Graphics
+	filename clipart/Redeliste-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ klicken um eine Redeliste zu erstellen, damit sich die Kandidaten vorstellen
+ können.
+ Die Redeliste ist technisch identisch zu der Redeliste eines Tagesordnungspunkt
+s, die in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Rednerliste-verwalten"
+
+\end_inset
+
+ beschrieben ist.
+ Es sind automatisch bereits alle Kandidaten auf der Redeliste.
+\end_layout
+
+\begin_layout Standard
+Um die Wahl zu beginnen, klickt man unten auf 
+\begin_inset Graphics
+	filename clipart/Neuer-Wahlgang.jpg
+	scale 70
+
+\end_inset
+
+.
+ Dadurch hat sich die Phase der Wahl automatisch auf 
+\family sans
+Im Wahlvorgang
+\family default
+ geändert.
+\end_layout
+
+\begin_layout Standard
+Um Stimmzettel zu erstellen, klickt man auf 
+\begin_inset Graphics
+	filename clipart/Stimmzettel-drucken.jpg
+	scale 70
+
+\end_inset
+
+.
+ Der Stimmzettel ist so ausgelegt, dass er ausgedruckt und verteilt werden
+ kann.
+\end_layout
+
+\begin_layout Standard
+Die Ergebnisse der Wahl können eingegeben werden, indem man auf
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename clipart/Stimmen-eingeben.jpg
+	scale 70
+
+\end_inset
+
+ klickt.
+ Um Kandidaten als gewählt zu markieren, klickt man auf das Symbol 
+\begin_inset Graphics
+	filename clipart/Gewählt-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ vor deren Namen.
+ Um die Wahl zu veröffentlichen, klickt man auf 
+\begin_inset Graphics
+	filename clipart/Wahl-veröffentlichen.jpg
+	scale 70
+
+\end_inset
+
+.
+ Im Projektor wird nun erst einmal nur die Kandidatenliste angezeigt, in
+ der die gewählten Kandidaten mit einem Stern markiert sind.
+ Um auch die Stimmenanzahl zu veröffentlichen, klickt man auf 
+\begin_inset Graphics
+	filename clipart/Wahl-projizieren.jpg
+	scale 70
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Falls weitere Wahlgänge nötig sind, kann man auf 
+\begin_inset Graphics
+	filename clipart/Neuer-Wahlgang.jpg
+	scale 70
+
+\end_inset
+
+ klicken, um einen weiteren zu beginnen.
+ Ist die Wahl abgeschlossen ändert man oben Phase auf 
+\family sans
+Abgeschlossen
+\family default
+.
+ Wenn man in einer abgeschlossenen Wahl oben auf 
+\begin_inset Graphics
+	filename clipart/PDF-Symbol.jpg
+	scale 70
+
+\end_inset
+
+ klickt, erhält man ein PDF mit dem Wahlergebnis, das man für die Nachbereitung
+ der Veranstaltung verwenden kann.
+ Mehr dazu siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Nachbereitung"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Einstellungen
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Einstellungen-Wahlen"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im Menü 
+\family sans
+Einstellungen\SpecialChar \menuseparator
+Wahlen
+\family default
+ können Einstellungen für die Benutzerverwaltung vorgenommen werden.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik Wahlgang und Stimmzettel
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Wahlmethode
+\family default
+ kann man wählen zwischen
+\end_layout
+
+\begin_layout Description
+Automatische
+\begin_inset space ~
+\end_inset
+
+Zuordnung
+\begin_inset space ~
+\end_inset
+
+der
+\begin_inset space ~
+\end_inset
+
+Methode Dabei wird der Stimmzettel automatisch für eine Stimme pro Kandidat
+ ausgelegt, wenn es mehr Kandidaten als Posten gibt.
+ Ansonsten wird Ja\SpecialChar \slash{}
+Nein\SpecialChar \slash{}
+Enthaltung auf den Stimmzettel geschrieben.
+\end_layout
+
+\begin_layout Description
+Eine
+\begin_inset space ~
+\end_inset
+
+Stimme
+\begin_inset space ~
+\end_inset
+
+pro
+\begin_inset space ~
+\end_inset
+
+Kandidat/in Der Stimmzettel wird immer für eine Stimme pro Kandidat ausgelegt.
+\end_layout
+
+\begin_layout Description
+Ja,
+\begin_inset space ~
+\end_inset
+
+Nein,
+\begin_inset space ~
+\end_inset
+
+Enthaltung
+\begin_inset space ~
+\end_inset
+
+pro
+\begin_inset space ~
+\end_inset
+
+Kandidat/in Der Stimmzettel wird immer für Ja\SpecialChar \slash{}
+Nein\SpecialChar \slash{}
+Enthaltung pro Kandidat
+ ausgelegt.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Die 100%-Basis eines Wahlergebnisses besteht aus
+\family default
+ kann man wählen, ob die prozentuale Berechnung des Wahlergebnisses
+\end_layout
+
+\begin_layout Description
+Nur
+\begin_inset space ~
+\end_inset
+
+gültige
+\begin_inset space ~
+\end_inset
+
+Stimmen nur auf gültigen Stimmen beruht.
+\end_layout
+
+\begin_layout Description
+Alle
+\begin_inset space ~
+\end_inset
+
+abgegebenen
+\begin_inset space ~
+\end_inset
+
+Stimmen auf allen abgegebenen Stimmen beruht.
+\end_layout
+
+\begin_layout Description
+Deaktiviert deaktiviert ist.
+ Es werden dann nur die Anzahlen der Stimmen als Ergebnis einer Wahl projiziert.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Anzahl der Stimmzettel (Vorauswahl)
+\family default
+ kann die Anzahl der Stimmzettel eingestellt werden, die 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ als PDF erstellt:
+\end_layout
+
+\begin_layout Description
+Anzahl
+\begin_inset space ~
+\end_inset
+
+aller
+\begin_inset space ~
+\end_inset
+
+Delegierten es werden so viele Stimmzettel erstellt, wie es in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ eingerichtete Teilnehmer gibt, die in der Gruppe 
+\emph on
+Delegierte
+\emph default
+ sind.
+ Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Gruppen"
+
+\end_inset
+
+ für Teilnehmergruppen.
+\end_layout
+
+\begin_layout Description
+Anzahl
+\begin_inset space ~
+\end_inset
+
+aller
+\begin_inset space ~
+\end_inset
+
+Teilnehmer/innen es werden so viele Stimmzettel erstellt, wie es in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ eingerichtete Teilnehmer gibt.
+\end_layout
+
+\begin_layout Description
+Verwende
+\begin_inset space ~
+\end_inset
+
+die
+\begin_inset space ~
+\end_inset
+
+folgende
+\begin_inset space ~
+\end_inset
+
+benutzerdefinierte
+\begin_inset space ~
+\end_inset
+
+Anzahl Es werden so viele Stimmzettel erstellt wie im Feld 
+\family sans
+Benutzerdefinierte Anzahl von Stimmzetteln
+\family default
+ angegeben ist.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Benutzerdefinierte Anzahl von Stimmzetteln
+\family default
+ wird die Anzahl der zu erstellenden Stimmzettel angegeben.
+\end_layout
+
+\begin_layout Standard
+Die Option 
+\family sans
+Wahlergebnisse nur für gewählte Kandidaten veröffentlichen (Projektoransicht)
+ 
+\family default
+hat derzeit keinen Effekt.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik PDF
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Titel für PDF-Dokument (alle Wahlen)
+\family default
+ wird der Titel eingegeben, der im PDF mit der Übersicht aller Wahlen erscheint.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Einleitungstext für PDF-Dokument (alle Wahlen)
+\family default
+ wird der Text eingegeben, der im PDF mit der Übersicht aller Wahlen erscheint.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Dateien
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Dateien"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Hochladen von Dateien
+\end_layout
+
+\begin_layout Standard
+Wechseln Sie zum Menüpunkt 
+\family sans
+Dateien
+\family default
+ und klicken Sie oben rechts auf 
+\begin_inset Graphics
+	filename clipart/Neu-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Laden Sie eine Datei hoch, indem Sie mit 
+\family sans
+Durchsuchen
+\family default
+ die Datei aus dem Dateisystem ihres Computers auswählen.
+ Außerdem können Sie noch einen ergänzenden Titel angeben, sowie die Person,
+ die die Datei hochlädt.
+ Wird keine Person angegeben, wird automatisch der aktuell eingeloggte Benutzer
+ eingetragen.
+\end_layout
+
+\begin_layout Standard
+Die Datei ist nun auf den Server geladen und unter ihrem Namen auf der Übersicht
+sseite des Menüpunkts 
+\family sans
+Dateien
+\family default
+ verlinkt.
+\end_layout
+
+\begin_layout Subsection
+Dateien auf dem Projektor anzeigen
+\end_layout
+
+\begin_layout Standard
+PDF-Dateien können direkt projiziert werden, wenn sie auf das Symbol 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol.jpg
+	scale 70
+
+\end_inset
+
+ vor der Datei klicken.
+\end_layout
+
+\begin_layout Standard
+Bilddateien können über oder in einem Tagesordnungspunkt angezeigt werden.
+ Wechseln Sie zum Menüpunkt 
+\family sans
+Tagesordnung
+\family default
+ und klicken Sie auf 
+\begin_inset Graphics
+	filename clipart/Neu-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ Klicken Sie dort in der Rubrik 
+\family sans
+Text
+\family default
+ auf das Symbol 
+\begin_inset Graphics
+	filename clipart/Bild-Einfügen-Symbol.jpg
+	scale 70
+
+\end_inset
+
+.
+ Es öffnet sich ein Dialog, indem alle Bilddateien unter 
+\family sans
+Image
+\begin_inset space ~
+\end_inset
+
+list
+\family default
+ aufgelistet sind.
+ Wählen Sie das entsprechende Bild aus.
+ Wenn nur das Bild angezeigt werden soll, deaktivieren Sie die Option 
+\family sans
+Als Tagesordnungspunkt anzeigen
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Nachbereitung
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Nachbereitung"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für die Nachbereitung einer Veranstaltung bietet 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ verschiedene Hilfsmittel an.
+ Es gibt die Möglichkeit
+\end_layout
+
+\begin_layout Itemize
+die Tagesordnung als PDF auszugeben, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Tagesordnung-drucken"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+die Teilnehmerliste als PDF auszugeben, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Teilnehmerliste"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+alle Anträge mit Begründungen als PDF auszugeben, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Manuelles-Erstellen-von"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+alle Wahlen mit den Wahlergebnissen als PDF auszugeben, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Anlegen-von-Wahlen"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+eine Liste mit allen Reden, den Rednern und der tatsächlichen Redezeit als
+ CSV auszugeben.
+ Dazu ist das Plugin 
+\emph on
+CSV Export Plugin for OpenSlides
+\emph default
+ erforderlich, das im Folgenden beschrieben ist.
+\end_layout
+
+\begin_layout Subsection
+Das Plugin 
+\emph on
+CSV Export Plugin for OpenSlides
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Das-Plugin-CSV"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Plugin kann von der Projektseite:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "https://github.com/OpenSlides/openslides-csv-export/"
+target "https://github.com/OpenSlides/openslides-csv-export/"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+heruntergeladen werden:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "https://github.com/OpenSlides/openslides-csv-export/archive/master.zip"
+target "https://github.com/OpenSlides/openslides-csv-export/archive/master.zip"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um es zu installieren, entpackt man die ZIP-Datei in einen beliebigen Ordner.
+ dadurch wird dort ein Ordner namens 
+\family sans
+openslides-csv-export-master
+\family default
+ angelegt.
+ Darin befindet sich der Unterordner 
+\family sans
+openslides_csv_export
+\family default
+, den man komplett in den Unterordner
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+~
+\backslash
+openslides
+\backslash
+plugins
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+des Verzeichnisses, in dem 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ installiert ist, kopiert.
+ Falls 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ läuft, muss es geschlossen und der Server neu gestartet werden, wie es
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Start-des-Servers"
+
+\end_inset
+
+ beschrieben ist.
+\end_layout
+
+\begin_layout Standard
+In der Menüleiste von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ erscheint nach der Installation das neue Icon
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename clipart/CSV-Export.jpg
+	scale 70
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Klickt man darauf, wird eine Liste aller Reden, den Rednern und der tatsächlich
+ geredeten Zeit in eine CSV-Datei exportiert.
+ CSV-Dateien können mit allen gängigen Tabellenkalkulationen wie z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+ 
+\emph on
+
+\begin_inset CommandInset href
+LatexCommand href
+name "LibreOffice Calc"
+target "https://de.libreoffice.org/discover/calc/"
+
+\end_inset
+
+
+\emph default
+ oder mit einem Texteditor geöffnet werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Einstellungen
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Einstellungen-Übersicht"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unter dem Menüpunkt 
+\family sans
+Einstellungen
+\family default
+ finden sich verschiedene Einstellmöglichkeiten.
+ Bei allen Einstellungen, die auch die Projektoransicht betreffen, zum Beispiel
+ dem Titel der Veranstaltung, ist zu beachten, dass die Projektoransicht
+ sich im Kopfbereich nicht automatisch aktualisiert.
+ Man muss das Browserfenster der Projektoransicht an dem Computer, an dem
+ der Projektor angeschlossen ist, manuell mit der Taste 
+\family sans
+F5
+\family default
+ aktualisieren.
+\end_layout
+
+\begin_layout Subsection
+Allgemein
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik Veranstaltung
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Veranstaltungsname
+\family default
+ wird der Name der Veranstaltung angegeben.
+ Er erscheint im Projektor links oben in der Kopfzeile.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Kurzbeschreibung der Veranstaltung
+\family default
+ kann die Veranstaltung kurz beschrieben werden.
+ Diese Beschreibung erscheint im Projektor in der Kopfzeile unter dem Veranstalt
+ungsnamen.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Veranstaltungszeitraum
+\family default
+ wird das Datum oder der Zeitraum der Veranstaltung angegeben.
+ Dies erscheint im Projektor in der Fußzeile rechts.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Veranstaltungsort
+\family default
+ wird der Ort angegeben.
+ Er erscheint im Projektor in der Fußzeile rechts.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Veranstalter
+\family default
+ wird der Veranstalter angegeben.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Impressum
+\family default
+ wird das Impressum des Veranstalters angegeben.
+ Dieses erscheint in der Fußzeile der Startseite.
+ Weblinks müssen als HTML-Code eingegeben werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Titel der Startseite
+\family default
+ wird der Titel für die Startseite eingegeben.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Text der Startseite
+\family default
+ wird der Text für die Startseite eingegeben.
+ Weblinks, Bilder, usw.
+\begin_inset space \space{}
+\end_inset
+
+müssen als HTML-Code eingegeben werden.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik System
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\family sans
+Erlaube Zugriff für anonyme Gast-Nutzer
+\family default
+ ist es möglich, dass anonyme, unangemeldete Personen das 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ der Veranstaltung sehen können.
+ Um deren Berechtigungen einzustellen, muss die Gruppe 
+\family sans
+Gäste
+\family default
+ bearbeitet werden, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Gruppen"
+
+\end_inset
+
+ für Details.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Diesen Text auf der Login-Seite anzeigen
+\family default
+ wird der Text eingetragen, der grün unterlegt auf dem Login-Fenster als
+ Information erscheint.
+\end_layout
+
+\begin_layout Subsection
+Projektor
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Projektor"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit den Einstellungen dieser Rubrik kann das Erscheinungsbild der Projektoransic
+ht angepasst werden.
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\family sans
+Logo auf dem Projektor anzeigen
+\family default
+ kann ein Logo oben links angezeigt werden.
+ Um das Logo zu ändern, muss die Datei 
+\series bold
+logo-projector.png
+\series default
+ im Unterordner
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+~
+\backslash
+Lib
+\backslash
+site-packages
+\backslash
+openslides
+\backslash
+core
+\backslash
+static
+\backslash
+img
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+des Verzeichnisses, in dem 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ installiert ist, durch eine Datei gleichen Namens ersetzt werden.
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\family sans
+Titel und Kurzbeschreibung der Veranstaltung auf dem Projektor anzeigen
+\family default
+ kann der Titel und die Kurzbeschreibung der Veranstaltung rechts neben
+ dem Logo angezeigt werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Hintergrundfarbe des Projektor-Kopf- und Fußbereichs
+\family default
+ kann diese Farbe verändert werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Hintergrundfarbe des Schriftfarbe des Projektor-Kopf- und Fußbereichs
+\family default
+ kann diese Farbe verändert werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Hintergrundfarbe des Schriftfarbe der Projektor-Überschrift
+\family default
+ kann diese Farbe verändert werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\family sans
+Voreingestellter Countdown
+\family default
+ kann die Anzahl an Sekunden für neue Countdowns voreingestellt werden.
+ Mehr zu Countdowns siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Countdowns"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Tagesordnung 
+\end_layout
+
+\begin_layout Standard
+Die Einstellungen für die Tagesordnung sind in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Tagesordnung"
+
+\end_inset
+
+ erläutert.
+\end_layout
+
+\begin_layout Subsection
+Anträge
+\end_layout
+
+\begin_layout Standard
+Die Einstellungen für Anträge sind in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Anträge"
+
+\end_inset
+
+ erläutert.
+\end_layout
+
+\begin_layout Subsection
+Wahlen
+\end_layout
+
+\begin_layout Standard
+Die Einstellungen für Wahlen sind in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Wahlen"
+
+\end_inset
+
+ erläutert.
+\end_layout
+
+\begin_layout Subsection
+Benutzer
+\end_layout
+
+\begin_layout Standard
+Die Einstellungen für die Benutzer sind in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Einstellungen-Benutzer"
+
+\end_inset
+
+ erläutert.
+\end_layout
+
+\end_body
+\end_document

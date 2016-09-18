@@ -5,42 +5,38 @@
 Overview
 ========
 
-This documentation repository contains the **outdated** OpenSlides manual of
-OpenSlides 1.5.
+This documentation repository contains the OpenSlides manual of
+OpenSlides 2.0.
 
-**Note**: The (outdated) images (placed in "_images") are not added to this repository to
-not inscrease the repo size. For rework of manual the images have to updated.
-All old images can be found here in
-`OpenSlides Core repo <https://github.com/OpenSlides/OpenSlides/tree/2.0b1/docs/_images>`_.
 
 Requirements
 ============
 
-- sphinx
-- sphinx-bootstrap-theme
-see `requirements.txt`_
+`LyX 2.1.x <http://www.lyx.org/>`_ (or newer)
 
-.. _requirements.txt: requirements.txt
 
 How to build the documentation?
 ===============================
 
-Instruction to build the docs on GNU/Linux.
+1. Install LyX.
 
-Install setup::
+2. Build the PDF output:
 
-    $ virtualenv .venv
-    $ source .venv/bin/activate
-    $ pip install -r requirements.txt
+   Open the file `OpenSlides-Handbuch.lyx` and press the button with the
+   two eyes (or use the menu *File->Export->PDF(pdflatex)*).
 
-Build html output (created in _build/html)::
 
-    $ make html
+Structure of documentation
+==========================
 
-Build pdf output (created in _build/latex)::
+The documentation has 2 parts:
 
-    $ make latex
-    $ make latexpdf
+* The manual for admins containing first steps, a tutorial and detailed descriptions, customizations etc.
+* The tutorial for users (*planned, not yet written*).
+
+The manual is the file `OpenSlides-Handbuch.lyx` (German). It points to the
+LyX files for the different sections.
+
 
 
 License and authors
@@ -48,4 +44,4 @@ License and authors
 
 The documentation is licensed under
 `Creative Commons CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>`_,
-see LICENSE file. The authors are mentioned in the AUTHORS file.
+see `LICENSE <LICENSE>`_ file. The authors are mentioned in the `AUTHORS <AUTHORS>`_ file.
