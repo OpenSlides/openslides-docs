@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass scrbook
 \begin_preamble
 % that links to image floats jumps
@@ -58,16 +60,16 @@ logicalmkup
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman lmodern
-\font_sans lmss
-\font_typewriter lmtt
-\font_math auto
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format pdf2
 \output_sync 0
@@ -135,11 +137,12 @@ logicalmkup
 \begin_body
 
 \begin_layout Chapter
-Erste Schritte
+Setup
 \end_layout
 
 \begin_layout Standard
-In diesem Kapitel werden die ersten Schritte bei 
+In diesem Kapitel werden die nötigen Schritte zur Installation und Konfiguration
+ von 
 \begin_inset Flex Noun
 status collapsed
 
@@ -149,11 +152,11 @@ OpenSlides
 
 \end_inset
 
- erklärt.
+ beschrieben.
 \end_layout
 
 \begin_layout Section
-Installation
+Installation und Start
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Installation"
@@ -173,10 +176,9 @@ OpenSlides
 
 \end_inset
 
- muss nur auf einem Computer installiert werden.
- Dieser fungiert im Netzwerk als Server.
- Im Präsentationsmodus Single gibt es kein Netzwerk.
- 
+ muss nur auf einem Rechner installiert werden, welcher im Netzwerk als
+ Server fungiert.
+ Im Präsentationsmodus Single gibt es kein Netzwerk, so dass 
 \begin_inset Flex Noun
 status collapsed
 
@@ -186,29 +188,15 @@ OpenSlides
 
 \end_inset
 
- muss dann auf dem einen verwendeten Computer installiert werden.
-\end_layout
-
-\begin_layout Standard
-Die aktuelle Version von 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
-, für die dieses Handbuch gültig ist, ist Version 2.0.
+ auf dem einen verwendeten Rechner selbst installiert werden muss.
 \end_layout
 
 \begin_layout Subsection
-Verwendung der Windows-Version (Portable Version mit openslides.exe)
+Windows
 \end_layout
 
 \begin_layout Standard
-Laden Sie die aktuelle 
+Laden Sie die aktuelle, portable 
 \begin_inset Flex Noun
 status collapsed
 
@@ -218,11 +206,11 @@ OpenSlides
 
 \end_inset
 
- Version für Windows von 
+-Version für Windows von 
 \begin_inset CommandInset href
 LatexCommand href
-name "http://openslides.org"
-target "http://openslides.org"
+name "https://openslides.org"
+target "https://openslides.org"
 
 \end_inset
 
@@ -250,157 +238,11 @@ OpenSlides
 
 \end_inset
 
- muss nun nicht weiter installiert werden.
+ muss nicht weiter installiert werden.
  Alle notwendigen Programmelemente sind in dem Ordner enthalten.
-\end_layout
-
-\begin_layout Subsection
-Verwendung der Linux/MacOS-Version
-\end_layout
-
-\begin_layout Standard
-Laden Sie die aktuelle 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
- Version für Linux/MacOS von
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset CommandInset href
-LatexCommand href
-name "http://openslides.org"
-target "http://openslides.org"
-
-\end_inset
-
- oder über den Python Package Index (PyPI) (
+ Führen Sie nun einfach die Datei 
 \begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-$ pip install openslides
-\end_layout
-
-\end_inset
-
-) herunter.
- Die Installationsanleitung für diese Version finden Sie in der beiliegenden
- README.rst.
- Folgen Sie den Anweisungen der Anleitung.
- 
-\end_layout
-
-\begin_layout Section
-Konfiguration
-\end_layout
-
-\begin_layout Standard
-Nach der Installation ist 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
- bereits vorkonfiguriert.
- Die beim ersten Start erzeugte (leere) Datenbank enthält einige Voreinstellunge
-n.
- Die Konfiguration kann im laufenden Programm unter dem Tab „Konfiguration“
- vorgenommen werden.
- Weitere Einstellungsmöglichkeiten für erfahrene Benutzer sind in der Datei
- 
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-settings.py
-\end_layout
-
-\end_inset
-
- möglich.
- Diese Datei liegt nicht im extrahierten 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
- Verzeichnis, sondern in einem Benutzerverzeichnis, das abhängig von Ihrem
- Betriebssystem ist.
- Unter Windows (außer bei der Portable Version) ist es standardmäßig
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-$HOME
-\backslash
-AppData
-\backslash
-Local
-\backslash
-openslides
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-, unter Linux/MacOS ist es standardmäßig
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-~/.config/openslides
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Start des Servers und Öffnen des Browsers
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Start-des-Servers"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Verwendung der Windows-Version (Portable Version mit openslides.exe)
-\end_layout
-
-\begin_layout Standard
-Wenn Sie die Windows-Version (Portable Version mit openslides.exe) verwenden,
- brauchen Sie nur die Datei 
-\begin_inset Flex Code
-status collapsed
+status open
 
 \begin_layout Plain Layout
 openslides.exe
@@ -408,9 +250,11 @@ openslides.exe
 
 \end_inset
 
- auszuführen.
- Mit dieser wird der eine grafische Oberfläche gestartet, mit der Sie den
- 
+aus.
+\end_layout
+
+\begin_layout Standard
+Eine grafische Oberfläche wird gestartet, mit der Sie den 
 \begin_inset Flex Noun
 status collapsed
 
@@ -420,7 +264,11 @@ OpenSlides
 
 \end_inset
 
--Server konfigurieren, starten und jederzeit beenden können:
+-Server starten und jederzeit beenden können:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -437,15 +285,27 @@ OpenSlides
 \end_layout
 
 \begin_layout Standard
-Zum Starten klicken Sie einfach auf den Knopf 
+Zum Starten klicken Sie einfach auf die Schaltfläche 
 \family sans
 Start
 \begin_inset space ~
 \end_inset
 
-server
+server.
+ Ihr
 \family default
- und ihr Webbrowser öffnet sich.
+ Webbrowser öffnet sich anschließend automatisch mit der passenden URL.
+\end_layout
+
+\begin_layout Standard
+Unter 
+\family sans
+Settings
+\family default
+ können Sie bei Bedarf einen anderen Host und Port einstellen (voreingestellt
+ ist Host 0.0.0.0, d.h.
+ OpenSlides hört auf allen Netzwerkinterfaces, und Port 8000).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -458,20 +318,11 @@ Reset
 
 admin
 \family default
- einen neuen Admin-Nutzer erstellen, dessen Name und Passwort.
- 
+ einen neuen Admin-Nutzer erstellen, dessen Name und Passwort 
 \family sans
 admin
 \family default
  ist.
-\end_layout
-
-\begin_layout Standard
-In 
-\family sans
-Settings
-\family default
- können Sie optional den Webhost und Port einstellen; mehr dazu siehe ??.
  Mit 
 \family sans
 Backup
@@ -480,27 +331,65 @@ Backup
 
 database
 \family default
- und 
-\family sans
-Sync
-\begin_inset space ~
-\end_inset
-
-database
-\family default
- können Sie Sitzungen speichern bzw.
-\begin_inset space \space{}
-\end_inset
-
-laden; mehr dazu siehe ??.
+ lässt sich die SQLite-Datenbank in regelmäßigen Abständen sichern (z.B.
+ auf einem externen Laufwerk).
 \end_layout
 
 \begin_layout Subsection
-Verwendung der Linux/MacOS-Version
+Linux / MacOS
 \end_layout
 
 \begin_layout Standard
-Starten Sie den Server, indem Sie in der Kommandozeile eingeben:
+Laden Sie die aktuelle 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Version für Linux/MacOS von
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "https://openslides.org"
+target "https://openslides.org"
+
+\end_inset
+
+ oder über den Python Package Index (PyPI) (
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+$ pip install openslides
+\end_layout
+
+\end_inset
+
+) herunter.
+ Folgen Sie anschließend der Installationsanweisung der zugehörigen 
+\begin_inset CommandInset href
+LatexCommand href
+name "README.rst"
+target "https://github.com/OpenSlides/OpenSlides/blob/master/README.rst#installation"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Starten Sie den 
+\noun on
+OpenSlides
+\noun default
+-Server, indem Sie in der Kommandozeile eingeben:
 \end_layout
 
 \begin_layout Standard
@@ -514,6 +403,10 @@ $ openslides
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Damit wird der Server gestartet und ihr Browser mit der richtigen URL geöffnet.
 \end_layout
 
 \begin_layout Standard
@@ -532,10 +425,6 @@ $ source .venv/bin/activate
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Damit wird der Server gestartet und ihr Browser mit der richtigen URL geöffnet.
 \end_layout
 
 \begin_layout Standard
@@ -595,19 +484,19 @@ OpenSlides
 \end_inset
 
 -Webinterface auf, indem Sie in die Adresszeile die IP-Adresse des Servers
- eintragen.
- Sie hat oft die Form 
+ eintragen (z.B.
+ 
 \begin_inset Flex Code
 status collapsed
 
 \begin_layout Plain Layout
-http://192.168.x.y/
+http://192.168.178.30
 \end_layout
 
 \end_inset
 
-, wobei x und y für eine bestimmte Zahl mit ein bis drei Ziffern stehen.
- Am Computer, auf dem 
+.
+ Am Rechner, auf dem 
 \begin_inset Flex Noun
 status collapsed
 
@@ -654,14 +543,14 @@ admin
 admin
 \family default
  möglich.
- Sie sollten das Passwort nach dem ersten Start ändern, siehe 
+ Sie sollten das Passwort nach dem ersten Start ändern (siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Benutzername-oder-Passwort"
+reference "subsec:Benutzername-oder-Passwort"
 
 \end_inset
 
-, um Unbefugten keinen Zugriff auf Ihre Daten zu gewähren.
+), um Unbefugten keinen Zugriff auf Ihre Daten zu gewähren.
 \end_layout
 
 \begin_layout Standard
@@ -693,6 +582,110 @@ OpenSlides
 
 \end_layout
 
+\begin_layout Section
+Konfiguration
+\end_layout
+
+\begin_layout Standard
+Nach der Installation ist 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ bereits vorkonfiguriert.
+ Die beim ersten Start erzeugte (leere) Datenbank enthält einige Voreinstellunge
+n.
+ Die Konfiguration kann im laufenden Programm unter dem Tab „Konfiguration“
+ vorgenommen werden.
+ Weitere Systemeinstellungen für erfahrene Benutzer sind in der Datei 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+settings.py
+\end_layout
+
+\end_inset
+
+ möglich.
+ Diese Datei liegt im 
+\noun on
+
+\begin_inset Flex Strong
+status open
+
+\begin_layout Plain Layout
+
+\noun on
+OpenSlides
+\noun default
+-Benutzerverzeichnis
+\end_layout
+
+\end_inset
+
+
+\noun default
+, das abhängig von Ihrem Betriebssystem ist:
+\end_layout
+
+\begin_layout Itemize
+Unter Windows (portable Version): 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+openslides
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Unter Windows (installierte Version): 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+C:
+\backslash
+Benutzer
+\backslash
+AppData
+\backslash
+Local
+\backslash
+openslides
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Unter Linux und MacOS: 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+~/.config/openslides/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
@@ -701,7 +694,7 @@ OpenSlides
 \end_layout
 
 \begin_layout Section
-Arbeiten mit 
+Erste Schritte mit 
 \begin_inset Flex Noun
 status collapsed
 
@@ -725,7 +718,11 @@ OpenSlides
 
 \end_inset
 
- so aus:
+ wie folgt aus:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -744,15 +741,8 @@ OpenSlides
 \begin_layout Standard
 In der Kopfzeile kann man durch Klicken auf das Logo jederzeit auf die Startseit
 e zurückkehren.
- In der Zeile rechts können Sie mit anderen Nutzern chatten, siehe ??, Ihr
- Profile bearbeiten und ihr Passwort ändern, siehe 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:An--und-Abmelden"
-
-\end_inset
-
- und die Menüsprache von 
+ In der Zeile rechts können Sie mit anderen Nutzern chatten, Ihr Profil
+ bearbeiten, Ihr Passwort ändern sowie die Menüsprache von 
 \begin_inset Flex Noun
 status collapsed
 
@@ -766,7 +756,7 @@ OpenSlides
 \end_layout
 
 \begin_layout Standard
-In der Menüleiste können Sie über die Menüpunkte alle Inhalte in 
+Über die Navigtionsleiste erreichen Sie alle Module von
 \begin_inset Flex Noun
 status collapsed
 
@@ -776,7 +766,11 @@ OpenSlides
 
 \end_inset
 
- eingeben und verwalten.
+:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -793,121 +787,112 @@ OpenSlides
 \end_layout
 
 \begin_layout Itemize
-Im Menüpunkt 
+
 \series bold
-Startseite
+Startseite:
 \series default
- können Sie die Teilnehmer willkommen heißen und kurz erklären, wie man
- 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
- nutzt.
+ Hier können Sie die Teilnehmenden willkommen heißen sowie allgemeine Infos
+ zur Veranstaltung oder OpenSlides-Nutzung hinterlassen.
 \end_layout
 
 \begin_layout Itemize
-Im Menüpunkt 
+
 \series bold
-Tagesordnung
+Tagesordnung:
 \series default
- können Sie die Tagesordnung der Veranstaltung im Vorfeld oder live anlegen,
- entsprechende Folien vorbereiten und die Rednerliste verwalten.
- Mehr zur Tagesordnung siehe 
+ Legen Sie Tagesordnungspunkte an und verwalten Sie Redelisten en (siehe
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Tagesordnung"
 
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Itemize
-Unter 
+
 \series bold
-Anträge
+Anträge:
 \series default
- verwalten Sie die gestellten Anträge und die dazugehörigen Abstimmungen.
- Mehr dazu siehe 
+ Verwalten Sie die gestellten Anträge und protokollieren Sie die dazugehörigen
+ Abstimmungsergebnisse (siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Anträge"
 
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Itemize
-Der Punkt 
+
 \series bold
-Wahlen
+Wahlen:
 \series default
- verwaltet die Wahlämter mit den Kandidaten sowie die jeweiligen Wahlergebnisse.
- Mehr zur dazu siehe 
+ Verwalten Sie die anstehenden Wahlämter mit den vorgeschlagenen Kandidaten
+ und protokollieren Sie die Wahlergebnisse (siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Wahlen"
 
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Itemize
-Der Menüpunkt 
+
 \series bold
-Teilnehmer/innen
+Teilnehmende:
 \series default
- ermöglicht einen Zugriff auf die Personenprofile.
- Mehr zur dazu siehe 
+ Hier legen Sie alle Benutzer von OpenSlides an und verwalten die Nutzergruppen
+ und deren Berechtigungen.
+ Die angelegten Teilnehmende können Sie dann in den anderen Modulen verwenden
+ (z.B.
+ als Redner, Antragsteller odre Kandidat) (siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Teilnehmer"
 
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Itemize
-Unter dem Punkt 
+
 \series bold
-Dateien
+Dateien:
 \series default
- können Sie eigene Dateien auf den Server laden und zum Download anbieten.
- PDF-Dateien können auch auf dem Projektor angezeigt werden.
- Mehr zur dazu siehe 
+ Nutzen Sie die Dokumentenablage, um beliebige Dateien zum Download anbieten.
+ PDF-Dateien, Bilder und Videos können auch auf dem Projektor angezeigt
+ werden (siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Dateien"
 
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Itemize
-Im Menüpunkt 
+
 \series bold
-Einstellungen
+Einstellungen:
 \series default
- können die grundlegenden Einstellungen für die Veranstaltung vorgenommen
- werden.
- Mehr zur dazu siehe 
+ Passen Sie die einzelnen Module auf Ihre Veranstaltung an.
+ Es gibt zahlreiche Konfigurationsoptionen (siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Einstellungen-Übersicht"
 
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Standard
@@ -919,8 +904,12 @@ Wenn Sie auf das Symbol
 
 \end_inset
 
- klicken, wird neben dem Begrüßungstext der aktuell projizierte Inhalt angezeigt
- (Live-Vorschau):
+ am rechten Bildschrimrand klicken, wird die Projektorseitenleiste ausgeklappt.
+ Dort wird der aktuell projizierte Inhalt in einer Live-Vorschau angezeigt.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -937,23 +926,22 @@ Wenn Sie auf das Symbol
 \end_layout
 
 \begin_layout Standard
-Damit haben Sie immer im Blick was die Teilnehmer gerade sehen und können
- während der Sitzung arbeiten.
- Das Projektorbild in voller Größe bekommen Sie in einem neuen Browsertab
- zu sehen, indem Sie auf die Live-Vorschau klicken.
+Damit haben Sie immer im Blick was die Teilnehmer gerade an der Leinwand
+ sehen.
+ Das Projektorbild in voller Größe erhalten Sie (in einem neuen Browsertab),
+ indem Sie auf die Live-Vorschau klicken.
  Sie ist auch unter der URL 
 \begin_inset Flex Code
 status collapsed
 
 \begin_layout Plain Layout
-/projector/
+/projector/1
 \end_layout
 
 \end_inset
 
  zu finden.
- Loggen Sie sich an dem Computer, an dem der Projektor angeschlossen ist,
- in 
+ Loggen Sie sich an dem Rechner in 
 \begin_inset Flex Noun
 status collapsed
 
@@ -963,54 +951,44 @@ OpenSlides
 
 \end_inset
 
- ein und rufen Sie den Link oder die URL auf.
- Legen Sie die Anzeige in einem eigenen Browserfenster auf den Projektor
- und projizieren Sie sie so auf die Leinwand.
- In vielen Browsern kann mit der Taste 
+ ein, an dem Ihr Projektor angeschlossen ist, und rufen Sie den Link oder
+ die URL auf.
+ Legen Sie die Projektoranzeige in ein eigenes Browserfenster und wechseln
+ Sie Ihren Browser in Vollbildmodus (i.d.R.
+ mit Taste 
 \family sans
 F11
 \family default
- in den Vollbildmodus gewechselt werden.
+).
  Im 
 \emph on
 Präsentationsmodus Single
 \emph default
- müssen Sie die Bildschirmanzeige auf Erweiterung/erweiterter Desktop stellen
- und das Browserfenster mit dem Projektorbild auf den Projektor schieben.
+ müssen Sie Ihren Projektor als zweiten Monitor einrichten (erweiterter
+ Desktop) und das Browserfenster mit dem Projektorbild auf Ihren angeschlossenen
+ Projektor schieben.
 \end_layout
 
 \begin_layout Standard
 Das Projektorbild aktualisiert sich vollkommen automatisch.
  Sollte die Aktualisierung auf Grund eines Fehlers, zum Beispiel einer Unterbrec
-hung der Verbindung zum Server, aussetzen, kann das Projektorbild an dem
- Computer, an dem der Projektor angeschlossen ist, regelmäßig mit der Taste
- 
+hung der Verbindung zum Server, aussetzen, laden Sie das Projektorbild an
+ dem Computer, an dem der Projektor angeschlossen ist, mit der Taste 
 \family sans
 F5
 \family default
- zurückgesetzt werden.
- Um dem Kopf des Projektorfensters nach einer Änderung in der Konfiguration
- zu aktualisieren, muss ebenfalls das Browserfenster zurückgesetzt werden.
+ neu.
+ 
 \end_layout
 
 \begin_layout Standard
-Unterhalb der Live-Vorschau gibt es die Rubriken 
-\family sans
-Countdown
-\family default
- und 
-\family sans
-Mitteilungen
-\family default
-.
- Mehr dazu siehe 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Countdown-und-Mitteilungen"
+Unterhalb der Live-Vorschau gibt es die Möglichkeit einen Countdown, eine
+ Mitteilung oder die aktuelle Redeliste zu projiziern.
+ 
+\end_layout
 
-\end_inset
-
-.
+\begin_layout Standard
+TODO: Projektorbutton einführen!
 \end_layout
 
 \end_body
