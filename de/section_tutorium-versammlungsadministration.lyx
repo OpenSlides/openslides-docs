@@ -139,20 +139,6 @@ Tutorium – Administration einer Versammlung
 \end_layout
 
 \begin_layout Standard
-Dieses Tutorial ist auf dem Stand von 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
- 2.0.x.
-\end_layout
-
-\begin_layout Standard
 In diesem Tutorial sehen Sie am Beispiel der Mitgliederversammlung eines
  Kleingartenvereins, wie Sie 
 \begin_inset Flex Noun

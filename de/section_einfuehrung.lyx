@@ -175,12 +175,16 @@ OpenSlides
 
 \end_inset
 
- können alle Inhalte der Veranstaltung zeitaktuell anhand des Verlaufs der
- Veranstaltung angepasst und an die Leinwand projiziert werden.
+ können alle Inhalte der Veranstaltung angepasst und unmittelbar an die
+ Leinwand projiziert werden.
  Dies betrifft vor allem die Tagesordnung und aktuelle Informationen für
  die Anwesenden.
- Zusätzlich gibt es Funktionen für die Teilnehmerverwaltung, Anträge, Abstimmung
-en und Wahlen.
+ Zusätzlich gibt es Funktionen zur Verwaltung von Teilnehmenden, Anträgen,
+ Wahlen und Dateien.
+\end_layout
+
+\begin_layout Standard
+TODO: Grundprinzip von OpenSlides erklären.
 \end_layout
 
 \begin_layout Standard
@@ -197,12 +201,28 @@ OpenSlides
 \end_layout
 
 \begin_layout Description
-Präsentationsmodus: Im Präsentationsmodus steuern ein oder mehrere Veranstalter
- (zum Beispiel Vorstandsmitglieder eines Vereins oder einer Partei) das
- Programm allein.
- Sie bearbeiten diese Inhalte interaktiv und bestimmen, was auf dem Projektor
- gezeigt wird.
- Alle Anwesenden können die Veranstaltung auf der Leinwand verfolgen.
+Präsentationsmodus
+\begin_inset space ~
+\end_inset
+
+Single: Nur der Versammlungsleiter (oder wahlweise ein Techniker) hat Zugriff
+ auf 
+\noun on
+OpenSlides
+\noun default
+.
+ Er steuert den Projektor allein.
+ Der Projektor ist am gleichen Rechner angeschlossen, wo 
+\noun on
+OpenSlides
+\noun default
+ läuft.
+ Die Teilnehmenden können die Veranstaltung auf der Leinwand verfolgen,
+ haben aber kein Zugriff auf 
+\noun on
+OpenSlides
+\noun default
+.
 \end_layout
 
 \begin_layout Description
@@ -210,29 +230,51 @@ Präsentationsmodus
 \begin_inset space ~
 \end_inset
 
-Single: Der Unterschied zum normalen Präsentationsmodus ist, dass nur eine
- einzige Person das gesamte System bedient 
-\emph on
-und
-\emph default
- der Projektor auch an ihrem Computer angeschlossen ist.
+Multi: Neben dem Versammlungsleiter haben noch weitere ausgewählte Mitarbeiter
+ Zugriff auf 
+\noun on
+OpenSlides
+\noun default
+.
+ Sie bearbeiten und verwalten die Inhalte gemeinsam und haben alle die Möglichke
+it, den Projektor zu steuern.
+ Der Projektor selbst ist an einem beliebiegen Rechner angeschlossen.
+ Jeder Rechner mit Zugriff auf OpenSlides muss sich im gleichen Netzwerk
+ befinden und den 
+\noun on
+OpenSlides
+\noun default
+-Server erreichen können (z.B.
+ in einem WLAN im Veranstaltungssaal).
 \end_layout
 
 \begin_layout Description
 Teilnehmermodus: Im Teilnehmermodus können sich zusätzlich zur Versammlungsleitu
 ng die anwesenden Teilnehmer mit dem eigenen Laptop oder Smartphone über
- Netzwerk (zum Beispiel WLAN) anmelden und eigene Inhalte bearbeiten, zum
- Beispiel einen Antrag stellen oder einen Kandidaten zur Wahl vorschlagen.
- Eine umfangreiche Rechteverwaltung garantiert die notwendige Sicherheit
- des Systems.
+ das zur Verfügung gestellte Netzwerk (zum Beispiel WLAN) bei 
+\noun on
+OpenSlides
+\noun default
+ anmelden und Inhalte einsehen bzw.
+ bearbeiten (z.
+ B.
+ einen Antrag einreichen oder einen Kandidaten zur Wahl vorschlagen).
+ Eine Rechte- und Benutzergruppenverwaltung garantiert die notwendige Zugriffsbe
+schränkung.
  Die Versammlungsleitung hat in der Regel weitgehende, die Versammlungsteilnehme
-r nur eingeschränkte Zugriffsrechte.
+r (z.
+ B.
+ Delegierte und Gäste) nur eingeschränkte Zugriffsrechte.
 \end_layout
 
 \begin_layout Standard
-Außer beim Präsentationsmodus Single benötigt man ein Computernetzwerk,
- zum Beispiel mit mehreren LAN-Anschlüssen oder einem WLAN im Raum.
- Ein Computer fungiert hier als Server für 
+Außer beim Präsentationsmodus Single benötigt man ein Computernetzwerk (LAN
+ oder WLAN), um den Zugriff von mehreren Nutzern auf 
+\noun on
+OpenSlides
+\noun default
+ zu ermöglichen.
+ Ein Rechner fungiert dabei als Server für 
 \begin_inset Flex Noun
 status collapsed
 
@@ -243,9 +285,9 @@ OpenSlides
 \end_inset
 
 .
- Alle anderen Computer müssen auf dessen IP-Adresse zugreifen können.
- Der Computer, an dem der Projektor angeschlossen ist, kann auch ein eigenständi
-ger Computer sein, der über das Netzwerk auf den Server zugreift.
+ Alle anderen Rechner müssen auf dessen IP-Adresse zugreifen können.
+ Der Projektor kann an jedem beliebigen Rechner im Netzwerk angeschlossen
+ werden.
 \end_layout
 
 \begin_layout Standard
@@ -258,11 +300,12 @@ OpenSlides
 
 \end_inset
 
- ist webbasiert, das heißt, es muss bei den Benutzern und Teilnehmern keine
- neue Software installiert werden.
- Das Programm wird ausschließlich über den eigenen Browser bedient.
- Alle gängigen aktuellen Browser werden unterstützt.
- Lediglich die Veranstaltungsleitung muss auf einem einzigen Computer, dem
+ ist webbasiert, d.
+ h.
+ es wird bei den Nutzern ausschließlich über den eigene Browser bedient.
+ Eine extra Software/App muss nicht installiert werden.
+ Alle aktuellen Browser werden unterstützt.
+ Lediglich die Veranstaltungsleitung muss auf einem einzigen Rechner, dem
  Server, 
 \begin_inset Flex Noun
 status collapsed
