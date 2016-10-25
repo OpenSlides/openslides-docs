@@ -6,7 +6,7 @@ Overview
 ========
 
 This documentation repository contains the OpenSlides manual of
-OpenSlides 2.0.
+OpenSlides 2.1.
 
 
 Requirements
@@ -18,7 +18,7 @@ Requirements
 How to build the documentation?
 ===============================
 
-1. Install LyX.
+1. Install LyX 2.2.x.
 
 2. Build the PDF output:
 

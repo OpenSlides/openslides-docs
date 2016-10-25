@@ -1,0 +1,1019 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrbook
+\begin_preamble
+% that links to image floats jumps
+% to the beginning of the float and 
+% not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a PDF-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% Linkfläche für Querverweise vergrößern und automatisch benennen,
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\@ifpackageloaded{babel}{
+ \addto\extrasngerman{%
+  \renewcommand*{\equationautorefname}[1]{}%
+  \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+ }
+}{}
+
+% provides caption formatting
+\usepackage[labelfont={bf,sf}]{caption}[2004/07/16]
+
+% enables calculation of values,
+\usepackage{calc}
+
+% increase the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed before their
+% corresponding section starts
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+% used to have extra space in table cells
+\@ifundefined{extrarowheight}
+ {\usepackage{array}}{}
+\setlength{\extrarowheight}{2pt}
+\end_preamble
+\options bibliography=totoc,index=totoc,BCOR7.5mm,captions=tableheading,dvipsnames,table
+\use_default_options false
+\master OpenSlides-Handbuch.lyx
+\begin_modules
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "OpenSlides Handbuch"
+\pdf_author "OpenSlides Team"
+\pdf_subject "OpenSlides Handbuch"
+\pdf_keywords "OpenSlides, Handbuch"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 2
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\notefontcolor #0000ff
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language german
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Erste Schritte
+\end_layout
+
+\begin_layout Standard
+In diesem Kapitel werden die ersten Schritte bei 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ erklärt.
+\end_layout
+
+\begin_layout Section
+Installation
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Installation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ muss nur auf einem Computer installiert werden.
+ Dieser fungiert im Netzwerk als Server.
+ Im Präsentationsmodus Single gibt es kein Netzwerk.
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ muss dann auf dem einen verwendeten Computer installiert werden.
+\end_layout
+
+\begin_layout Standard
+Die aktuelle Version von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+, für die dieses Handbuch gültig ist, ist Version 2.1.
+\end_layout
+
+\begin_layout Subsection
+Verwendung der Windows-Version (Portable Version mit openslides.exe)
+\end_layout
+
+\begin_layout Standard
+Laden Sie die aktuelle 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ Version für Windows von 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://openslides.org"
+target "http://openslides.org"
+
+\end_inset
+
+ herunter.
+ Extrahieren Sie das zip-Archiv (z.
+ B.
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+openslides-N.N-portable.zip
+\end_layout
+
+\end_inset
+
+) in einen beliebigen Ordner.
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ muss nun nicht weiter installiert werden.
+ Alle notwendigen Programmelemente sind in dem Ordner enthalten.
+\end_layout
+
+\begin_layout Subsection
+Verwendung der Linux/MacOS-Version
+\end_layout
+
+\begin_layout Standard
+Laden Sie die aktuelle 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ Version für Linux/MacOS von
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "http://openslides.org"
+target "http://openslides.org"
+
+\end_inset
+
+ oder über den Python Package Index (PyPI) (
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+$ pip install openslides
+\end_layout
+
+\end_inset
+
+) herunter.
+ Die Installationsanleitung für diese Version finden Sie in der beiliegenden
+ README.rst.
+ Folgen Sie den Anweisungen der Anleitung.
+ 
+\end_layout
+
+\begin_layout Section
+Konfiguration
+\end_layout
+
+\begin_layout Standard
+Nach der Installation ist 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ bereits vorkonfiguriert.
+ Die beim ersten Start erzeugte (leere) Datenbank enthält einige Voreinstellunge
+n.
+ Die Konfiguration kann im laufenden Programm unter dem Tab „Konfiguration“
+ vorgenommen werden.
+ Weitere Einstellungsmöglichkeiten für erfahrene Benutzer sind in der Datei
+ 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+settings.py
+\end_layout
+
+\end_inset
+
+ möglich.
+ Diese Datei liegt nicht im extrahierten 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ Verzeichnis, sondern in einem Benutzerverzeichnis, das abhängig von Ihrem
+ Betriebssystem ist.
+ Unter Windows (außer bei der Portable Version) ist es standardmäßig
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+$HOME
+\backslash
+AppData
+\backslash
+Local
+\backslash
+openslides
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+, unter Linux/MacOS ist es standardmäßig
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+~/.config/openslides
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Start des Servers und Öffnen des Browsers
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Start-des-Servers"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Verwendung der Windows-Version (Portable Version mit openslides.exe)
+\end_layout
+
+\begin_layout Standard
+Wenn Sie die Windows-Version (Portable Version mit openslides.exe) verwenden,
+ brauchen Sie nur die Datei 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+openslides.exe
+\end_layout
+
+\end_inset
+
+ auszuführen.
+ Mit dieser wird der eine grafische Oberfläche gestartet, mit der Sie den
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Server konfigurieren, starten und jederzeit beenden können:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/OpenSlides-Server-before-Start.jpg
+	lyxscale 50
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zum Starten klicken Sie einfach auf den Knopf 
+\family sans
+Start
+\begin_inset space ~
+\end_inset
+
+server
+\family default
+ und ihr Webbrowser öffnet sich.
+\end_layout
+
+\begin_layout Standard
+Falls Sie Ihren Administrator-Zugang vergessen haben, können Sie mit Klick
+ auf 
+\family sans
+Reset
+\begin_inset space ~
+\end_inset
+
+admin
+\family default
+ einen neuen Admin-Nutzer erstellen, dessen Name und Passwort.
+ 
+\family sans
+admin
+\family default
+ ist.
+\end_layout
+
+\begin_layout Standard
+In 
+\family sans
+Settings
+\family default
+ können Sie optional den Webhost und Port einstellen; mehr dazu siehe ??.
+ Mit 
+\family sans
+Backup
+\begin_inset space ~
+\end_inset
+
+database
+\family default
+ und 
+\family sans
+Sync
+\begin_inset space ~
+\end_inset
+
+database
+\family default
+ können Sie Sitzungen speichern bzw.
+\begin_inset space \space{}
+\end_inset
+
+laden; mehr dazu siehe ??.
+\end_layout
+
+\begin_layout Subsection
+Verwendung der Linux/MacOS-Version
+\end_layout
+
+\begin_layout Standard
+Starten Sie den Server, indem Sie in der Kommandozeile eingeben:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+$ openslides
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wenn Sie eine virtuelle Arbeitsumgebung (virtualenv) verwenden, müssen Sie
+ diese zuvor aktivieren:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+$ source .venv/bin/activate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damit wird der Server gestartet und ihr Browser mit der richtigen URL geöffnet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ kann jederzeit im Fenster der Kommandozeile mit der Tastenkombination 
+\family sans
+Strg+C
+\family default
+ beendet werden.
+ Alle eingegebenen Daten bleiben in der Datenbank gespeichert.
+\end_layout
+
+\begin_layout Standard
+Weitere Startoptionen können Sie mit folgender Eingabe sehen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+$ openslides –help
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Öffnen des Browsers
+\end_layout
+
+\begin_layout Standard
+Bei Start des Servers wird automatisch der Browser mit der richtigen URL
+ geöffnet.
+\end_layout
+
+\begin_layout Standard
+Falls dies wegen Ihrer Browsereinstellungen nicht gelingt, rufen Sie das
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Webinterface auf, indem Sie in die Adresszeile die IP-Adresse des Servers
+ eintragen.
+ Sie hat oft die Form 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+http://192.168.x.y/
+\end_layout
+
+\end_inset
+
+, wobei x und y für eine bestimmte Zahl mit ein bis drei Ziffern stehen.
+ Am Computer, auf dem 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ gestartet wurde, kann 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ auch über 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+http://localhost:8000
+\end_layout
+
+\end_inset
+
+ aufgerufen werden.
+\end_layout
+
+\begin_layout Subsection
+Erster Login
+\end_layout
+
+\begin_layout Standard
+Der erste Login als Administrator ist mit dem Benutzernamen 
+\family sans
+admin
+\family default
+ und dem Passwort 
+\family sans
+admin
+\family default
+ möglich.
+ Sie sollten das Passwort nach dem ersten Start ändern, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Benutzername-oder-Passwort"
+
+\end_inset
+
+, um Unbefugten keinen Zugriff auf Ihre Daten zu gewähren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Hinweis:
+\series default
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ benötigt Cookies um die Identität des Nutzers festzustellen, solange er
+ eingeloggt ist.
+ Beim Ausloggen wird das Cookie wieder gelöscht.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Arbeiten mit 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nach dem ersten Einloggen sieht 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ so aus:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Übersicht-nach-Start.jpg
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In der Kopfzeile kann man durch Klicken auf das Logo jederzeit auf die Startseit
+e zurückkehren.
+ In der Zeile rechts können Sie mit anderen Nutzern chatten, siehe ??, Ihr
+ Profile bearbeiten und ihr Passwort ändern, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:An--und-Abmelden"
+
+\end_inset
+
+ und die Menüsprache von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ ändern.
+\end_layout
+
+\begin_layout Standard
+In der Menüleiste können Sie über die Menüpunkte alle Inhalte in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ eingeben und verwalten.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Menüleiste.jpg
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Im Menüpunkt 
+\series bold
+Startseite
+\series default
+ können Sie die Teilnehmer willkommen heißen und kurz erklären, wie man
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ nutzt.
+\end_layout
+
+\begin_layout Itemize
+Im Menüpunkt 
+\series bold
+Tagesordnung
+\series default
+ können Sie die Tagesordnung der Veranstaltung im Vorfeld oder live anlegen,
+ entsprechende Folien vorbereiten und die Rednerliste verwalten.
+ Mehr zur Tagesordnung siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Tagesordnung"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Unter 
+\series bold
+Anträge
+\series default
+ verwalten Sie die gestellten Anträge und die dazugehörigen Abstimmungen.
+ Mehr dazu siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Anträge"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Der Punkt 
+\series bold
+Wahlen
+\series default
+ verwaltet die Wahlämter mit den Kandidaten sowie die jeweiligen Wahlergebnisse.
+ Mehr zur dazu siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Wahlen"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Der Menüpunkt 
+\series bold
+Teilnehmer/innen
+\series default
+ ermöglicht einen Zugriff auf die Personenprofile.
+ Mehr zur dazu siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Teilnehmer"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Unter dem Punkt 
+\series bold
+Dateien
+\series default
+ können Sie eigene Dateien auf den Server laden und zum Download anbieten.
+ PDF-Dateien können auch auf dem Projektor angezeigt werden.
+ Mehr zur dazu siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Dateien"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Im Menüpunkt 
+\series bold
+Einstellungen
+\series default
+ können die grundlegenden Einstellungen für die Veranstaltung vorgenommen
+ werden.
+ Mehr zur dazu siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Einstellungen-Übersicht"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Wenn Sie auf das Symbol 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol-Leiste.jpg
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+ klicken, wird neben dem Begrüßungstext der aktuell projizierte Inhalt angezeigt
+ (Live-Vorschau):
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename clipart/Übersicht-nach-Start-Projektor.jpg
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damit haben Sie immer im Blick was die Teilnehmer gerade sehen und können
+ während der Sitzung arbeiten.
+ Das Projektorbild in voller Größe bekommen Sie in einem neuen Browsertab
+ zu sehen, indem Sie auf die Live-Vorschau klicken.
+ Sie ist auch unter der URL 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+/projector/
+\end_layout
+
+\end_inset
+
+ zu finden.
+ Loggen Sie sich an dem Computer, an dem der Projektor angeschlossen ist,
+ in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ ein und rufen Sie den Link oder die URL auf.
+ Legen Sie die Anzeige in einem eigenen Browserfenster auf den Projektor
+ und projizieren Sie sie so auf die Leinwand.
+ In vielen Browsern kann mit der Taste 
+\family sans
+F11
+\family default
+ in den Vollbildmodus gewechselt werden.
+ Im 
+\emph on
+Präsentationsmodus Single
+\emph default
+ müssen Sie die Bildschirmanzeige auf Erweiterung/erweiterter Desktop stellen
+ und das Browserfenster mit dem Projektorbild auf den Projektor schieben.
+\end_layout
+
+\begin_layout Standard
+Das Projektorbild aktualisiert sich vollkommen automatisch.
+ Sollte die Aktualisierung auf Grund eines Fehlers, zum Beispiel einer Unterbrec
+hung der Verbindung zum Server, aussetzen, kann das Projektorbild an dem
+ Computer, an dem der Projektor angeschlossen ist, regelmäßig mit der Taste
+ 
+\family sans
+F5
+\family default
+ zurückgesetzt werden.
+ Um dem Kopf des Projektorfensters nach einer Änderung in der Konfiguration
+ zu aktualisieren, muss ebenfalls das Browserfenster zurückgesetzt werden.
+\end_layout
+
+\begin_layout Standard
+Unterhalb der Live-Vorschau gibt es die Rubriken 
+\family sans
+Countdown
+\family default
+ und 
+\family sans
+Mitteilungen
+\family default
+.
+ Mehr dazu siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Countdown-und-Mitteilungen"
+
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,6 @@
+title,first_name,last_name,structure_level,groups,comment,is_active,is_present,is_committee
+Prof. Dr.,Max,Käßmann,,2,,1,,
+,John,Doe,,2,abc,1,,
+,Fred,Bloggs,,2,,,,
+,Žusan,Oltrán,Vorstand,"2,3",kommt 15 Minuten später,1,,
+,,Wahlkommision,,4,,1,1,1
