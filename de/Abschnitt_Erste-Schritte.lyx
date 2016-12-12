@@ -127,20 +127,29 @@ logicalmkup
 \papercolumns 1
 \papersides 2
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author -1945514659 "Emanuel Schtze"
 \end_header
 
 \begin_body
 
 \begin_layout Chapter
+
+\change_deleted -1945514659 1481573088
 Erste Schritte
+\change_inserted -1945514659 1481573089
+Setup
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481573158
 In diesem Kapitel werden die ersten Schritte bei 
 \begin_inset Flex Noun
 status collapsed
@@ -152,10 +161,31 @@ OpenSlides
 \end_inset
 
  erklärt.
+\change_inserted -1945514659 1481573159
+In diesem Kapitel werden die nötigen Schritte zur Installation und Konfiguration
+ von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481573159
+OpenSlides
+\end_layout
+
+\end_inset
+
+ beschrieben.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Section
 Installation
+\change_inserted -1945514659 1481573262
+ und Start
+\change_unchanged
+
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Installation"
@@ -175,9 +205,31 @@ OpenSlides
 
 \end_inset
 
- muss nur auf einem Computer installiert werden.
- Dieser fungiert im Netzwerk als Server.
- Im Präsentationsmodus Single gibt es kein Netzwerk.
+ muss nur auf einem 
+\change_deleted -1945514659 1481573270
+Computer
+\change_inserted -1945514659 1481573273
+Rechner
+\change_unchanged
+ installiert werden
+\change_inserted -1945514659 1481573355
+, welcher
+\change_deleted -1945514659 1481573359
+.
+ Dieser fungiert
+\change_unchanged
+ im Netzwerk als Server
+\change_inserted -1945514659 1481573364
+ fungiert
+\change_unchanged
+.
+ Im Präsentationsmodus Single gibt es kein Netzwerk
+\change_inserted -1945514659 1481573374
+, so dass
+\change_deleted -1945514659 1481573373
+.
+
+\change_unchanged
  
 \begin_inset Flex Noun
 status collapsed
@@ -188,10 +240,32 @@ OpenSlides
 
 \end_inset
 
- muss dann auf dem einen verwendeten Computer installiert werden.
+ 
+\change_deleted -1945514659 1481573386
+muss dann
+\change_unchanged
+ auf dem einen verwendeten 
+\change_inserted -1945514659 1481573391
+Rechner
+\change_deleted -1945514659 1481573393
+Computer
+\change_unchanged
+ 
+\change_inserted -1945514659 1481573396
+selbst 
+\change_unchanged
+installiert werden
+\change_inserted -1945514659 1481573399
+ muss
+\change_unchanged
+.
+\change_deleted -1945514659 1481573457
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481573455
 Die aktuelle Version von 
 \begin_inset Flex Noun
 status collapsed
@@ -203,14 +277,28 @@ OpenSlides
 \end_inset
 
 , für die dieses Handbuch gültig ist, ist Version 2.1.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
-Verwendung der Windows-Version (Portable Version mit openslides.exe)
+
+\change_deleted -1945514659 1481573471
+Verwendung der 
+\change_unchanged
+Windows
+\change_deleted -1945514659 1481573474
+-Version (Portable Version mit openslides.exe)
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-Laden Sie die aktuelle 
+Laden Sie die aktuelle
+\change_inserted -1945514659 1481573480
+, portable
+\change_unchanged
+ 
 \begin_inset Flex Noun
 status collapsed
 
@@ -220,11 +308,17 @@ OpenSlides
 
 \end_inset
 
- Version für Windows von 
+
+\change_inserted -1945514659 1481573487
+-
+\change_deleted -1945514659 1481573484
+ 
+\change_unchanged
+Version für Windows von 
 \begin_inset CommandInset href
 LatexCommand href
-name "http://openslides.org"
-target "http://openslides.org"
+name "https://openslides.org"
+target "https://openslides.org"
 
 \end_inset
 
@@ -254,14 +348,143 @@ OpenSlides
 
  muss nun nicht weiter installiert werden.
  Alle notwendigen Programmelemente sind in dem Ordner enthalten.
+
+\change_inserted -1945514659 1481574035
+ Führen Sie nun einfach die Datei
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481573541
+openslides.exe
+\end_layout
+
+\end_inset
+
+ aus.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481574035
+Eine grafische Oberfläche wird gestartet, mit der Sie den 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481574035
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Server starten und jederzeit beenden können:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\change_inserted -1945514659 1481574035
+\begin_inset Graphics
+	filename clipart/OpenSlides-Server-before-Start.jpg
+	lyxscale 50
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481574035
+Zum Starten klicken Sie einfach auf die Schaltfläche 
+\family sans
+Start
+\begin_inset space ~
+\end_inset
+
+server
+\family default
+.
+ Ihr Webbrowser öffnet sich anschließend automatisch mit der passenden URL.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481574035
+Unter 
+\family sans
+Settings 
+\family default
+können Sie bei Bedarf einen anderen Host und Port einstellen (voreingestellt
+ ist Host 0.0.0.0, d.h.
+ OpenSlides hört auf allen Netzwerkinterfaces, und Port 8000).
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481574035
+Falls Sie Ihren Administrator-Zugang vergessen haben, können Sie mit Klick
+ auf 
+\family sans
+Reset
+\begin_inset space ~
+\end_inset
+
+admin
+\family default
+ einen neuen Admin-Nutzer erstellen, dessen Name und Passwort 
+\family sans
+admin
+\family default
+ ist.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481574035
+Mit 
+\family sans
+Backup
+\begin_inset space ~
+\end_inset
+
+database
+\family default
+ lässt sich die SQLite-Datenbank in regelmäßigen Abständen sichern (z.B.
+ auf einem externen Laufwerk).
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsection
-Verwendung der Linux/MacOS-Version
+
+\change_deleted -1945514659 1481574049
+Verwendung der 
+\change_unchanged
+Linux
+\change_inserted -1945514659 1481574056
+ 
+\change_unchanged
+/
+\change_inserted -1945514659 1481574056
+ 
+\change_unchanged
+MacOS
+\change_deleted -1945514659 1481574059
+-Version
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
 Laden Sie die aktuelle 
+\change_deleted -1945514659 1481574075
+
 \begin_inset Flex Noun
 status collapsed
 
@@ -271,15 +494,21 @@ OpenSlides
 
 \end_inset
 
- Version für Linux/MacOS von
+
+\change_inserted -1945514659 1481574071
+-
+\change_deleted -1945514659 1481574071
+ 
+\change_unchanged
+Version für Linux/MacOS von
 \begin_inset Newline newline
 \end_inset
 
 
 \begin_inset CommandInset href
 LatexCommand href
-name "http://openslides.org"
-target "http://openslides.org"
+name "https://openslides.org"
+target "https://openslides.org"
 
 \end_inset
 
@@ -294,10 +523,273 @@ $ pip install openslides
 \end_inset
 
 ) herunter.
- Die Installationsanleitung für diese Version finden Sie in der beiliegenden
- README.rst.
- Folgen Sie den Anweisungen der Anleitung.
  
+\change_inserted -1945514659 1481574119
+Folgen Sie anschließend der
+\change_deleted -1945514659 1481574120
+Die
+\change_unchanged
+ Installationsanleitung 
+\change_deleted -1945514659 1481574124
+f
+\change_inserted -1945514659 1481574127
+der zugehörigen
+\change_deleted -1945514659 1481574146
+ür diese Version finden Sie in der beiliegenden
+\change_unchanged
+ 
+\change_deleted -1945514659 1481574208
+README.rst
+\change_inserted -1945514659 1481574215
+
+\begin_inset CommandInset href
+LatexCommand href
+name "README.rst"
+target "https://github.com/OpenSlides/OpenSlides/blob/master/README.rst#installation"
+
+\end_inset
+
+
+\change_unchanged
+.
+ 
+\change_deleted -1945514659 1481574232
+Folgen Sie den Anweisungen der Anleitung.
+ 
+\change_inserted -1945514659 1481577726
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481577727
+Starten Sie den Server, indem Sie in der Kommandozeile eingeben:
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481577739
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481577727
+$ openslides
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481577739
+Damit wird der Server gestartet und ihr Browser mit der richtigen URL geöffnet.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481577727
+Wenn Sie eine virtuelle Arbeitsumgebung (virtualenv) verwenden, müssen Sie
+ diese zuvor aktivieren:
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481577727
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481577727
+$ source .venv/bin/activate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481577727
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481577727
+OpenSlides
+\end_layout
+
+\end_inset
+
+ kann jederzeit im Fenster der Kommandozeile mit der Tastenkombination 
+\family sans
+Strg+C
+\family default
+ beendet werden.
+ Alle eingegebenen Daten bleiben in der Datenbank gespeichert.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481577727
+Weitere Startoptionen können Sie mit folgender Eingabe sehen:
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481578261
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481577727
+$ openslides –help
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1945514659 1481578261
+Öffnen des Browsers
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481578261
+Bei Start des Servers wird automatisch der Browser mit der richtigen URL
+ geöffnet.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481578463
+Falls dies wegen Ihrer Browsereinstellungen nicht gelingt, rufen Sie das
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481578261
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Webinterface auf, indem Sie in die Adresszeile die IP-Adresse und Port
+ des Servers eintragen (z.B.
+ http://192.168.178.30:8000).
+ Am Rechner, auf dem 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481578261
+OpenSlides
+\end_layout
+
+\end_inset
+
+ gestartet wurde, kann 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481578261
+OpenSlides
+\end_layout
+
+\end_inset
+
+ auch über 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481578261
+http://localhost:8000
+\end_layout
+
+\end_inset
+
+ aufgerufen werden.
+\end_layout
+
+\begin_layout Subsection
+
+\change_inserted -1945514659 1481578463
+Erster Login
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481578489
+Der erste Login als Administrator ist mit dem Benutzernamen 
+\family sans
+admin
+\family default
+ und dem Passwort 
+\family sans
+admin
+\family default
+ möglich.
+ Sie sollten das Passwort nach dem ersten Start ändern (siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Benutzername-oder-Passwort"
+
+\end_inset
+
+), um Unbefugten keinen Zugriff auf Ihre Daten zu gewähren.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481578463
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481578503
+
+\series bold
+Hinweis:
+\series default
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481578463
+OpenSlides
+\end_layout
+
+\end_inset
+
+ benötigt Cookies, um die Identität des Nutzers festzustellen, solange er
+ eingeloggt ist.
+ Beim Ausloggen wird das Cookie wieder gelöscht.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -318,8 +810,19 @@ OpenSlides
  bereits vorkonfiguriert.
  Die beim ersten Start erzeugte (leere) Datenbank enthält einige Voreinstellunge
 n.
- Die Konfiguration kann im laufenden Programm unter dem Tab „Konfiguration“
- vorgenommen werden.
+ Die Konfiguration kann im laufenden Programm unter dem 
+\change_inserted -1945514659 1481578576
+Menüpunkt
+\change_deleted -1945514659 1481578576
+Tab
+\change_unchanged
+ „
+\change_inserted -1945514659 1481578579
+Einstellungen
+\change_deleted -1945514659 1481578582
+Konfiguration
+\change_unchanged
+“ vorgenommen werden.
  Weitere Einstellungsmöglichkeiten für erfahrene Benutzer sind in der Datei
  
 \begin_inset Flex Code
@@ -332,7 +835,9 @@ settings.py
 \end_inset
 
  möglich.
- Diese Datei liegt nicht im extrahierten 
+ Diese Datei liegt 
+\change_deleted -1945514659 1481578618
+nicht im extrahierten 
 \begin_inset Flex Noun
 status collapsed
 
@@ -342,9 +847,59 @@ OpenSlides
 
 \end_inset
 
- Verzeichnis, sondern in einem Benutzerverzeichnis, das abhängig von Ihrem
- Betriebssystem ist.
- Unter Windows (außer bei der Portable Version) ist es standardmäßig
+ Verzeichnis, sondern
+\change_unchanged
+ i
+\change_deleted -1945514659 1481578623
+n
+\change_inserted -1945514659 1481578623
+m
+\change_unchanged
+ 
+\change_deleted -1945514659 1481578654
+einem B
+\change_inserted -1945514659 1481578651
+
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481578648
+OpenSlides
+\end_layout
+
+\end_inset
+
+-B
+\change_unchanged
+enutzerverzeichnis, das abhängig von Ihrem Betriebssystem ist
+\change_inserted -1945514659 1481578672
+:
+\change_deleted -1945514659 1481578696
+.
+\change_inserted -1945514659 1481578696
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted -1945514659 1481578696
+ 
+\change_unchanged
+Unter Windows (
+\change_deleted -1945514659 1481578705
+außer bei der P
+\change_inserted -1945514659 1481578706
+p
+\change_unchanged
+ortable Version)
+\change_deleted -1945514659 1481578711
+ ist es standardmäßig
+\change_inserted -1945514659 1481578711
+:
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -352,13 +907,27 @@ OpenSlides
 status collapsed
 
 \begin_layout Plain Layout
+
+\change_inserted -1945514659 1481578777
+C:
+\backslash
+<Benutzer>
+\change_deleted -1945514659 1481578778
 $HOME
+\change_unchanged
+
 \backslash
 AppData
 \backslash
 Local
 \backslash
 openslides
+\change_inserted -1945514659 1481578819
+
+\backslash
+
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -367,7 +936,27 @@ openslides
 \end_layout
 
 \begin_layout Standard
-, unter Linux/MacOS ist es standardmäßig
+
+\change_deleted -1945514659 1481578796
+, u
+\change_inserted -1945514659 1481578796
+U
+\change_unchanged
+nter Linux
+\change_inserted -1945514659 1481578801
+ und
+\change_deleted -1945514659 1481578801
+/
+\change_inserted -1945514659 1481578801
+ 
+\change_unchanged
+MacOS
+\change_deleted -1945514659 1481578805
+ ist es standardmäßig
+\change_inserted -1945514659 1481578805
+:
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -376,6 +965,10 @@ status collapsed
 
 \begin_layout Plain Layout
 ~/.config/openslides
+\change_inserted -1945514659 1481578814
+/
+\change_unchanged
+
 \end_layout
 
 \end_inset
@@ -383,7 +976,9 @@ status collapsed
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+
+\change_deleted -1945514659 1481578175
 Start des Servers und Öffnen des Browsers
 \begin_inset CommandInset label
 LatexCommand label
@@ -394,11 +989,17 @@ name "sec:Start-des-Servers"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+
+\change_deleted -1945514659 1481578175
 Verwendung der Windows-Version (Portable Version mit openslides.exe)
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481574031
 Wenn Sie die Windows-Version (Portable Version mit openslides.exe) verwenden,
  brauchen Sie nur die Datei 
 \begin_inset Flex Code
@@ -428,6 +1029,8 @@ OpenSlides
 \begin_layout Standard
 \noindent
 \align center
+
+\change_deleted -1945514659 1481574031
 \begin_inset Graphics
 	filename clipart/OpenSlides-Server-before-Start.jpg
 	lyxscale 50
@@ -439,6 +1042,8 @@ OpenSlides
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481574031
 Zum Starten klicken Sie einfach auf den Knopf 
 \family sans
 Start
@@ -451,6 +1056,8 @@ server
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481574031
 Falls Sie Ihren Administrator-Zugang vergessen haben, können Sie mit Klick
  auf 
 \family sans
@@ -469,6 +1076,8 @@ admin
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481578250
 In 
 \family sans
 Settings
@@ -497,15 +1106,21 @@ database
 laden; mehr dazu siehe ??.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+
+\change_deleted -1945514659 1481578249
 Verwendung der Linux/MacOS-Version
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481577721
 Starten Sie den Server, indem Sie in der Kommandozeile eingeben:
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481577721
 \begin_inset Flex Code
 status collapsed
 
@@ -519,11 +1134,15 @@ $ openslides
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481577721
 Wenn Sie eine virtuelle Arbeitsumgebung (virtualenv) verwenden, müssen Sie
  diese zuvor aktivieren:
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481577721
 \begin_inset Flex Code
 status collapsed
 
@@ -537,10 +1156,14 @@ $ source .venv/bin/activate
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481577721
 Damit wird der Server gestartet und ihr Browser mit der richtigen URL geöffnet.
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481577721
 \begin_inset Flex Noun
 status collapsed
 
@@ -559,10 +1182,14 @@ Strg+C
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481577721
 Weitere Startoptionen können Sie mit folgender Eingabe sehen:
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481577721
 \begin_inset Flex Code
 status collapsed
 
@@ -573,18 +1200,26 @@ $ openslides –help
 \end_inset
 
 
+\change_unchanged
+
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+
+\change_deleted -1945514659 1481578256
 Öffnen des Browsers
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481578256
 Bei Start des Servers wird automatisch der Browser mit der richtigen URL
  geöffnet.
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481578256
 Falls dies wegen Ihrer Browsereinstellungen nicht gelingt, rufen Sie das
  
 \begin_inset Flex Noun
@@ -640,13 +1275,19 @@ http://localhost:8000
 \end_inset
 
  aufgerufen werden.
+\change_unchanged
+
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+
+\change_deleted -1945514659 1481578441
 Erster Login
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481578441
 Der erste Login als Administrator ist mit dem Benutzernamen 
 \family sans
 admin
@@ -667,6 +1308,8 @@ reference "subsec:Benutzername-oder-Passwort"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted -1945514659 1481578441
 \begin_inset Note Greyedout
 status open
 
@@ -703,7 +1346,13 @@ OpenSlides
 \end_layout
 
 \begin_layout Section
-Arbeiten mit 
+
+\change_deleted -1945514659 1481578835
+Arbeiten
+\change_inserted -1945514659 1481578837
+Erste Schritte
+\change_unchanged
+ mit 
 \begin_inset Flex Noun
 status collapsed
 
@@ -727,7 +1376,13 @@ OpenSlides
 
 \end_inset
 
- so aus:
+ 
+\change_inserted -1945514659 1481578856
+wie folgt
+\change_deleted -1945514659 1481578857
+so
+\change_unchanged
+ aus:
 \end_layout
 
 \begin_layout Standard
@@ -746,15 +1401,38 @@ OpenSlides
 \begin_layout Standard
 In der Kopfzeile kann man durch Klicken auf das Logo jederzeit auf die Startseit
 e zurückkehren.
- In der Zeile rechts können Sie mit anderen Nutzern chatten, siehe ??, Ihr
- Profile bearbeiten und ihr Passwort ändern, siehe 
+ In der Zeile rechts können Sie mit anderen Nutzern chatten, 
+\change_deleted -1945514659 1481578881
+siehe ??,
+\change_unchanged
+ Ihr Profil
+\change_deleted -1945514659 1481578887
+e
+\change_unchanged
+ bearbeiten
+\change_inserted -1945514659 1481578893
+,
+\change_unchanged
+ 
+\change_deleted -1945514659 1481578894
+und i
+\change_inserted -1945514659 1481578895
+I
+\change_unchanged
+hr Passwort ändern
+\change_deleted -1945514659 1481578908
+, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:An--und-Abmelden"
 
 \end_inset
 
- und die Menüsprache von 
+ und
+\change_inserted -1945514659 1481578910
+ sowie
+\change_unchanged
+ die Menüsprache von 
 \begin_inset Flex Noun
 status collapsed
 
@@ -768,7 +1446,17 @@ OpenSlides
 \end_layout
 
 \begin_layout Standard
-In der Menüleiste können Sie über die Menüpunkte alle Inhalte in 
+
+\change_inserted -1945514659 1481578931
+Über die Navigationsleiste
+\change_deleted -1945514659 1481578940
+In der Menüleiste könne
+\change_inserted -1945514659 1481578946
+ erreichen Sie alle Module von
+\change_deleted -1945514659 1481578952
+n Sie über die Menüpunkte alle Inhalte in 
+\change_unchanged
+
 \begin_inset Flex Noun
 status collapsed
 
@@ -778,7 +1466,15 @@ OpenSlides
 
 \end_inset
 
- eingeben und verwalten.
+
+\change_inserted -1945514659 1481578963
+:
+\change_unchanged
+ 
+\change_deleted -1945514659 1481578957
+eingeben und verwalten.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -795,12 +1491,33 @@ OpenSlides
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1945514659 1481578979
 Im Menüpunkt 
+\change_unchanged
+
 \series bold
 Startseite
+\change_inserted -1945514659 1481578983
+:
+\change_unchanged
+
 \series default
- können Sie die Teilnehmer willkommen heißen und kurz erklären, wie man
  
+\change_inserted -1945514659 1481579002
+Hier 
+\change_unchanged
+können Sie die Teilnehmer willkommen heißen 
+\change_inserted -1945514659 1481579008
+sowie
+\change_deleted -1945514659 1481579009
+und
+\change_inserted -1945514659 1481579020
+ allgemeine Informationen zur Veranstaltung oder 
+\change_deleted -1945514659 1481579024
+ kurz erklären, wie man 
+\change_unchanged
+
 \begin_inset Flex Noun
 status collapsed
 
@@ -810,105 +1527,303 @@ OpenSlides
 
 \end_inset
 
- nutzt.
+
+\change_inserted -1945514659 1481579030
+-Nutzung hinterlassen
+\change_deleted -1945514659 1481579032
+ nutzt
+\change_unchanged
+.
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1945514659 1481579039
 Im Menüpunkt 
+\change_unchanged
+
 \series bold
 Tagesordnung
+\change_inserted -1945514659 1481579043
+:
+\change_unchanged
+
 \series default
- können Sie die Tagesordnung der Veranstaltung im Vorfeld oder live anlegen,
- entsprechende Folien vorbereiten und die Rednerliste verwalten.
- Mehr zur Tagesordnung siehe 
+ 
+\change_inserted -1945514659 1481579047
+Legen Sie 
+\change_deleted -1945514659 1481579051
+können Sie die 
+\change_unchanged
+Tagesordnung
+\change_inserted -1945514659 1481579061
+spunkte an und verwalten Sie
+\change_deleted -1945514659 1481579068
+ der Veranstaltung im Vorfeld oder live anlegen, entsprechende Folien vorbereite
+n und die 
+\change_unchanged
+Red
+\change_deleted -1945514659 1481579069
+n
+\change_unchanged
+e
+\change_deleted -1945514659 1481579070
+r
+\change_unchanged
+liste
+\change_inserted -1945514659 1481579073
+n
+\change_unchanged
+ 
+\change_deleted -1945514659 1481579089
+verwalten.
+ Mehr zur Tagesordnung 
+\change_inserted -1945514659 1481579090
+(
+\change_unchanged
+siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Tagesordnung"
 
 \end_inset
 
+
+\change_inserted -1945514659 1481579091
+)
+\change_unchanged
 .
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1945514659 1481579098
 Unter 
+\change_unchanged
+
 \series bold
 Anträge
+\change_inserted -1945514659 1481579100
+:
+\change_unchanged
+
 \series default
- verwalten Sie die gestellten Anträge und die dazugehörigen Abstimmungen.
- Mehr dazu siehe 
+ 
+\change_inserted -1945514659 1481579102
+V
+\change_deleted -1945514659 1481579102
+v
+\change_unchanged
+erwalten Sie die gestellten Anträge und 
+\change_inserted -1945514659 1481579112
+protokollieren Sie 
+\change_unchanged
+die dazugehörigen Abstimmung
+\change_inserted -1945514659 1481579126
+sergebnisse (
+\change_deleted -1945514659 1481579129
+en.
+ Mehr dazu 
+\change_unchanged
+siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Anträge"
 
 \end_inset
 
+
+\change_inserted -1945514659 1481579133
+)
+\change_unchanged
 .
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1945514659 1481579140
 Der Punkt 
+\change_unchanged
+
 \series bold
 Wahlen
+\change_inserted -1945514659 1481579141
+:
+\change_unchanged
+
 \series default
- verwaltet die Wahlämter mit den Kandidaten sowie die jeweiligen Wahlergebnisse.
- Mehr zur dazu siehe 
+ 
+\change_deleted -1945514659 1481579144
+v
+\change_inserted -1945514659 1481579144
+V
+\change_unchanged
+erwalte
+\change_inserted -1945514659 1481579151
+n Sie die anstehenden
+\change_deleted -1945514659 1481579153
+t die
+\change_unchanged
+ Wahlämter mit den 
+\change_inserted -1945514659 1481579161
+vorgeschlagenen 
+\change_unchanged
+Kandidaten 
+\change_inserted -1945514659 1481579169
+und protokollieren Sie 
+\change_deleted -1945514659 1481579171
+sowie 
+\change_unchanged
+die
+\change_deleted -1945514659 1481579179
+ jeweiligen
+\change_unchanged
+ Wahlergebnisse
+\change_inserted -1945514659 1481579184
+ (
+\change_deleted -1945514659 1481579186
+.
+ Mehr zur dazu 
+\change_unchanged
+siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Wahlen"
 
 \end_inset
 
+
+\change_inserted -1945514659 1481579190
+)
+\change_unchanged
 .
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1945514659 1481579196
 Der Menüpunkt 
+\change_unchanged
+
 \series bold
-Teilnehmer/innen
+Teilnehme
+\change_inserted -1945514659 1481579215
+nde:
+\change_deleted -1945514659 1481579205
+r/innen
+\change_unchanged
+
 \series default
- ermöglicht einen Zugriff auf die Personenprofile.
- Mehr zur dazu siehe 
+ 
+\change_inserted -1945514659 1481579326
+Hier legen Sie alle Benutzer von 
+\noun on
+OpenSlides
+\noun default
+ an und verwalten die Nutzergruppen und deren Berechtigungen.
+ Die angelegten Teilnehmenden können Sie dann in den anderen Modulen verwenden
+ (z.B.
+ als Redner, Antragsteller oder Kandidat)
+\change_deleted -1945514659 1481579331
+ermöglicht einen Zugriff auf die Personenprofile.
+ Mehr zur dazu
+\change_inserted -1945514659 1481579332
+ (
+\change_deleted -1945514659 1481579333
+ 
+\change_unchanged
+siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Teilnehmer"
 
 \end_inset
 
+
+\change_inserted -1945514659 1481579335
+)
+\change_unchanged
 .
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1945514659 1481579345
 Unter dem Punkt 
+\change_unchanged
+
 \series bold
 Dateien
+\change_inserted -1945514659 1481579347
+:
+\change_unchanged
+
 \series default
- können Sie eigene Dateien auf den Server laden und zum Download anbieten.
- PDF-Dateien können auch auf dem Projektor angezeigt werden.
- Mehr zur dazu siehe 
+ 
+\change_inserted -1945514659 1481579372
+Nutzen Sie die Dokumentenablage, um beliebige Dateien zum Download anzubieten
+\change_deleted -1945514659 1481579379
+können Sie eigene Dateien auf den Server laden und zum Download anbieten
+\change_unchanged
+.
+ PDF-Dateien
+\change_inserted -1945514659 1481579391
+, Bilder und Videos
+\change_unchanged
+ können auch auf dem Projektor angezeigt werden
+\change_inserted -1945514659 1481579400
+ (
+\change_deleted -1945514659 1481579401
+.
+ Mehr zur dazu 
+\change_unchanged
+siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Dateien"
 
 \end_inset
 
+
+\change_inserted -1945514659 1481579403
+)
+\change_unchanged
 .
 \end_layout
 
 \begin_layout Itemize
+
+\change_deleted -1945514659 1481579416
 Im Menüpunkt 
+\change_unchanged
+
 \series bold
 Einstellungen
+\change_inserted -1945514659 1481579454
+:
+\change_unchanged
+
 \series default
- können die grundlegenden Einstellungen für die Veranstaltung vorgenommen
+ 
+\change_inserted -1945514659 1481579487
+Passen Sie die einzelnen Module auf Ihre Veranstaltung an.
+ Es gibt zahlreiche Konfigurationsoptionen (siehe
+\change_deleted -1945514659 1481579500
+können die grundlegenden Einstellungen für die Veranstaltung vorgenommen
  werden.
- Mehr zur dazu siehe 
+ Mehr zur dazu siehe
+\change_unchanged
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Einstellungen-Übersicht"
 
 \end_inset
 
+
+\change_inserted -1945514659 1481579512
+)
+\change_unchanged
 .
 \end_layout
 
@@ -921,8 +1836,19 @@ Wenn Sie auf das Symbol
 
 \end_inset
 
- klicken, wird neben dem Begrüßungstext der aktuell projizierte Inhalt angezeigt
- (Live-Vorschau):
+ 
+\change_inserted -1945514659 1481579555
+am rechten Bildschirmrand 
+\change_unchanged
+klicken, wird 
+\change_inserted -1945514659 1481579593
+die Projektorseitenleiste ausgeklappt.
+ Dort wird der aktuell projizierte Inhalt in einer Live-Vorschau angezeigt.
+\change_deleted -1945514659 1481579600
+neben dem Begrüßungstext der aktuell projizierte Inhalt angezeigt (Live-Vorschau
+):
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
@@ -939,22 +1865,66 @@ Wenn Sie auf das Symbol
 \end_layout
 
 \begin_layout Standard
-Damit haben Sie immer im Blick was die Teilnehmer gerade sehen und können
- während der Sitzung arbeiten.
- Das Projektorbild in voller Größe bekommen Sie in einem neuen Browsertab
- zu sehen, indem Sie auf die Live-Vorschau klicken.
+Damit haben Sie immer im Blick was die Teilnehme
+\change_inserted -1945514659 1481579623
+nden
+\change_deleted -1945514659 1481579623
+r
+\change_unchanged
+ gerade 
+\change_inserted -1945514659 1481579634
+an der Leinwand 
+\change_unchanged
+sehen
+\change_inserted -1945514659 1481579638
+.
+
+\change_unchanged
+ 
+\change_deleted -1945514659 1481579644
+und können während der Sitzung arbeiten.
+ 
+\change_unchanged
+Das Projektorbild in voller Größe 
+\change_deleted -1945514659 1481579672
+bekommen
+\change_inserted -1945514659 1481579676
+erhalten
+\change_unchanged
+ Sie 
+\change_inserted -1945514659 1481579680
+(
+\change_unchanged
+in einem neuen Browsertab
+\change_inserted -1945514659 1481579683
+)
+\change_deleted -1945514659 1481579756
+ zu sehen
+\change_unchanged
+, indem Sie auf die Live-Vorschau klicken.
  Sie ist auch unter der URL 
 \begin_inset Flex Code
 status collapsed
 
 \begin_layout Plain Layout
 /projector/
+\change_inserted -1945514659 1481579812
+1
+\change_unchanged
+
 \end_layout
 
 \end_inset
 
  zu finden.
- Loggen Sie sich an dem Computer, an dem der Projektor angeschlossen ist,
+ Loggen Sie sich an dem 
+\change_deleted -1945514659 1481579818
+Computer
+\change_inserted -1945514659 1481579821
+Rechner
+\change_deleted -1945514659 1481579833
+, an dem der Projektor angeschlossen ist,
+\change_unchanged
  in 
 \begin_inset Flex Noun
 status collapsed
@@ -965,38 +1935,146 @@ OpenSlides
 
 \end_inset
 
- ein und rufen Sie den Link oder die URL auf.
- Legen Sie die Anzeige in einem eigenen Browserfenster auf den Projektor
- und projizieren Sie sie so auf die Leinwand.
- In vielen Browsern kann mit der Taste 
+ ein
+\change_inserted -1945514659 1481579860
+, an dem Ihr Projektor angeschlossen ist,
+\change_unchanged
+ und rufen Sie den Link oder die URL auf.
+ Legen Sie die 
+\change_inserted -1945514659 1481579869
+Projektor
+\change_deleted -1945514659 1481579870
+A
+\change_inserted -1945514659 1481579870
+a
+\change_unchanged
+nzeige in ein
+\change_deleted -1945514659 1481579889
+em
+\change_unchanged
+ eigene
+\change_inserted -1945514659 1481579890
+s
+\change_deleted -1945514659 1481579890
+n
+\change_unchanged
+ Browserfenster 
+\change_inserted -1945514659 1481579916
+und wechseln Sie Ihren Browser in Vollbildmodus
+\change_deleted -1945514659 1481579920
+auf den Projektor und projizieren Sie sie so auf die Leinwand
+\change_inserted -1945514659 1481579937
+ (i.d.R.
+ 
+\change_deleted -1945514659 1481579944
+.
+ In vielen Browsern kann 
+\change_unchanged
+mit
+\change_deleted -1945514659 1481579946
+ der
+\change_unchanged
+ Taste 
 \family sans
 F11
+\change_inserted -1945514659 1481579964
+).
+
+\change_unchanged
+
 \family default
- in den Vollbildmodus gewechselt werden.
+ 
+\change_deleted -1945514659 1481579960
+in den Vollbildmodus gewechselt werden.
+
+\change_unchanged
  Im 
 \emph on
 Präsentationsmodus Single
 \emph default
- müssen Sie die Bildschirmanzeige auf Erweiterung/erweiterter Desktop stellen
- und das Browserfenster mit dem Projektorbild auf den Projektor schieben.
+ müssen Sie 
+\change_inserted -1945514659 1481580007
+Ihren Projektor als zweiten Monitor einrichten (erweiterter Desktop) 
+\change_deleted -1945514659 1481580013
+die Bildschirmanzeige auf Erweiterung/erweiterter Desktop stellen
+\change_unchanged
+ und das Browserfenster mit dem Projektorbild auf 
+\change_inserted -1945514659 1481580027
+Ihren angeschlossenen
+\change_deleted -1945514659 1481580030
+den
+\change_unchanged
+ Projektor schieben.
 \end_layout
 
 \begin_layout Standard
 Das Projektorbild aktualisiert sich vollkommen automatisch.
- Sollte die Aktualisierung auf Grund eines Fehlers, zum Beispiel einer Unterbrec
-hung der Verbindung zum Server, aussetzen, kann das Projektorbild an dem
- Computer, an dem der Projektor angeschlossen ist, regelmäßig mit der Taste
+ Sollte die Aktualisierung auf Grund eines Fehlers
+\change_inserted -1945514659 1481580068
+ (
+\change_deleted -1945514659 1481580068
+, 
+\change_unchanged
+z
+\change_deleted -1945514659 1481580046
+um
+\change_inserted -1945514659 1481580047
+.
+
+\change_unchanged
+ B
+\change_inserted -1945514659 1481580048
+.
+\change_deleted -1945514659 1481580050
+eispiel
+\change_unchanged
+ einer Unterbrechung der Verbindung zum Server
+\change_inserted -1945514659 1481580073
+)
+\change_deleted -1945514659 1481580074
+,
+\change_unchanged
+ aussetzen, 
+\change_inserted -1945514659 1481580085
+laden Sie das
+\change_deleted -1945514659 1481580086
+kann das
+\change_unchanged
+ Projektorbild an dem Computer, an dem der Projektor angeschlossen ist,
  
+\change_deleted -1945514659 1481580100
+regelmäßig
+\change_unchanged
+ mit der Taste 
 \family sans
 F5
 \family default
- zurückgesetzt werden.
+ 
+\change_deleted -1945514659 1481580109
+zurückgesetzt werden
+\change_inserted -1945514659 1481580109
+neu
+\change_unchanged
+.
+
+\change_deleted -1945514659 1481580120
  Um dem Kopf des Projektorfensters nach einer Änderung in der Konfiguration
  zu aktualisieren, muss ebenfalls das Browserfenster zurückgesetzt werden.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Standard
-Unterhalb der Live-Vorschau gibt es die Rubriken 
+Unterhalb der Live-Vorschau gibt es die 
+\change_inserted -1945514659 1481580147
+Möglichkeit einen
+\change_deleted -1945514659 1481580148
+Rubriken
+\change_inserted -1945514659 1481580167
+ Countdown, eine Mitteilung oder die aktuelle Redeliste zu projizieren.
+
+\change_deleted -1945514659 1481580170
+ 
 \family sans
 Countdown
 \family default
@@ -1013,6 +2091,29 @@ reference "sec:Countdown-und-Mitteilungen"
 \end_inset
 
 .
+\change_inserted -1945514659 1481580202
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted -1945514659 1481580204
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted -1945514659 1481580221
+TODO: Den Projektorbutton hier einführen! Wichtig!
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
 \end_layout
 
 \end_body

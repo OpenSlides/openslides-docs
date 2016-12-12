@@ -165,8 +165,9 @@ OpenSlides
 
 \end_inset
 
- wurde vor allem für Mitgliederversammlungen, Delegiertenversammlungen,
- Hauptversammlungen oder Parteitage entwickelt.
+ wurde speziell für die Vorbereitung und Durchführung von Versammlungen,
+ wie Mitgliederversammlungen, Delegiertenversammlungen, Hauptversammlungen
+ und Parteitage, entwickelt.
  Mit 
 \begin_inset Flex Noun
 status collapsed
@@ -183,10 +184,17 @@ OpenSlides
  die Anwesenden.
  Zusätzlich gibt es Funktionen zur Verwaltung von Teilnehmenden, Anträgen,
  Wahlen und Dateien.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Grundprinzip von OpenSlides erklären (Projektion, Steuerung und Partizipat
+ion für Teilnehmer).
 \end_layout
 
-\begin_layout Standard
-TODO: Grundprinzip von OpenSlides erklären.
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
