@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass scrbook
 \begin_preamble
 % Linkfläche für Querverweise vergrößern und automatisch benennen,
@@ -45,16 +47,16 @@ logicalmkup
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman lmodern
-\font_sans lmss
-\font_typewriter lmtt
-\font_math auto
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format pdf2
 \output_sync 0
@@ -124,6 +126,16 @@ logicalmkup
 \selected 1
 \filename_suffix 0
 \color #00ff00
+\end_branch
+\branch EinzelnesDokument
+\selected 0
+\filename_suffix 0
+\color #ff00ff
+\end_branch
+\branch ImHandbuch
+\selected 1
+\filename_suffix 0
+\color #aaaaff
 \end_branch
 \index Index
 \shortcut idx
@@ -240,7 +252,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "section_einfuehrung.lyx"
+filename "Abschnitt_Einfuehrung.lyx"
 
 \end_inset
 
@@ -259,7 +271,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "section_erste-schritte.lyx"
+filename "Abschnitt_Erste-Schritte.lyx"
 
 \end_inset
 
@@ -278,7 +290,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "section_tutorium-versammlungsadministration.lyx"
+filename "Abschnitt_Tutorium-Administration.lyx"
 
 \end_inset
 
@@ -297,7 +309,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "section_einzelne-functionen.lyx"
+filename "Abschnitt_Einzelne-Funktionen.lyx"
 
 \end_inset
 
@@ -316,46 +328,13 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "section_weitere-anpassung.lyx"
+filename "Abschnitt_Weitere-Anpassung.lyx"
 
 \end_inset
 
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Chapter
-Sonstiges
-\end_layout
-
-\begin_layout Standard
-Dieses Handbuch ist noch nicht fertiggestellt.
- Wenn Sie Interesse haben, uns zu unterstützen, schreiben Sie uns einfach
- eine E-Mail:
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-name "users-de@openslides.org"
-target "users-de@openslides.org"
-type "mailto:"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Datenschutz
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -363,10 +342,14 @@ Datenschutz
 
 \begin_layout Chapter
 \start_of_appendix
-Voreinstellungen der Teilnehmer-Gruppen
+CSV-Beispieldateien
+\end_layout
+
+\begin_layout Section
+Beispiel für Tagesordnung CSV-Datei
 \begin_inset CommandInset label
 LatexCommand label
-name "chap:Voreinstellungen-der-Teilnehmer-"
+name "chap:Beispiel-für-Tagesordnung"
 
 \end_inset
 
@@ -374,183 +357,26 @@ name "chap:Voreinstellungen-der-Teilnehmer-"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename clipart/Gruppe-Gäste.jpg
-	lyxscale 33
-	width 100col%
-
+Dies ist als Beispiel der Inhalt einer CSV-Datei für den Import von 2
+\begin_inset space ~
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Voreinstellung der Gruppe 
-\begin_inset Quotes gld
-\end_inset
-
-Gäste
-\begin_inset Quotes grd
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+Tagesordnungspunkten:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
 
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename clipart/Gruppe-registrierte-Nutzer.jpg
-	lyxscale 33
-	width 100col%
-
+\family sans
+title,text,duration,comment,is_hidden
+\begin_inset Newline newline
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Voreinstellung der Gruppe 
-\begin_inset Quotes gld
+Begrüßung,Die Vereinsvorsitzende Frau Weise heißt sie herzlich willkommen.,5:00,K
+ommentar,
+\begin_inset Newline newline
 \end_inset
 
-Registrierte Nutzer
-\begin_inset Quotes grd
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename clipart/Gruppe-Delegierte.jpg
-	lyxscale 33
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Voreinstellung der Gruppe 
-\begin_inset Quotes gld
-\end_inset
-
-Delegierte
-\begin_inset Quotes grd
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename clipart/Gruppe-Mitarbeitende.jpg
-	lyxscale 33
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Voreinstellung der Gruppe 
-\begin_inset Quotes gld
-\end_inset
-
-Mitarbeitende
-\begin_inset Quotes grd
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Chapter
-CSV-Beispieldateien
+Bericht des Vorstands,,20:00,,1
 \end_layout
 
 \begin_layout Section
@@ -575,24 +401,25 @@ Teilnehmern:
 \begin_layout Standard
 
 \family sans
-title,first_name,last_name,structure_level,groups,comment,is_active
+title,first_name,last_name,structure_level,groups,comment,is_active,is_present,i
+s_committee
 \begin_inset Newline newline
 \end_inset
 
 Prof.
- Dr.,Max,Käßmann,,3,,1
+ Dr.,Max,Käßmann,,2,,1,,
 \begin_inset Newline newline
 \end_inset
 
-,John,Doe,,4,abc,1
+,John,Doe,,2,abc,1,,
 \begin_inset Newline newline
 \end_inset
 
-,Fred,Bloggs,,,,
+,Fred,Bloggs,,2,,,, ,Žusan,Oltrán,Vorstand,"2,3",kommt 15 Minuten später,1,,
 \begin_inset Newline newline
 \end_inset
 
-,Žusan,Oltrán,Vorstand,"3,4",kommt 15 Minuten später,0
+,,Wahlkommision,,4,,1,1,1
 \end_layout
 
 \begin_layout Section
@@ -617,7 +444,7 @@ Anträgen:
 \begin_layout Standard
 
 \family sans
-identifier,title,text,reason,submitter,category
+identifier,title,text,reason,submitter,category,origin
 \begin_inset Newline newline
 \end_inset
 
@@ -625,15 +452,15 @@ Kat A-1,Satzungsänderung,"Die Mitgliederversammlung möge beschließen, in
  §8 Absatz 1 der Vereinssatzung die Zahl fünf durch sieben zu ersetzen.","Die
  vielen Aufgaben erfordern eine Erweiterung des Beirates auf sieben Mitglieder.",
 Dr.
- Hans Schulze,Kategorie A
+ Hans Schulze,Kategorie A,Vorstandssitzung vom 19.10.
 \begin_inset Newline newline
 \end_inset
 
-B1,Titel 2,Text 2,Begründung 2,Antragsteller 2,Kategorie B
+B1,Titel 2,Text 2,Begründung 2,Antragsteller 2,Kategorie B,
 \begin_inset Newline newline
 \end_inset
 
-,Titel 3,Text 3,Begründung 3,,
+,Titel 3,Text 3,Begründung 3,,,
 \end_layout
 
 \begin_layout Chapter

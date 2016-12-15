@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass scrbook
 \begin_preamble
 % that links to image floats jumps
@@ -47,7 +49,7 @@
  {\usepackage{array}}{}
 \setlength{\extrarowheight}{2pt}
 \end_preamble
-\options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading,dvipsnames,table
+\options bibliography=totoc,index=totoc,BCOR7.5mm,captions=tableheading,dvipsnames,table
 \use_default_options false
 \master OpenSlides-Handbuch.lyx
 \begin_modules
@@ -58,16 +60,16 @@ logicalmkup
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman lmodern
-\font_sans lmss
-\font_typewriter lmtt
-\font_math auto
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format pdf2
 \output_sync 0
@@ -163,8 +165,9 @@ OpenSlides
 
 \end_inset
 
- wurde vor allem für Mitgliederversammlungen, Delegiertenversammlungen,
- Hauptversammlungen oder Parteitage entwickelt.
+ wurde speziell für die Vorbereitung und Durchführung von Versammlungen,
+ wie Mitgliederversammlungen, Delegiertenversammlungen, Hauptversammlungen
+ und Parteitage, entwickelt.
  Mit 
 \begin_inset Flex Noun
 status collapsed
@@ -181,10 +184,17 @@ OpenSlides
  die Anwesenden.
  Zusätzlich gibt es Funktionen zur Verwaltung von Teilnehmenden, Anträgen,
  Wahlen und Dateien.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Grundprinzip von OpenSlides erklären (Projektion, Steuerung und Partizipat
+ion für Teilnehmer).
 \end_layout
 
-\begin_layout Standard
-TODO: Grundprinzip von OpenSlides erklären.
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
