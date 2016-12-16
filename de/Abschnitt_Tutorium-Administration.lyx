@@ -178,7 +178,7 @@ Tutorium – Administration einer Versammlung
 \end_layout
 
 \begin_layout Standard
-In diesem Tutorial sehen Sie am Beispiel der Mitgliederversammlung eines
+In diesem Tutorium sehen Sie am Beispiel der Mitgliederversammlung eines
  Kleingartenvereins, wie Sie 
 \begin_inset Flex Noun
 status collapsed
@@ -449,13 +449,6 @@ Startseite: Herzlich willkommen, liebe Gartenfreunde!
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \noindent
 \align center
 \begin_inset Graphics
@@ -486,13 +479,6 @@ OpenSlides
 Diesen Text auf der Login-Seite anzeigen
 \family default
  erscheint auf dem Login-Fenster, wenn sich die Teilnehmer einloggen:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -596,6 +582,20 @@ Tagesordnung
 \end_inset
 
  und geben Sie ein neues Thema wie folgt ein:
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Begrüßung
+\end_layout
+
+\begin_layout Plain Layout
+Die Vereinsvorsitzende Frau Weise heißt Sie herzlich willkommen.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -827,8 +827,12 @@ nicht
 \end_layout
 
 \begin_layout Standard
-Eigene Themen werden in der Übersicht rosa unterlegt, um anzuzeigen, dass
- sie nicht Teil der offiziellen Tagesordnung sind.
+Eigene Themen werden in der Übersicht mit der Option 
+\family sans
+Interner Eintrag
+\family default
+ versehen, um anzuzeigen, dass sie nicht Teil der offiziellen Tagesordnung
+ sind.
 \end_layout
 
 \begin_layout Subsection
@@ -948,47 +952,26 @@ Der Inhalt von Tagesordnungspunkten kann jederzeit geändert werden, insbesonder
 \end_layout
 
 \begin_layout Standard
+Wie man sieht.
+ können einige Änderungen direkt in der Tagesordnungsübersicht vorgenommen
+ werden.
+\end_layout
+
+\begin_layout Standard
 Ändern Sie zum Beispiel den Inhalt des Tagesordnungspunktes 
 \family sans
 Bericht des Vorstandes
 \family default
-, indem Sie dort auf 
+, indem Sie im Kontextmenü auf 
 \family sans
 Bearbeiten
 \family default
  klicken und einen Text zum Tagesordnungspunkt eingeben.
-\end_layout
-
-\begin_layout Standard
-Als Alternative für das Bearbeiten können Sie im Kontextmenü auf 
-\family sans
-Quick-Edit
-\family default
- klicken und so oft benötigte Dinge wie die 
-\family sans
-Dauer
-\family default
- ändern.
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Graphics
-	filename clipart/TOP-QuickEdit.jpg
-	lyxscale 50
-	width 100col%
-
+ Anschließend setzen sie die Dauer auf 0:20 (20
+\begin_inset space \thinspace{}
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
+min).
 \end_layout
 
 \begin_layout Subsection
@@ -1095,10 +1078,13 @@ Projizieren Sie die Redeliste nun durch Klicken auf
 \end_layout
 
 \begin_layout Standard
-In der Rubrik 
-\family sans
-Letzte Redner/innen
-\family default
+Durch Drücken auf 
+\begin_inset Graphics
+	filename clipart/Letzte-Redner.jpg
+	scale 70
+
+\end_inset
+
  können sie sich die letzten Redner als Liste anzeigen lassen.
  Ein Teil dieser Liste wird auch projiziert, je nach den Einstellungen.
  Für Details dazu siehe 
@@ -1697,8 +1683,7 @@ Satzungsänderung
 \end_layout
 
 \begin_layout Plain Layout
-Die Versammlung möge beschließen, in §8 Absatz 1 der Vereinssatzung die
- Zahl fünf durch sieben zu ersetzen.
+in §8 Absatz 1 der Vereinssatzung die Zahl fünf durch sieben zu ersetzen.
 \end_layout
 
 \begin_layout Plain Layout
@@ -1731,7 +1716,7 @@ Die vielen Aufgaben erfordern eine Erweiterung des Beirats auf sieben Mitglieder
 \end_layout
 
 \begin_layout Standard
-Wie Sie sehen, gibt es im Textfeld schon eine Einleitung 
+Wie Sie sehen, gibt schon eine Einleitung 
 \begin_inset Quotes gld
 \end_inset
 
@@ -1760,7 +1745,7 @@ Erstellen Sie auf gleiche Weise eine weiteren Antrag mit dem Titel
 \begin_inset Quotes grd
 \end_inset
 
-.
+ und einem beliebigen Text.
 \end_layout
 
 \begin_layout Standard
