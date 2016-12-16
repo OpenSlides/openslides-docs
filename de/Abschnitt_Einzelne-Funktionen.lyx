@@ -811,6 +811,8 @@ target "http://localhost:8000/projector/2/"
 Der dritte Projektor bekommt die 3 usw.
  Der entsprechende Projektor wird in einem neuen Browsertab geöffnet, indem
  man in der Projektorverwaltung auf ihn klickt.
+ Wird ein Projektor wieder gelöscht, wird seine Nummer nicht neu vergeben.
+ Jeder Projektor hat also eine einzigartige Nummer.
 \end_layout
 
 \begin_layout Standard
@@ -1339,7 +1341,7 @@ B.:
 status open
 
 \begin_layout Plain Layout
-Begrüßung,Die Vorsitzende Frau Weise heißt Sie willkommen.,5:00,
+Begrüßung,Die Vorsitzende Frau Weise heißt Sie willkommen.,0:15,
 \begin_inset ERT
 status collapsed
 
@@ -1386,9 +1388,9 @@ Jedes Komma trennt die Eigenschaften voneinander.
  Es muss jedoch mindestens der Titel angegeben werden.
  Als Dauer geben Sie eine Zeit im Format 
 \family sans
-mm:ss
+h:mm
 \family default
- (Minuten:Sekunden, z.
+ (Stunde:Minuten, z.
 \begin_inset space \thinspace{}
 \end_inset
 
@@ -1396,22 +1398,16 @@ B:
 \begin_inset Quotes gld
 \end_inset
 
-5:00
+0:15
 \begin_inset Quotes grd
 \end_inset
 
-) Bei is_hidden
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-korrigieren
-\end_layout
-
-\end_inset
-
- bedeutet '1', dass diese Eigenschaft gesetzt wird, ansonsten verwendet
- man '0' oder nichts.
+) Bei 
+\family sans
+is_hidden
+\family default
+ bedeutet '1', dass dieser Eintrag als intern behandelt wird, ansonsten
+ verwendet man '0' oder nichts.
 \begin_inset Newline newline
 \end_inset
 
@@ -1628,7 +1624,7 @@ Text
 \begin_inset Text
 
 \begin_layout Plain Layout
-15:00
+0:15
 \end_layout
 
 \end_inset
@@ -1754,28 +1750,8 @@ Klickt man dort auf
 Bearbeiten
 \family default
 , kann man den Tagesordnungspunkt bearbeiten.
- Als Alternative für das Bearbeiten kann man im Kontextmenü auf 
-\family sans
-Quick-Edit
-\family default
- klicken und so oft benötigte Dinge wie die 
-\family sans
-Dauer
-\family default
- ändern:
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Graphics
-	filename clipart/TOP-QuickEdit.jpg
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
+ Wie man sieht, können einige Eigenschaften wie die Dauer direkt in der
+ Übersicht geändert werden.
 \end_layout
 
 \begin_layout Standard
@@ -1785,6 +1761,12 @@ Kommentare
 \family default
  dienen nur als Hinweis und werden nicht projiziert.
  Sie sind nur für die Versammlungsleitung sichtbar.
+ 
+\family sans
+Interne Einträge
+\family default
+ werden nicht in der Tagesordnungsübersicht projiziert, da sie nicht Teil
+ der offiziellen Tagesordnung sind.
 \end_layout
 
 \begin_layout Subsection
@@ -1799,8 +1781,12 @@ name "subsec:Einrichtung-eigener-Themen"
 \end_layout
 
 \begin_layout Standard
-Eigene Themen werden verwendet, um Dinge außerhalb der offiziellen Tagesordnung
- zu behandeln.
+Eigene Themen bzw.
+\begin_inset space \space{}
+\end_inset
+
+interne Einträge werden verwendet, um Dinge außerhalb der offiziellen Tagesordnu
+ng zu behandeln.
  Technisch sind sie jedoch dasselbe wie ein Tagesordnungspunkt.
  Das Erstellen eines eigenen Themas funktioniert daher genauso wie das Erstellen
  eines Tagesordnungspunkts, nur dass es wichtig ist, dass die Option 
@@ -1815,8 +1801,12 @@ nicht
 \end_layout
 
 \begin_layout Standard
-Eigene Themen werden in der Übersicht rosa unterlegt, um anzuzeigen, dass
- sie nicht Teil der offiziellen Tagesordnung sind.
+Eigene Themen werden in der Übersicht mit der Option 
+\family sans
+Interner Eintrag 
+\family default
+angezeigt, um anzuzeigen, dass sie nicht Teil der offiziellen Tagesordnung
+ sind.
 \end_layout
 
 \begin_layout Subsection
@@ -1902,15 +1892,6 @@ Mit dem Knopf
 \end_inset
 
  können Tagesordnungspunkte ausgewählt werden um sie zu löschen.
- Mit dem Knopf 
-\begin_inset Graphics
-	filename clipart/Filter-Knopf.jpg
-	scale 70
-
-\end_inset
-
- können bestimmte Punkte ausgeblendet werden.
- Dies beeinträchtigt jedoch nicht die Projektion der Tagesordnung.
 \end_layout
 
 \begin_layout Subsection
@@ -2176,10 +2157,10 @@ reference "subsec:Das-Plugin-CSV"
 \end_layout
 
 \begin_layout Subsection
-Tagesordnung drucken
+Tagesordnung exportieren
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Tagesordnung-drucken"
+name "subsec:Tagesordnung-exportieren"
 
 \end_inset
 
@@ -2187,15 +2168,17 @@ name "subsec:Tagesordnung-drucken"
 \end_layout
 
 \begin_layout Standard
-Auf der Übersichtsseite der Tagesordnung kann man durch Klicken auf 
+Klickt man in der Tagesordnungsübersicht auf 
 \begin_inset Graphics
-	filename clipart/PDF-Symbol.jpg
+	filename clipart/Exportieren-alle.jpg
 	scale 70
 
 \end_inset
 
- die gesamte Tagesordnung mit allen Unterpunkten (ohne eigene Themen) als
- PDF-Datei abrufen.
+, kann man das Ausgabeformat wählen.
+ Es wird so entweder ein PDF generiert, das die gesamte Tagesordnung mit
+ allen Unterpunkten (ohne eigene Themen) enthält, oder es wird ein CSV-Datei
+ erstellt, die man für eine andere Veranstaltung wieder importieren kann.
 \end_layout
 
 \begin_layout Subsection
@@ -6520,9 +6503,9 @@ reference "subsec:Versionierung"
 \begin_layout Standard
 Im Feld 
 \family sans
-Name der Empfehlungskommission 
+Name des Empfehlungsgebers 
 \family default
-kann die Bezeichnung der Empfehlungskommission angegeben werden.
+kann die Bezeichnung einer Empfehlungskommission angegeben werden.
  Ist ein Name angegeben, wird so die Empfehlungs-Funktion aktiviert, die
  in 
 \begin_inset CommandInset ref
@@ -7483,7 +7466,7 @@ OpenSlides
 die Tagesordnung als PDF auszugeben, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Tagesordnung-drucken"
+reference "subsec:Tagesordnung-exportieren"
 
 \end_inset
 
