@@ -276,7 +276,7 @@ OpenSlides
 
 \end_inset
 
- wie in 
+ und starten Sie anschließend den Server wie in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Installation"
@@ -284,14 +284,6 @@ reference "sec:Installation"
 \end_inset
 
  beschrieben.
- Starten Sie anschließend den Server wie in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Start-des-Servers"
-
-\end_inset
-
- erläutert.
  Sie sehen jetzt die Login-Seite von 
 \begin_inset Flex Noun
 status collapsed

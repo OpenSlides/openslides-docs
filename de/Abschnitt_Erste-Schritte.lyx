@@ -206,7 +206,11 @@ OpenSlides
 
 \end_inset
 
--Version für Windows von 
+-Version für Windows von
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset CommandInset href
 LatexCommand href
 name "https://openslides.org"
@@ -215,9 +219,12 @@ target "https://openslides.org"
 \end_inset
 
  herunter.
- Extrahieren Sie das zip-Archiv (z.
+ Extrahieren Sie das Zip-Archiv (z.
  B.
- 
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Flex Code
 status collapsed
 
@@ -240,7 +247,7 @@ OpenSlides
 
  muss nun nicht weiter installiert werden.
  Alle notwendigen Programmelemente sind in dem Ordner enthalten.
- Führen Sie nun einfach die Datei
+ Führen Sie nun einfach die Datei 
 \begin_inset Flex Code
 status collapsed
 
@@ -281,7 +288,7 @@ OpenSlides
 \end_layout
 
 \begin_layout Standard
-Zum Starten klicken Sie einfach auf die Schaltfläche 
+Zum Starten klicken Sie einfach auf den Knopf 
 \family sans
 Start
 \begin_inset space ~
@@ -313,7 +320,7 @@ Reset
 
 admin
 \family default
- einen neuen Admin-Nutzer erstellen, dessen Name und Passwort 
+ einen neuen Administrator-Nutzer erstellen, dessen Name und Passwort 
 \family sans
 admin
 \family default
