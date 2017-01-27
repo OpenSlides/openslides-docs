@@ -64,7 +64,7 @@ logicalmkup
 \index_command default
 \float_placement h
 \paperfontsize 12
-\spacing single
+\spacing onehalf
 \use_hyperref true
 \pdf_title "OpenSlides Handbuch"
 \pdf_author "OpenSlides Team"
@@ -233,7 +233,7 @@ OpenSlides
 
 \end_inset
 
- Version 2.1b1
+ Version 2.1b2
 \end_layout
 
 \begin_layout Standard
@@ -468,7 +468,7 @@ Impressum
 \end_layout
 
 \begin_layout Standard
-Copyright 2012–2016
+Copyright 2012–2017
 \end_layout
 
 \begin_layout Description
