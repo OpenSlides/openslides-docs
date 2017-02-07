@@ -77,7 +77,7 @@ logicalmkup
 \index_command default
 \float_placement h
 \paperfontsize 12
-\spacing single
+\spacing onehalf
 \use_hyperref true
 \pdf_title "OpenSlides Handbuch"
 \pdf_author "OpenSlides Team"
@@ -200,36 +200,21 @@ OpenSlides
 
 \end_inset
 
- erläutert.
- Die Funktionen sind mit wenigen Ausnahmen alle über die Menüpunkte des
- Webinterfaces zu erreichen.
-\end_layout
-
-\begin_layout Standard
-Die meisten der hier beschriebenen Funktionen sind nur für Administratoren
- und Mitglieder der Teilnehmergruppe Mitarbeitende verfügbar.
- Die Funktionen für normale Teilnehmer sind im Tutorium 
+ erläutert, die über die Menüpunkte des Webinterfaces zu erreichen sind.
+ Die meisten der hier beschriebenen Funktionen sind nur für Administratoren
+ und Mitglieder der Teilnehmergruppe 
 \emph on
-Teilnehmer
+Mitarbeitende
 \emph default
- beschrieben, das sich noch im Aufbau befindet.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-ToDo
-\end_layout
-
-\end_inset
-
-
+ verfügbar.
+ 
 \end_layout
 
 \begin_layout Section
-An- und Abmelden – Benutzername und Passwort ändern
+Login und Zugangsdaten
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:An--und-Abmelden"
+name "sec:Login-und-Zugangsdaten"
 
 \end_inset
 
@@ -260,7 +245,7 @@ OpenSlides
 \begin_inset Graphics
 	filename clipart/Login-Bildschirm.jpg
 	lyxscale 50
-	scale 95
+	scale 80
 
 \end_inset
 
@@ -268,17 +253,49 @@ OpenSlides
 \end_layout
 
 \begin_layout Standard
-Der erste Benutzername des Administrators ist 
+Der Benutzername und das initiale Passwort des Administrators ist jeweils
+\family sans
+ 
+\family default
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
 \family sans
 admin
-\family default
+\end_layout
+
+\end_inset
+
 .
- Er hat das erste Passwort 
+ 
+\end_layout
+
+\begin_layout Standard
+Neu angelegte Teilnehmer haben einen aus dem Vor- und Nachnamen zusammengesetzte
+n Benutzernamen, wobei Groß- und Kleinschreibung zu beachten ist und zwischen
+ den Namen ein Leerzeichen liegt.
+ Beispiel: Ein mit dem Vornamen 
 \family sans
-admin
+Max
 \family default
-.
- Über die Teilnehmerverwaltung
+ und dem Nachnamen 
+\family sans
+Mustermann
+\family default
+ angelegter Teilnehmer hat den Benutzernamen
+\family sans
+ Max
+\begin_inset space ~
+\end_inset
+
+Mustermann.
+
+\family default
+ Das voreingestellte Passwort kann über die Teilnehmerverwaltung eingesehen
+ werden.
 \begin_inset Foot
 status collapsed
 
@@ -295,35 +312,11 @@ reference "sec:Teilnehmer"
 
 \end_inset
 
- neu angelegte Teilnehmer haben einen aus dem Vor- und Nachnamen zusammengesetzt
-en Benutzernamen, wobei Groß- und Kleinschreibung zu beachten ist und zwischen
- den Namen ein Leerzeichen liegt.
- Beispiel: Ein mit dem Vornamen 
-\family sans
-Max
-\family default
- und dem Nachnamen 
-\family sans
-Mustermann
-\family default
- angelegter Teilnehmer hat den Benutzernamen
+
 \end_layout
 
 \begin_layout Standard
-
-\family sans
-Max
-\begin_inset space ~
-\end_inset
-
-Mustermann
-\end_layout
-
-\begin_layout Standard
-Das voreingestellte Passwort kann über die Teilnehmerverwaltung eingesehen
- werden.
- Zum Einloggen geben Sie Ihren Benutzernamen und Ihr Passwort ein und klicken
- auf 
+Zum Einloggen geben Sie Benutzernamen und Passwort ein und klicken auf 
 \family sans
 Anmelden
 \family default
@@ -331,7 +324,7 @@ Anmelden
 \end_layout
 
 \begin_layout Standard
-Um die Nutzer zu informieren wie man sich einloggt, kann man einen Text
+Um Nutzer zu informieren, wie man sich einloggt, kann man einen Text angeben
  im Menü 
 \family sans
 Einstellungen\SpecialChar menuseparator
@@ -342,8 +335,9 @@ System
 \family sans
 Diesen Text auf der Login-Seite anzeigen
 \family default
- eingeben.
- Dieser erscheint auf dem Login-Fenster, wenn sich die Teilnehmer einloggen:
+.
+ Dieser Text erscheint auf dem Login-Fenster, wenn sich die Teilnehmer einloggen
+:
 \end_layout
 
 \begin_layout Standard
@@ -352,7 +346,7 @@ Diesen Text auf der Login-Seite anzeigen
 \begin_inset Graphics
 	filename clipart/Login-Bildschirm-angepasst.jpg
 	lyxscale 50
-	scale 95
+	scale 80
 
 \end_inset
 
@@ -378,9 +372,9 @@ OpenSlides
 
 \end_inset
 
- benötigt ein Cookie um die Identität des Nutzers festzustellen, solange
- er eingeloggt ist.
- Beim Ausloggen wird das Cookie wieder gelöscht.
+ benötigt Cookies um die Identität des Nutzers festzustellen, solange er
+ eingeloggt ist.
+ Beim Ausloggen werden die Cookies wieder gelöscht.
 \end_layout
 
 \end_inset
@@ -389,10 +383,10 @@ OpenSlides
 \end_layout
 
 \begin_layout Subsection
-Eigenen Benutzernamen oder Passwort ändern
+Benutzername und Passwort ändern
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Benutzername-oder-Passwort"
+name "subsec:Benutzername-und-Passwort"
 
 \end_inset
 
@@ -400,7 +394,7 @@ name "subsec:Benutzername-oder-Passwort"
 \end_layout
 
 \begin_layout Standard
-Klickt man in der Kopfzeile von 
+Nach dem Login kann man in der 
 \begin_inset Flex Noun
 status collapsed
 
@@ -410,32 +404,8 @@ OpenSlides
 
 \end_inset
 
- rechts auf den Benutzernamen, kann man das Profil bearbeiten oder das Passwort
- ändern.
-\end_layout
-
-\begin_layout Standard
-Die eigenen Benutzereinstellungen wie Benutzername und Passwort können über
- den Button oben rechts geändert werden.
- Klicken Sie auf den Button, wählen Sie im oberen rechten Menü aus, ob Sie
- Ihre persönlichen Einstellungen oder Ihr Passwort ändern möchten, und ändern
- Sie die jeweiligen Einstellungen.
- Klicken Sie abschließend auf 
-\family sans
-Speichern
-\family default
-.
-\end_layout
-
-\begin_layout Subsection
-Fremde Benutzereinstellungen (insbesondere Benutzername oder Passwort) ändern
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Fremde-Benutzereinstellungen"
-
-\end_inset
-
-
+-Kopfzeile rechts auf seinen Benutzernamen klicken, um sein Profil zu bearbeiten
+ oder sein Passwort zu ändern.
 \end_layout
 
 \begin_layout Standard
@@ -483,31 +453,29 @@ Passwort
  Klickt man auf 
 \begin_inset Graphics
 	filename clipart/Generieren.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 115bp 0bp
 
 \end_inset
 
 , wird ein neues, zufälliges Passwort erstellt.
  Alternativ kann man selbst ein Passwort wählen.
- Die Änderung des Passworts überschreibt das vom Teilnehmer festgelegte
- Passwort und deaktiviert das initiale Passwort.
+ Die Änderung des Passworts überschreibt das vom Nutzer festgelegte Passwort
+ und deaktiviert das initiale Passwort.
 \end_layout
 
 \begin_layout Standard
-Die initialen Passwörter (nicht die vom Teilnehmer festgelegten) aller Teilnehme
-r können Administratoren aus einer PDF-Datei ablesen.
+Die initialen Passwörter (nicht die vom Teilnehmer festgelegten) können
+ Administratoren aus der Zugangsdaten-PDF-Datei ablesen.
  Diese Datei wird generiert, wenn man im Menü 
 \family sans
 Teilnehmende
 \family default
- auf
-\begin_inset Newline newline
-\end_inset
-
-
+ auf 
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 165bp 0bp
 
 \end_inset
 
@@ -521,7 +489,7 @@ Zugangsdatenliste
 \begin_layout Standard
 Die Zugangsdatenliste besteht aus einer Seite für jeden Teilnehmer.
  Sie ist dazu gedacht dem Teilnehmer seine Seite vor Beginn der Veranstaltung
- zu geben.
+ auszuhändigen.
  Den Begrüßuns- und Erläuterungstext auf der Teilnehmerseite kann in den
  Teilnehmer-Einstellungen festgelegt werden, siehe 
 \begin_inset CommandInset ref
@@ -567,10 +535,10 @@ OpenSlides
 \end_inset
 
  ist Inhalte zu projizieren.
- Bei Versammlungen ist es essentiell die Teilnehmer über den Ablauf und
+ Bei Versammlungen ist es essentiell, die Teilnehmer über den Ablauf und
  den aktuellen Punkt zu informieren.
  Je nach den technischen Möglichkeiten im Versammlungsraum stehen dafür
- mehrere Projektoren zur Verfügung.
+ ein oder mehrere Projektoren zur Verfügung.
 \end_layout
 
 \begin_layout Standard
@@ -584,23 +552,28 @@ OpenSlides
 
 \end_inset
 
- erst einmal einen Projektor an.
- Dieser wird aufgerufen, indem man im Browser die Adresse
-\begin_inset Newline newline
+ einen Projektor an.
+ Dieser wird aufgerufen, indem man zunächst die Projektorseitenleiste durch
+ Klicken auf den Projektorknopf am rechten Rand 
+\begin_inset Graphics
+	filename clipart/Projektorsymbol-Leiste.jpg
+	scale 35
+	BoundingBox 0bp 9bp 50bp 0bp
+
 \end_inset
 
+ aufklappt und anschließend auf die Projektor-Live-Vorschau klickt.
+\end_layout
 
+\begin_layout Standard
+Alternativ kann man im Browser direkt die URL 
 \begin_inset CommandInset href
 LatexCommand href
 target "http://localhost:8000/projector/1/"
 
 \end_inset
 
-
-\begin_inset Newline newline
-\end_inset
-
-eingibt.
+ eingeben.
  Wird 
 \begin_inset Flex Noun
 status collapsed
@@ -611,21 +584,12 @@ OpenSlides
 
 \end_inset
 
- über einen Webserver betrieben, wird die Webadresse statt 
+ auf einem entfernten Rechner betrieben, wird anstatt 
 \emph on
 localhost
 \emph default
- verwendet.
- Alternativ wird der Projektor in einem neuen Browsertab geöffnet, indem
- man auf die Projektorvoransicht klickt.
- Ist diese noch nicht sichtbar, muss man zuerst rechts oben auf 
-\begin_inset Graphics
-	filename clipart/Projektorsymbol-Leiste.jpg
-	scale 70
-
-\end_inset
-
- klicken.
+ die genaue IP-Adresse oder Domain verwendet.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -637,7 +601,7 @@ Die Projektorvorschau sieht so aus:
 \align center
 \begin_inset Graphics
 	filename clipart/Projektorvorschau.jpg
-	scale 95
+	scale 80
 
 \end_inset
 
@@ -648,7 +612,8 @@ Die Projektorvorschau sieht so aus:
 Klickt man auf 
 \begin_inset Graphics
 	filename clipart/Projektor-leeren.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 161bp 0bp
 
 \end_inset
 
@@ -671,20 +636,21 @@ Leeren
 \begin_layout Standard
 Einige zu projizierende Informationen benötigen mehr Platz als auf dem Projektor
  vorhanden.
- Daher kann man mit den Tasten unterhalb der Vorschau:
-\begin_inset Newline newline
-\end_inset
-
-
+ Mit den Zoom-/Scroll-Steuerungsschaltflächen lässt sich die Projektion
+ leicht anpassen: 
 \begin_inset Graphics
 	filename clipart/Projektorknöpfe.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 256bp 0bp
 
 \end_inset
 
- die Projektion anpassen.
- Für eine lange Tagesordnung kann man die Pfeiltasten nutzen, um zu den
- aktuellen Punkten zu scrollen.
+ 
+\end_layout
+
+\begin_layout Standard
+Für eine lange Tagesordnung kann man die Pfeiltasten nutzen, um zu den aktuellen
+ Punkten zu scrollen.
  Mit den Vergrößerungsknöpfen kann heran- oder herausgezoomt werden.
  Jeder Veränderungsschritt wird als rote Zahl angezeigt.
  Wurde z.
@@ -695,18 +661,20 @@ B.
  dreimal nach unten gescrollt und einmal vergrößert, sieht man 
 \begin_inset Graphics
 	filename clipart/Projektorknöpfe-geändert.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 256bp 0bp
 
 \end_inset
 
 .
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
+\begin_layout Standard
 Mit den Knöpfen 
 \begin_inset Graphics
 	filename clipart/Zurücksetzen.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 32bp 0bp
 
 \end_inset
 
@@ -714,11 +682,12 @@ Mit den Knöpfen
  Mit 
 \begin_inset Graphics
 	filename clipart/Bearbeiten-Symbol-klein.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 5bp 22bp 0bp
 
 \end_inset
 
- kann die aktuell projizierte Sache geändert werden.
+ kann die aktuell projizierte Folie bearbeitet werden.
  Wird z.
 \begin_inset space \thinspace{}
 \end_inset
@@ -735,7 +704,8 @@ Mehrere Projektoren
 Klickt man in der Projektorvorschau auf 
 \begin_inset Graphics
 	filename clipart/Projektor-verwalten.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 90bp 0bp
 
 \end_inset
 
@@ -743,41 +713,29 @@ Klickt man in der Projektorvorschau auf
  Mit 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
  können weitere Projektoren erstellt werden.
  Auf diese Weise ist es beispielsweise möglich, die Tagesordnung auf einem
- Projektor anzuzeigen und den aktuellen Antrag auf einem zweiten.
+ Projektor anzuzeigen und den aktuellen Antrag oder die Redeliste auf einem
+ zweiten.
 \end_layout
 
 \begin_layout Standard
-Klickt man in der Projektorverwaltung auf 
-\begin_inset Graphics
-	filename clipart/Projektor-für-Redeliste.jpg
-	scale 70
-
-\end_inset
-
-, kann man einen Projektor festlegen, auf der Redelisten standardmäßig ausgegebe
-n werden.
- Wird ein Thema auf einem anderen Projektor angezeigt, erscheint dann dessen
- Redeliste automatisch auf dem festlegten Projektor.
-\end_layout
-
-\begin_layout Standard
-\noindent
 Sobald mehr als ein Projektor vorhanden ist, erscheint neben jedem Projektionskn
-opf eine Erweiterung: 
+opf eine ausklappbares Menü 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol-erweitert.jpg
-	scale 95
+	scale 60
+	BoundingBox 0bp 7bp 50bp 0bp
 
 \end_inset
 
- mit der der Projektor ausgewählt werden kann.
- In der Projektorvorschau kann ebenfalls ein Projektor ausgewählt werden:
+, mit dem der Projektor ausgewählt werden kann.
+ In der Projektorvorschau kann ebenfalls der Projektor gewechselt werden:
 \end_layout
 
 \begin_layout Standard
@@ -785,7 +743,7 @@ opf eine Erweiterung:
 \align center
 \begin_inset Graphics
 	filename clipart/Projektorauswahl.jpg
-	scale 95
+	scale 80
 
 \end_inset
 
@@ -794,7 +752,7 @@ opf eine Erweiterung:
 
 \begin_layout Standard
 Der zweite angelegte Projektor hat unabhängig von seinem Namen die Adresse
-\begin_inset Newline newline
+\begin_inset Newline linebreak
 \end_inset
 
 
@@ -804,13 +762,10 @@ target "http://localhost:8000/projector/2/"
 
 \end_inset
 
-
-\begin_inset Newline newline
-\end_inset
-
-Der dritte Projektor bekommt die 3 usw.
+.
+ Der dritte Projektor bekommt die 3, usw.
  Der entsprechende Projektor wird in einem neuen Browsertab geöffnet, indem
- man in der Projektorverwaltung auf ihn klickt.
+ man in der Projektorverwaltung auf die Vorschau klickt.
  Wird ein Projektor wieder gelöscht, wird seine Nummer nicht neu vergeben.
  Jeder Projektor hat also eine einzigartige Nummer.
 \end_layout
@@ -819,21 +774,59 @@ Der dritte Projektor bekommt die 3 usw.
 Mit dem Kopf 
 \begin_inset Graphics
 	filename clipart/Projektor-identifizieren.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 129bp 0bp
 
 \end_inset
 
  wird auf jedem Projektor für ein paar Sekunden seine Nummer und sein Name
  angezeigt.
- Mit dem Knopf 
+ Mit 
 \begin_inset Graphics
 	filename clipart/Projektor-verbreiten.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 95bp 0bp
 
 \end_inset
 
  kann der Inhalt des Projektors auf allen anderen Projektoren angezeigt
- werden.
+ und verbreitet werden.
+\end_layout
+
+\begin_layout Standard
+Klickt man in der Projektorverwaltung auf 
+\begin_inset Graphics
+	filename clipart/Projektor-für-Redeliste.jpg
+	scale 60
+	BoundingBox 0bp 7bp 249bp 0bp
+
+\end_inset
+
+, lässt sich der Projektor festlegen, auf welchen sich die 
+\emph on
+aktuelle
+\emph default
+ Redeliste bezieht.
+ Ein Bespiel: Projektor 1 ist als Referenz für die aktuelle Redeliste eingestell
+t.
+ Ein Antrag wird nun auf Projeketor 1 angezeigt.
+ Projektor 2 projiziert stets die aktuelle Redeliste.
+ Damit wird auf Projektor 2 die Redeliste des Antrags von Projektor 1 dargestell
+t.
+ Präsentiert man nun einen Tagesordnungspunkt auf Projektor 1, aktualisiert
+ sich Projektor 1 automatisch und zeigt die Redeliste des Tagesordnungspunkts
+ an.
+\end_layout
+
+\begin_layout Standard
+Die aktuelle Redeliste kann sich immer nur auf einen definierten Projektor
+ beziehen.
+ Ist zu der projizierten Folie keine Redeliste vorhanden, bleibt die 
+\emph on
+aktuelle
+\emph default
+ Redeliste leer.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -861,36 +854,18 @@ Mit der Option
 \family sans
 Logo auf dem Projektor anzeigen
 \family default
- kann ein Logo oben links angezeigt werden.
- Um das Logo zu ändern, muss die Datei 
-\series bold
+ kann ein Logo oben links dargestellt werden.
+ Um das Logo zu ändern, muss eine Datei mit Namen 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 logo-projector.png
-\series default
- im Unterordner
-\begin_inset Newline newline
+\end_layout
+
 \end_inset
 
-
-\series bold
-~
-\backslash
-Lib
-\backslash
-site-packages
-\backslash
-openslides
-\backslash
-core
-\backslash
-static
-\backslash
-img
-\series default
-
-\begin_inset Newline newline
-\end_inset
-
-des Verzeichnisses, in dem 
+ im 
 \begin_inset Flex Noun
 status collapsed
 
@@ -900,40 +875,79 @@ OpenSlides
 
 \end_inset
 
- installiert ist, durch eine Datei gleichen Namens ersetzt werden.
+-Benutzerdatenverzeichnis abgelegt werden:
 \end_layout
 
 \begin_layout Standard
-Mit der Option 
+.
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+/static/img/logo-projector.png
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diese Datei überschreibt das voreingestellte 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Logo.
+ In der portablen Version für Windows ist das 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Benutzerdatenverzeichnis der Ordner 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+openslides
+\end_layout
+
+\end_inset
+
+; dort wo auch die Datenbank liegt.Mit der Option 
 \family sans
 Titel und Kurzbeschreibung der Veranstaltung auf dem Projektor anzeigen
 \family default
- kann der Titel und die Kurzbeschreibung der Veranstaltung rechts neben
- dem Logo angezeigt werden.
+ lässt sich Titel und Kurzbeschreibung auf dem Projektor ein- und ausblenden.
 \end_layout
 
 \begin_layout Standard
-Im Feld 
-\family sans
+Mit den drei Farbeinstellungen lässt sich die Farbgebung auf dem Projektor
+ individualisieren:
+\end_layout
+
+\begin_layout Itemize
 Hintergrundfarbe des Projektor-Kopf- und Fußbereichs
-\family default
- kann diese Farbe verändert werden.
 \end_layout
 
-\begin_layout Standard
-Im Feld 
-\family sans
+\begin_layout Itemize
 Schriftfarbe des Projektor-Kopf- und Fußbereichs
-\family default
- kann diese Farbe verändert werden.
 \end_layout
 
-\begin_layout Standard
-Im Feld 
+\begin_layout Itemize
+
 \family sans
 Schriftfarbe der Projektor-Überschrift
-\family default
- kann diese Farbe verändert werden.
 \end_layout
 
 \begin_layout Standard
@@ -941,7 +955,7 @@ Im Feld
 \family sans
 Vorgegebene Sekunden für neue Countdowns
 \family default
- kann die Anzahl an Sekunden für neue Countdowns voreingestellt werden.
+ lässt sich die Voreinstellung für Countdowns anpassen.
  Mehr zu Countdowns siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -953,19 +967,25 @@ reference "subsec:Countdowns"
 \end_layout
 
 \begin_layout Standard
-Im Feld 
+Die voreingestellte (weiße) Füllfarbe für einen leeren Projektor lässt sich
+ im Feld 
 \family sans
 Farbe für ausgeblendeten Projektor
 \family default
- kann die Füllfarbe eingestellt werden, mit der der Projektor eine leere
- Fläche anzeigt, wenn man in der Projektorvorschau 
+ kann die Füllfarbe ändern.
+ Diese Farbe wird angezeigt, wenn in der Projektorvorschau 
 \begin_inset Graphics
 	filename clipart/Projektor-leeren.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 161bp 0bp
 
 \end_inset
 
- gedrückt hat.
+ gedrückt wird.
+\end_layout
+
+\begin_layout Verbatim*
+
 \end_layout
 
 \begin_layout Standard
@@ -1017,14 +1037,16 @@ name "subsec:Countdowns"
 Um einen Countdown laufen zu lassen, klickt man auf 
 \begin_inset Graphics
 	filename clipart/Neuer-Countdown.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 206bp 0bp
 
 \end_inset
 
  und dann auf 
 \begin_inset Graphics
 	filename clipart/Bearbeiten-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 32bp 0bp
 
 \end_inset
 
@@ -1055,22 +1077,16 @@ B:
 \end_inset
 
 ) angegeben.
- Zuletzt klickt man auf 
-\begin_inset Graphics
-	filename clipart/Haken-Symbol.jpg
-	scale 70
-
-\end_inset
-
-.
- Mit Klick auf 
+ .
+ Nach dem Speichern kann mit Klick auf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 34bp 0bp
 
 \end_inset
 
- wird der Countdown angezeigt:
+ der Countdown angezeigt werden:
 \end_layout
 
 \begin_layout Standard
@@ -1109,7 +1125,7 @@ reference "subsec:Einstellungen-Projektor"
 \begin_inset space \thinspace{}
 \end_inset
 
-s orange eingefärbt.
+s orange eingefärbt .
  Diese Zeit kann im Menü 
 \family sans
 Einstellungen\SpecialChar menuseparator
@@ -1137,13 +1153,14 @@ Tagesordnung
 Countdown mit der Redeliste verkoppeln
 \family default
  ausgewählt sein.
- Dadurch werden alle existierenden Countdowns automatisch gestartet, wenn
+ Dadurch werden alle existierenden Countdown automatisch gestartet, wenn
  eine Rede begonnen wird.
  Ob, welcher und wie viele Countdowns projiziert werden, kann durch das
  Klicken auf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 34bp 0bp
 
 \end_inset
 
@@ -1158,35 +1175,31 @@ Mitteilungen
 Um etwas mitzuteilen, klicken Sie auf 
 \begin_inset Graphics
 	filename clipart/Neue-Mitteilung.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 190bp 0bp
 
 \end_inset
 
  und rechts oben in der Mitteilung auf 
 \begin_inset Graphics
 	filename clipart/Bearbeiten-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 32bp 0bp
 
 \end_inset
 
 .
- Geben Sie nun einen Text ein und klicken anschließend auf das Symbol 
-\begin_inset Graphics
-	filename clipart/Haken-Symbol.jpg
-	scale 70
-
-\end_inset
-
-.
- Klicken Sie auf 
+ Geben Sie nun einen Text ein und speichern Sie anschließend die Mitteilung.
+ Klicken Sie nun zum Projizieren auf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 34bp 0bp
 
 \end_inset
 
-, wird die Mitteilung projiziert.
- Es kann immer nur eine Mitteilung projiziert werden.
+.
+ Es kann immer nur eine Mitteilung pro Projektor projiziert werden.
 \end_layout
 
 \begin_layout Standard
@@ -1210,7 +1223,8 @@ Redeliste
 Durch Klicken auf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 34bp 0bp
 
 \end_inset
 
@@ -1219,7 +1233,8 @@ wird die Redeliste der aktuell projizierten Sache als Box am rechten unteren
  Durch Klicken auf 
 \begin_inset Graphics
 	filename clipart/Mikrofon-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 30bp 0bp
 
 \end_inset
 
@@ -1248,10 +1263,10 @@ name "sec:Tagesordnung"
 
 \begin_layout Standard
 Die Verwaltung der Tagesordnung geschieht im Menü 
-\family sans
-Tagesordnung
-\family default
-.
+\emph on
+Tages
+\emph default
+ordnung.
  Dort wird die Tagesordnung in einer editierbaren Liste angezeigt.
 \end_layout
 
@@ -1264,18 +1279,33 @@ Um einen neuen Tagesordnungspunkt zu erstellen, klickt man oben rechts auf
  
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
 .
- Der Text der Tagesordnung kann frei formatiert werden und er kann auch
- Bilder und Weblinks enthalten.
+ 
+\end_layout
+
+\begin_layout Standard
+Der Titel eines sogenannten 
+\begin_inset Quotes gld
+\end_inset
+
+Themas
+\begin_inset Quotes grd
+\end_inset
+
+ (nicht jedes Thema ist gleich auch ein offizieller Tagesordnungspunkt)
+ ist ein Pflichtfeld.
+ Die Angeabe des Textes ist optional und kann frei formatiert werden.
+ Auch eine Einbettung von Bildern und Weblinks ist möglich.
  Im Feld 
 \family sans
 Anhang
 \family default
- können Sie aus allen in 
+ können Sie auf eine beliebige Datei referenzieren, die Sie vorher in 
 \begin_inset Flex Noun
 status collapsed
 
@@ -1285,7 +1315,7 @@ OpenSlides
 
 \end_inset
 
- verfügbaren Dateien einen Anhang wählen.
+ hochgeladen haben.
  Mehr zu Dateien siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1294,15 +1324,50 @@ reference "sec:Dateien"
 \end_inset
 
 .
- Die Anhänge werden nicht mit projiziert, sie dienen nur für zusätzliche
- Informationen.
+ Die Anhänge werden nicht mit projiziert, sie dienen nur als zusätzliche
+ Information.
+\end_layout
+
+\begin_layout Subsection
+Tagesordnungspunkte importieren
 \end_layout
 
 \begin_layout Standard
-Für längere Veranstaltung mit vielen Tagesordnungspunkten ist es sinnvoll
- Tagesordnungspunkte aus einer Datei zu importieren.
- Dazu muss eine CSV-Datei erstellt werden.
- Dies ist eine Textdatei (die üblicherweise die Endung 
+Für Veranstaltungen mit vielen Tagesordnungspunkten kann es es sinnvoll
+ diese Einträge zu importieren.
+ Klickt man auf 
+\begin_inset Graphics
+	filename clipart/Importieren-Symbol.jpg
+	scale 60
+	BoundingBox 0bp 7bp 107bp 0bp
+
+\end_inset
+
+ gibt es zwei Möglichkeiten:
+\end_layout
+
+\begin_layout Enumerate
+Importieren durch Kopieren/Einfügen in ein Textfeld.
+\end_layout
+
+\begin_layout Enumerate
+Importieren aus einer CSV-Datei.
+\end_layout
+
+\begin_layout Standard
+Möglichkeit (1) eignet sich für den schnellen Import, wenn es Ihnen nur
+ um die Titel der Themen geht (d.h.
+ ohne Angabe von Text, Dauer, Kommentar oder der Markierung als internen
+ Eintrag).
+\end_layout
+
+\begin_layout Standard
+Möglichkeit (2) bietet einen umfangreicheren Import aller Daten.
+ Diese Variante wird in diesem Abschnitt im Detail beschrieben.
+\end_layout
+
+\begin_layout Standard
+Eine CSV-Datei ist eine Textdatei (die üblicherweise die Endung 
 \family sans
 .csv
 \family default
@@ -1311,7 +1376,7 @@ Für längere Veranstaltung mit vielen Tagesordnungspunkten ist es sinnvoll
 .txt
 \family default
  hat).
- Ihre erste Zeile muss aus dieser Zeile bestehen:
+ Ihre erste Zeile muss aus folgender Kopfzeile bestehen:
 \end_layout
 
 \begin_layout Standard
@@ -1319,7 +1384,7 @@ Für längere Veranstaltung mit vielen Tagesordnungspunkten ist es sinnvoll
 status open
 
 \begin_layout Plain Layout
-title,text,duration,comment,is_hidden
+Title,Text,Dauer,Kommentar,Interner Eintrag
 \end_layout
 
 \end_inset
@@ -1328,7 +1393,7 @@ title,text,duration,comment,is_hidden
 \end_layout
 
 \begin_layout Standard
-Es folgen dann je eine Zeile für jeden Tagesordnungspunkt.
+Es folgen dann je eine Zeile pro Tagesordnungspunkt.
  Ein Eintrag für einen Tagesordnungspunkt wäre z.
 \begin_inset space \thinspace{}
 \end_inset
@@ -1343,7 +1408,7 @@ status open
 \begin_layout Plain Layout
 Begrüßung,Die Vorsitzende Frau Weise heißt Sie willkommen.,0:15,
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1354,7 +1419,7 @@ status collapsed
 
 ,
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1387,9 +1452,9 @@ Jedes Komma trennt die Eigenschaften voneinander.
  Gibt es eine Eigenschaft nicht, folgen die Kommas direkt aufeinander.
  Es muss jedoch mindestens der Titel angegeben werden.
  Als Dauer geben Sie eine Zeit im Format 
-\family sans
+\emph on
 h:mm
-\family default
+\emph default
  (Stunde:Minuten, z.
 \begin_inset space \thinspace{}
 \end_inset
@@ -1402,50 +1467,38 @@ B:
 \begin_inset Quotes grd
 \end_inset
 
-) Bei 
-\family sans
-is_hidden
-\family default
- bedeutet '1', dass dieser Eintrag als intern behandelt wird, ansonsten
- verwendet man '0' oder nichts.
-\begin_inset Newline newline
+) ein.
+ Handelt es sich um einen internen Eintrag nutzen Sie '1', ansonsten verwenden
+ Sie '0' oder nichts.
+\end_layout
+
+\begin_layout Standard
+Nach Auswahl der CSV-Datei wird der Feldtrenner automatisch erkannt (i.d.R.
+ 
+\begin_inset Quotes gld
 \end_inset
 
-Zum Importieren klickt man oben auf 
-\begin_inset Graphics
-	filename clipart/Importieren-Symbol.jpg
-	scale 70
-
+,
+\begin_inset Quotes grd
 \end_inset
 
-.
- Dort stellt man in der Rubrik 
-\family sans
-Import von CSV-Datei
-\family default
- die 
-\family sans
-Kodierung
-\family default
- auf UTF-8.
- Das stellt sicher, dass Text mit Akzenten, Umlauten usw.
-\begin_inset space \space{}
+ oder 
+\begin_inset Quotes gld
 \end_inset
 
-korrekt importiert werden.
- Dazu muss die CSV-Datei auch mit der Kodierung UTF-8 gespeichert worden
- sein.
- (Dafür reicht es bei den meisten Editor-Programmen aus, dass man 
-\emph on
-Unicode
-\emph default
- für die Kodierung einstellt, falls das nicht schon automatisch die Voreinstellu
-ng ist.) Nun klickt man auf den Knopf 
-\family sans
-Durchsuchen
-\family default
- und wählt eine CSV-Datei aus.
- Danach sieht man in der Vorschau was importiert werden wird:
+;
+\begin_inset Quotes grd
+\end_inset
+
+).
+ Sie können den Feldtrenner aber auch manuell ändern.
+ Die Kodierung ist voreingestellt UTF-8.
+ Bei Bedarf kann hier auf ISO-8859-1 umgeschaltet werden, abhängig davon
+ wie die Datei gespeichert wurde.
+ Die lässt sich leicht in der Vorschau erkennen, ob z.B.
+ Umlaute korrekt dargestellt werden.
+ Ist alles korrekt ausgewählt, sollten Sie eine vollständige Vorschau für
+ den Import angezeigt bekommen:
 \begin_inset Foot
 status open
 
@@ -1469,7 +1522,7 @@ reference "chap:Beispiel-für-Tagesordnung"
 
 
 \begin_inset Branch EinzelnesDokument
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset CommandInset ref
@@ -1494,6 +1547,16 @@ reference "chap:Beispiel-für-Tagesordnung-1"
 \begin_layout Standard
 \noindent
 \align center
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+TODO: Screeshot aktualisieren (letzte Spalte veraltet)
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename clipart/Tagesordnung-import.jpg
 	lyxscale 50
@@ -1505,8 +1568,7 @@ reference "chap:Beispiel-für-Tagesordnung-1"
 \end_layout
 
 \begin_layout Standard
-und kann die CSV-Datei noch ändern, falls es Fehler gibt.
- Zum Import drückt man auf den Knopf 
+Ist alles korrekt, klicken Sie anschließend den Knopf 
 \family sans
 x
 \begin_inset space ~
@@ -1519,6 +1581,7 @@ Themen
 importieren
 \family default
 .
+ Ein Zähler informiert Sie über die erfolgreich importierten Themen.
 \end_layout
 
 \begin_layout Standard
@@ -1559,7 +1622,7 @@ Excel
 \begin_inset Text
 
 \begin_layout Plain Layout
-title
+Title
 \end_layout
 
 \end_inset
@@ -1568,7 +1631,7 @@ title
 \begin_inset Text
 
 \begin_layout Plain Layout
-text
+Text
 \end_layout
 
 \end_inset
@@ -1577,7 +1640,7 @@ text
 \begin_inset Text
 
 \begin_layout Plain Layout
-duration
+Dauer
 \end_layout
 
 \end_inset
@@ -1586,7 +1649,7 @@ duration
 \begin_inset Text
 
 \begin_layout Plain Layout
-comment
+Kommentar
 \end_layout
 
 \end_inset
@@ -1595,7 +1658,7 @@ comment
 \begin_inset Text
 
 \begin_layout Plain Layout
-is_hidden
+Interner Eintrag
 \end_layout
 
 \end_inset
@@ -1703,22 +1766,12 @@ Kommentar
 \end_layout
 
 \begin_layout Standard
-und speichert sie als CSV-Datei mit der Kodierung 
+Anschließend speichern Sie die Tabelle als CSV-Datei.
+ Wählen Sie als Kodierung möglichst 
 \emph on
 UTF-8
 \emph default
- und dem Komma als Trennzeichen.
- Es können so bestehende Mitgliedslisten für 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
- aufbereitet werden.
+ und als Trennzeichen Komma oder Semikolon.
 \end_layout
 
 \begin_layout Subsection
@@ -1737,7 +1790,6 @@ Der Inhalt von Tagesordnungspunkten kann jederzeit geändert werden, insbesonder
 \align center
 \begin_inset Graphics
 	filename clipart/TOP-mit-Menü.jpg
-	scale 95
 
 \end_inset
 
@@ -1818,7 +1870,8 @@ Die Tagesordnungspunkte werden entsprechend der aktuellen Sortierung mit
  dem Knopf 
 \begin_inset Graphics
 	filename clipart/Tagesordnung-nummerieren.jpg
-	scale 70
+	scale 55
+	BoundingBox 0bp 9bp 142bp 0bp
 
 \end_inset
 
@@ -1863,7 +1916,8 @@ Die Reihenfolge der Tagesordnungspunkte kann jederzeit verändert werden
  Dazu klickt man oben auf den Knopf 
 \begin_inset Graphics
 	filename clipart/Tagesordnung-sortieren.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 106bp 0bp
 
 \end_inset
 
@@ -1876,7 +1930,8 @@ Die Reihenfolge der Tagesordnungspunkte kann jederzeit verändert werden
  Nach der Änderung der Reihenfolge muss man 
 \begin_inset Graphics
 	filename clipart/Tagesordnung-nummerieren.jpg
-	scale 70
+	scale 55
+	BoundingBox 0bp 9bp 142bp 0bp
 
 \end_inset
 
@@ -1887,7 +1942,8 @@ Die Reihenfolge der Tagesordnungspunkte kann jederzeit verändert werden
 Mit dem Knopf 
 \begin_inset Graphics
 	filename clipart/Auswählen-Knopf.jpg
-	scale 70
+	scale 55
+	BoundingBox 0bp 9bp 129bp 0bp
 
 \end_inset
 
@@ -1899,14 +1955,11 @@ Projektion der Tagesordnung
 \end_layout
 
 \begin_layout Standard
-Die komplette Tagesordnung wird projiziert, wenn man auf das Symbol
-\begin_inset Newline newline
-\end_inset
-
-
+Die komplette Tagesordnung wird projiziert, wenn man auf das Symbol 
 \begin_inset Graphics
 	filename clipart/Tagesordnung-projizieren.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 8bp 118bp 0bp
 
 \end_inset
 
@@ -1914,7 +1967,8 @@ Die komplette Tagesordnung wird projiziert, wenn man auf das Symbol
  Durch Drücken von 
 \begin_inset Graphics
 	filename clipart/Untermenü-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 26bp 0bp
 
 \end_inset
 
@@ -1928,7 +1982,8 @@ Einzelne Tagesordnungspunkte werden projiziert, indem man auf das Symbol
  
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 34bp 0bp
 
 \end_inset
 
@@ -1972,7 +2027,8 @@ Redeliste
  Alternativ klickt man auf den Tagesordnungspunkt und dann auf 
 \begin_inset Graphics
 	filename clipart/Redeliste-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 86bp 0bp
 
 \end_inset
 
@@ -1983,7 +2039,8 @@ Redeliste
 Mit einem Klick auf 
 \begin_inset Graphics
 	filename clipart/Redeliste+Mich.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 147bp 0bp
 
 \end_inset
 
@@ -1992,7 +2049,8 @@ Mit einem Klick auf
  von 
 \begin_inset Graphics
 	filename clipart/Redner-entfernen.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 31bp 0bp
 
 \end_inset
 
@@ -2003,22 +2061,29 @@ Mit einem Klick auf
 Die Redeliste wird durch Klicken auf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol-Redeliste.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 88bp 0bp
 
 \end_inset
 
  projiziert.
- Durch Drücken von 
+ Durch Drücken von
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename clipart/Nächste-Rede-beginnen.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 167bp 0bp
 
 \end_inset
 
  oder 
 \begin_inset Graphics
 	filename clipart/Rede-beginnen.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 59bp 0bp
 
 \end_inset
 
@@ -2046,7 +2111,8 @@ Countdown mit der Redeliste verkoppeln
  Klicken auf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 34bp 0bp
 
 \end_inset
 
@@ -2065,14 +2131,16 @@ reference "subsec:Countdowns"
 Um die Rede zu beenden, klickt man auf 
 \begin_inset Graphics
 	filename clipart/Aktuelle-Rede-beenden.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 165bp 0bp
 
 \end_inset
 
  oder 
 \begin_inset Graphics
 	filename clipart/Rede-beenden.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 67bp 0bp
 
 \end_inset
 
@@ -2083,7 +2151,8 @@ Um die Rede zu beenden, klickt man auf
 Durch Klicken auf 
 \begin_inset Graphics
 	filename clipart/Letzte-Redner.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 5bp 126bp 0bp
 
 \end_inset
 
@@ -2111,7 +2180,8 @@ Jede Redeliste ist erst einmal offen.
  man den Knopf 
 \begin_inset Graphics
 	filename clipart/Redeliste-schließen.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 70bp 0bp
 
 \end_inset
 
@@ -2119,7 +2189,8 @@ Jede Redeliste ist erst einmal offen.
  Der Knopf ändert sich nun zu 
 \begin_inset Graphics
 	filename clipart/Redeliste-öffnen.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 109bp 0bp
 
 \end_inset
 
@@ -2131,7 +2202,8 @@ Die Reihenfolge der Redeliste kann jederzeit geändert werden.
  Dazu klickt man auf das Symbol 
 \begin_inset Graphics
 	filename clipart/Redner-verschieben.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 28bp 0bp
 
 \end_inset
 
@@ -2171,7 +2243,8 @@ name "subsec:Tagesordnung-exportieren"
 Klickt man in der Tagesordnungsübersicht auf 
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 165bp 0bp
 
 \end_inset
 
@@ -2329,7 +2402,8 @@ Zum manuellen Anlegen eines neuen Teilnehmers klickt man oben rechts auf
  
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
@@ -2475,7 +2549,8 @@ In der Praxis kann es sein, dass man oft nicht mehr angibt als den Namen.
  
 \begin_inset Graphics
 	filename clipart/Importieren-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 107bp 0bp
 
 \end_inset
 
@@ -2486,7 +2561,8 @@ In der Praxis kann es sein, dass man oft nicht mehr angibt als den Namen.
  Abschließend klickt man auf 
 \begin_inset Graphics
 	filename clipart/Importieren-Knopf.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 104bp 0bp
 
 \end_inset
 
@@ -2522,11 +2598,14 @@ Teilnehmer können automatisiert aus einer Liste importiert werden.
 
 \begin_layout Standard
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
-title,first_name,last_name,structure_level,groups,comment,is_active,is_present,i
-s_committee
+title,first_name,last_name,structure_level,groups,comment,
+\begin_inset Newline newline
+\end_inset
+
+is_active,is_present,is_committee
 \end_layout
 
 \end_inset
@@ -2545,7 +2624,7 @@ B.:
 
 \begin_layout Standard
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Prof.
@@ -2714,7 +2793,7 @@ B.:
 
 \begin_layout Standard
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
 ,Žusan,Oltrán,Vorstand,"2,3",kommt 15 Minuten später,1,
@@ -2762,7 +2841,8 @@ Die geschweiften Klammern verhindern, dass aus zwei aufeinanderfolgenden
 Zum Importieren klickt man oben rechts auf 
 \begin_inset Graphics
 	filename clipart/Importieren-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 107bp 0bp
 
 \end_inset
 
@@ -2817,7 +2897,7 @@ reference "chap:Beispiel-für-Teilnehmer"
 
 
 \begin_inset Branch EinzelnesDokument
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset CommandInset ref
@@ -2834,13 +2914,6 @@ reference "chap:Beispiel-für-Teilnehmer-1"
  zu finden.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -3225,7 +3298,8 @@ Alle Teilnehmer werden in der Teilnehmerliste aufgeführt.
 Mit 
 \begin_inset Graphics
 	filename clipart/Auswählen-Knopf.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 129bp 0bp
 
 \end_inset
 
@@ -3255,7 +3329,7 @@ Durch das Klicken auf den Namen eines Teilnehmers, werden dessen Daten angezeigt
  Für das Ändern des Passworts, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Fremde-Benutzereinstellungen"
+reference "subsec:Benutzername-und-Passwort"
 
 \end_inset
 
@@ -3267,7 +3341,8 @@ Die Teilnehmerliste kann als PDF ausgegeben werden, wenn man auf das Symbol
  
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 160bp 0bp
 
 \end_inset
 
@@ -3290,7 +3365,7 @@ Beim Anlegen eines Teilnehmers wird automatisch ein zufälliges Erst-Passwort
  Für weitere Informationen siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Fremde-Benutzereinstellungen"
+reference "subsec:Benutzername-und-Passwort"
 
 \end_inset
 
@@ -3324,7 +3399,8 @@ OpenSlides
  Klick man auf 
 \begin_inset Graphics
 	filename clipart/Gruppen-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 92bp 0bp
 
 \end_inset
 
@@ -3338,6 +3414,7 @@ Um den Gruppennamen zu ändern, geht man mit der Maus auf den Gruppennamen
  und klickt dann auf das erscheinende Symbol 
 \begin_inset Graphics
 	filename clipart/Gruppenname-ändern.jpg
+	BoundingBox 0bp 0bp 25bp 10bp
 
 \end_inset
 
@@ -3345,7 +3422,8 @@ Um den Gruppennamen zu ändern, geht man mit der Maus auf den Gruppennamen
  Eine neue Gruppe kann durch Klicken auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
@@ -3436,7 +3514,7 @@ Titel für das Zugangsdaten- und Begrüßungs-PDF
  Mehr dazu siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Fremde-Benutzereinstellungen"
+reference "subsec:Benutzername-und-Passwort"
 
 \end_inset
 
@@ -3533,7 +3611,8 @@ Anträge
  oben auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 61bp 0bp
 
 \end_inset
 
@@ -3772,7 +3851,8 @@ OpenSlides
 Zum Importieren klickt man oben rechts auf 
 \begin_inset Graphics
 	filename clipart/Importieren-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 107bp 0bp
 
 \end_inset
 
@@ -3827,7 +3907,7 @@ reference "chap:Beispiel-für-Antrag"
 
 
 \begin_inset Branch EinzelnesDokument
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset CommandInset ref
@@ -4390,7 +4470,8 @@ reference "subsec:Versionierung"
 Mit dem Knopf 
 \begin_inset Graphics
 	filename clipart/Auswählen-Knopf.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 129bp 0bp
 
 \end_inset
 
@@ -4543,14 +4624,16 @@ Anträge
  oben auf 
 \begin_inset Graphics
 	filename clipart/Sachgebiete.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 109bp 0bp
 
 \end_inset
 
 , kann man bestehende Sachgebiete bearbeiten oder mit 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
@@ -4599,7 +4682,8 @@ Sortieren
  Anschließend klickt man auf 
 \begin_inset Graphics
 	filename clipart/Nummerieren.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 125bp 0bp
 
 \end_inset
 
@@ -4634,14 +4718,16 @@ Anträge
  oben auf 
 \begin_inset Graphics
 	filename clipart/Antragsblöcke.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 119bp 0bp
 
 \end_inset
 
 , kann man bestehende Antragsblöcke bearbeiten oder mit 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
@@ -4676,7 +4762,8 @@ Klickt man in der Übersicht der Antragsblöcke auf einen Block, kann man
  danach durch Drücken von 
 \begin_inset Graphics
 	filename clipart/Empfehlungen-blockweise.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 291bp 0bp
 
 \end_inset
 
@@ -4721,14 +4808,16 @@ Anträge
  oben auf 
 \begin_inset Graphics
 	filename clipart/Schlagwörter.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 116bp 0bp
 
 \end_inset
 
 , kann man bestehende Schlagwörter bearbeiten oder mit 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 61bp 0bp
 
 \end_inset
 
@@ -5765,7 +5854,7 @@ OpenSlides
  eine neue Antragsversion an.
  Sie können auf der Antragsseite mehrere Versionen miteinander vergleichen.
  Wählen Sie dazu je einen Knopf links und rechts aus und klicken Sie auf
- den Button „Unterschied“.
+ den Knopf „Unterschied“.
 \end_layout
 
 \begin_layout Standard
@@ -5782,7 +5871,7 @@ OpenSlides
  als zugelassene Version.
  Diese wird auf dem Projektor angezeigt und in der Antragsseite mit einem
  grünen Haken markiert.
- Klicken Sie auf einen grauen Haken-Button, um eine andere Version zuzulassen.
+ Klicken Sie auf einen grauen Haken-Knopf, um eine andere Version zuzulassen.
  Hierbei müssen Sie den entsprechenden Dialog mit „Ja“ bestätigen.
 \end_layout
 
@@ -5875,7 +5964,8 @@ Um einen Änderungsantrag für obiges Beispiel zu erstellen, klickt man in
  der Box über dem Antragstext auf 
 \begin_inset Graphics
 	filename clipart/Neuer-Änderungsantrag.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 170bp 0bp
 
 \end_inset
 
@@ -5986,6 +6076,16 @@ außerhalb
 \begin_layout Standard
 \noindent
 \align center
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+TODO: Screenshot erneuern
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename clipart/Änderungsempfehlung.jpg
 	lyxscale 75
@@ -6038,7 +6138,8 @@ Um einen Antrag live zu ändern, klickt man rechts über dem Antrag auf
 
 \begin_inset Graphics
 	filename clipart/Inline-Bearbeitung.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 141bp 0bp
 
 \end_inset
 
@@ -6075,6 +6176,16 @@ Sobald man eine Änderung vorgenommen hat, erscheint unten am Bildschirm
 \begin_layout Standard
 \noindent
 \align center
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+TODO: Screenshot erneuern
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename clipart/Text-wurde-geändert.jpg
 	lyxscale 75
@@ -6099,14 +6210,16 @@ Um einen Antrag anzuzeigen, klicken Sie entweder in der Antragsübersicht
  auf den Knopf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 34bp 0bp
 
 \end_inset
 
  vor dem Antrag oder auf der Seite eines Antrags auf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 34bp 0bp
 
 \end_inset
 
@@ -6120,7 +6233,8 @@ Einzelne Antragszeilen können hervorgehoben werden.
  Klickt man auf 
 \begin_inset Graphics
 	filename clipart/gehe-zu.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 81bp 0bp
 
 \end_inset
 
@@ -6128,7 +6242,8 @@ Einzelne Antragszeilen können hervorgehoben werden.
  Die Hervorhebung kann mit 
 \begin_inset Graphics
 	filename clipart/Hervorhebung-projizieren.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 50bp 0bp
 
 \end_inset
 
@@ -6150,7 +6265,8 @@ name "subsec:Abstimmungen-Antrag"
 Mit dem Knopf 
 \begin_inset Graphics
 	filename clipart/Neue-Abstimmung.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 148bp 0bp
 
 \end_inset
 
@@ -6259,7 +6375,8 @@ In diesem Fall wurde die erforderliche Mehrheit nicht erreicht und man kann
  mit 
 \begin_inset Graphics
 	filename clipart/Neue-Abstimmung.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 148bp 0bp
 
 \end_inset
 
@@ -6293,7 +6410,8 @@ name "subsec:Anträge-Exportieren"
 Klickt man in der Antragsübersicht auf 
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 9bp 160bp 0bp
 
 \end_inset
 
@@ -6774,7 +6892,8 @@ Wahlen werden im gleichnamigen Menü verwaltet.
  Klickt man dort oben auf 
 \begin_inset Graphics
 	filename clipart/PDF-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
@@ -6798,7 +6917,8 @@ Anlegen von Wahlen
 Eine neue Wahl wird angelegt, indem man oben auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
@@ -6858,7 +6978,8 @@ name "subsec:Durchführung-einer-Wahl"
 Klickt man in der Wahlübersicht auf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 34bp 0bp
 
 \end_inset
 
@@ -6874,7 +6995,8 @@ Kandidaten/innen
  kann man sich mit 
 \begin_inset Graphics
 	filename clipart/Redeliste+Mich.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 147bp 0bp
 
 \end_inset
 
@@ -6895,7 +7017,8 @@ OpenSlides
  Egal wie viele Kandidaten es bereits gibt, durch Klicken oben auf 
 \begin_inset Graphics
 	filename clipart/PDF-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
@@ -6907,7 +7030,8 @@ OpenSlides
 Steht die Kandidatenliste fest, kann man oben auf 
 \begin_inset Graphics
 	filename clipart/Redeliste-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 86bp 0bp
 
 \end_inset
 
@@ -6929,7 +7053,8 @@ reference "subsec:Rednerliste-verwalten"
 Um die Wahl zu beginnen, klickt man unten auf 
 \begin_inset Graphics
 	filename clipart/Neuer-Wahlgang.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 137bp 0bp
 
 \end_inset
 
@@ -6945,7 +7070,8 @@ Im Wahlvorgang
 Um Stimmzettel zu erstellen, klickt man auf 
 \begin_inset Graphics
 	filename clipart/Stimmzettel-drucken.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 151bp 0bp
 
 \end_inset
 
@@ -6962,7 +7088,8 @@ Die Ergebnisse der Wahl können eingegeben werden, indem man auf
 
 \begin_inset Graphics
 	filename clipart/Stimmen-eingeben.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 141bp 0bp
 
 \end_inset
 
@@ -6972,7 +7099,8 @@ Die Ergebnisse der Wahl können eingegeben werden, indem man auf
  Um die Wahl zu veröffentlichen, klickt man auf 
 \begin_inset Graphics
 	filename clipart/Wahl-veröffentlichen.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 123bp 0bp
 
 \end_inset
 
@@ -6982,7 +7110,8 @@ Die Ergebnisse der Wahl können eingegeben werden, indem man auf
  Um auch die Stimmenanzahl zu veröffentlichen, klickt man auf 
 \begin_inset Graphics
 	filename clipart/Wahl-projizieren.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 97bp 0bp
 
 \end_inset
 
@@ -6993,7 +7122,8 @@ Die Ergebnisse der Wahl können eingegeben werden, indem man auf
 Falls weitere Wahlgänge nötig sind, kann man auf 
 \begin_inset Graphics
 	filename clipart/Weiterer-Wahlgang.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 5bp 140bp 0bp
 
 \end_inset
 
@@ -7006,7 +7136,8 @@ Abgeschlossen
  Wenn man in einer abgeschlossenen Wahl oben auf 
 \begin_inset Graphics
 	filename clipart/PDF-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
@@ -7336,7 +7467,8 @@ Dateien
  und klicken Sie oben rechts auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
@@ -7373,7 +7505,8 @@ PDF-, JPG/JPEG-, GIF- und PNG-Dateien können direkt projiziert werden, wenn
  sie auf das Symbol 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 34bp 0bp
 
 \end_inset
 
@@ -7390,12 +7523,23 @@ Tagesordnung
  und klicken Sie auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
-	scale 70
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
 
 \end_inset
 
 .
- Klicken Sie dort in der Rubrik 
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+TODO: aktualiseieren auf neuen Editor (Pfad zum Bild eingeben '/static/...')
+\end_layout
+
+\end_inset
+
+Klicken Sie dort in der Rubrik 
 \family sans
 Text
 \family default
@@ -7623,13 +7767,13 @@ OpenSlides
 
 \end_inset
 
- erscheint nach der Installation das neue Icon
+ erscheint nach der Installation dieses neue Icon:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
 	filename clipart/CSV-Export.jpg
-	scale 70
+	scale 60
 
 \end_inset
 
@@ -7900,15 +8044,26 @@ reference "subsec:Einstellungen-Teilnehmer"
 
 \begin_layout Standard
 \begin_inset Branch EinzelnesDokument
-status collapsed
+status open
 
 \begin_layout Chapter
 \start_of_appendix
 CSV-Beispieldateien
 \end_layout
 
+\begin_layout Standard
+Nachfolgende CSV-Dateien dienen als Beispiel für die in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Einzelne-Funktionen"
+
+\end_inset
+
+ beschriebenen CSV-Imports.
+\end_layout
+
 \begin_layout Section
-Beispiel für Tagesordnung CSV-Datei
+Beispiel für Tagesordnung
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Beispiel-für-Tagesordnung-1"
@@ -7929,16 +8084,16 @@ Tagesordnungspunkten:
 \begin_layout Standard
 
 \family sans
-title,text,duration,comment,is_hidden
+Title,Text,Dauer,Kommentar,Interner Eintrag
 \begin_inset Newline newline
 \end_inset
 
-Begrüßung,Die Vereinsvorsitzende Frau Weise heißt sie herzlich willkommen.,5:00,K
+Begrüßung,Die Vereinsvorsitzende Frau Weise heißt sie herzlich willkommen.,0:15,K
 ommentar,
 \begin_inset Newline newline
 \end_inset
 
-Bericht des Vorstands,,20:00,,1
+Bericht des Vorstands,,0:20,,1
 \end_layout
 
 \begin_layout Section

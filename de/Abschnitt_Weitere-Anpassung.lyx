@@ -277,7 +277,7 @@ OpenSlides
  in 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Start-des-Servers"
+reference "sec:Installation"
 
 \end_inset
 
@@ -308,7 +308,7 @@ OpenSlides
 
  programmiert, ist nocht nicht beschrieben.
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 ToDo
