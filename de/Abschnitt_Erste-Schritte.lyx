@@ -28,6 +28,7 @@
   \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
   \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
   \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\itemautorefname}{\negthickspace}%
  }
 }{}
 
@@ -56,6 +57,26 @@
 logicalmkup
 \end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Format 60
+InsetLayout Flex:Menu_Name
+LyxType	charstyle
+LabelString	"menu name"
+LatexType	command
+LatexName	textsf{\textit
+RightDelim	}
+Font
+  Shape	italic
+  Family	sans
+EndFont
+HTMLTag	span
+HTMLAttr	class='MenuName'
+HTMLStyle
+  span.MenuName {font-family: sans-serif;font-style: italic;}
+EndHTMLStyle
+ResetsFont true
+End
+\end_local_layout
 \language ngerman
 \language_package default
 \inputencoding auto
@@ -77,7 +98,7 @@ logicalmkup
 \index_command default
 \float_placement h
 \paperfontsize 12
-\spacing single
+\spacing onehalf
 \use_hyperref true
 \pdf_title "OpenSlides Handbuch"
 \pdf_author "OpenSlides Team"
@@ -289,23 +310,35 @@ OpenSlides
 
 \begin_layout Standard
 Zum Starten klicken Sie einfach auf den Knopf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Start
 \begin_inset space ~
 \end_inset
 
 server
-\family default
+\end_layout
+
+\end_inset
+
 .
  Ihr Webbrowser öffnet sich anschließend automatisch mit der passenden URL.
 \end_layout
 
 \begin_layout Standard
 Unter 
-\family sans
-Settings 
-\family default
-können Sie bei Bedarf einen anderen Host und Port einstellen (voreingestellt
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Settings
+\end_layout
+
+\end_inset
+
+ können Sie bei Bedarf einen anderen Host und Port einstellen (voreingestellt
  ist Host 0.0.0.0, d.h.
  OpenSlides hört auf allen Netzwerkinterfaces, und Port 8000).
 \end_layout
@@ -313,29 +346,43 @@ können Sie bei Bedarf einen anderen Host und Port einstellen (voreingestellt
 \begin_layout Standard
 Falls Sie Ihren Administrator-Zugang vergessen haben, können Sie mit Klick
  auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Reset
 \begin_inset space ~
 \end_inset
 
 admin
-\family default
+\end_layout
+
+\end_inset
+
  einen neuen Administrator-Nutzer erstellen, dessen Name und Passwort 
 \family sans
+\series bold
 admin
 \family default
+\series default
  ist.
 \end_layout
 
 \begin_layout Standard
 Mit 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Backup
 \begin_inset space ~
 \end_inset
 
 database
-\family default
+\end_layout
+
+\end_inset
+
  lässt sich die SQLite-Datenbank in regelmäßigen Abständen sichern (z.B.
  auf einem externen Laufwerk).
 \end_layout
@@ -430,9 +477,15 @@ OpenSlides
 \end_inset
 
  kann jederzeit im Fenster der Kommandozeile mit der Tastenkombination 
-\family sans
-Strg+C
-\family default
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+Strg+c
+\end_layout
+
+\end_inset
+
  beendet werden.
  Alle eingegebenen Daten bleiben in der Datenbank gespeichert.
 \end_layout
@@ -518,17 +571,21 @@ Erster Login
 \begin_layout Standard
 Der erste Login als Administrator ist mit dem Benutzernamen 
 \family sans
+\series bold
 admin
 \family default
+\series default
  und dem Passwort 
 \family sans
+\series bold
 admin
 \family default
+\series default
  möglich.
  Sie sollten das Passwort nach dem ersten Start ändern (siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Benutzername-oder-Passwort"
+reference "subsec:Benutzername-und-Passwort"
 
 \end_inset
 
@@ -648,13 +705,6 @@ status collapsed
 ~/.config/openslides/
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -921,12 +971,17 @@ OpenSlides
  ein, an dem Ihr Projektor angeschlossen ist, und rufen Sie den Link oder
  die URL auf.
  Legen Sie die Projektoranzeige in ein eigenes Browserfenster und wechseln
- Sie Ihren Browser in Vollbildmodus (i.d.R.
- mit Taste 
-\family sans
-F11).
+ Sie Ihren Browser in Vollbildmodus (in der Regel mit der Taste 
+\begin_inset Flex Code
+status collapsed
 
-\family default
+\begin_layout Plain Layout
+F11
+\end_layout
+
+\end_inset
+
+).
  Im 
 \emph on
 Präsentationsmodus Single
@@ -943,9 +998,15 @@ Das Projektorbild aktualisiert sich vollkommen automatisch.
  einer Unterbrechung der Verbindung zum Server) aussetzen, laden Sie das
  Projektorbild an dem Computer, an dem der Projektor angeschlossen ist,
  mit der Taste 
-\family sans
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 F5
-\family default
+\end_layout
+
+\end_inset
+
  neu.
 \end_layout
 
