@@ -28,6 +28,7 @@
   \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
   \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
   \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\itemautorefname}{\negthickspace}%
  }
 }{}
 
@@ -56,6 +57,26 @@
 logicalmkup
 \end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Format 60
+InsetLayout Flex:Menu_Name
+LyxType	charstyle
+LabelString	"menu name"
+LatexType	command
+LatexName	textsf{\textit
+RightDelim	}
+Font
+  Shape	italic
+  Family	sans
+EndFont
+HTMLTag	span
+HTMLAttr	class='MenuName'
+HTMLStyle
+  span.MenuName {font-family: sans-serif;font-style: italic;}
+EndHTMLStyle
+ResetsFont true
+End
+\end_local_layout
 \language ngerman
 \language_package default
 \inputencoding auto
@@ -297,24 +318,42 @@ OpenSlides
  in Ihrem Browser.
  Loggen Sie sich als Administrator ein, indem Sie als Benutzernamen 
 \family sans
+\series bold
 admin
 \family default
+\series default
  und als Passwort 
 \family sans
+\series bold
 admin
 \family default
+\series default
  eingeben und auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anmelden
-\family default
+\end_layout
+
+\end_inset
+
  klicken.
 \end_layout
 
 \begin_layout Standard
 Anschließend sollten Sie sofort das Administrator-Passwort ändern.
  Klicken Sie dazu oben rechts in der Kopfzeile auf 
-\family sans
-Administrator:
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Administrator
+\end_layout
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -330,25 +369,37 @@ Administrator:
 
 \begin_layout Standard
 Anschließend auf 
-\family sans
-Passwort ändern
-\family default
+\begin_inset Graphics
+	filename clipart/Passwort-ändern.jpg
+	scale 60
+	BoundingBox 0bp 7bp 163bp 0bp
+
+\end_inset
+
 .
  Geben Sie in die entsprechenden Felder Ihr altes Passwort 
 \family sans
+\series bold
 admin
 \family default
+\series default
  und anschließend Ihr neues Passwort ein.
  Wiederholen Sie das neue Passwort im dritten Formularfeld.
  Bestätigen Sie die Eingabe mit 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Speichern
-\family default
+\end_layout
+
+\end_inset
+
 .
  Weitere Informationen zur Benutzerverwaltung finden Sie in 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:An--und-Abmelden"
+reference "sec:Login-und-Zugangsdaten"
 
 \end_inset
 
@@ -363,10 +414,16 @@ Konfiguration des Systems
 \begin_layout Standard
 Geben Sie die Rahmendaten Ihrer Veranstaltung ins System ein.
  Wechseln Sie dazu zum Menüpunkt 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Allgemein
-\family default
+\end_layout
+
+\end_inset
+
  und geben Sie die Veranstaltungsdaten wie folgt ein:
 \begin_inset Note Note
 status collapsed
@@ -465,9 +522,15 @@ OpenSlides
 .
  Es erscheint als Fußzeile in der Startseite.
  Der Text im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Diesen Text auf der Login-Seite anzeigen
-\family default
+\end_layout
+
+\end_inset
+
  erscheint auf dem Login-Fenster, wenn sich die Teilnehmer einloggen:
 \end_layout
 
@@ -486,9 +549,15 @@ Diesen Text auf der Login-Seite anzeigen
 
 \begin_layout Standard
 Alle Änderungen in den 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen
-\family default
+\end_layout
+
+\end_inset
+
  werden sofort gespeichert.
  Alle Einstellungen sind im Detail in 
 \begin_inset CommandInset ref
@@ -561,9 +630,15 @@ Eingabe der Tagesordnung
 Die Tagesordnung enthält nach einer Neuinstallation noch keine Einträge.
  Legen Sie zunächst einige Einträge an.
  Klicken Sie dazu im Menüpunkt 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Tagesordnung
-\family default
+\end_layout
+
+\end_inset
+
  oben rechts auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
@@ -606,9 +681,15 @@ Die Vereinsvorsitzende Frau Weise heißt Sie herzlich willkommen.
 Wie sie sehen, können Sie den Text frei formatieren und dort auch Bilder
  einfügen.
  Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anhang
-\family default
+\end_layout
+
+\end_inset
+
  können Sie aus allen in 
 \begin_inset Flex Noun
 status collapsed
@@ -632,9 +713,15 @@ reference "sec:Dateien"
 \end_inset
 
 Klicken Sie abschließend auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Speichern
-\family default
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -700,18 +787,36 @@ Sie können nun nachträglich die Reihenfolge der Einträge verändern und auch
 \end_inset
 
  und ziehen Sie dann mit gedrückter linker Maustaste den Punkt 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Sonstiges
-\family default
+\end_layout
+
+\end_inset
+
  an die letzte Stelle.
  Den Punkt 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Gartenfest
-\family default
+\end_layout
+
+\end_inset
+
  ziehen Sie unter 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Bericht des Vorstands
-\family default
+\end_layout
+
+\end_inset
+
  und schieben ihn etwas nach rechts, bis er dort einrastet.
  Gehen sie durch Drücken des Knopfes 
 \begin_inset Graphics
@@ -813,9 +918,15 @@ Bitte kommen die pünktlich um 16:00 Uhr zurück in den Saal!
 
 \begin_layout Standard
 Dabei ist es wichtig, dass die Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Als Tagesordnungspunkt anzeigen
-\family default
+\end_layout
+
+\end_inset
+
  
 \emph on
 nicht
@@ -884,18 +995,30 @@ Durch Drücken von
 
  neben dem Knopf, können Sie wählen, ob alle Tagesordnungspunkte oder nur
  die Hauptpunkte angezeigt werden, also in unserem Fall ohne den Punkt 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Gartenfest
-\family default
+\end_layout
+
+\end_inset
+
 .
  Eigene Themen werden in der Tagesordnung nicht projiziert.
 \end_layout
 
 \begin_layout Standard
 Um nur den Tagesordnungspunkt 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anträge
-\family default
+\end_layout
+
+\end_inset
+
  zu projizieren, drücken Sie auf den Knopf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
@@ -952,19 +1075,31 @@ Der Inhalt von Tagesordnungspunkten kann jederzeit geändert werden, auch
 \end_layout
 
 \begin_layout Standard
-Einige Änderungen können direkt in dieser Übersich vorgenommen werden.
+Einige Änderungen können direkt in dieser Übersicht vorgenommen werden.
 \end_layout
 
 \begin_layout Standard
 Ändern Sie zum Beispiel die Dauer des Tagesordnungspunktes 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Bericht des Vorstandes
-\family default
+\end_layout
+
+\end_inset
+
  auf 0:20h.
  Titel und Text können Sie nach Klick auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Bearbeiten
-\family default
+\end_layout
+
+\end_inset
+
  ändern.
 \end_layout
 
@@ -992,13 +1127,25 @@ OpenSlides
  bietet für jeden Tagesordnungspunkt eine eigene Redeliste.
  Um eine Redeliste zu öffnen, klicken Sie im Kontextmenü des Tagesordnungspunkts
  
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Bericht des Vorstandes
-\family default
+\end_layout
+
+\end_inset
+
  auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Redeliste
-\family default
+\end_layout
+
+\end_inset
+
 .
  Alternativ klicken Sie auf den Tagesordnungspunkt und dann auf 
 \begin_inset Graphics
@@ -1202,9 +1349,15 @@ en Berechtigungen zugewiesen werden.
 
 \begin_layout Standard
 Zum Anlegen eines neuen Teilnehmers wechseln Sie zum Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Teilnehmende
-\family default
+\end_layout
+
+\end_inset
+
  und klicken Sie oben rechts auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
@@ -1271,18 +1424,36 @@ Dr.
 
 \begin_layout Standard
 Die Angabe des 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Titels
-\family default
+\end_layout
+
+\end_inset
+
  und der 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Gliederungsebene
-\family default
+\end_layout
+
+\end_inset
+
  ist optional.
  Über die 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Gruppe
-\family default
+\end_layout
+
+\end_inset
+
  wird festgelegt, welche Berechtigungen der Teilnehmer hat, also ob er z.
 \begin_inset space \thinspace{}
 \end_inset
@@ -1305,9 +1476,15 @@ Bearbeiten eines Teilnehmers
 
 \begin_layout Standard
 Im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Teilnehmende
-\family default
+\end_layout
+
+\end_inset
+
  ist nun eine Liste mit allen angelegten Personen zu sehen:
 \end_layout
 
@@ -1336,9 +1513,15 @@ Klicken Sie zum Bearbeiten eines Teilnehmers entweder auf dessen Namen und
 
  oder fahren Sie mit der Maus über den Namen und wählen dann das Kontextmenü
  
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Bearbeiten
-\family default
+\end_layout
+
+\end_inset
+
 .
  Einige Einstellungen können direkt in der Teilnehmerübersicht geändert
  werden.
@@ -1358,9 +1541,15 @@ Mustermann“ hinter den Namen auf
 \end_inset
 
  und weisen ihm zusätzlich die Gruppe 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Mitarbeitende
-\family default
+\end_layout
+
+\end_inset
+
  zu.
  In der Teilnehmerliste kann jederzeit eingestellt werden, ob ein Teilnehmer
  anwesend ist.
@@ -1392,9 +1581,15 @@ Beim Anlegen eines Teilnehmers wird automatisch ein zufälliges initiales
 \end_inset
 
  und dann auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Zugangsdatenliste
-\family default
+\end_layout
+
+\end_inset
+
  klicken.
  Dieses PDF ist so ausgelegt, dass man jedem Teilnehmer seine ausgedruckten
  Zugangsdaten beim Empfang auf der Versammlung aushändigen kann.
@@ -1410,13 +1605,19 @@ Um als Administrator das Passwort von z.
 B.
  Luise Schmidt neu zu setzen, klicken Sie in der Teilnehmerliste unterhalb
  des Namens auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Passwort
 \begin_inset space ~
 \end_inset
 
 ändern
-\family default
+\end_layout
+
+\end_inset
+
  und tragen Sie ein neues Passwort ein oder generieren eines.
 \end_layout
 
@@ -1438,25 +1639,30 @@ reference "sec:Teilnehmer"
 
 \begin_layout Section
 Countdowns und Mitteilungen
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Countdowns-Mitteilungen"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 Unterhalb der Live-Vorschau gibt es die Rubriken 
-\family sans
-Countdown
-\family default
- und 
-\family sans
-Mitteilungen.
+\begin_inset Flex Menu Name
+status collapsed
 
-\family default
+\begin_layout Plain Layout
+Countdown
+\end_layout
+
+\end_inset
+
+ und 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Mitteilungen
+\end_layout
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -1489,7 +1695,11 @@ B.
 \begin_inset Quotes gld
 \end_inset
 
-Das Mittagessen gibt es in 5 Minuten im Foyer, 1.
+Das Mittagessen gibt es in 5
+\begin_inset space ~
+\end_inset
+
+Minuten im Foyer, 1.
 \begin_inset space ~
 \end_inset
 
@@ -1554,9 +1764,15 @@ min als Countdown laufen zu lassen, klicken Sie auf
 
 .
  Geben Sie als 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Beschreibung
-\family default
+\end_layout
+
+\end_inset
+
  
 \begin_inset Quotes gld
 \end_inset
@@ -1566,9 +1782,15 @@ Mittagessen startet in
 \end_inset
 
  und als 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Startzeit
-\family default
+\end_layout
+
+\end_inset
+
  
 \begin_inset Quotes gld
 \end_inset
@@ -1659,9 +1881,15 @@ Eingabe eines bereits vorliegenden Antrags
 Vor Beginn der Veranstaltung liegen bereits Anträge an die Versammlung vor,
  welche ins System gebracht werden sollen.
  Wechseln Sie zum Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anträge
-\family default
+\end_layout
+
+\end_inset
+
  und klicken auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
@@ -1864,9 +2092,15 @@ Der Vorsitzende stellt fest, dass der Antrag angenommen ist.
 \end_inset
 
  und dann auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Annehmen
-\family default
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -1932,9 +2166,15 @@ Anlegen von Wahlen
 \begin_layout Standard
 Vor Veranstaltungsbeginn sind die anstehenden Wahlen vorzubereiten.
  Gehen Sie dazu ins Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Wahlen
-\family default
+\end_layout
+
+\end_inset
+
 .
  Legen Sie nun eine neue Wahl an indem sie oben auf 
 \begin_inset Graphics
@@ -2047,14 +2287,26 @@ Klicken Sie in der Wahlübersicht auf
 \end_inset
 
  vor 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Vorstand
-\family default
+\end_layout
+
+\end_inset
+
  und die Wahl wird projiziert.
  Klicken Sie nun auf den Namen der Wahl 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Vorstand
-\family default
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -2084,7 +2336,7 @@ OpenSlides
 
 \begin_layout Standard
 Wir gehen nun davon aus, dass die Kandidatenliste feststeht.
- Erzeugen Sie einen neuen Wahlgang durch Klicken auf 
+ Um die Wahl zu beginnen, klicken Sie unten auf 
 \begin_inset Graphics
 	filename clipart/Neuer-Wahlgang.jpg
 	scale 60
@@ -2094,9 +2346,15 @@ Wir gehen nun davon aus, dass die Kandidatenliste feststeht.
 
 .
  Dadurch hat sich die Phase der Wahl automatisch auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Im Wahlvorgang
-\family default
+\end_layout
+
+\end_inset
+
  geändert.
 \end_layout
 
@@ -2170,7 +2428,7 @@ Da die Wahl von Personen eine geheime Wahl ist, müssen Stimmzettel erstellt
 \begin_layout Standard
 Wir nehmen nun an, dass die Wahl ausgezählt wurde und die Ergebnisse vorliegen.
  Tragen Sie daher nun die Ergebnisse dieses 1.
-\begin_inset space \space{}
+\begin_inset space ~
 \end_inset
 
 Wahlgangs ein, indem Sie auf 
@@ -2182,20 +2440,69 @@ Wahlgangs ein, indem Sie auf
 \end_inset
 
  klicken.
- Nutzen Sie als Beispiel folgende Stimmverteilung: Administrator 23, Frau
- Meyer 38, Herr Mustermann 17, Herr Müller 20, Frau Schmidt 22, 
-\family sans
+ Nutzen Sie als Beispiel folgende Stimmverteilung: Administrator
+\begin_inset space ~
+\end_inset
+
+23, Frau Meyer
+\begin_inset space ~
+\end_inset
+
+38, Herr Mustermann
+\begin_inset space ~
+\end_inset
+
+17, Herr Müller
+\begin_inset space ~
+\end_inset
+
+20, Frau Schmidt
+\begin_inset space ~
+\end_inset
+
+22, 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 gültige Stimmen
-\family default
- 109, 
-\family sans
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+109, 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 ungültige Stimmen
-\family default
- 1 und 
-\family sans
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+1 und 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 abgegebene Stimmen
-\family default
- 110.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+110.
 \end_layout
 
 \begin_layout Standard
@@ -2296,9 +2603,15 @@ or als gewählt.
 \end_inset
 
  und ändern die Phase der Wahl auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Abgeschlossen
-\family default
+\end_layout
+
+\end_inset
+
 .
  Wenn Sie in der Wahl oben auf 
 \begin_inset Graphics

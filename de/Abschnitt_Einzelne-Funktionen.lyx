@@ -28,6 +28,7 @@
   \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
   \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
   \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\itemautorefname}{\negthickspace}%
  }
 }{}
 
@@ -56,6 +57,26 @@
 logicalmkup
 \end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Format 60
+InsetLayout Flex:Menu_Name
+LyxType	charstyle
+LabelString	"menu name"
+LatexType	command
+LatexName	textsf{\textit
+RightDelim	}
+Font
+  Shape	italic
+  Family	sans
+EndFont
+HTMLTag	span
+HTMLAttr	class='MenuName'
+HTMLStyle
+  span.MenuName {font-family: sans-serif;font-style: italic;}
+EndHTMLStyle
+ResetsFont true
+End
+\end_local_layout
 \language ngerman
 \language_package default
 \inputencoding auto
@@ -254,21 +275,12 @@ OpenSlides
 
 \begin_layout Standard
 Der Benutzername und das initiale Passwort des Administrators ist jeweils
-\family sans
  
-\family default
-
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-
 \family sans
+\series bold
 admin
-\end_layout
-
-\end_inset
-
+\family default
+\series default
 .
  
 \end_layout
@@ -317,24 +329,42 @@ reference "sec:Teilnehmer"
 
 \begin_layout Standard
 Zum Einloggen geben Sie Benutzernamen und Passwort ein und klicken auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anmelden
-\family default
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Standard
 Um Nutzer zu informieren, wie man sich einloggt, kann man einen Text angeben
  im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Allgemein\SpecialChar menuseparator
 System
-\family default
+\end_layout
+
+\end_inset
+
  im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Diesen Text auf der Login-Seite anzeigen
-\family default
+\end_layout
+
+\end_inset
+
 .
  Dieser Text erscheint auf dem Login-Fenster, wenn sich die Teilnehmer einloggen
 :
@@ -434,20 +464,32 @@ reference "sec:Teilnehmer"
 \begin_layout Standard
 Benutzer mit den entsprechenden Rechten können alle Teilnehmer über das
  Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Teilnehmende
-\family default
+\end_layout
+
+\end_inset
+
  verwalten und dort auch den Benutzernamen und das Passwort ändern.
  Um das Passwort zu ändern, klickt man in der Teilnehmerliste unter den
  Namen des Teilnehmers auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Passwort
 \begin_inset space ~
 \end_inset
 
 ändern
-\family default
- .
+\end_layout
+
+\end_inset
+
+.
  Es erscheint nun ein Eingabefeld für das neue Passwort.
  Darunter wird das initiale Passwort angezeigt.
  Klickt man auf 
@@ -468,9 +510,15 @@ Passwort
 Die initialen Passwörter (nicht die vom Teilnehmer festgelegten) können
  Administratoren aus der Zugangsdaten-PDF-Datei ablesen.
  Diese Datei wird generiert, wenn man im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Teilnehmende
-\family default
+\end_layout
+
+\end_inset
+
  auf 
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
@@ -480,9 +528,15 @@ Teilnehmende
 \end_inset
 
  klickt und dann 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Zugangsdatenliste
-\family default
+\end_layout
+
+\end_inset
+
  auswählt.
 \end_layout
 
@@ -626,18 +680,26 @@ reference "subsec:Einstellungen-Projektor"
 \end_inset
 
 .
- Klickt man erneut auf 
-\family sans
-Leeren
-\family default
+ Klickt man erneut auf
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename clipart/Projektor-leeren.jpg
+	scale 60
+	BoundingBox 0bp 7bp 161bp 0bp
+
+\end_inset
+
 , wird der Projektor wieder aktiv.
 \end_layout
 
 \begin_layout Standard
 Einige zu projizierende Informationen benötigen mehr Platz als auf dem Projektor
  vorhanden.
- Mit den Zoom-/Scroll-Steuerungsschaltflächen lässt sich die Projektion
- leicht anpassen: 
+ Mit den Zoom-/Scroll-Knöpfen lässt sich die Projektion leicht anpassen:
+ 
 \begin_inset Graphics
 	filename clipart/Projektorknöpfe.jpg
 	scale 60
@@ -696,10 +758,6 @@ B.
  ein Tagesordnungspunkt projiziert, wird dieser zur Bearbeitung geöffnet.
 \end_layout
 
-\begin_layout Subsection
-Mehrere Projektoren
-\end_layout
-
 \begin_layout Standard
 Klickt man in der Projektorvorschau auf 
 \begin_inset Graphics
@@ -710,7 +768,33 @@ Klickt man in der Projektorvorschau auf
 \end_inset
 
 , gelangt man in das Menü der Projektorverwaltung.
- Mit 
+ Klickt man dort beim Standardprojektor auf 
+\begin_inset Graphics
+	filename clipart/Gruppenname-ändern.jpg
+	scale 60
+	BoundingBox 0bp 7bp 25bp 0bp
+
+\end_inset
+
+, kann man den Projektornamen und auch dessen Auflösung ändern.
+ Außerdem kann man so über 
+\begin_inset Graphics
+	filename clipart/Projektionsvorgaben.jpg
+	scale 60
+	BoundingBox 0bp 7bp 161bp 0bp
+
+\end_inset
+
+ festlegen, welche Bereiche (Themen, Wahlen usw.) dieser Projektor standardmäßig
+ anzeigen soll.
+\end_layout
+
+\begin_layout Subsection
+Mehrere Projektoren
+\end_layout
+
+\begin_layout Standard
+In der Projektorverwaltung können mit 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
 	scale 60
@@ -718,7 +802,7 @@ Klickt man in der Projektorvorschau auf
 
 \end_inset
 
- können weitere Projektoren erstellt werden.
+ weitere Projektoren erstellt werden.
  Auf diese Weise ist es beispielsweise möglich, die Tagesordnung auf einem
  Projektor anzuzeigen und den aktuellen Antrag oder die Redeliste auf einem
  zweiten.
@@ -726,7 +810,7 @@ Klickt man in der Projektorvorschau auf
 
 \begin_layout Standard
 Sobald mehr als ein Projektor vorhanden ist, erscheint neben jedem Projektionskn
-opf eine ausklappbares Menü 
+opf ein ausklappbares Menü 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol-erweitert.jpg
 	scale 60
@@ -807,15 +891,39 @@ Klickt man in der Projektorverwaltung auf
 aktuelle
 \emph default
  Redeliste bezieht.
- Ein Bespiel: Projektor 1 ist als Referenz für die aktuelle Redeliste eingestell
-t.
- Ein Antrag wird nun auf Projeketor 1 angezeigt.
- Projektor 2 projiziert stets die aktuelle Redeliste.
- Damit wird auf Projektor 2 die Redeliste des Antrags von Projektor 1 dargestell
-t.
- Präsentiert man nun einen Tagesordnungspunkt auf Projektor 1, aktualisiert
- sich Projektor 1 automatisch und zeigt die Redeliste des Tagesordnungspunkts
- an.
+ Ein Beispiel: Projektor
+\begin_inset space ~
+\end_inset
+
+1 ist als Referenz für die aktuelle Redeliste eingestellt.
+ Ein Antrag wird nun auf Projektor
+\begin_inset space ~
+\end_inset
+
+1 angezeigt.
+ Projektor
+\begin_inset space ~
+\end_inset
+
+2 projiziert stets die aktuelle Redeliste.
+ Damit wird auf Projektor
+\begin_inset space ~
+\end_inset
+
+2 die Redeliste des Antrags von Projektor
+\begin_inset space ~
+\end_inset
+
+1 dargestellt.
+ Präsentiert man nun einen Tagesordnungspunkt auf Projektor
+\begin_inset space ~
+\end_inset
+
+1, aktualisiert sich Projektor
+\begin_inset space ~
+\end_inset
+
+1 automatisch und zeigt die Redeliste des Tagesordnungspunkts an.
 \end_layout
 
 \begin_layout Standard
@@ -842,20 +950,69 @@ name "subsec:Einstellungen-Projektor"
 
 \begin_layout Standard
 Im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Projektor
-\family default
+\end_layout
+
+\end_inset
+
  können Einstellungen für die Projektoransicht vorgenommen werden.
 \end_layout
 
 \begin_layout Standard
+Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Projektorsprache
+\end_layout
+
+\end_inset
+
+ kann die Sprache eingestellt werden, die für den Projektor verwendet wird.
+ Diese ist unabhängig von der Spracheinstellung von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+.
+ Auf diese Weise kann man 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ administrieren, auch wenn man nicht 100%ig in der Sprache firm ist, in
+ der die Veranstaltung projiziert wird.
+\end_layout
+
+\begin_layout Standard
 Mit der Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Logo auf dem Projektor anzeigen
-\family default
+\end_layout
+
+\end_inset
+
  kann ein Logo oben links dargestellt werden.
- Um das Logo zu ändern, muss eine Datei mit Namen 
+ Um das Logo zu ändern, muss eine Datei mit dem Namen 
 \begin_inset Flex Code
 status collapsed
 
@@ -876,10 +1033,10 @@ OpenSlides
 \end_inset
 
 -Benutzerdatenverzeichnis abgelegt werden:
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-.
+
 \begin_inset Flex Code
 status collapsed
 
@@ -890,9 +1047,9 @@ status collapsed
 \end_inset
 
 
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Diese Datei überschreibt das voreingestellte 
 \begin_inset Flex Noun
 status collapsed
@@ -904,7 +1061,10 @@ OpenSlides
 \end_inset
 
 -Logo.
- In der portablen Version für Windows ist das 
+\begin_inset Newline newline
+\end_inset
+
+In der portablen Version für Windows ist das 
 \begin_inset Flex Noun
 status collapsed
 
@@ -914,20 +1074,60 @@ OpenSlides
 
 \end_inset
 
--Benutzerdatenverzeichnis der Ordner 
+-Benutzerdatenverzeichnis der Unterordner
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Flex Code
 status collapsed
 
 \begin_layout Plain Layout
+
+\backslash
+Lib
+\backslash
+site-packages
+\backslash
+openslides
+\backslash
+core
+\backslash
+static
+\backslash
 openslides
 \end_layout
 
 \end_inset
 
-; dort wo auch die Datenbank liegt.Mit der Option 
-\family sans
+
+\begin_inset Newline newline
+\end_inset
+
+des Installationsordners von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+; dort wo auch die Datenbank liegt.
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Titel und Kurzbeschreibung der Veranstaltung auf dem Projektor anzeigen
-\family default
+\end_layout
+
+\end_inset
+
  lässt sich Titel und Kurzbeschreibung auf dem Projektor ein- und ausblenden.
 \end_layout
 
@@ -937,24 +1137,55 @@ Mit den drei Farbeinstellungen lässt sich die Farbgebung auf dem Projektor
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Hintergrundfarbe des Projektor-Kopf- und Fußbereichs
 \end_layout
 
-\begin_layout Itemize
-Schriftfarbe des Projektor-Kopf- und Fußbereichs
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Flex Menu Name
+status collapsed
 
-\family sans
+\begin_layout Plain Layout
+Schriftfarbe des Projektor-Kopf- und Fußbereichs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Schriftfarbe der Projektor-Überschrift
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Vorgegebene Sekunden für neue Countdowns
-\family default
+\end_layout
+
+\end_inset
+
  lässt sich die Voreinstellung für Countdowns anpassen.
  Mehr zu Countdowns siehe 
 \begin_inset CommandInset ref
@@ -969,9 +1200,15 @@ reference "subsec:Countdowns"
 \begin_layout Standard
 Die voreingestellte (weiße) Füllfarbe für einen leeren Projektor lässt sich
  im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Farbe für ausgeblendeten Projektor
-\family default
+\end_layout
+
+\end_inset
+
  kann die Füllfarbe ändern.
  Diese Farbe wird angezeigt, wenn in der Projektorvorschau 
 \begin_inset Graphics
@@ -982,10 +1219,6 @@ Farbe für ausgeblendeten Projektor
 \end_inset
 
  gedrückt wird.
-\end_layout
-
-\begin_layout Verbatim*
-
 \end_layout
 
 \begin_layout Standard
@@ -1008,17 +1241,35 @@ name "sec:Countdown-und-Mitteilungen"
 
 \begin_layout Standard
 Unterhalb der Live-Vorschau des Projektors gibt es die Rubriken 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Countdown
-\family default
+\end_layout
+
+\end_inset
+
 , 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Mitteilungen
-\family default
+\end_layout
+
+\end_inset
+
  und 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Redeliste
-\family default
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -1052,18 +1303,36 @@ Um einen Countdown laufen zu lassen, klickt man auf
 
 .
  Als 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Beschreibung
-\family default
+\end_layout
+
+\end_inset
+
  gibt man einen kurzen Text ein, der später unter der Zeit erscheint.
  Als 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Startzeit
-\family default
+\end_layout
+
+\end_inset
+
  wird die Zeit im Format 
-\family sans
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 mm:ss
-\family default
+\end_layout
+
+\end_inset
+
  (Minuten:Sekunden, z.
 \begin_inset space \thinspace{}
 \end_inset
@@ -1109,10 +1378,16 @@ Es ist möglich mehrere Countdowns gleichzeitig zu projizieren.
 \end_inset
 
 s für die Länge neuer Countdowns kann im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Projektor
-\family default
+\end_layout
+
+\end_inset
+
  geändert werden, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1125,12 +1400,18 @@ reference "subsec:Einstellungen-Projektor"
 \begin_inset space \thinspace{}
 \end_inset
 
-s orange eingefärbt .
+s orange eingefärbt.
  Diese Zeit kann im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Tagesordnung
-\family default
+\end_layout
+
+\end_inset
+
  geändert werden, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1144,14 +1425,26 @@ reference "subsec:Einstellungen-Tagesordnung"
 
 \begin_layout Standard
 Um für jede Rede einen Countdown mitlaufen zu lassen, muss im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Tagesordnung
-\family default
+\end_layout
+
+\end_inset
+
  die Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Countdown mit der Redeliste verkoppeln
-\family default
+\end_layout
+
+\end_inset
+
  ausgewählt sein.
  Dadurch werden alle existierenden Countdown automatisch gestartet, wenn
  eine Rede begonnen wird.
@@ -1263,10 +1556,16 @@ name "sec:Tagesordnung"
 
 \begin_layout Standard
 Die Verwaltung der Tagesordnung geschieht im Menü 
-\emph on
-Tages
-\emph default
-ordnung.
+\begin_inset Flex Menu Name
+status open
+
+\begin_layout Plain Layout
+Tagesordnung
+\end_layout
+
+\end_inset
+
+.
  Dort wird die Tagesordnung in einer editierbaren Liste angezeigt.
 \end_layout
 
@@ -1289,22 +1588,20 @@ Um einen neuen Tagesordnungspunkt zu erstellen, klickt man oben rechts auf
 \end_layout
 
 \begin_layout Standard
-Der Titel eines sogenannten 
-\begin_inset Quotes gld
-\end_inset
-
-Themas
-\begin_inset Quotes grd
-\end_inset
-
- (nicht jedes Thema ist gleich auch ein offizieller Tagesordnungspunkt)
- ist ein Pflichtfeld.
- Die Angeabe des Textes ist optional und kann frei formatiert werden.
+Der Titel eines Themas (nicht jedes Thema ist auch ein offizieller Tagesordnungs
+punkt) ist ein Pflichtfeld.
+ Die Angabe des Textes ist optional und kann frei formatiert werden.
  Auch eine Einbettung von Bildern und Weblinks ist möglich.
  Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anhang
-\family default
+\end_layout
+
+\end_inset
+
  können Sie auf eine beliebige Datei referenzieren, die Sie vorher in 
 \begin_inset Flex Noun
 status collapsed
@@ -1334,7 +1631,7 @@ Tagesordnungspunkte importieren
 
 \begin_layout Standard
 Für Veranstaltungen mit vielen Tagesordnungspunkten kann es es sinnvoll
- diese Einträge zu importieren.
+ sein, diese Einträge zu importieren.
  Klickt man auf 
 \begin_inset Graphics
 	filename clipart/Importieren-Symbol.jpg
@@ -1347,22 +1644,63 @@ Für Veranstaltungen mit vielen Tagesordnungspunkten kann es es sinnvoll
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Importieren-durch-Kopieren/Einfü"
+
+\end_inset
+
 Importieren durch Kopieren/Einfügen in ein Textfeld.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Importieren-aus-einer"
+
+\end_inset
+
 Importieren aus einer CSV-Datei.
 \end_layout
 
 \begin_layout Standard
-Möglichkeit (1) eignet sich für den schnellen Import, wenn es Ihnen nur
- um die Titel der Themen geht (d.h.
- ohne Angabe von Text, Dauer, Kommentar oder der Markierung als internen
+Möglichkeit
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Importieren-durch-Kopieren/Einfü"
+
+\end_inset
+
+ eignet sich für den schnellen Import, wenn es Ihnen nur um die Titel der
+ Themen geht (d.
+\begin_inset space \thinspace{}
+\end_inset
+
+h.
+\begin_inset space \space{}
+\end_inset
+
+ohne Angabe von Text, Dauer, Kommentar oder der Markierung als internen
  Eintrag).
 \end_layout
 
 \begin_layout Standard
-Möglichkeit (2) bietet einen umfangreicheren Import aller Daten.
+Möglichkeit
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Importieren-aus-einer"
+
+\end_inset
+
+ bietet einen umfangreicheren Import aller Daten.
  Diese Variante wird in diesem Abschnitt im Detail beschrieben.
 \end_layout
 
@@ -1381,10 +1719,14 @@ Eine CSV-Datei ist eine Textdatei (die üblicherweise die Endung
 
 \begin_layout Standard
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
-Title,Text,Dauer,Kommentar,Interner Eintrag
+Titel,Text,Dauer,Kommentar,Interner
+\begin_inset space ~
+\end_inset
+
+Eintrag
 \end_layout
 
 \end_inset
@@ -1403,12 +1745,12 @@ B.:
 
 \begin_layout Standard
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Begrüßung,Die Vorsitzende Frau Weise heißt Sie willkommen.,0:15,
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1419,7 +1761,7 @@ status open
 
 ,
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1452,9 +1794,15 @@ Jedes Komma trennt die Eigenschaften voneinander.
  Gibt es eine Eigenschaft nicht, folgen die Kommas direkt aufeinander.
  Es muss jedoch mindestens der Titel angegeben werden.
  Als Dauer geben Sie eine Zeit im Format 
-\emph on
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 h:mm
-\emph default
+\end_layout
+
+\end_inset
+
  (Stunde:Minuten, z.
 \begin_inset space \thinspace{}
 \end_inset
@@ -1467,40 +1815,53 @@ B:
 \begin_inset Quotes grd
 \end_inset
 
-) ein.
- Handelt es sich um einen internen Eintrag nutzen Sie '1', ansonsten verwenden
- Sie '0' oder nichts.
+).
+ Handelt es sich um einen internen Eintrag verwendet man '1', ansonsten
+ verwendet man '0' oder nichts.
 \end_layout
 
 \begin_layout Standard
-Nach Auswahl der CSV-Datei wird der Feldtrenner automatisch erkannt (i.d.R.
- 
-\begin_inset Quotes gld
-\end_inset
-
-,
-\begin_inset Quotes grd
-\end_inset
-
- oder 
-\begin_inset Quotes gld
-\end_inset
-
-;
-\begin_inset Quotes grd
-\end_inset
-
-).
+Nach Auswahl der CSV-Datei wird der Feldtrenner (normalerweise das Komma)
+ automatisch erkannt.
  Sie können den Feldtrenner aber auch manuell ändern.
- Die Kodierung ist voreingestellt UTF-8.
- Bei Bedarf kann hier auf ISO-8859-1 umgeschaltet werden, abhängig davon
- wie die Datei gespeichert wurde.
- Die lässt sich leicht in der Vorschau erkennen, ob z.B.
- Umlaute korrekt dargestellt werden.
+ Die 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Kodierung
+\end_layout
+
+\end_inset
+
+ ist voreingestellt 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+UTF-8
+\end_layout
+
+\end_inset
+
+.
+ Bei Bedarf kann hier auf 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+ISO-8859-1
+\end_layout
+
+\end_inset
+
+ umgeschaltet werden, abhängig davon, wie die Datei gespeichert wurde.
+ Dies lässt sich leicht in der Vorschau erkennen, ob Akzenten und Umlaute
+ korrekt dargestellt werden.
  Ist alles korrekt ausgewählt, sollten Sie eine vollständige Vorschau für
  den Import angezeigt bekommen:
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Den Inhalt der CSV-Datei, die für dieses Bildschirmfoto verwendet wurde,
@@ -1547,16 +1908,6 @@ reference "chap:Beispiel-für-Tagesordnung-1"
 \begin_layout Standard
 \noindent
 \align center
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TODO: Screeshot aktualisieren (letzte Spalte veraltet)
-\end_layout
-
-\end_inset
-
-
 \begin_inset Graphics
 	filename clipart/Tagesordnung-import.jpg
 	lyxscale 50
@@ -1568,8 +1919,12 @@ TODO: Screeshot aktualisieren (letzte Spalte veraltet)
 \end_layout
 
 \begin_layout Standard
-Ist alles korrekt, klicken Sie anschließend den Knopf 
-\family sans
+und kann die CSV-Datei noch ändern, falls es Fehler gibt.
+ Zum Import drückt man auf den Knopf 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 x
 \begin_inset space ~
 \end_inset
@@ -1579,16 +1934,20 @@ Themen
 \end_inset
 
 importieren
-\family default
+\end_layout
+
+\end_inset
+
 .
- Ein Zähler informiert Sie über die erfolgreich importierten Themen.
 \end_layout
 
 \begin_layout Standard
 CSV-Dateien lassen sich übrigens recht einfach mit gängigen Tabellenkalkulations
 programmen wie 
-\noun on
+\begin_inset Flex Noun
+status collapsed
 
+\begin_layout Plain Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "LibreOffice"
@@ -1597,11 +1956,20 @@ target "http://www.libreoffice.org/"
 \end_inset
 
 
-\noun default
+\end_layout
+
+\end_inset
+
  oder 
-\noun on
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
 Excel
-\noun default
+\end_layout
+
+\end_inset
+
  erstellen.
  Dazu erstellt man einfach eine Tabelle in dieser Form:
 \end_layout
@@ -1622,7 +1990,7 @@ Excel
 \begin_inset Text
 
 \begin_layout Plain Layout
-Title
+Titel
 \end_layout
 
 \end_inset
@@ -1790,6 +2158,7 @@ Der Inhalt von Tagesordnungspunkten kann jederzeit geändert werden, insbesonder
 \align center
 \begin_inset Graphics
 	filename clipart/TOP-mit-Menü.jpg
+	scale 95
 
 \end_inset
 
@@ -1798,25 +2167,46 @@ Der Inhalt von Tagesordnungspunkten kann jederzeit geändert werden, insbesonder
 
 \begin_layout Standard
 Klickt man dort auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Bearbeiten
-\family default
+\end_layout
+
+\end_inset
+
 , kann man den Tagesordnungspunkt bearbeiten.
  Wie man sieht, können einige Eigenschaften wie die Dauer direkt in der
  Übersicht geändert werden.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Flex Menu Name
+status collapsed
 
-\family sans
+\begin_layout Plain Layout
 Kommentare
-\family default
+\end_layout
+
+\end_inset
+
  dienen nur als Hinweis und werden nicht projiziert.
  Sie sind nur für die Versammlungsleitung sichtbar.
  
-\family sans
-Interne Einträge
-\family default
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Interne
+\begin_inset space ~
+\end_inset
+
+Einträge
+\end_layout
+
+\end_inset
+
  werden nicht in der Tagesordnungsübersicht projiziert, da sie nicht Teil
  der offiziellen Tagesordnung sind.
 \end_layout
@@ -1842,9 +2232,15 @@ ng zu behandeln.
  Technisch sind sie jedoch dasselbe wie ein Tagesordnungspunkt.
  Das Erstellen eines eigenen Themas funktioniert daher genauso wie das Erstellen
  eines Tagesordnungspunkts, nur dass es wichtig ist, dass die Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Als Tagesordnungspunkt anzeigen
-\family default
+\end_layout
+
+\end_inset
+
  
 \emph on
 nicht
@@ -1854,10 +2250,20 @@ nicht
 
 \begin_layout Standard
 Eigene Themen werden in der Übersicht mit der Option 
-\family sans
-Interner Eintrag 
-\family default
-angezeigt, um anzuzeigen, dass sie nicht Teil der offiziellen Tagesordnung
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Interner
+\begin_inset space ~
+\end_inset
+
+Eintrag
+\end_layout
+
+\end_inset
+
+ angezeigt, um anzuzeigen, dass sie nicht Teil der offiziellen Tagesordnung
  sind.
 \end_layout
 
@@ -2020,9 +2426,15 @@ OpenSlides
  verfügt bei jedem Tagesordnungseintrag über eine Redelistenfunktion.
  Um eine Redeliste zu erstellen oder zu bearbeiten, klickt man im Kontextmenü
  des jeweiligen Tagesordnungspunkts auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Redeliste
-\family default
+\end_layout
+
+\end_inset
+
 .
  Alternativ klickt man auf den Tagesordnungspunkt und dann auf 
 \begin_inset Graphics
@@ -2101,9 +2513,15 @@ reference "subsec:Einstellungen-Tagesordnung"
 \end_inset
 
 , die Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Countdown mit der Redeliste verkoppeln
-\family default
+\end_layout
+
+\end_inset
+
  ausgewählt sein.
  Dadurch werden alle existierenden Countdowns automatisch gestartet, wenn
  eine Rede begonnen wird.
@@ -2267,10 +2685,16 @@ name "subsec:Einstellungen-Tagesordnung"
 
 \begin_layout Standard
 Im Menüpunkt 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Tagesordnung
-\family default
+\end_layout
+
+\end_inset
+
  kann das Verhalten der Tagesordnung konfiguriert werden.
 \end_layout
 
@@ -2280,9 +2704,15 @@ Rubrik Allgemein
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Präfix für Nummerierung von Tagesordnungspunkten
-\family default
+\end_layout
+
+\end_inset
+
  kann man einen Präfix angeben, der vor der Nummer des Tagesordnungspunkts
  angezeigt wird; z.
 \begin_inset space \thinspace{}
@@ -2302,9 +2732,15 @@ TOP
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Nummerierungssystem für Tagesordnungspunkte
-\family default
+\end_layout
+
+\end_inset
+
  kann die Nummerierung der Tagesordnungspunkte zwischen arabischen und römischen
  Nummern umgeschaltet werden:
 \end_layout
@@ -2319,9 +2755,15 @@ Römisch große römische Ziffern
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Beginn der Veranstaltung
-\family default
+\end_layout
+
+\end_inset
+
  wird der genaue Beginn der Veranstaltung angegeben.
  Klickt man in das Eingabefeld, erscheint ein Kalender in dem man das Datum
  und anschließend die Uhrzeit auswählen kann.
@@ -2333,9 +2775,15 @@ Rubrik Redeliste
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anzahl der dargestellten letzten Redner/innen auf dem Projektor
-\family default
+\end_layout
+
+\end_inset
+
  kann die Anzahl der letzten Redner eingestellt werden, die als Liste in
  grauer Schrift über der Liste der folgenden Redner angezeigt wird.
  
@@ -2343,18 +2791,30 @@ Anzahl der dargestellten letzten Redner/innen auf dem Projektor
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Countdown in den letzten x Sekunden der Redezeit orange darstellen
-\family default
+\end_layout
+
+\end_inset
+
  kann man einstellen, die wie viele der letzten Sekunden eines Countdowns
  in orange dargestellt werden.
 \end_layout
 
 \begin_layout Standard
 Mit der Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Countdown mit der Redeliste verkoppeln
-\family default
+\end_layout
+
+\end_inset
+
  werden bei Beginn jeder Rede alle existierenden Countdowns gestartet.
  Mehr zu Countdowns siehe 
 \begin_inset CommandInset ref
@@ -2386,9 +2846,15 @@ name "sec:Teilnehmer"
 
 \begin_layout Standard
 Die Teilnehmerverwaltung ist im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Teilnehmende
-\family default
+\end_layout
+
+\end_inset
+
  angelegt.
  Dort werden alle angelegten Teilnehmer in einer editierbaren Liste angezeigt.
 \end_layout
@@ -2410,20 +2876,6 @@ Zum manuellen Anlegen eines neuen Teilnehmers klickt man oben rechts auf
 .
  In der erscheinenden Eingabemaske können folgende Angaben gemacht werden:
  
-\end_layout
-
-\begin_layout Description
-Benutzername Benutzername des Teilnehmers, mit dem er sich in 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
- einloggt.
 \end_layout
 
 \begin_layout Description
@@ -2464,7 +2916,7 @@ Vorstand
 \end_layout
 
 \begin_layout Description
-Teilnehmendennummer optionale Nummer eines Teilnehmers.
+Teilnehmernummer optionale Nummer eines Teilnehmers.
  Die Teilnehmernummer wird in Redelisten in Klammern nach dem Namen angezeigt
 \end_layout
 
@@ -2504,11 +2956,11 @@ Kommentar optionaler Kommentar zum Teilnehmer
 \end_layout
 
 \begin_layout Description
-Über
+Erweiterte
 \begin_inset space ~
 \end_inset
 
-mich optionale persönliche Informationen zum Teilnehmer
+Felder zeigt die folgenden, optionalen Einstellungen an:
 \end_layout
 
 \begin_layout Description
@@ -2528,6 +2980,22 @@ Ist
 aktiv Option, die bestimmt, ob der Teilnehmer als aktiv behandelt werden
  soll.
  Man kann ihn so deaktivieren, ohne ihn zu löschen.
+ 
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Hinweis:
+\series default
+ Inaktive Teilnehmer können sich aus Sicherheitsgründen auch mit korrekten
+ Zugangsdaten nicht einloggen.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -2541,6 +3009,14 @@ ein
 
 Gremium Option, die festlegt, ob dieser Benutzer als Gremium behandelt werden
  soll.
+\end_layout
+
+\begin_layout Description
+Über
+\begin_inset space ~
+\end_inset
+
+mich optionale persönliche Informationen zum Teilnehmer
 \end_layout
 
 \begin_layout Standard
@@ -2601,11 +3077,19 @@ Teilnehmer können automatisiert aus einer Liste importiert werden.
 status collapsed
 
 \begin_layout Plain Layout
-title,first_name,last_name,structure_level,groups,comment,
+Titel,Vorname,Nachname,Gliederungsebene,Teilnehmernummer,Gruppen,
 \begin_inset Newline newline
 \end_inset
 
-is_active,is_present,is_committee
+Kommentar,Ist
+\begin_inset space ~
+\end_inset
+
+aktiv,Ist
+\begin_inset space ~
+\end_inset
+
+anwesend,Ist ein Gremium
 \end_layout
 
 \end_inset
@@ -2629,6 +3113,28 @@ status collapsed
 \begin_layout Plain Layout
 Prof.
  Dr.,Max,Käßmann,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -2722,59 +3228,8 @@ Jedes Komma trennt die Eigenschaften voneinander.
 \begin_inset Newline newline
 \end_inset
 
-Bei der Gruppe wird nicht deren Name, sondern deren Nummer angegeben.
- Voreingestellt in 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
- ist Gruppe
-\begin_inset space ~
-\end_inset
-
-
-\family sans
-2
-\family default
- für 
-\emph on
-Delegierte
-\emph default
-, Gruppe
-\begin_inset space ~
-\end_inset
-
-
-\family sans
-3
-\family default
- für 
-\emph on
-Mitarbeitende
-\emph default
- und Gruppe
-\begin_inset space ~
-\end_inset
-
-
-\family sans
-4
-\family default
- für 
-\emph on
-Gremien
-\emph default
-.
- Die Gruppe
-\begin_inset space ~
-\end_inset
-
-1 wird von OpenSlides automatisch vergeben.
+Die Angabe der Gruppe ermöglicht es, für alle Teilnehmer einer Gruppe dieselben
+ Rechte festzulegen.
  Mehr Details zu Gruppen siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2796,7 +3251,33 @@ B.:
 status collapsed
 
 \begin_layout Plain Layout
-,Žusan,Oltrán,Vorstand,"2,3",kommt 15 Minuten später,1,
+,Žusan,Oltrán,Vorstand,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+"Delegierte,Mitarbeitende",
+\begin_inset Newline newline
+\end_inset
+
+kommt 15 Minuten später,1,
 \begin_inset ERT
 status collapsed
 
@@ -2848,34 +3329,65 @@ Zum Importieren klickt man oben rechts auf
 
 .
  Dort stellt man in der Rubrik 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Import von CSV-Datei
-\family default
+\end_layout
+
+\end_inset
+
  die 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Kodierung
-\family default
- auf UTF-8.
+\end_layout
+
+\end_inset
+
+ auf 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+UTF-8
+\end_layout
+
+\end_inset
+
+.
  Das stellt sicher, dass Namen mit Akzenten, Umlauten usw.
 \begin_inset space \space{}
 \end_inset
 
 korrekt importiert werden.
- Dazu muss die CSV-Datei auch mit der Kodierung UTF-8 gespeichert worden
- sein.
+ Dazu muss die CSV-Datei auch mit der Kodierung 
+\emph on
+UTF-8
+\emph default
+ gespeichert worden sein.
  (Dafür reicht es bei den meisten Editor-Programmen aus, dass man 
 \emph on
 Unicode
 \emph default
  für die Kodierung einstellt, falls das nicht schon automatisch die Voreinstellu
 ng ist.) Nun klickt man auf den Knopf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Durchsuchen
-\family default
+\end_layout
+
+\end_inset
+
  und wählt eine CSV-Datei aus.
  Danach sieht man in der Vorschau was importiert werden wird:
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Den Inhalt der CSV-Datei, die für dieses Bildschirmfoto verwendet wurde,
@@ -2935,7 +3447,10 @@ reference "chap:Beispiel-für-Teilnehmer-1"
 \begin_layout Standard
 und kann die CSV-Datei noch ändern, falls es Fehler gibt.
  Zum Import drückt man auf den Knopf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 x
 \begin_inset space ~
 \end_inset
@@ -2945,7 +3460,10 @@ Teilnehmende
 \end_inset
 
 importieren
-\family default
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -3010,8 +3528,10 @@ Oltrán
 \begin_layout Standard
 CSV-Dateien lassen sich übrigens recht einfach mit gängigen Tabellenkalkulations
 programmen wie 
-\noun on
+\begin_inset Flex Noun
+status collapsed
 
+\begin_layout Plain Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "LibreOffice"
@@ -3020,11 +3540,20 @@ target "http://www.libreoffice.org/"
 \end_inset
 
 
-\noun default
+\end_layout
+
+\end_inset
+
  oder 
-\noun on
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
 Excel
-\noun default
+\end_layout
+
+\end_inset
+
  erstellen.
  Dazu erstellt man einfach eine Tabelle in dieser Form:
 \end_layout
@@ -3033,9 +3562,8 @@ Excel
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="7">
+<lyxtabular version="3" rows="3" columns="6">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3047,7 +3575,7 @@ Excel
 \begin_inset Text
 
 \begin_layout Plain Layout
-title
+Titel
 \end_layout
 
 \end_inset
@@ -3056,7 +3584,7 @@ title
 \begin_inset Text
 
 \begin_layout Plain Layout
-first_name
+Vorname
 \end_layout
 
 \end_inset
@@ -3065,7 +3593,7 @@ first_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-last_name
+Nachname
 \end_layout
 
 \end_inset
@@ -3074,7 +3602,7 @@ last_name
 \begin_inset Text
 
 \begin_layout Plain Layout
-structure_level
+Gliederungsebene
 \end_layout
 
 \end_inset
@@ -3083,16 +3611,7 @@ structure_level
 \begin_inset Text
 
 \begin_layout Plain Layout
-groups
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-comment
+Teilnehmernummer
 \end_layout
 
 \end_inset
@@ -3101,7 +3620,8 @@ comment
 \begin_inset Text
 
 \begin_layout Plain Layout
-...
+\SpecialChar ldots
+
 \end_layout
 
 \end_inset
@@ -3148,16 +3668,7 @@ Doe
 \begin_inset Text
 
 \begin_layout Plain Layout
-2
-\end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Kommentar
 \end_layout
 
 \end_inset
@@ -3174,15 +3685,6 @@ Kommentar
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3347,9 +3849,15 @@ Die Teilnehmerliste kann als PDF ausgegeben werden, wenn man auf das Symbol
 \end_inset
 
  und dann auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Teilnehmerliste
-\family default
+\end_layout
+
+\end_inset
+
  klickt.
 \end_layout
 
@@ -3440,22 +3948,40 @@ Um den Gruppennamen zu ändern, geht man mit der Maus auf den Gruppennamen
 
 \begin_layout Standard
 Die Gruppe 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Standard
-\family default
+\end_layout
+
+\end_inset
+
  wird automatisch zugewiesen.
  Zu dieser gehören somit auch alle unangemeldete Teilnehmer.
  Unangemeldete Teilnehmer können die Veranstaltung jedoch nur sehen, wenn
  im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Allgemein\SpecialChar menuseparator
 System
-\family default
+\end_layout
+
+\end_inset
+
  die Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Erlaube Zugriff für anonyme Gast-Nutzer
-\family default
+\end_layout
+
+\end_inset
+
  aktiviert ist.
 \end_layout
 
@@ -3472,10 +3998,16 @@ name "subsec:Einstellungen-Teilnehmer"
 
 \begin_layout Standard
 Im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Teilnehmende
-\family default
+\end_layout
+
+\end_inset
+
  können Einstellungen für die Teilnehmerverwaltung vorgenommen werden.
 \end_layout
 
@@ -3485,9 +4017,15 @@ Rubrik Allgemein
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Namen der Teilnehmenden sortieren nach
-\family default
+\end_layout
+
+\end_inset
+
  kann festgelegt werden, wie die Teilnehmer in der Liste standardmäßig sortiert
  werden:
 \end_layout
@@ -3506,9 +4044,15 @@ Rubrik PDF
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Titel für das Zugangsdaten- und Begrüßungs-PDF
-\family default
+\end_layout
+
+\end_inset
+
  wird der Titel eingegeben, der im PDF der Zugangsdaten erscheint, das man
  an die Teilnehmer austeilen kann.
  Mehr dazu siehe 
@@ -3523,17 +4067,29 @@ reference "subsec:Benutzername-und-Passwort"
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Hilfetext für das Zugangsdaten- und Willkommens-PDF
-\family default
+\end_layout
+
+\end_inset
+
  wird der Text eingegeben, der im PDF der Zugangsdaten erscheint.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 System URL
-\family default
+\end_layout
+
+\end_inset
+
  wird die URL angegeben, auf der sich die Teilnehmer einloggen können.
  Dort läuft der 
 \begin_inset Flex Noun
@@ -3550,33 +4106,57 @@ OpenSlides
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 WLAN-Name (SSID)
-\family default
+\end_layout
+
+\end_inset
+
  kann der Name eines WLANs angegeben werden.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 WLAN-Passwort
-\family default
+\end_layout
+
+\end_inset
+
  kann das Passwort für das WLAN angegeben werden.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 WLAN-Verschlüsselung
-\family default
+\end_layout
+
+\end_inset
+
  kann die Verschlüsselung des WLANs angegeben werden.
 \end_layout
 
 \begin_layout Standard
 Die Angaben für das WLAN und die 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 System URL
-\family default
+\end_layout
+
+\end_inset
+
  erscheinen im PDF der Zugangsdaten und werden auch im QR-Code in diesem
  PDF berücksichtigt.
 \end_layout
@@ -3605,9 +4185,15 @@ Manuelles Erstellen von Anträgen
 
 \begin_layout Standard
 Um einen neuen Antrag zu erstellen, klickt man im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anträge
-\family default
+\end_layout
+
+\end_inset
+
  oben auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
@@ -3623,9 +4209,15 @@ Anträge
 
 \begin_layout Standard
 Wird die Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Als Tagesordnungspunkt anzeigen
-\family default
+\end_layout
+
+\end_inset
+
  ausgewählt, erscheint die Wahl als Tagesordnungspunkt.
  Ansonsten erscheint die Wahl in der Tagesordnungsübersicht als eigenes
  Thema.
@@ -3641,9 +4233,15 @@ reference "subsec:Einrichtung-eigener-Themen"
 \end_inset
 
 Optional kann ein 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Elternelement
-\family default
+\end_layout
+
+\end_inset
+
  angegeben werden.
  Als Elternelement kann jeder Punkt der Tagesordnung sowie jeder Antrag
  und jede Wahl ausgewählt werden.
@@ -3653,10 +4251,16 @@ Elternelement
 \end_inset
 
 Mit der Option 
-\family sans
-Erweiterte Felder anzeigen 
-\family default
-können außerdem Anhänge,
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Erweiterte Felder anzeigen
+\end_layout
+
+\end_inset
+
+ können außerdem Anhänge,
 \begin_inset Foot
 status collapsed
 
@@ -3769,10 +4373,10 @@ Anträge können automatisiert aus einer Liste importiert werden.
 
 \begin_layout Standard
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
-identifier,title,text,reason,submitter,category,origin
+Bezeichner,Titel,Text,Begründung,Antragsteller/in,Sachgebiet,Herkunft
 \end_layout
 
 \end_inset
@@ -3858,34 +4462,65 @@ Zum Importieren klickt man oben rechts auf
 
 .
  Dort stellt man in der Rubrik 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Import von CSV-Datei
-\family default
+\end_layout
+
+\end_inset
+
  die 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Kodierung
-\family default
- auf UTF-8.
+\end_layout
+
+\end_inset
+
+ auf 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+UTF-8
+\end_layout
+
+\end_inset
+
+.
  Das stellt sicher, dass Namen mit Akzenten, Umlauten usw.
 \begin_inset space \space{}
 \end_inset
 
 korrekt importiert werden.
- Dazu muss die CSV-Datei auch mit der Kodierung UTF-8 gespeichert worden
- sein.
+ Dazu muss die CSV-Datei auch mit der Kodierung 
+\emph on
+UTF-8
+\emph default
+ gespeichert worden sein.
  (Dafür reicht es bei den meisten Editor-Programmen aus, dass man 
 \emph on
 Unicode
 \emph default
  für die Kodierung einstellt, falls das nicht schon automatisch die Voreinstellu
 ng ist.) Nun klickt man auf den Knopf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Durchsuchen
-\family default
+\end_layout
+
+\end_inset
+
  und wählt eine CSV-Datei aus.
  Nach wenigen Sekunden sieht man in der Vorschau was importiert werden wird:
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Den Inhalt der CSV-Datei, die für dieses Bildschirmfoto verwendet wurde,
@@ -3947,7 +4582,10 @@ und kann die CSV-Datei noch ändern, falls es Fehler gibt.
  Wie man sieht, werden noch nicht existierende Kategorien und Antragsteller
  beim Importieren automatisch angelegt.
  Zum Import drückt man auf den blauen Knopf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 x
 \begin_inset space ~
 \end_inset
@@ -3957,7 +4595,10 @@ Anträge
 \end_inset
 
 importieren
-\family default
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -3972,8 +4613,12 @@ Gibt es bereits einen Antrag mit demselben Bezeichner, wird der Antrag nicht
 \begin_layout Standard
 CSV-Dateien lassen sich übrigens recht einfach mit gängigen Tabellenkalkulations
 programmen wie 
-\noun on
+\begin_inset Flex Noun
+status collapsed
 
+\begin_layout Plain Layout
+
+\noun off
 \begin_inset CommandInset href
 LatexCommand href
 name "LibreOffice"
@@ -3982,11 +4627,20 @@ target "http://www.libreoffice.org/"
 \end_inset
 
 
-\noun default
+\end_layout
+
+\end_inset
+
  oder 
-\noun on
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
 Excel
-\noun default
+\end_layout
+
+\end_inset
+
  erstellen.
  Dazu erstellt man einfach eine Tabelle in dieser Form:
 \end_layout
@@ -3995,15 +4649,13 @@ Excel
 \noindent
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="7">
+<lyxtabular version="3" rows="3" columns="5">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="10col%">
+<column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="8col%">
 <column alignment="center" valignment="top" width="20col%">
 <column alignment="center" valignment="top" width="18col%">
-<column alignment="center" valignment="top" width="11col%">
-<column alignment="center" valignment="top" width="10col%">
-<column alignment="center" valignment="top" width="10col%">
+<column alignment="center" valignment="top" width="0pt">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -4021,7 +4673,7 @@ Excel
 \uwave off
 \noun off
 \color none
-identifier
+Bezeichner
 \end_layout
 
 \end_inset
@@ -4042,7 +4694,7 @@ identifier
 \uwave off
 \noun off
 \color none
-title
+Titel
 \end_layout
 
 \end_inset
@@ -4063,7 +4715,7 @@ title
 \uwave off
 \noun off
 \color none
-text
+Text
 \end_layout
 
 \end_inset
@@ -4084,58 +4736,17 @@ text
 \uwave off
 \noun off
 \color none
-reason
+Begründung
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\SpecialChar ldots
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-submitter
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-category
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-origin
 \end_layout
 
 \end_inset
@@ -4231,61 +4842,11 @@ r.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Dr.
- Hans Schulze
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Kate\SpecialChar softhyphen
-gorie
-\begin_inset space ~
-\end_inset
-
-A
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Vor\SpecialChar softhyphen
-stands\SpecialChar softhyphen
-sitzung vom 19.10.
 \end_layout
 
 \end_inset
@@ -4328,25 +4889,7 @@ sitzung vom 19.10.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4369,17 +4912,6 @@ und speichert sie als CSV-Datei mit der Kodierung
 UTF-8
 \emph default
  und dem Komma als Trennzeichen.
- Es können so bestehende Mitgliedslisten für 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
- aufbereitet werden.
 \end_layout
 
 \begin_layout Subsection
@@ -4407,9 +4939,15 @@ Der Inhalt von Anträgen kann jederzeit geändert werden, insbesondere während
 
 \begin_layout Standard
 Klickt man dort auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Bearbeiten
-\family default
+\end_layout
+
+\end_inset
+
 , kann man den Antrag bearbeiten.
  Um nur den Antragsblock oder die Kategorie zu ändern, kann man alternativ
  auf die entsprechenden Symbole 
@@ -4526,10 +5064,16 @@ reference "subsec:Einstellungen-Anträge"
 
 \end_inset
 
-, ein Name für die 
-\emph on
-Empfehlungskommission
-\emph default
+, ein 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Name des Empfehlungsgebers
+\end_layout
+
+\end_inset
+
  angegeben ist.
 \end_layout
 
@@ -4618,9 +5162,15 @@ name "subsec:Sachgebiete"
 
 \begin_layout Standard
 Klickt man im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anträge
-\family default
+\end_layout
+
+\end_inset
+
  oben auf 
 \begin_inset Graphics
 	filename clipart/Sachgebiete.jpg
@@ -4644,18 +5194,35 @@ Anträge
 
 \begin_layout Standard
 Beim Erstellen gibt man in das Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Präfix
-\family default
- einen Präfix ein, der verwendet wird, wenn in den Einstellungen die Nummerierun
-g 
-\family sans
-pro
-\begin_inset space ~
+\end_layout
+
 \end_inset
 
-Sachgebiet
-\family default
+ einen Präfix ein, der verwendet wird, wenn in den Einstellungen der 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Bezeichner
+\end_layout
+
+\end_inset
+
+ auf 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Pro Sachgebiet nummerieren
+\end_layout
+
+\end_inset
+
  eingestellt ist, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4673,9 +5240,15 @@ Wird einem Antrag nachträglich ein anderes Sachgebiet zugewiesen, wird dessen
  ist.
  Dazu fährt man mit der Maus über den Sachgebietstitel und klickt im erscheinend
 en Menü auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Sortieren
-\family default
+\end_layout
+
+\end_inset
+
 .
  Dort können alle Anträge des Sachgebiets durch Verschieben neu sortiert
  werden.
@@ -4712,9 +5285,15 @@ Antragsblöcke sind eine Möglichkeit mehrere Anträge zu gruppieren, ohne
 
 \begin_layout Standard
 Klickt man im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anträge
-\family default
+\end_layout
+
+\end_inset
+
  oben auf 
 \begin_inset Graphics
 	filename clipart/Antragsblöcke.jpg
@@ -4733,9 +5312,15 @@ Anträge
 
  neue erstellen.
  Wird die Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Als Tagesordnungspunkt anzeigen
-\family default
+\end_layout
+
+\end_inset
+
  ausgewählt, erscheint der Block als Tagesordnungspunkt.
  Ansonsten erscheint er in der Tagesordnungsübersicht als eigenes Thema.
  Siehe 
@@ -4747,9 +5332,15 @@ reference "subsec:Einrichtung-eigener-Themen"
 
  für mehr zu eigenen Themen.
  Optional kann ein 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Elternelement
-\family default
+\end_layout
+
+\end_inset
+
  angegeben werden.
  Als Elternelement kann jeder Punkt der Tagesordnung sowie jeder Antrag
  und jede Wahl ausgewählt werden.
@@ -4802,9 +5393,15 @@ name "subsec:Schlagwörter "
 
 \begin_layout Standard
 Klickt man im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anträge
-\family default
+\end_layout
+
+\end_inset
+
  oben auf 
 \begin_inset Graphics
 	filename clipart/Schlagwörter.jpg
@@ -5750,7 +6347,7 @@ Es kann eingestellt werden, dass ein Antrag in einem bestimmten Status nur
  für bestimmte Benutzer sichtbar ist.
  Die Anpassung kann vor dem ersten Anlegen der Datenbank in der Datei 
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
 OpenSlides/motion/signals.py
@@ -5763,7 +6360,7 @@ OpenSlides/motion/signals.py
 
 \begin_layout Standard
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
 create_builtin_workflows()
@@ -5780,7 +6377,7 @@ erfolgen: Dazu beim gewünschten Status beispielsweise die Zeile
 
 \begin_layout Standard
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
 required_permission_to_see='motion.can_manage_motion',
@@ -5797,7 +6394,7 @@ einfügen.
  einem entsprechenden Tool direkt auf die Datenbank zugreifen und beim gewünscht
 en Status das Feld 
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
 required_permission_to_see
@@ -5807,7 +6404,7 @@ required_permission_to_see
 
  beispielsweise mit der Zeichenkette 
 \begin_inset Flex Code
-status open
+status collapsed
 
 \begin_layout Plain Layout
 motion.can_manage_motion
@@ -5839,8 +6436,8 @@ OpenSlides
 
 \end_inset
 
- versioniert Ihre Anträge, wenn sich der Antrag im komplexen Arbeitsablauf
- und nicht mehr im Status „veröffentlicht“ befindet.
+ versioniert Anträge, wenn sich der Antrag im komplexen Arbeitsablauf und
+ nicht mehr im Status „veröffentlicht“ befindet.
  Jedes Mal, wenn der Antrag bearbeitet wird, legt 
 \begin_inset Flex Noun
 status collapsed
@@ -5852,9 +6449,6 @@ OpenSlides
 \end_inset
 
  eine neue Antragsversion an.
- Sie können auf der Antragsseite mehrere Versionen miteinander vergleichen.
- Wählen Sie dazu je einen Knopf links und rechts aus und klicken Sie auf
- den Knopf „Unterschied“.
 \end_layout
 
 \begin_layout Standard
@@ -5870,28 +6464,49 @@ OpenSlides
 
  als zugelassene Version.
  Diese wird auf dem Projektor angezeigt und in der Antragsseite mit einem
- grünen Haken markiert.
- Klicken Sie auf einen grauen Haken-Knopf, um eine andere Version zuzulassen.
- Hierbei müssen Sie den entsprechenden Dialog mit „Ja“ bestätigen.
+ Stern markiert.
+ Klickt man hinter einer Version auf 
+\begin_inset Graphics
+	filename clipart/Version-zulassen.jpg
+	scale 60
+	BoundingBox 0bp 0bp 24bp 22bp
+
+\end_inset
+
+, wird diese zugelassen.
 \end_layout
 
 \begin_layout Standard
-Wenn Sie (bei entsprechender 
-\family sans
-Voreinstellung
-\family default
-, siehe 
+Wenn in den Einstellungen die Option 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Erlaubt Versionierung zu deaktivieren
+\end_layout
+
+\end_inset
+
+ ausgewählt ist, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Einstellungen-Anträge"
 
 \end_inset
 
-) einen Antrag bearbeiten, haben Sie mit dem Haken „Keine neue Version erzeugen“
- die Möglichkeit, die ansonsten erfolgende Versionierung im Einzelfall ausnahmsw
-eise zu umgehen.
- Dies kann sinnvoll sein, wenn Sie einen Antrag nur redaktionell (trivial)
- ändern wollen.
+, kann man beim Bearbeiten eines Antrags mit der Option 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Triviale Änderung
+\end_layout
+
+\end_inset
+
+, die Versionierung umgehen.
+ Dies kann sinnvoll sein, wenn man einen Antrag nur redaktionell (trivial)
+ ändern will.
 \end_layout
 
 \begin_layout Standard
@@ -6076,16 +6691,6 @@ außerhalb
 \begin_layout Standard
 \noindent
 \align center
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TODO: Screenshot erneuern
-\end_layout
-
-\end_inset
-
-
 \begin_inset Graphics
 	filename clipart/Änderungsempfehlung.jpg
 	lyxscale 75
@@ -6176,16 +6781,6 @@ Sobald man eine Änderung vorgenommen hat, erscheint unten am Bildschirm
 \begin_layout Standard
 \noindent
 \align center
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-TODO: Screenshot erneuern
-\end_layout
-
-\end_inset
-
-
 \begin_inset Graphics
 	filename clipart/Text-wurde-geändert.jpg
 	lyxscale 75
@@ -6331,9 +6926,15 @@ OpenSlides
 
  automatisch die prozentualen Anteile der übrigen Stimmzahlen.
  Klicken Sie am Ende auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Speichern
-\family default
+\end_layout
+
+\end_inset
+
 .
  Das Ergebnis wird sofort projiziert, wenn der Antrag gerade projiziert
  wird.
@@ -6444,10 +7045,16 @@ name "subsec:Einstellungen-Anträge"
 
 \begin_layout Standard
 Im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Anträge
-\family default
+\end_layout
+
+\end_inset
+
  können Einstellungen vorgenommen werden, die für neue Anträge verwendet
  werden.
 \end_layout
@@ -6458,9 +7065,15 @@ Rubrik Allgemein
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Arbeitsablauf von neuen Anträgen
-\family default
+\end_layout
+
+\end_inset
+
  kann man wählen zwischen
 \end_layout
 
@@ -6504,9 +7117,15 @@ reference "subsec:Versionierung"
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Bezeichner
-\family default
+\end_layout
+
+\end_inset
+
  kann man festlegen wie Anträge bezeichnet werden:
 \end_layout
 
@@ -6540,17 +7159,29 @@ setzen es wird kein automatischer Bezeichner gesetzt
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Antragseinleitung
-\family default
+\end_layout
+
+\end_inset
+
  kann ein Text als voreingestellte Einleitung für Anträge eingestellt werden.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Voreingestellte Zeilennummerierung
-\family default
+\end_layout
+
+\end_inset
+
  kann die Nummerierung des Antragstexts festgelegt werden:
 \end_layout
 
@@ -6569,20 +7200,31 @@ innerhalb Der Text wird nicht umgebrochen und die Zeilenzahlen erscheinen
 
 \begin_layout Standard
 Das Feld 
-\family sans
-Zeilenlänge 
-\family default
-ist nur relevant wenn die Zeilennummerierung aktiv ist.
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Zeilenlänge
+\end_layout
+
+\end_inset
+
+ ist nur relevant wenn die Zeilennummerierung aktiv ist.
  Es legt fest wie viele Zeichen maximal auf eine Zeile gesetzt werden.
 \end_layout
 
 \begin_layout Standard
 Mit der Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einreichen von neuen Anträgen stoppen für Nutzer ohne Verwaltungsrechte
- 
-\family default
-kann Teilnehmern, die nicht in der Gruppe 
+\end_layout
+
+\end_inset
+
+ kann Teilnehmern, die nicht in der Gruppe 
 \emph on
 Mitarbeitende
 \emph default
@@ -6601,10 +7243,16 @@ reference "subsec:Gruppen"
 
 \begin_layout Standard
 Mit der Option 
-\family sans
-Erlaubt Versionierung zu deaktivieren 
-\family default
-wird es ermöglicht, beim Ändern von Anträgen die automatische Versionierung
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Erlaubt Versionierung zu deaktivieren
+\end_layout
+
+\end_inset
+
+ wird es ermöglicht, beim Ändern von Anträgen die automatische Versionierung
  im Einzelfall zu deaktivieren.
  Dies kann sinnvoll sein, wenn Anträge nur redaktionell geändert werden,
  aber ansonsten die Versionierung aktiv bleiben soll.
@@ -6620,10 +7268,16 @@ reference "subsec:Versionierung"
 
 \begin_layout Standard
 Im Feld 
-\family sans
-Name des Empfehlungsgebers 
-\family default
-kann die Bezeichnung einer Empfehlungskommission angegeben werden.
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Name des Empfehlungsgebers
+\end_layout
+
+\end_inset
+
+ kann die Bezeichnung einer Empfehlungskommission angegeben werden.
  Ist ein Name angegeben, wird so die Empfehlungs-Funktion aktiviert, die
  in 
 \begin_inset CommandInset ref
@@ -6641,26 +7295,44 @@ Rubrik Änderungsanträge
 
 \begin_layout Standard
 Mit der Option 
-\family sans
-Änderungsanträge aktivieren 
-\family default
-kann das System für Änderungsanträge aktiviert werden.
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Änderungsanträge aktivieren
+\end_layout
+
+\end_inset
+
+ kann das System für Änderungsanträge aktiviert werden.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
-Präfix für den Bezeichner von Änderungsanträgen 
-\family default
-kann ein Bezeichnungspräfix für Änderungsanträge angegeben werden.
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Präfix für den Bezeichner von Änderungsanträgen
+\end_layout
+
+\end_inset
+
+ kann ein Bezeichnungspräfix für Änderungsanträge angegeben werden.
 \end_layout
 
 \begin_layout Standard
 Mit der Option 
-\family sans
-Titel und Text für neuen Änderungsantrag übernehmen 
-\family default
-werden der Titel und der Text des Antrags automatisch für den Änderungsantrag
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Titel und Text für neuen Änderungsantrag übernehmen
+\end_layout
+
+\end_inset
+
+ werden der Titel und der Text des Antrags automatisch für den Änderungsantrag
  übernommen.
 \end_layout
 
@@ -6670,9 +7342,15 @@ Rubrik Unterstützer/innen
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Mindestanzahl erforderlicher Unterstützer/innen für einen Antrag
-\family default
+\end_layout
+
+\end_inset
+
  kann festgelegt werden, wie viele Personen einen Antrag unterstützen müssen,
  damit er zur Abstimmung zugelassen wird.
  Wird '0' eingetragen, wird das Unterstützersystem deaktiviert.
@@ -6680,15 +7358,55 @@ Mindestanzahl erforderlicher Unterstützer/innen für einen Antrag
 
 \begin_layout Standard
 Mit der Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Entferne alle Unterstützer eines Antrags, wenn ein Antragsteller seinen
- Antrag im Anfangsstadium bearbeitet 
-\family default
-werden alle Unterstützer von Antrag entfernt, wenn er bearbeitet wird.
+ Antrag im Anfangsstadium bearbeitet
+\end_layout
+
+\end_inset
+
+ werden alle Unterstützer von Antrag entfernt, wenn er bearbeitet wird.
  Der Grund ist, dass bisherige Unterstützer eine geänderte Fassung nicht
  automatisch auch unterstützen.
  Durch diese Option wird sichergestellt, dass sie auch die geänderte Fassung
  explizit unterstützen.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik Kommentare
+\end_layout
+
+\begin_layout Standard
+Mit dem Knopf 
+\begin_inset Graphics
+	filename clipart/Kommentarfeld-hinzufügen.jpg
+	scale 70
+
+\end_inset
+
+ können Textfelder für Kommentare zu Anträgen hinzugefügt werden.
+ Werden Anträge erstellt, erscheinen diese Felder in der Eingabemaske.
+ Voreingestellt ist, dass Kommentare privat sind.
+ Das bedeutet, dass nur Nutzer mit entsprechenden Rechten (Administratoren,
+ Kommissionsmitglieder) diese sehen können.
+ Soll ein Kommentarfeld öffentlich sein, klickt man auf 
+\begin_inset Graphics
+	filename clipart/Kommentarfeld-privat.jpg
+	scale 70
+
+\end_inset
+
+ und dieser Knopf ändert sich auf 
+\begin_inset Graphics
+	filename clipart/Kommentarfeld-öffentlich.jpg
+	scale 70
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -6697,9 +7415,15 @@ Rubrik Abstimmung und Stimmzettel
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Die 100%-Basis eines Wahlergebnisses besteht aus
-\family default
+\end_layout
+
+\end_inset
+
  kann man wählen, ob die prozentuale Berechnung des Wahlergebnisses
 \end_layout
 
@@ -6743,9 +7467,15 @@ Deaktiviert deaktiviert ist.
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anzahl der Stimmzettel (Vorauswahl)
-\family default
+\end_layout
+
+\end_inset
+
  kann die Anzahl der Stimmzettel eingestellt werden, die 
 \begin_inset Flex Noun
 status collapsed
@@ -6833,17 +7563,29 @@ benutzerdefinierte
 \end_inset
 
 Anzahl Es werden so viele Stimmzettel erstellt wie im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Benutzerdefinierte Anzahl von Stimmzetteln
-\family default
+\end_layout
+
+\end_inset
+
  angegeben ist.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Benutzerdefinierte Anzahl von Stimmzetteln
-\family default
+\end_layout
+
+\end_inset
+
  wird die Anzahl der zu erstellenden Stimmzettel angegeben.
 \end_layout
 
@@ -6853,18 +7595,30 @@ Rubrik Export
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Titel für PDF- und DOCX-Dokumente (alle Anträge)
-\family default
+\end_layout
+
+\end_inset
+
  wird der Titel eingegeben, der in der Ausgabe mit der Übersicht aller Anträge
  erscheint.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einleitungstext für PDF- und DOCX-Dokumente (alle Anträge)
-\family default
+\end_layout
+
+\end_inset
+
  wird der Text eingegeben, der in der Ausgabe mit der Übersicht aller Anträge
  erscheint.
 \end_layout
@@ -6889,9 +7643,9 @@ name "sec:Wahlen"
 
 \begin_layout Standard
 Wahlen werden im gleichnamigen Menü verwaltet.
- Klickt man dort oben auf 
+ Klickt man dort auf 
 \begin_inset Graphics
-	filename clipart/PDF-Symbol.jpg
+	filename clipart/Exportieren-alle.jpg
 	scale 60
 	BoundingBox 0bp 7bp 61bp 0bp
 
@@ -6936,9 +7690,15 @@ B.
 
 \begin_layout Standard
 Wird die Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Als Tagesordnungspunkt anzeigen
-\family default
+\end_layout
+
+\end_inset
+
  ausgewählt, erscheint die Wahl als Tagesordnungspunkt, ansonsten als eigenes
  Thema.
  Siehe 
@@ -6953,9 +7713,15 @@ reference "subsec:Einrichtung-eigener-Themen"
 \end_inset
 
 Optional kann ein 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Elternelement
-\family default
+\end_layout
+
+\end_inset
+
  angegeben werden.
  Als Elternelement kann jeder Punkt der Tagesordnung sowie jeder Antrag
  und jede Wahl ausgewählt werden.
@@ -6989,9 +7755,15 @@ Klickt man in der Wahlübersicht auf
 
 \begin_layout Standard
 In der Rubrik 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Kandidaten/innen
-\family default
+\end_layout
+
+\end_inset
+
  kann man sich mit 
 \begin_inset Graphics
 	filename clipart/Redeliste+Mich.jpg
@@ -7027,7 +7799,28 @@ OpenSlides
 \end_layout
 
 \begin_layout Standard
-Steht die Kandidatenliste fest, kann man oben auf 
+Um die Wahl zu beginnen, klickt man unten auf 
+\begin_inset Graphics
+	filename clipart/Neuer-Wahlgang.jpg
+	scale 60
+	BoundingBox 0bp 7bp 137bp 0bp
+
+\end_inset
+
+.
+ Dadurch hat sich die Phase der Wahl automatisch auf 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Im Wahlvorgang
+\end_layout
+
+\end_inset
+
+ geändert.
+ Die Kandidatenliste steht somit auch fest.
+ Man kann oben auf 
 \begin_inset Graphics
 	filename clipart/Redeliste-Symbol.jpg
 	scale 60
@@ -7047,23 +7840,6 @@ reference "subsec:Rednerliste-verwalten"
 
  beschrieben ist.
  Es sind automatisch bereits alle Kandidaten auf der Redeliste.
-\end_layout
-
-\begin_layout Standard
-Um die Wahl zu beginnen, klickt man unten auf 
-\begin_inset Graphics
-	filename clipart/Neuer-Wahlgang.jpg
-	scale 60
-	BoundingBox 0bp 7bp 137bp 0bp
-
-\end_inset
-
-.
- Dadurch hat sich die Phase der Wahl automatisch auf 
-\family sans
-Im Wahlvorgang
-\family default
- geändert.
 \end_layout
 
 \begin_layout Standard
@@ -7094,8 +7870,22 @@ Die Ergebnisse der Wahl können eingegeben werden, indem man auf
 \end_inset
 
  klickt.
+ Nach der Eingabe erscheint das Wahlergebnis in einer Tabelle.
+ Über dieser kann man in der Liste 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Erforderliche Mehrheit
+\end_layout
+
+\end_inset
+
+ festlegen, welche Mehrheit für eine gültige Wahl erreicht werden muss.
+ Dementsprechend erscheint in der Tabelle, ob dieses Quorum erreicht wurde.
  Um anschließend Kandidaten als gewählt zu markieren, klickt man in die
  Box vor dem Namen des Kandidaten.
+ Kandidaten können unabhängig vom Quorum als gewählt markiert werden.
  Um die Wahl zu veröffentlichen, klickt man auf 
 \begin_inset Graphics
 	filename clipart/Wahl-veröffentlichen.jpg
@@ -7129,9 +7919,15 @@ Falls weitere Wahlgänge nötig sind, kann man auf
 
  klicken, um einen weiteren zu beginnen.
  Ist die Wahl abgeschlossen ändert man deren Phase auf 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Abgeschlossen
-\family default
+\end_layout
+
+\end_inset
+
 .
  Wenn man in einer abgeschlossenen Wahl oben auf 
 \begin_inset Graphics
@@ -7166,10 +7962,16 @@ name "subsec:Einstellungen-Wahlen"
 
 \begin_layout Standard
 Im Menü 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen\SpecialChar menuseparator
 Wahlen
-\family default
+\end_layout
+
+\end_inset
+
  können Einstellungen für die Benutzerverwaltung vorgenommen werden.
 \end_layout
 
@@ -7179,9 +7981,15 @@ Rubrik Wahlgang und Stimmzettel
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Wahlmethode
-\family default
+\end_layout
+
+\end_inset
+
  kann man wählen zwischen
 \end_layout
 
@@ -7251,9 +8059,15 @@ Nein pro Kandidat ausgelegt.
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Die 100%-Basis eines Wahlergebnisses besteht aus
-\family default
+\end_layout
+
+\end_inset
+
  kann man wählen, ob die prozentuale Berechnung des Wahlergebnisses
 \end_layout
 
@@ -7313,9 +8127,15 @@ Deaktiviert deaktiviert ist.
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anzahl der Stimmzettel (Vorauswahl)
-\family default
+\end_layout
+
+\end_inset
+
  kann die Anzahl der Stimmzettel eingestellt werden, die 
 \begin_inset Flex Noun
 status collapsed
@@ -7403,17 +8223,29 @@ benutzerdefinierte
 \end_inset
 
 Anzahl Es werden so viele Stimmzettel erstellt wie im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Benutzerdefinierte Anzahl von Stimmzetteln
-\family default
+\end_layout
+
+\end_inset
+
  angegeben ist.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Benutzerdefinierte Anzahl von Stimmzetteln
-\family default
+\end_layout
+
+\end_inset
+
  wird die Anzahl der zu erstellenden Stimmzettel angegeben.
 \end_layout
 
@@ -7423,17 +8255,29 @@ Rubrik PDF
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Titel für PDF-Dokument (alle Wahlen)
-\family default
+\end_layout
+
+\end_inset
+
  wird der Titel eingegeben, der im PDF mit der Übersicht aller Wahlen erscheint.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einleitungstext für PDF-Dokument (alle Wahlen)
-\family default
+\end_layout
+
+\end_inset
+
  wird der Text eingegeben, der im PDF der Wahlzettel aller Wahlen erscheint.
 \end_layout
 
@@ -7461,9 +8305,15 @@ Hochladen von Dateien
 
 \begin_layout Standard
 Wechseln Sie zum Menüpunkt 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Dateien
-\family default
+\end_layout
+
+\end_inset
+
  und klicken Sie oben rechts auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
@@ -7477,9 +8327,15 @@ Dateien
 
 \begin_layout Standard
 Laden Sie eine Datei hoch, indem Sie mit 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Durchsuchen
-\family default
+\end_layout
+
+\end_inset
+
  die Datei aus dem Dateisystem ihres Computers auswählen.
  Außerdem können Sie noch einen ergänzenden Titel angeben, sowie die Person,
  die die Datei hochlädt.
@@ -7490,9 +8346,15 @@ Durchsuchen
 \begin_layout Standard
 Die Datei ist nun auf den Server geladen und unter ihrem Namen auf der Übersicht
 sseite des Menüpunkts 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Dateien
-\family default
+\end_layout
+
+\end_inset
+
  verlinkt.
 \end_layout
 
@@ -7516,11 +8378,17 @@ PDF-, JPG/JPEG-, GIF- und PNG-Dateien können direkt projiziert werden, wenn
 \begin_layout Standard
 Bilddateien, mit Ausnahme von PDF-Bildern, können auch über oder in einem
  Tagesordnungspunkt angezeigt werden.
- Wechseln Sie zum Menüpunkt 
-\family sans
+ Dazu wechselt man zum Menüpunkt 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Tagesordnung
-\family default
- und klicken Sie auf 
+\end_layout
+
+\end_inset
+
+ und klickt auf 
 \begin_inset Graphics
 	filename clipart/Neu-Symbol.jpg
 	scale 60
@@ -7529,20 +8397,16 @@ Tagesordnung
 \end_inset
 
 .
- 
-\begin_inset Note Note
+ Klickt man dort in der Rubrik 
+\begin_inset Flex Menu Name
 status collapsed
 
 \begin_layout Plain Layout
-TODO: aktualiseieren auf neuen Editor (Pfad zum Bild eingeben '/static/...')
+Text
 \end_layout
 
 \end_inset
 
-Klicken Sie dort in der Rubrik 
-\family sans
-Text
-\family default
  auf das Symbol 
 \begin_inset Graphics
 	filename clipart/Bild-Einfügen-Symbol.jpg
@@ -7550,27 +8414,64 @@ Text
 
 \end_inset
 
-.
- Es öffnet sich ein Dialog, indem alle Bilddateien unter 
-\family sans
-Image
-\begin_inset space ~
+, öffnet sich ein Dialog, indem man einen Link (eine URL) zu einem Bild
+ eingeben kann.
+ Die URL zu einem hochgeladenen Bild erhält man, wenn man vorher im Menü
+ 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Dateien
+\end_layout
+
 \end_inset
 
-list
-\family default
- aufgelistet sind.
- Wählen Sie das entsprechende Bild aus.
- Wenn nur das Bild angezeigt werden soll, deaktivieren Sie die Option 
-\family sans
+ auf den Titel einer Datei klickt.
+ Es öffnet sich dann ein neuer Browsertab oder ein neues Browserfenster
+ aus dessen Adresszeile man die URL mit dem Tastenkürzel 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+Strg+c
+\end_layout
+
+\end_inset
+
+ kopieren kann.
+ Diese URL kann danach mit dem Tastenkürzel 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+Strg+v
+\end_layout
+
+\end_inset
+
+ in das URL Feld kopiert werden.
+ 
+\end_layout
+
+\begin_layout Standard
+Wenn nur das Bild angezeigt werden soll, deaktivieren Sie die Option 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Als Tagesordnungspunkt anzeigen
-\family default
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Standard
-Des Weiteren ist es möglich, hochgeladene Bilder in Antragstexten zu verwenden
- oder an Anträge anzuhängen.
+Des Weiteren ist es möglich, hochgeladene Bilder auf dieselbe Weise in Antragste
+xten zu verwenden.
+ Dateien können auch an Anträge angehängt werden.
 \end_layout
 
 \begin_layout Standard
@@ -7707,32 +8608,46 @@ target "https://github.com/OpenSlides/openslides-csv-export/archive/master.zip"
 
 \begin_layout Standard
 Um es zu installieren, entpackt man die ZIP-Datei in einen beliebigen Ordner.
- dadurch wird dort ein Ordner namens 
-\family sans
+ Dadurch wird dort ein Ordner namens 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 openslides-csv-export-master
-\family default
- angelegt.
- Darin befindet sich der Unterordner 
-\family sans
-openslides_csv_export
-\family default
-, den man komplett in den Unterordner
-\begin_inset Newline newline
+\end_layout
+
 \end_inset
 
+ angelegt.
+ Darin befindet sich der Unterordner 
+\begin_inset Flex Code
+status collapsed
 
-\series bold
+\begin_layout Plain Layout
+openslides_csv_export
+\end_layout
+
+\end_inset
+
+, den man komplett in den Unterordner 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 ~
 \backslash
 openslides
 \backslash
 plugins
-\begin_inset Newline newline
+\end_layout
+
 \end_inset
 
 
+\series bold
+ 
 \series default
-des Verzeichnisses, in dem 
+des Verzeichnisses kopiert, in dem 
 \begin_inset Flex Noun
 status collapsed
 
@@ -7742,8 +8657,11 @@ OpenSlides
 
 \end_inset
 
- installiert ist, kopiert.
- Falls 
+ installiert ist.
+\end_layout
+
+\begin_layout Standard
+Falls 
 \begin_inset Flex Noun
 status collapsed
 
@@ -7754,10 +8672,7 @@ OpenSlides
 \end_inset
 
  läuft, muss es geschlossen und der Server neu gestartet werden.
-\end_layout
-
-\begin_layout Standard
-In der Menüleiste von 
+ Anschließend erscheint in der Menüleiste von 
 \begin_inset Flex Noun
 status collapsed
 
@@ -7767,7 +8682,7 @@ OpenSlides
 
 \end_inset
 
- erscheint nach der Installation dieses neue Icon:
+ das neue Icon
 \end_layout
 
 \begin_layout Standard
@@ -7789,8 +8704,10 @@ Klickt man darauf, wird eine Liste aller Reden, den Rednern und der tatsächlich
 
 B.
  
-\noun on
+\begin_inset Flex Noun
+status collapsed
 
+\begin_layout Plain Layout
 \begin_inset CommandInset href
 LatexCommand href
 name "LibreOffice Calc"
@@ -7799,8 +8716,89 @@ target "https://de.libreoffice.org/discover/calc/"
 \end_inset
 
 
-\noun default
+\end_layout
+
+\end_inset
+
  oder mit einem Texteditor geöffnet werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Chat
+\end_layout
+
+\begin_layout Standard
+Alle Nutzer, die in der Gruppe Mitarbeitende sind, oder die Berechtigung
+ zum Chatten haben, können über 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ miteinander chatten.
+ Diese Nutzer sehen in der Kopfzeile oben rechts das Chat-Symbol vor ihrem
+ Namen: 
+\begin_inset Graphics
+	filename clipart/Chat-Titelleiste.jpg
+	scale 70
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Klickt man darauf, öffnet sich eine Chatbox:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename clipart/Chatbox.jpg
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+in der man die Nachrichten der anderen Nutzer sehen kann.
+ Man kann dort eigene Nachrichten schreiben, die mit Klicken auf 
+\begin_inset Graphics
+	filename clipart/Chat-senden.jpg
+	scale 60
+	BoundingBox 0bp 7bp 39bp 0bp
+
+\end_inset
+
+ verschickt werden.
+\end_layout
+
+\begin_layout Standard
+Nutzer mit der Berechtigung Chats zu verwalten, können mit 
+\begin_inset Graphics
+	filename clipart/Chatverlauf-löschen.jpg
+	scale 60
+	BoundingBox 0bp 7bp 37bp 0bp
+
+\end_inset
+
+ den Chatverlauf löschen.
+\end_layout
+
+\begin_layout Standard
+Um die Chatbox zu schließen, klickt man wieder auf das Chat-Symbol.
 \end_layout
 
 \begin_layout Standard
@@ -7823,18 +8821,30 @@ name "sec:Einstellungen-Übersicht"
 
 \begin_layout Standard
 Unter dem Menüpunkt 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Einstellungen
-\family default
+\end_layout
+
+\end_inset
+
  finden sich verschiedene Einstellmöglichkeiten.
  Bei allen Einstellungen, die auch die Projektoransicht betreffen, zum Beispiel
  dem Titel der Veranstaltung, ist zu beachten, dass die Projektoransicht
  sich im Kopfbereich nicht automatisch aktualisiert.
  Man muss das Browserfenster der Projektoransicht an dem Computer, an dem
  der Projektor angeschlossen ist, manuell mit der Taste 
-\family sans
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
 F5
-\family default
+\end_layout
+
+\end_inset
+
  aktualisieren.
 \end_layout
 
@@ -7848,18 +8858,30 @@ Rubrik Veranstaltung
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Veranstaltungsname
-\family default
+\end_layout
+
+\end_inset
+
  wird der Name der Veranstaltung angegeben.
  Er erscheint im Projektor links oben in der Kopfzeile.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Kurzbeschreibung der Veranstaltung
-\family default
+\end_layout
+
+\end_inset
+
  kann die Veranstaltung kurz beschrieben werden.
  Diese Beschreibung erscheint im Projektor in der Kopfzeile unter dem Veranstalt
 ungsnamen.
@@ -7867,35 +8889,59 @@ ungsnamen.
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Veranstaltungszeitraum
-\family default
+\end_layout
+
+\end_inset
+
  wird das Datum oder der Zeitraum der Veranstaltung angegeben.
  Dies erscheint im Projektor in der Fußzeile rechts.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Veranstaltungsort
-\family default
+\end_layout
+
+\end_inset
+
  wird der Ort angegeben.
  Er erscheint im Projektor in der Fußzeile rechts.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Veranstalter
-\family default
+\end_layout
+
+\end_inset
+
  wird der Veranstalter angegeben.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Impressum
-\family default
+\end_layout
+
+\end_inset
+
  wird das Impressum des Veranstalters angegeben.
  Dieses erscheint in der Fußzeile der Startseite.
  Weblinks müssen als HTML-Code eingegeben werden.
@@ -7903,17 +8949,29 @@ Impressum
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Titel der Startseite
-\family default
+\end_layout
+
+\end_inset
+
  wird der Titel für die Startseite eingegeben.
 \end_layout
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Text der Startseite
-\family default
+\end_layout
+
+\end_inset
+
  wird der Text für die Startseite eingegeben.
  Weblinks, Bilder, usw.
 \begin_inset space \space{}
@@ -7928,9 +8986,15 @@ Rubrik System
 
 \begin_layout Standard
 Mit der Option 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Erlaube Zugriff für anonyme Gast-Nutzer
-\family default
+\end_layout
+
+\end_inset
+
  ist es möglich, dass anonyme, unangemeldete Personen das 
 \begin_inset Flex Noun
 status collapsed
@@ -7943,9 +9007,9 @@ OpenSlides
 
  der Veranstaltung sehen können.
  Um deren Berechtigungen einzustellen, muss die Gruppe 
-\family sans
+\emph on
 Gäste
-\family default
+\emph default
  bearbeitet werden, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -7958,9 +9022,15 @@ reference "subsec:Gruppen"
 
 \begin_layout Standard
 Im Feld 
-\family sans
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Diesen Text auf der Login-Seite anzeigen
-\family default
+\end_layout
+
+\end_inset
+
  wird der Text eingetragen, der grün unterlegt auf dem Login-Fenster als
  Information erscheint.
 \end_layout
@@ -8026,8 +9096,6 @@ reference "subsec:Einstellungen-Wahlen"
 \end_layout
 
 \begin_layout Subsection
-
-\family sans
 Teilnehmende
 \end_layout
 
@@ -8044,7 +9112,7 @@ reference "subsec:Einstellungen-Teilnehmer"
 
 \begin_layout Standard
 \begin_inset Branch EinzelnesDokument
-status open
+status collapsed
 
 \begin_layout Chapter
 \start_of_appendix
@@ -8063,7 +9131,7 @@ reference "chap:Einzelne-Funktionen"
 \end_layout
 
 \begin_layout Section
-Beispiel für Tagesordnung
+Beispiel für Tagesordnung CSV-Datei
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Beispiel-für-Tagesordnung-1"
@@ -8084,7 +9152,7 @@ Tagesordnungspunkten:
 \begin_layout Standard
 
 \family sans
-Title,Text,Dauer,Kommentar,Interner Eintrag
+Titel,Text,Dauer,Kommentar,Interner Eintrag
 \begin_inset Newline newline
 \end_inset
 
@@ -8118,25 +9186,29 @@ Teilnehmern:
 \begin_layout Standard
 
 \family sans
-title,first_name,last_name,structure_level,groups,comment,is_active,is_present,i
-s_committee
+Titel,Vorname,Nachname,Gliederungsebene,Teilnehmernummer,Gruppen,Kommentar,Ist
+ aktiv,Ist anwesend,Ist ein Gremium
 \begin_inset Newline newline
 \end_inset
 
 Prof.
- Dr.,Max,Käßmann,,2,,1,,
+ Dr.,Max,Käßmann,,,Delegierte,,1,,
 \begin_inset Newline newline
 \end_inset
 
-,John,Doe,,2,abc,1,,
+,John,Doe,,,Delegierte,abc,1,,
 \begin_inset Newline newline
 \end_inset
 
-,Fred,Bloggs,,2,,,, ,Žusan,Oltrán,Vorstand,"2,3",kommt 15 Minuten später,1,,
+,Fred,Bloggs,,,Delegierte,,,,
 \begin_inset Newline newline
 \end_inset
 
-,,Wahlkommision,,4,,1,1,1
+,Žusan,Oltrán,Vorstand,,"Delegierte,Mitarbeitende",kommt 15 Minuten später,1,,
+\begin_inset Newline newline
+\end_inset
+
+,,Wahlkommision,,,Gremien,,1,1,1
 \end_layout
 
 \begin_layout Section
@@ -8161,7 +9233,7 @@ Anträgen:
 \begin_layout Standard
 
 \family sans
-identifier,title,text,reason,submitter,category,origin
+Bezeichner,Titel,Text,Begründung,Antragsteller/in,Sachgebiet,Herkunft
 \begin_inset Newline newline
 \end_inset
 

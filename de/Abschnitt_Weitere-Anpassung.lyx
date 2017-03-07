@@ -28,6 +28,7 @@
   \renewcommand{\sectionautorefname}{Kap.\negthinspace}%
   \renewcommand{\subsectionautorefname}{Kap.\negthinspace}%
   \renewcommand{\subsubsectionautorefname}{Kap.\negthinspace}%
+  \renewcommand{\itemautorefname}{\negthickspace}%
  }
 }{}
 
@@ -56,6 +57,26 @@
 logicalmkup
 \end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Format 60
+InsetLayout Flex:Menu_Name
+LyxType	charstyle
+LabelString	"menu name"
+LatexType	command
+LatexName	textsf{\textit
+RightDelim	}
+Font
+  Shape	italic
+  Family	sans
+EndFont
+HTMLTag	span
+HTMLAttr	class='MenuName'
+HTMLStyle
+  span.MenuName {font-family: sans-serif;font-style: italic;}
+EndHTMLStyle
+ResetsFont true
+End
+\end_local_layout
 \language ngerman
 \language_package default
 \inputencoding auto
@@ -77,7 +98,7 @@ logicalmkup
 \index_command default
 \float_placement h
 \paperfontsize 12
-\spacing single
+\spacing onehalf
 \use_hyperref true
 \pdf_title "OpenSlides Handbuch"
 \pdf_author "OpenSlides Team"
@@ -162,45 +183,14 @@ Eigenes Logo einfügen
 \end_layout
 
 \begin_layout Standard
-Um das Logo zu ändern, muss die Datei 
-\series bold
-logo-projector.png
-\series default
- im Unterordner
-\begin_inset Newline newline
-\end_inset
-
-
-\series bold
-~
-\backslash
-Lib
-\backslash
-site-packages
-\backslash
-openslides
-\backslash
-core
-\backslash
-static
-\backslash
-img
-\series default
-
-\begin_inset Newline newline
-\end_inset
-
-des Verzeichnisses, in dem 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
+Dies ist in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Einstellungen-Projektor"
 
 \end_inset
 
- installiert ist, durch eine Datei gleichen Namens ersetzt werden.
+ erklärt.
 \end_layout
 
 \begin_layout Section
@@ -236,23 +226,21 @@ CSV Export Plugin for OpenSlides
 
 \begin_layout Standard
 Plugins werden installiert, indem man den Dateiordner des Plugins komplett
- in den Unterordner
-\begin_inset Newline newline
-\end_inset
+ in den Unterordner 
+\begin_inset Flex Code
+status collapsed
 
-
-\series bold
+\begin_layout Plain Layout
 ~
 \backslash
 openslides
 \backslash
 plugins
-\begin_inset Newline newline
+\end_layout
+
 \end_inset
 
-
-\series default
-des Verzeichnisses, in dem 
+ des Verzeichnisses kopiert, in dem 
 \begin_inset Flex Noun
 status collapsed
 
@@ -262,7 +250,7 @@ OpenSlides
 
 \end_inset
 
- installiert ist, kopiert.
+ installiert ist.
  Falls 
 \begin_inset Flex Noun
 status collapsed

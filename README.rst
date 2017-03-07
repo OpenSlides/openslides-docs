@@ -12,7 +12,7 @@ OpenSlides 2.1.
 Requirements
 ============
 
-`LyX 2.1.x <http://www.lyx.org/>`_ (or newer)
+`LyX 2.2.x <http://www.lyx.org/>`_ (or newer)
 
 
 How to build the documentation?
