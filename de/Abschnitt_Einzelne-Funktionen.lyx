@@ -6530,6 +6530,22 @@ B.
 
 \begin_layout Standard
 Angenommen dieser Antrag wird behandelt:
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Die Mitgliederversammlung möge beschließen, in §8 Absatz 1 der Vereinssatzung
+ die Zahl fünf durch sieben zu ersetzen.
+\begin_inset Newline newline
+\end_inset
+
+Die vielen Aufgaben erfordern eine Erweiterung des Beirates auf sieben Mitgliede
+r.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6824,7 +6840,6 @@ Um einen Antrag anzuzeigen, klicken Sie entweder in der Antragsübersicht
 \begin_layout Standard
 Einzelne Antragszeilen können hervorgehoben werden.
  Dazu muss man in der Antragsseite die Zeilennummerierung aktiviert haben.
- Über dem Text kann man eine Zeilennummer anwählen.
  Klickt man auf 
 \begin_inset Graphics
 	filename clipart/gehe-zu.jpg
@@ -6833,8 +6848,12 @@ Einzelne Antragszeilen können hervorgehoben werden.
 
 \end_inset
 
-, wird diese Zeile hervorgehoben.
- Die Hervorhebung kann mit 
+, kann man eine Zeile auswählen und diese hervorheben.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Update wenn wieder verfügbar: Die Hervorhebung kann mit 
 \begin_inset Graphics
 	filename clipart/Hervorhebung-projizieren.jpg
 	scale 60
@@ -6843,6 +6862,11 @@ Einzelne Antragszeilen können hervorgehoben werden.
 \end_inset
 
  auch projiziert werden.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -7909,15 +7933,15 @@ Erforderliche Mehrheit
 \end_layout
 
 \begin_layout Standard
-Falls weitere Wahlgänge nötig sind, kann man auf 
+Falls weitere Wahlgänge nötig sind, kann man diese mit 
 \begin_inset Graphics
-	filename clipart/Weiterer-Wahlgang.jpg
+	filename clipart/Neuer-Wahlgang.jpg
 	scale 60
-	BoundingBox 0bp 5bp 140bp 0bp
+	BoundingBox 0bp 7bp 137bp 0bp
 
 \end_inset
 
- klicken, um einen weiteren zu beginnen.
+ anlegen.
  Ist die Wahl abgeschlossen ändert man deren Phase auf 
 \begin_inset Flex Menu Name
 status collapsed
