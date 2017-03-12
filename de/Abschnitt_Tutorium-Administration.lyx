@@ -372,7 +372,7 @@ Anschließend auf
 \begin_inset Graphics
 	filename clipart/Passwort-ändern.jpg
 	scale 60
-	BoundingBox 0bp 7bp 163bp 0bp
+	BoundingBox 0bp 7bp 129bp 0bp
 
 \end_inset
 
@@ -429,8 +429,7 @@ Allgemein
 status collapsed
 
 \begin_layout Description
-Veranstaltungsname: Schreberverein Nord e.
- V.
+Veranstaltungsname: Mitgliederversammlung
 \end_layout
 
 \begin_layout Description
@@ -442,7 +441,7 @@ der
 \begin_inset space ~
 \end_inset
 
-Veranstaltung: Mitgliederversammlung des Vereins 2017
+Veranstaltung: Mitgliederversammlung des Schrebervereins Nord e.V.
 \end_layout
 
 \begin_layout Description
@@ -450,7 +449,7 @@ Veranstaltungszeitraum: Sonnabend, 2.
 \begin_inset space ~
 \end_inset
 
-März
+Mai
 \begin_inset space ~
 \end_inset
 
@@ -462,8 +461,7 @@ Veranstaltungsort: Leipzig
 \end_layout
 
 \begin_layout Description
-Veranstalter: Schreberverein Nord e.
- V.
+Veranstalter: Schreberverein Nord e.V.
 \end_layout
 
 \begin_layout Description
@@ -501,7 +499,7 @@ Startseite: Herzlich willkommen, liebe Gartenfreunde!
 \begin_inset Graphics
 	filename clipart/Einstellungen-Allgemein.jpg
 	lyxscale 50
-	width 74col%
+	width 85col%
 
 \end_inset
 
@@ -1163,7 +1161,7 @@ Setzen Sie sich selbst auf die Redeliste, indem sie auf
 \begin_inset Graphics
 	filename clipart/Redeliste+Mich.jpg
 	scale 60
-	BoundingBox 0bp 7bp 147bp 0bp
+	BoundingBox 0bp 7bp 122bp 0bp
 
 \end_inset
 
@@ -1576,7 +1574,7 @@ Beim Anlegen eines Teilnehmers wird automatisch ein zufälliges initiales
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
 	scale 60
-	BoundingBox 0bp 7bp 165bp 0bp
+	BoundingBox 0bp 7bp 138bp 0bp
 
 \end_inset
 
@@ -2315,7 +2313,7 @@ Setzen Sie sich selbst mit
 \begin_inset Graphics
 	filename clipart/Redeliste+Mich.jpg
 	scale 60
-	BoundingBox 0bp 7bp 147bp 0bp
+	BoundingBox 0bp 7bp 122bp 0bp
 
 \end_inset
 
