@@ -496,7 +496,7 @@ Passwort
 \begin_inset Graphics
 	filename clipart/Generieren.jpg
 	scale 60
-	BoundingBox 0bp 9bp 115bp 0bp
+	BoundingBox 0bp 7bp 109bp 0bp
 
 \end_inset
 
@@ -523,7 +523,7 @@ Teilnehmende
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
 	scale 60
-	BoundingBox 0bp 9bp 165bp 0bp
+	BoundingBox 0bp 7bp 138bp 0bp
 
 \end_inset
 
@@ -2452,7 +2452,7 @@ Mit einem Klick auf
 \begin_inset Graphics
 	filename clipart/Redeliste+Mich.jpg
 	scale 60
-	BoundingBox 0bp 7bp 147bp 0bp
+	BoundingBox 0bp 7bp 122bp 0bp
 
 \end_inset
 
@@ -2662,7 +2662,7 @@ Klickt man in der Tagesordnungsübersicht auf
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
 	scale 60
-	BoundingBox 0bp 7bp 165bp 0bp
+	BoundingBox 0bp 7bp 138bp 0bp
 
 \end_inset
 
@@ -3844,7 +3844,7 @@ Die Teilnehmerliste kann als PDF ausgegeben werden, wenn man auf das Symbol
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
 	scale 60
-	BoundingBox 0bp 9bp 160bp 0bp
+	BoundingBox 0bp 7bp 138bp 0bp
 
 \end_inset
 
@@ -6838,7 +6838,17 @@ Um einen Antrag anzuzeigen, klicken Sie entweder in der Antragsübersicht
 \end_layout
 
 \begin_layout Standard
-Einzelne Antragszeilen können hervorgehoben werden.
+Einzelne Antragszeilen können in 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ hervorgehoben werden.
  Dazu muss man in der Antragsseite die Zeilennummerierung aktiviert haben.
  Klickt man auf 
 \begin_inset Graphics
@@ -6849,6 +6859,14 @@ Einzelne Antragszeilen können hervorgehoben werden.
 \end_inset
 
 , kann man eine Zeile auswählen und diese hervorheben.
+ Diese Hervorhebung ist momentan nicht projizierbar.
+ Stattdessen muss man z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+ die Hintergrundfarbe der entsprechenden Zeile ändern, um sie im Projektor
+ hervorzuheben.
 \begin_inset Note Note
 status collapsed
 
@@ -7036,7 +7054,7 @@ Klickt man in der Antragsübersicht auf
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
 	scale 60
-	BoundingBox 0bp 9bp 160bp 0bp
+	BoundingBox 0bp 7bp 138bp 0bp
 
 \end_inset
 
@@ -7671,7 +7689,7 @@ Wahlen werden im gleichnamigen Menü verwaltet.
 \begin_inset Graphics
 	filename clipart/Exportieren-alle.jpg
 	scale 60
-	BoundingBox 0bp 7bp 61bp 0bp
+	BoundingBox 0bp 7bp 138bp 0bp
 
 \end_inset
 
@@ -7792,7 +7810,7 @@ Kandidaten/innen
 \begin_inset Graphics
 	filename clipart/Redeliste+Mich.jpg
 	scale 60
-	BoundingBox 0bp 7bp 147bp 0bp
+	BoundingBox 0bp 7bp 122bp 0bp
 
 \end_inset
 
@@ -9057,6 +9075,25 @@ Diesen Text auf der Login-Seite anzeigen
 
  wird der Text eingetragen, der grün unterlegt auf dem Login-Fenster als
  Information erscheint.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik CSV
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Feldtrenner für alle CSV-Exports und -Beispiele
+\end_layout
+
+\end_inset
+
+ können Sie das Trennzeichen für alle Exporte und Beispiele im CSV-Format
+ festlegen.
 \end_layout
 
 \begin_layout Subsection
