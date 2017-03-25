@@ -194,6 +194,140 @@ reference "subsec:Einstellungen-Projektor"
 \end_layout
 
 \begin_layout Section
+Eigenes Favicon verwenden
+\end_layout
+
+\begin_layout Standard
+Das sogenannte Favicon ist das Icon, das in den Browsertabs von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ verwendet wird.
+ Um es zu ändern, muss eine Datei mit dem Namen 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+favicon.png
+\end_layout
+
+\end_inset
+
+ im 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Benutzerdatenverzeichnis abgelegt werden:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+/static/img/favicon.png
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Diese Datei überschreibt das voreingestellte 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Icon.
+\begin_inset Newline newline
+\end_inset
+
+In der portablen Version für Windows ist das 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Benutzerdatenverzeichnis der Unterordner
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+openslides
+\backslash
+static
+\backslash
+img
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+des Installationsordners von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Achtung:
+\series default
+ Nach der Änderung des Favicons, muss der Browser-Cache gelöscht werden,
+ ehe das neue Icon verwendet wird.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Plugins
 \end_layout
 
@@ -312,6 +446,130 @@ Eigene Datenbank anbinden
 \end_layout
 
 \begin_layout Standard
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ verwendet immer die Datenbank mit dem Namen 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+db.sqlite3
+\end_layout
+
+\end_inset
+
+, die sich im Unterordner 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+openslides
+\end_layout
+
+\end_inset
+
+ befindet.
+ Existiert dort noch keine Datenbank, wir eine leere erstellt, wenn der
+ 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Server gestartet wird.
+\end_layout
+
+\begin_layout Standard
+Möchte man an zwei oder mehreren Versammlungen parallel arbeiten, muss man
+ die Datenbank jeder Versammlung in einem separaten Ordner speichern.
+ Dazu beendet man die 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Sitzung und stoppt den 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Server.
+ Danach kopiert oder verschiebt man die Datei 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+db.sqlite3
+\end_layout
+
+\end_inset
+
+ in einen Ordner seiner Wahl.
+\end_layout
+
+\begin_layout Standard
+Um eine Datenbank später wieder aufzurufen, kopiert man die Datei 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+db.sqlite3
+\end_layout
+
+\end_inset
+
+ in den Unterordner 
+\begin_inset Flex Code
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+openslides
+\end_layout
+
+\end_inset
+
+ und startet den 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+-Server.
+\end_layout
+
+\begin_layout Section
+Eigenen Webserver einsetzen
+\end_layout
+
+\begin_layout Standard
 Dieses Handbuch ist noch nicht fertiggestellt.
  Wenn Sie Interesse haben, uns zu unterstützen, schreiben Sie uns einfach
  eine E-Mail:
@@ -330,11 +588,25 @@ type "mailto:"
 \end_layout
 
 \begin_layout Section
-Eigenen Webserver einsetzen
+Template anpassen
 \end_layout
 
-\begin_layout Section
-Template anpassen
+\begin_layout Standard
+Dieses Handbuch ist noch nicht fertiggestellt.
+ Wenn Sie Interesse haben, uns zu unterstützen, schreiben Sie uns einfach
+ eine E-Mail:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "users-de@openslides.org"
+target "users-de@openslides.org"
+type "mailto:"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
