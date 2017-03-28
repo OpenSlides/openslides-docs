@@ -1085,17 +1085,11 @@ status collapsed
 \begin_layout Plain Layout
 
 \backslash
-Lib
-\backslash
-site-packages
-\backslash
 openslides
-\backslash
-core
 \backslash
 static
 \backslash
-openslides
+img
 \end_layout
 
 \end_inset
@@ -1114,7 +1108,26 @@ OpenSlides
 
 \end_inset
 
-; dort wo auch die Datenbank liegt.
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Achtung:
+\series default
+ Nach der Änderung des Logos, muss der Browser-Cache gelöscht werden, ehe
+ das neue Logo verwendet wird.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5047,16 +5060,7 @@ name "subsec:Empfehlung"
 \end_layout
 
 \begin_layout Standard
-Klick man auf den Namen eines Antrags, kann man in der Box über dem Antragstext
- auf 
-\begin_inset Graphics
-	filename clipart/Empfehlung-einzeln.jpg
-	scale 70
-
-\end_inset
-
- klicken, um für den Antrag eine Empfehlung festzulegen.
- Empfehlungen sind nur dann verfügbar, wenn in den Antragseinstellungen,
+Empfehlungen sind nur dann verfügbar, wenn in den Antragseinstellungen,
  siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5078,11 +5082,28 @@ Name des Empfehlungsgebers
 \end_layout
 
 \begin_layout Standard
-Anträge können später mittels Antragsblöcken gemäß ihrer Empfehlung angenommen
- werden, siehe 
+Klick man auf den Namen eines Antrags, kann man in der Box über dem Antragstext
+ auf 
+\begin_inset Graphics
+	filename clipart/Empfehlung-einzeln.jpg
+	scale 70
+
+\end_inset
+
+ klicken, um für den Antrag eine Empfehlung festzulegen.
+ Anträge können entweder später mittels Antragsblöcken gemäß ihrer Empfehlung
+ angenommen werden, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Antragsblöcke"
+
+\end_inset
+
+, oder einzeln durch klicken auf 
+\begin_inset Graphics
+	filename clipart/Empfehlung-folgen.jpg
+	scale 60
+	BoundingBox 0bp 7bp 137bp 0bp
 
 \end_inset
 
@@ -5298,7 +5319,7 @@ Anträge
 \begin_inset Graphics
 	filename clipart/Antragsblöcke.jpg
 	scale 60
-	BoundingBox 0bp 7bp 119bp 0bp
+	BoundingBox 0bp 7bp 117bp 0bp
 
 \end_inset
 
@@ -6837,8 +6858,12 @@ Um einen Antrag anzuzeigen, klicken Sie entweder in der Antragsübersicht
  in der oberen Zeile rechts.
 \end_layout
 
+\begin_layout Subsection
+Navigation
+\end_layout
+
 \begin_layout Standard
-Einzelne Antragszeilen können in 
+Man kann in 
 \begin_inset Flex Noun
 status collapsed
 
@@ -6848,8 +6873,8 @@ OpenSlides
 
 \end_inset
 
- hervorgehoben werden.
- Dazu muss man in der Antragsseite die Zeilennummerierung aktiviert haben.
+ zu einzelnen Antragstextzeilen navigieren.
+ Dazu muss in der Antragsseite die Zeilennummerierung aktiviert sein.
  Klickt man auf 
 \begin_inset Graphics
 	filename clipart/gehe-zu.jpg
@@ -6858,33 +6883,12 @@ OpenSlides
 
 \end_inset
 
-, kann man eine Zeile auswählen und diese hervorheben.
- Diese Hervorhebung ist momentan nicht projizierbar.
- Stattdessen muss man z.
-\begin_inset space \thinspace{}
+, kann man eine Zeile auswählen und zu dieser springen.
+ Die ausgewählte Zeile wird für 3
+\begin_inset space ~
 \end_inset
 
-B.
- die Hintergrundfarbe der entsprechenden Zeile ändern, um sie im Projektor
- hervorzuheben.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Update wenn wieder verfügbar: Die Hervorhebung kann mit 
-\begin_inset Graphics
-	filename clipart/Hervorhebung-projizieren.jpg
-	scale 60
-	BoundingBox 0bp 9bp 50bp 0bp
-
-\end_inset
-
- auch projiziert werden.
-\end_layout
-
-\end_inset
-
-
+Sekunden gelb hinterlegt.
 \end_layout
 
 \begin_layout Subsection
@@ -7253,6 +7257,31 @@ Zeilenlänge
 
  ist nur relevant wenn die Zeilennummerierung aktiv ist.
  Es legt fest wie viele Zeichen maximal auf eine Zeile gesetzt werden.
+ 
+\begin_inset Note Greyedout
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Achtung:
+\series default
+ Nach der Änderung der Zeilenlänge muss man in den Browserfenstern von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ die Seite neu laden, damit die neue Länge verwendet wird.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8640,8 +8669,8 @@ heruntergeladen werden:
 
 \begin_inset CommandInset href
 LatexCommand href
-name "https://github.com/OpenSlides/openslides-csv-export/archive/master.zip"
-target "https://github.com/OpenSlides/openslides-csv-export/archive/master.zip"
+name "https://github.com/OpenSlides/openslides-csv-export/archive/2.0.2.zip"
+target "https://github.com/OpenSlides/openslides-csv-export/archive/2.0.2.zip"
 
 \end_inset
 
@@ -8655,7 +8684,7 @@ Um es zu installieren, entpackt man die ZIP-Datei in einen beliebigen Ordner.
 status collapsed
 
 \begin_layout Plain Layout
-openslides-csv-export-master
+openslides-csv-export-2.0.2
 \end_layout
 
 \end_inset
@@ -8676,7 +8705,7 @@ openslides_csv_export
 status collapsed
 
 \begin_layout Plain Layout
-~
+
 \backslash
 openslides
 \backslash
