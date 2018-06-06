@@ -6,7 +6,7 @@ Overview
 ========
 
 This documentation repository contains the OpenSlides manual of
-OpenSlides 2.1.
+OpenSlides 2.2.
 
 
 Requirements
@@ -32,7 +32,7 @@ Structure of documentation
 The documentation has 2 parts:
 
 * The manual for admins containing first steps, a tutorial and detailed descriptions, customizations etc.
-* The tutorial for users (*planned, not yet written*).
+* The tutorial for users/delegates.
 
 The manual is the file `OpenSlides-Handbuch.lyx` (German). It points to the
 LyX files for the different sections.

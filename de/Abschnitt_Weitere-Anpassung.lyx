@@ -179,21 +179,6 @@ name "chap:Weitere-Anpassungen-von"
 \end_layout
 
 \begin_layout Section
-Eigenes Logo einfügen
-\end_layout
-
-\begin_layout Standard
-Dies ist in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Einstellungen-Projektor"
-
-\end_inset
-
- erklärt.
-\end_layout
-
-\begin_layout Section
 Eigenes Favicon verwenden
 \end_layout
 
@@ -229,7 +214,7 @@ OpenSlides
 
 \end_inset
 
--Benutzerdatenverzeichnis abgelegt werden:
+-Verzeichnis abgelegt werden:
 \begin_inset Newline newline
 \end_inset
 
@@ -238,7 +223,7 @@ OpenSlides
 status collapsed
 
 \begin_layout Plain Layout
-/static/img/favicon.png
+~/static/img/favicon.png
 \end_layout
 
 \end_inset
@@ -271,7 +256,7 @@ OpenSlides
 
 \end_inset
 
--Benutzerdatenverzeichnis der Unterordner
+-Verzeichnis der Unterordner
 \begin_inset Newline newline
 \end_inset
 
@@ -280,7 +265,7 @@ OpenSlides
 status collapsed
 
 \begin_layout Plain Layout
-
+~
 \backslash
 openslides
 \backslash
@@ -295,17 +280,7 @@ img
 \begin_inset Newline newline
 \end_inset
 
-des Installationsordners von 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
-.
+Dieser muss zuerst angelegt werden.
 \begin_inset Newline newline
 \end_inset
 

@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -17,7 +17,6 @@
   \renewcommand{\itemautorefname}{\negthickspace}%
  }
 }{}
-
 
 % provides caption formatting
 \usepackage[labelfont={bf,sf}]{caption}[2004/07/16]
@@ -78,6 +77,8 @@ End
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format pdf2
 \output_sync 0
@@ -122,6 +123,7 @@ End
 \suppress_date true
 \justification true
 \use_refstyle 0
+\use_minted 0
 \notefontcolor #0000ff
 \branch Erste-Schritte
 \selected 1
@@ -166,7 +168,10 @@ End
 \tocdepth 2
 \paragraph_separation skip
 \defskip medskip
-\quotes_language german
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -204,39 +209,6 @@ OpenSlides
 \end_inset
 
  Team
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-\noindent
-Wenn Sie Anmerkungen haben oder Fehler gefunden haben, senden Sie bitte
- eine Mail an die deutsche Dokumentations-Mailingliste: 
-\begin_inset CommandInset href
-LatexCommand href
-name "users-de@openslides.org"
-target "users-de@openslides.org?subject=OpenSlides Handbuch"
-type "mailto:"
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Dazu müssen Sie sich vorher 
-\begin_inset CommandInset href
-LatexCommand href
-name "an der Liste anmelden"
-target "http://mail.openslides.org/listinfo/users-de/"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
 \begin_inset Newline newline
 \end_inset
 
@@ -254,7 +226,7 @@ OpenSlides
 
 \end_inset
 
- Version 2.1
+ Version 2.2
 \end_layout
 
 \begin_layout Standard
@@ -268,6 +240,7 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 \begin_inset Branch Einführung
+inverted 0
 status open
 
 \begin_layout Standard
@@ -287,6 +260,7 @@ filename "Abschnitt_Einfuehrung.lyx"
 
 \begin_layout Standard
 \begin_inset Branch Erste-Schritte
+inverted 0
 status open
 
 \begin_layout Standard
@@ -306,6 +280,7 @@ filename "Abschnitt_Erste-Schritte.lyx"
 
 \begin_layout Standard
 \begin_inset Branch Tutorial-Präsentationsmodus
+inverted 0
 status open
 
 \begin_layout Standard
@@ -325,6 +300,7 @@ filename "Abschnitt_Tutorium-Administration.lyx"
 
 \begin_layout Standard
 \begin_inset Branch Einzelne-Funktionen
+inverted 0
 status open
 
 \begin_layout Standard
@@ -344,6 +320,7 @@ filename "Abschnitt_Einzelne-Funktionen.lyx"
 
 \begin_layout Standard
 \begin_inset Branch Anpassungen
+inverted 0
 status open
 
 \begin_layout Standard
@@ -397,7 +374,73 @@ ommentar,
 \begin_inset Newline newline
 \end_inset
 
-Bericht des Vorstands,,0:20,,1
+Bericht des Vorstands,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+0:20,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+1
+\family default
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Die geschweiften Klammern verhindern, dass \SpecialChar LaTeX
+ aus zwei aufeinanderfolgenden
+ Kommas ein Anführungszeichen macht.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -422,29 +465,455 @@ Teilnehmern:
 \begin_layout Standard
 
 \family sans
-Titel,Vorname,Nachname,Gliederungsebene,Teilnehmernummer,Gruppen,Kommentar,Ist
- aktiv,Ist anwesend,Ist ein Gremium
+Titel,Vorname,Nachname,Gliederungsebene,Teilnehmernummer,Gruppen,Kommentar,
+\begin_inset Newline newline
+\end_inset
+
+Ist aktiv,Ist anwesend,Ist ein Gremium,Initiales Passwort,E-Mail
 \begin_inset Newline newline
 \end_inset
 
 Prof.
- Dr.,Max,Käßmann,,,Delegierte,,1,,
+ Dr.,Max,Käßmann,,,Delegierte,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+1,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+kaessmann@abc.abc
 \begin_inset Newline newline
 \end_inset
 
-,John,Doe,,,Delegierte,abc,1,,
+,John,Doe,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,Delegierte,abc,1,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+doe@abc.abc
 \begin_inset Newline newline
 \end_inset
 
-,Fred,Bloggs,,,Delegierte,,,,
+,Fred,Bloggs,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,Delegierte,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+bloggs@abc.abc
 \begin_inset Newline newline
 \end_inset
 
-,Žusan,Oltrán,Vorstand,,"Delegierte,Mitarbeitende",kommt 15 Minuten später,1,,
+,Žusan,Oltrán,Vorstand,,"Delegierte,Mitarbeitende",kommt 15 Minuten später,1,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+oltran@abc.abc
 \begin_inset Newline newline
 \end_inset
 
-,,Wahlkommision,,,Gremien,,1,1,1
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+Wahlkommision,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,Gremien,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+1,1,1,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+wahlkommision@abc.abc
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -469,23 +938,99 @@ Anträgen:
 \begin_layout Standard
 
 \family sans
-Bezeichner,Titel,Text,Begründung,Antragsteller/in,Sachgebiet,Herkunft
+Bezeichner,Titel,Text,Begründung,Antragsteller/in,Sachgebiet,Herkunft,Antragsblo
+ck
 \begin_inset Newline newline
 \end_inset
 
 Kat A-1,Satzungsänderung,"Die Mitgliederversammlung möge beschließen, in
  §8 Absatz 1 der Vereinssatzung die Zahl fünf durch sieben zu ersetzen.","Die
  vielen Aufgaben erfordern eine Erweiterung des Beirates auf sieben Mitglieder.",
-Dr.
- Hans Schulze,Kategorie A,Vorstandssitzung vom 19.10.
+Hans Schulze,Kategorie A,Vorstandssitzung vom 19.10.,
 \begin_inset Newline newline
 \end_inset
 
-B1,Titel 2,Text 2,Begründung 2,Antragsteller 2,Kategorie B,
+B1,Titel 2,Text 2,Begründung 2,Anke Meier-Schulze,Kategorie B,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+
 \begin_inset Newline newline
 \end_inset
 
-,Titel 3,Text 3,Begründung 3,,,
+,Titel 3,Text 3,Begründung 3,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -493,7 +1038,7 @@ Impressum
 \end_layout
 
 \begin_layout Standard
-Copyright 2012–2017
+Copyright 2012–2018
 \end_layout
 
 \begin_layout Description
@@ -543,16 +1088,44 @@ OpenSlides
 LatexCommand href
 name "Creative Commons CC BY-SA 3.0"
 target "http://creativecommons.org/licenses/by-sa/3.0/"
+literal "false"
 
 \end_inset
 
  lizensiert.
 \end_layout
 
+\begin_layout Standard
+\noindent
+Wenn Sie Anmerkungen oder Korrekturen zu diesem Handbuch haben, senden Sie
+ bitte eine E-Mail an die deutsche Dokumentations-Mailingliste 
+\begin_inset CommandInset href
+LatexCommand href
+name "users-de@openslides.org"
+target "users-de@openslides.org?subject=OpenSlides Handbuch"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+.
+ Dazu müssen Sie sich vorher 
+\begin_inset CommandInset href
+LatexCommand href
+name "an der Liste anmelden"
+target "http://mail.openslides.org/listinfo/users-de/"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "Django"
+literal "true"
 
 \end_inset
 
@@ -561,6 +1134,7 @@ key "Django"
 LatexCommand href
 name "Dokumentation von Django"
 target "https://docs.djangoproject.com"
+literal "false"
 
 \end_inset
 
