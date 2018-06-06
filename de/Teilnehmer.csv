@@ -1,6 +1,6 @@
-Titel,Vorname,Nachname,Gliederungsebene,Teilnehmernummer,Gruppen,Kommentar,Ist aktiv,Ist anwesend,Ist ein Gremium
-Prof. Dr.,Max,Käßmann,,,Delegierte,,1,,
-,John,Doe,,,Delegierte,abc,1,,
-,Fred,Bloggs,,,Delegierte,,,,
-,Žusan,Oltrán,Vorstand,,"Delegierte,Mitarbeitende",kommt 15 Minuten später,1,,
-,,Wahlkommision,,,Gremien,,1,1,1
+Titel,Vorname,Nachname,Gliederungsebene,Teilnehmernummer,Gruppen,Kommentar,Ist aktiv,Ist anwesend,Ist ein Gremium,Initiales Passwort,E-Mail
+Prof. Dr.,Max,Käßmann,,,Delegierte,,1,,,,kaessmann@abc.abc
+,John,Doe,,,Delegierte,abc,1,,,,doe@abc.abc
+,Fred,Bloggs,,,Delegierte,,,,,,bloggs@abc.abc
+,Žusan,Oltrán,Vorstand,,"Delegierte,Mitarbeitende",kommt 15 Minuten später,1,,,,oltran@abc.abc
+,,Wahlkommision,,,Gremien,,1,1,1,,wahlkommision@abc.abc

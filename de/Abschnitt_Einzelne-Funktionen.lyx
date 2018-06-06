@@ -107,7 +107,7 @@ End
 \pdf_bookmarks true
 \pdf_bookmarksnumbered true
 \pdf_bookmarksopen true
-\pdf_bookmarksopenlevel 2
+\pdf_bookmarksopenlevel 1
 \pdf_breaklinks true
 \pdf_pdfborder false
 \pdf_colorlinks true
@@ -182,7 +182,7 @@ OpenSlides
 
 \end_inset
 
- 2.1
+ 2.2
 \end_layout
 
 \begin_layout Standard
@@ -457,7 +457,6 @@ reference "sec:Teilnehmer"
 \end_inset
 
  wird automatisch ein zufälliges initiales Passwort gesetzt.
- Dieses kann nicht mehr geändert werden.
  Es ist solange aktiv, bis der Teilnehmer es ändert.
 \end_layout
 
@@ -527,22 +526,23 @@ Teilnehmende
 
 \end_inset
 
- klickt und dann 
-\begin_inset Flex Menu Name
-status collapsed
+ klickt und dann auf
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Plain Layout
-Zugangsdatenliste
-\end_layout
+
+\begin_inset Graphics
+	filename clipart/Zugangsdatenliste.jpg
+	scale 80
 
 \end_inset
 
- auswählt.
+.
 \end_layout
 
 \begin_layout Standard
 Die Zugangsdatenliste besteht aus einer Seite für jeden Teilnehmer.
- Sie ist dazu gedacht dem Teilnehmer seine Seite vor Beginn der Veranstaltung
+ Sie ist dazu da, um jedem Teilnehmer seine Seite vor Beginn der Veranstaltung
  auszuhändigen.
  Den Begrüßuns- und Erläuterungstext auf der Teilnehmerseite kann in den
  Teilnehmer-Einstellungen festgelegt werden, siehe 
@@ -590,7 +590,7 @@ OpenSlides
 
  ist Inhalte zu projizieren.
  Bei Versammlungen ist es essentiell, die Teilnehmer über den Ablauf und
- den aktuellen Punkt zu informieren.
+ den aktuellen Programmpunkt zu informieren.
  Je nach den technischen Möglichkeiten im Versammlungsraum stehen dafür
  ein oder mehrere Projektoren zur Verfügung.
 \end_layout
@@ -776,12 +776,14 @@ Klickt man in der Projektorvorschau auf
 
 \end_inset
 
-, kann man den Projektornamen und auch dessen Auflösung ändern.
- Außerdem kann man so über 
-\begin_inset Graphics
-	filename clipart/Projektionsvorgaben.jpg
-	scale 60
-	BoundingBox 0bp 7bp 161bp 0bp
+, kann man den Projektornamen, das Seitenverhältnis und die Skalierung ändern.
+ Außerdem kann man im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Projektionsvorgaben
+\end_layout
 
 \end_inset
 
@@ -868,8 +870,8 @@ Mit dem Kopf
  Mit 
 \begin_inset Graphics
 	filename clipart/Projektor-verbreiten.jpg
-	scale 60
-	BoundingBox 0bp 7bp 95bp 0bp
+	scale 75
+	BoundingBox 0bp 7bp 70bp 0bp
 
 \end_inset
 
@@ -1012,17 +1014,7 @@ Logo auf dem Projektor anzeigen
 \end_inset
 
  kann ein Logo oben links dargestellt werden.
- Um das Logo zu ändern, muss eine Datei mit dem Namen 
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-logo-projector.png
-\end_layout
-
-\end_inset
-
- im 
+ Um das Logo festzulegen, muss eine Datei mit dem Logo zu 
 \begin_inset Flex Noun
 status collapsed
 
@@ -1032,102 +1024,28 @@ OpenSlides
 
 \end_inset
 
--Benutzerdatenverzeichnis abgelegt werden:
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-/static/img/logo-projector.png
-\end_layout
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Diese Datei überschreibt das voreingestellte 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
--Logo.
-\begin_inset Newline newline
-\end_inset
-
-In der portablen Version für Windows ist das 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
-
-\end_inset
-
--Benutzerdatenverzeichnis der Unterordner
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-
-\backslash
-openslides
-\backslash
-static
-\backslash
-img
-\end_layout
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-des Installationsordners von 
-\begin_inset Flex Noun
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides
-\end_layout
+ hochgeladen werden, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Logos-festlegen"
 
 \end_inset
 
 .
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
-
-\begin_inset Note Greyedout
-status open
+\begin_layout Standard
+Mit der Option 
+\begin_inset Flex Menu Name
+status collapsed
 
 \begin_layout Plain Layout
-
-\series bold
-Achtung:
-\series default
- Nach der Änderung des Logos, muss der Browser-Cache gelöscht werden, ehe
- das neue Logo verwendet wird.
+Uhr auf dem Projektor anzeigen
 \end_layout
 
 \end_inset
 
-
+ kann die aktuelle Uhrzeit oben rechts angezeigt werden.
 \end_layout
 
 \begin_layout Standard
@@ -1354,7 +1272,7 @@ B:
 \begin_inset Quotes gld
 \end_inset
 
-5:00
+05:00
 \begin_inset Quotes grd
 \end_inset
 
@@ -1409,12 +1327,8 @@ reference "subsec:Einstellungen-Projektor"
 \end_inset
 
 .
- Die Zeit der Countdowns wird unter 30
-\begin_inset space \thinspace{}
-\end_inset
-
-s orange eingefärbt.
- Diese Zeit kann im Menü 
+ Die letzten Sekunden des Countdowns können orange eingefärbt werden.
+ Dies kann im Menü 
 \begin_inset Flex Menu Name
 status collapsed
 
@@ -1425,7 +1339,7 @@ Tagesordnung
 
 \end_inset
 
- geändert werden, siehe 
+ eingestellt werden, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Einstellungen-Tagesordnung"
@@ -1433,7 +1347,7 @@ reference "subsec:Einstellungen-Tagesordnung"
 \end_inset
 
 .
- Nach dem Ablauf wird die Zeit rot eingefärbt und läuft negativ.
+ Nach dem Ablauf des Countdowns wird die Zeit rot eingefärbt und läuft negativ.
 \end_layout
 
 \begin_layout Standard
@@ -1459,7 +1373,7 @@ Countdown mit der Redeliste verkoppeln
 \end_inset
 
  ausgewählt sein.
- Dadurch werden alle existierenden Countdown automatisch gestartet, wenn
+ Dadurch werden alle existierenden Countdowns automatisch gestartet, wenn
  eine Rede begonnen wird.
  Ob, welcher und wie viele Countdowns projiziert werden, kann durch das
  Klicken auf 
@@ -1570,7 +1484,7 @@ name "sec:Tagesordnung"
 \begin_layout Standard
 Die Verwaltung der Tagesordnung geschieht im Menü 
 \begin_inset Flex Menu Name
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Tagesordnung
@@ -1793,8 +1707,9 @@ status collapsed
 status collapsed
 
 \begin_layout Plain Layout
-Die geschweiften Klammern verhindern, dass aus zwei aufeinanderfolgenden
- Kommas ein Anführungszeichen gemacht wird.
+Die geschweiften Klammern verhindern, dass \SpecialChar LaTeX
+ aus zwei aufeinanderfolgenden
+ Kommas ein Anführungszeichen macht.
 \end_layout
 
 \end_inset
@@ -1869,8 +1784,8 @@ ISO-8859-1
 \end_inset
 
  umgeschaltet werden, abhängig davon, wie die Datei gespeichert wurde.
- Dies lässt sich leicht in der Vorschau erkennen, ob Akzenten und Umlaute
- korrekt dargestellt werden.
+ In der Vorschau lässt sich leicht erkennen, ob Akzenten und Umlaute korrekt
+ dargestellt werden.
  Ist alles korrekt ausgewählt, sollten Sie eine vollständige Vorschau für
  den Import angezeigt bekommen:
 \begin_inset Foot
@@ -1932,7 +1847,7 @@ reference "chap:Beispiel-für-Tagesordnung-1"
 \end_layout
 
 \begin_layout Standard
-und kann die CSV-Datei noch ändern, falls es Fehler gibt.
+Man kann die CSV-Datei noch ändern, falls es Fehler gibt.
  Zum Import drückt man auf den Knopf 
 \begin_inset Flex Menu Name
 status collapsed
@@ -1964,7 +1879,7 @@ status collapsed
 \begin_inset CommandInset href
 LatexCommand href
 name "LibreOffice"
-target "http://www.libreoffice.org/"
+target "https://www.libreoffice.org/"
 
 \end_inset
 
@@ -2412,7 +2327,7 @@ Einzelne Tagesordnungspunkte werden projiziert, indem man auf das Symbol
 
 \begin_layout Standard
 Punkte, die als erledigt markiert wurden, werden in der projizierten Tagesordnun
-g grau dargestellt.
+g nicht mehr dargestellt.
 \end_layout
 
 \begin_layout Subsection
@@ -2470,8 +2385,8 @@ Mit einem Klick auf
 \end_inset
 
  kann man sich selbst auf die Redeliste setzen.
- Administratoren können jeden auf die Redeliste setzen und durch Klicken
- von 
+ Administratoren können jeden auf die Redeliste setzen, durch Klicken von
+ 
 \begin_inset Graphics
 	filename clipart/Redner-entfernen.jpg
 	scale 60
@@ -2479,7 +2394,15 @@ Mit einem Klick auf
 
 \end_inset
 
- jeden von der Liste nehmen.
+ jeden von der Liste nehmen und durch Klicken auf 
+\begin_inset Graphics
+	filename clipart/Alle-Redner-entfernen.jpg
+	scale 75
+	BoundingBox 0bp 7bp 140bp 0bp
+
+\end_inset
+
+ die Redeliste leeren.
 \end_layout
 
 \begin_layout Standard
@@ -2492,19 +2415,7 @@ Die Redeliste wird durch Klicken auf
 \end_inset
 
  projiziert.
- Durch Drücken von
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Graphics
-	filename clipart/Nächste-Rede-beginnen.jpg
-	scale 60
-	BoundingBox 0bp 7bp 167bp 0bp
-
-\end_inset
-
- oder 
+ Durch Drücken von 
 \begin_inset Graphics
 	filename clipart/Rede-beginnen.jpg
 	scale 60
@@ -2560,14 +2471,6 @@ reference "subsec:Countdowns"
 
 \begin_layout Standard
 Um die Rede zu beenden, klickt man auf 
-\begin_inset Graphics
-	filename clipart/Aktuelle-Rede-beenden.jpg
-	scale 60
-	BoundingBox 0bp 7bp 165bp 0bp
-
-\end_inset
-
- oder 
 \begin_inset Graphics
 	filename clipart/Rede-beenden.jpg
 	scale 60
@@ -2643,6 +2546,20 @@ Die Reihenfolge der Redeliste kann jederzeit geändert werden.
 \end_layout
 
 \begin_layout Standard
+Unterhalb der Live-Vorschau gibt es die Rubrik 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Redeliste
+\end_layout
+
+\end_inset
+
+ in der die aktuelle Liste projiziert und verwaltet werden kann.
+\end_layout
+
+\begin_layout Standard
 Am Ende der Veranstaltung kann man sämtliche Redelisten mit den jeweiligen
  Redezeiten als CSV-Datei exportieren.
  Dazu benötigt man das Plugin 
@@ -2681,7 +2598,7 @@ Klickt man in der Tagesordnungsübersicht auf
 
 , kann man das Ausgabeformat wählen.
  Es wird so entweder ein PDF generiert, das die gesamte Tagesordnung mit
- allen Unterpunkten (ohne eigene Themen) enthält, oder es wird ein CSV-Datei
+ allen Unterpunkten (ohne eigene Themen) enthält, oder es wird eine CSV-Datei
  erstellt, die man für eine andere Veranstaltung wieder importieren kann.
 \end_layout
 
@@ -2792,7 +2709,7 @@ Im Feld
 status collapsed
 
 \begin_layout Plain Layout
-Anzahl der dargestellten letzten Redner/innen auf dem Projektor
+Anzahl der dargestellten letzten Redner auf dem Projektor
 \end_layout
 
 \end_inset
@@ -2910,6 +2827,10 @@ Nachname Nachname
 \end_layout
 
 \begin_layout Description
+E-Mail E-Mailadresse
+\end_layout
+
+\begin_layout Description
 Gliederungsebene optionale Angabe der Mitgliedschaft in einer Organisation.
  Bei Veranstaltungen von Vereinen kann man so z.
 \begin_inset space \thinspace{}
@@ -2930,7 +2851,16 @@ Vorstand
 
 \begin_layout Description
 Teilnehmernummer optionale Nummer eines Teilnehmers.
- Die Teilnehmernummer wird in Redelisten in Klammern nach dem Namen angezeigt
+ Die Teilnehmernummer wird in Redelisten in Klammern nach dem Namen angezeigt.
+ Die Nummer kann dazu verwendet werden, die Anwesenheit während der Veranstaltun
+g schnell zu ändern, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Einstellungen-Teilnehmer"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Description
@@ -3102,7 +3032,11 @@ aktiv,Ist
 \begin_inset space ~
 \end_inset
 
-anwesend,Ist ein Gremium
+anwesend,Ist ein Gremium,Initiales Passwort,
+\begin_inset Newline newline
+\end_inset
+
+E-Mail
 \end_layout
 
 \end_inset
@@ -3213,7 +3147,29 @@ status collapsed
 
 \end_inset
 
+,
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+kaessmann@abc.abc
 \end_layout
 
 \end_inset
@@ -3223,8 +3179,9 @@ status collapsed
 status collapsed
 
 \begin_layout Plain Layout
-Die geschweiften Klammern verhindern, dass aus zwei aufeinanderfolgenden
- Kommas ein Anführungszeichen gemacht wird.
+Die geschweiften Klammern verhindern, dass \SpecialChar LaTeX
+ aus zwei aufeinanderfolgenden
+ Kommas ein Anführungszeichen macht.
 \end_layout
 
 \end_inset
@@ -3243,6 +3200,8 @@ Jedes Komma trennt die Eigenschaften voneinander.
 
 Die Angabe der Gruppe ermöglicht es, für alle Teilnehmer einer Gruppe dieselben
  Rechte festzulegen.
+ Ist eine Gruppe angegeben, die noch nicht existiert, wird sie beim Importieren
+ automatisch neu angelegt.
  Mehr Details zu Gruppen siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3312,7 +3271,29 @@ status collapsed
 
 \end_inset
 
+,
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+oltran@abc.abc
 \end_layout
 
 \end_inset
@@ -3322,8 +3303,9 @@ status collapsed
 status collapsed
 
 \begin_layout Plain Layout
-Die geschweiften Klammern verhindern, dass aus zwei aufeinanderfolgenden
- Kommas ein Anführungszeichen gemacht wird.
+Die geschweiften Klammern verhindern, dass \SpecialChar LaTeX
+ aus zwei aufeinanderfolgenden
+ Kommas ein Anführungszeichen macht.
 \end_layout
 
 \end_inset
@@ -3478,6 +3460,7 @@ importieren
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3833,7 +3816,7 @@ Geht man mit der Maus auf einen Teilnehmer, erscheint hinter seinem Namen
 
 , falls er noch nicht Mitglied einer Gruppe ist.
  Ansonsten ist es immer sichtbar.
- Klickt man auf dieses Symbol, kann man eine Gruppe festlegen oder ändern.
+ Klickt man auf dieses Symbol, kann man die Gruppe festlegen oder ändern.
 \end_layout
 
 \begin_layout Standard
@@ -3862,12 +3845,10 @@ Die Teilnehmerliste kann als PDF ausgegeben werden, wenn man auf das Symbol
 \end_inset
 
  und dann auf 
-\begin_inset Flex Menu Name
-status collapsed
-
-\begin_layout Plain Layout
-Teilnehmerliste
-\end_layout
+\begin_inset Graphics
+	filename clipart/Teilnehmendenliste-PDF.jpg
+	scale 80
+	BoundingBox 0bp 7bp 140bp 0bp
 
 \end_inset
 
@@ -3957,6 +3938,37 @@ Um den Gruppennamen zu ändern, geht man mit der Maus auf den Gruppennamen
 \end_inset
 
 .
+ Die Gruppen 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Standard
+\end_layout
+
+\end_inset
+
+ und 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Mitarbeitende
+\end_layout
+
+\end_inset
+
+ können nicht gelöscht werden, da 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+ sonst unbedienbar werden würde.
 \end_layout
 
 \begin_layout Standard
@@ -4049,6 +4061,41 @@ Vorname nach dem Vornamen
 
 \begin_layout Description
 Nachname nach dem Nachnamen
+\end_layout
+
+\begin_layout Standard
+Ist die Option 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Ansicht zur Teilnehmeranwesenheit aktivieren
+\end_layout
+
+\end_inset
+
+ aktiviert, erscheint in der Titelleiste des Menüs 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Teilnehmende
+\end_layout
+
+\end_inset
+
+ der Knopf 
+\begin_inset Graphics
+	filename clipart/Anwesenheit.jpg
+	scale 80
+	BoundingBox 0bp 7bp 84bp 0bp
+
+\end_inset
+
+.
+ Klickt man darauf, kann man schnell die Anwesenheit von Teilnehmern ändern,
+ indem man ihre Nummer eingibt.
+ Dafür müssen die Teilnehmer eine Teilnehmernummer besitzen.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4172,6 +4219,53 @@ System URL
 
  erscheinen im PDF der Zugangsdaten und werden auch im QR-Code in diesem
  PDF berücksichtigt.
+\end_layout
+
+\begin_layout Subsubsection*
+Rubrik E-Mail
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Absender
+\end_layout
+
+\end_inset
+
+ wird die E-Mailadresse eingegeben, von der aus Nachrichten an Teilnehmer
+ verschickt werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Betreff
+\end_layout
+
+\end_inset
+
+ wird der Betreff der E-Mailnachricht eingegeben.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Nachrichtentext
+\end_layout
+
+\end_inset
+
+ wird der Text der E-Mailnachricht eingegeben.
 \end_layout
 
 \begin_layout Standard
@@ -4341,7 +4435,7 @@ reference "subsec:Schlagwörter "
 
 \end_inset
 
- die Unterstützer und der Arbeitsablauf
+ und der Arbeitsablauf
 \begin_inset space \thinspace{}
 \end_inset
 
@@ -4363,6 +4457,21 @@ reference "subsec:Arbeitsablauf-und-Status"
 \end_inset
 
  angegeben werden.
+ Um einen Antragsblock, Schlagwörter und ein Sachgebiet festzulegen zu können,
+ müssen vorher Antragsblöcke, Schlagwörter und Sachgebiete definiert worden
+ sein.
+ Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Herkunft
+\end_layout
+
+\end_inset
+
+ kann man eine kurze Information zur Herkunft angeben, die in der Antragsliste
+ erscheint.
 \end_layout
 
 \begin_layout Subsection
@@ -4389,7 +4498,11 @@ Anträge können automatisiert aus einer Liste importiert werden.
 status collapsed
 
 \begin_layout Plain Layout
-Bezeichner,Titel,Text,Begründung,Antragsteller/in,Sachgebiet,Herkunft
+Bezeichner,Titel,Text,Begründung,Antragsteller/in,Sachgebiet,Herkunft,
+\begin_inset Newline newline
+\end_inset
+
+Antragsblock
 \end_layout
 
 \end_inset
@@ -4398,6 +4511,9 @@ Bezeichner,Titel,Text,Begründung,Antragsteller/in,Sachgebiet,Herkunft
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
 Es folgen dann je eine Zeile für jeden Antrag.
  Ein Eintrag für einen Antrag wäre z.
 \begin_inset space \thinspace{}
@@ -4410,10 +4526,9 @@ B.:
 
 \family sans
 Kat A-1,Satzungsänderung,"Die Mitgliederversammlung möge beschließen, in
- §8 Absatz 1 der Vereinssatzung die Zahl fünf durch sieben zu ersetzen.",Die
- vielen Aufgaben erfordern eine Erweiterung des Beirates auf sieben Mitglieder.,D
-r.
- Hans Schulze,Kategorie A,Vorstandssitzung vom 19.10.
+ §8 Absatz 1 der Vereinssatzung die Zahl fünf durch sieben zu ersetzen.","Die
+ vielen Aufgaben erfordern eine Erweiterung des Beirates auf sieben Mitglieder.",
+Hans Schulze,Kategorie A,Vorstandssitzung vom 19.10.,
 \end_layout
 
 \begin_layout Standard
@@ -4423,8 +4538,8 @@ Jedes Komma trennt die Eigenschaften voneinander.
  Enthält eine Eigenschaft ein Komma, muss die Eigenschaft in doppelte Anführungs
 zeichen gesetzt werden.
  Dies wurde in obigem Beispiel für den Antragstext gemacht.
- Beim Antragsteller ist es wichtig, dass er mit seinem Titel angegeben wird.
- In obigem Beisiel ist der Benutzername bei 
+ Beim Antragsteller ist es wichtig, dass er mit Titel angegeben wird, wenn
+ er in 
 \begin_inset Flex Noun
 status collapsed
 
@@ -4434,24 +4549,8 @@ OpenSlides
 
 \end_inset
 
- zwar 
-\begin_inset Quotes gld
-\end_inset
-
-Hans Schulze
-\begin_inset Quotes grd
-\end_inset
-
-, hier muss er aber als 
-\begin_inset Quotes gld
-\end_inset
-
-Dr.
- Hans Schulze
-\begin_inset Quotes grd
-\end_inset
-
- angegeben werden, wenn er mit diesem Titel in 
+ bereits als Teilnehmer existiert.
+ Existiert der Antragsteller noch nicht, wird ihn 
 \begin_inset Flex Noun
 status collapsed
 
@@ -4461,7 +4560,13 @@ OpenSlides
 
 \end_inset
 
- angelegt ist.
+ automatisch anlegen.
+ Noch nicht existierende Antragsteller müssen 
+\emph on
+ohne
+\emph default
+ Titel in der CSV-Datei stehen, da der Titel sonst als Vorname angelegt
+ würde.
 \end_layout
 
 \begin_layout Standard
@@ -4531,7 +4636,8 @@ Durchsuchen
 \end_inset
 
  und wählt eine CSV-Datei aus.
- Nach wenigen Sekunden sieht man in der Vorschau was importiert werden wird:
+ Nach wenigen Sekunden sieht man in der Vorschau was importiert werden wird
+ und kann die CSV-Datei noch ändern, falls es Fehler gibt:
 \begin_inset Foot
 status collapsed
 
@@ -4575,6 +4681,10 @@ reference "chap:Beispiel-für-Antrag-1"
 \end_inset
 
 
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4591,8 +4701,7 @@ reference "chap:Beispiel-für-Antrag-1"
 \end_layout
 
 \begin_layout Standard
-und kann die CSV-Datei noch ändern, falls es Fehler gibt.
- Wie man sieht, werden noch nicht existierende Kategorien und Antragsteller
+Wie man sieht, werden noch nicht existierende Sachgebiete und Antragsteller
  beim Importieren automatisch angelegt.
  Zum Import drückt man auf den blauen Knopf 
 \begin_inset Flex Menu Name
@@ -4665,8 +4774,8 @@ Excel
 <lyxtabular version="3" rows="3" columns="5">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="8col%">
-<column alignment="center" valignment="top" width="20col%">
+<column alignment="center" valignment="top" width="12col%">
+<column alignment="center" valignment="top" width="25col%">
 <column alignment="center" valignment="top" width="18col%">
 <column alignment="center" valignment="top" width="0pt">
 <row>
@@ -4803,10 +4912,8 @@ Kat A-1
 \uwave off
 \noun off
 \color none
-Sat\SpecialChar softhyphen
-zungs\SpecialChar softhyphen
-ände\SpecialChar softhyphen
-rung
+Satzungs\SpecialChar softhyphen
+änderung
 \end_layout
 
 \end_inset
@@ -4827,8 +4934,8 @@ rung
 \uwave off
 \noun off
 \color none
-Die Mitgliederversammlung möge beschließen, in §8 Absatz 1 der Vereinssatzung
- die Zahl fünf durch sieben zu ersetzen.
+Die Mitgliederversammlung möge beschließen,\SpecialChar ldots
+
 \end_layout
 
 \end_inset
@@ -4849,8 +4956,8 @@ Die Mitgliederversammlung möge beschließen, in §8 Absatz 1 der Vereinssatzung
 \uwave off
 \noun off
 \color none
-Die vielen Aufgaben erfordern eine Erweiterung des Beirates auf sieben Mitgliede
-r.
+Die vielen Aufgaben erfordern \SpecialChar ldots
+
 \end_layout
 
 \end_inset
@@ -4962,8 +5069,8 @@ Bearbeiten
 \end_inset
 
 , kann man den Antrag bearbeiten.
- Um nur den Antragsblock oder die Kategorie zu ändern, kann man alternativ
- auf die entsprechenden Symbole 
+ Um nur den Antragsblock, die Schlagworte, das Sachgebiet oder die Herkunft
+ zu ändern, kann man alternativ auf die entsprechenden Symbole 
 \begin_inset Graphics
 	filename clipart/Kategorie-Block-Icon.jpg
 
@@ -5026,7 +5133,8 @@ Mit dem Knopf
 
 \end_inset
 
- in der Antragsübersicht können Anträge ausgewählt werden um sie zu löschen.
+ in der Antragsübersicht können Anträge ausgewählt werden um diese zusammen
+ zu ändern.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5043,7 +5151,8 @@ reference "subsec:Einstellungen-Anträge"
 \end_inset
 
 .
- Ist der Antrag geöffnet, kann die Nummerierung für ihn geändert werden.
+ Ist der Antrag geöffnet, indem man in der Antragsliste auf seinen Titel
+ geklickt hat, kann die Nummerierung für ihn geändert werden.
  Dies ändert jedoch nicht die Nummerierung in der Projektion.
  Für diese ist nur die globale Einstellung ausschlaggebend.
 \end_layout
@@ -5082,8 +5191,7 @@ Name des Empfehlungsgebers
 \end_layout
 
 \begin_layout Standard
-Klick man auf den Namen eines Antrags, kann man in der Box über dem Antragstext
- auf 
+Ist der Antrag geöffnet, kann man in der Box über dem Antragstext auf 
 \begin_inset Graphics
 	filename clipart/Empfehlung-einzeln.jpg
 	scale 70
@@ -5130,7 +5238,7 @@ OpenSlides
 \end_layout
 
 \begin_layout Subsubsection
-Nummerierung
+Bezeichner
 \end_layout
 
 \begin_layout Standard
@@ -5143,8 +5251,8 @@ OpenSlides
 
 \end_inset
 
- nummeriert alle Anträge automatisch, je nachdem welche Voreinstellungen
- man vorgenommen hat, siehe 
+ nummeriert den Bezeichner von Anträgen automatisch, je nachdem welche Voreinste
+llungen man vorgenommen hat, siehe 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Einstellungen-Anträge"
@@ -6359,81 +6467,42 @@ Ja
 
 \end_layout
 
-\begin_layout Subsubsection
-Experteneinstellung
+\begin_layout Subsection
+Unterstützung
 \end_layout
 
 \begin_layout Standard
-Es kann eingestellt werden, dass ein Antrag in einem bestimmten Status nur
- für bestimmte Benutzer sichtbar ist.
- Die Anpassung kann vor dem ersten Anlegen der Datenbank in der Datei 
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-OpenSlides/motion/signals.py
-\end_layout
+Ist das Unterstützersystem in den Einstellungen aktiviert, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Einstellungen-Anträge"
 
 \end_inset
 
- in der Funktion
+, können Teilnehmer einen Antrag im Status „
+\emph on
+eingereicht
+\emph default
+“ oder „
+\emph on
+veröffentlicht
+\emph default
+“ unterstützen.
+ Dazu klickt man auf den Antragstitel in der Antragsübersicht und anschließend
+ auf 
+\begin_inset Graphics
+	filename clipart/Antrag-unterstützen.jpg
+	scale 75
+	BoundingBox 0bp 7bp 110bp 0bp
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-create_builtin_workflows()
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-erfolgen: Dazu beim gewünschten Status beispielsweise die Zeile
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-required_permission_to_see='motion.can_manage_motion',
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-einfügen.
- Die Anpassung kann aber auch bei bestehender Datenbank erfolgen: Dazu mit
- einem entsprechenden Tool direkt auf die Datenbank zugreifen und beim gewünscht
-en Status das Feld 
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-required_permission_to_see
-\end_layout
-
-\end_inset
-
- beispielsweise mit der Zeichenkette 
-\begin_inset Flex Code
-status collapsed
-
-\begin_layout Plain Layout
-motion.can_manage_motion
-\end_layout
-
-\end_inset
-
- überschreiben.
+Solange der Antragsstatus nicht geändert wurde, können die Teilnehmer dem
+ Antrag ihre Unterstützung auch wieder entziehen.
 \end_layout
 
 \begin_layout Subsection
@@ -6644,13 +6713,44 @@ Ist der Antrag erstellt, wird er in der Antragsliste unter dem ursprünglichen
 \end_layout
 
 \begin_layout Standard
+In diesem Beispiel würde in den Einstellungen der Präfix
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Suffix, siehe Bug https://github.com/OpenSlides/OpenSlides/issues/3622
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Quotes gld
+\end_inset
+
+-Ä
+\begin_inset Quotes grd
+\end_inset
+
+ für Änderungsanträge eingestellt.
+ Änderungsanträge erhalten damit den Bezeichner des ursprünglichen Antrags
+ plus den Suffix.
+\end_layout
+
+\begin_layout Standard
 Änderungsanträge werden wie alle anderen Anträge behandelt.
  Das heißt man kann den Arbeitsablauf einstellen, darüber abstimmen usw.
- Sie können auch normal importiert werden.
+ Änderungsanträge können auch normal importiert werden.
 \end_layout
 
 \begin_layout Subsubsection
 Änderungsempfehlung
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Änderungsempfehlung"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6743,6 +6843,24 @@ Mit den Daumen-Symbolen kann die Änderung gemäß Beschlussfassung angenommen
  oder verworfen werden.
 \end_layout
 
+\begin_layout Standard
+Für den Titel eines Antrags kann auch eine Änderungsempfehlung erstellt
+ werden.
+ Dazu geht man mit der Maus vor den ersten Buchstaben des Titels und es
+ erscheint 
+\begin_inset Graphics
+	filename clipart/Neue-Änderungsempfehlung.jpg
+	scale 70
+
+\end_inset
+
+.
+ Klickt man darauf, kann eine Änderung eingegeben werden.
+ Vor dem Titel erscheint nun ein blauer Strich, der angibt, dass es eine
+ Änderung gibt.
+ Durch Klicken auf den Strich gelangt man direkt zur Änderungsdarstellung.
+\end_layout
+
 \begin_layout Subsubsection
 Inline-Bearbeitung
 \end_layout
@@ -6820,7 +6938,7 @@ Sobald man eine Änderung vorgenommen hat, erscheint unten am Bildschirm
 \align center
 \begin_inset Graphics
 	filename clipart/Text-wurde-geändert.jpg
-	lyxscale 75
+	lyxscale 70
 	scale 70
 
 \end_inset
@@ -6928,15 +7046,14 @@ Mit dem Knopf
 \end_layout
 
 \begin_layout Standard
-Sie können eine erforderliche Mehrheit festlegen.
- Mit 
+Mit 
 \begin_inset Graphics
 	filename clipart/PDF-Symbol-klein.jpg
 	scale 70
 
 \end_inset
 
- können Sie eventuell benötigte Abstimmungszettel als PDF erzeugen.
+ kann man eventuell benötigte Abstimmungszettel als PDF erzeugen.
  Mittels 
 \begin_inset Graphics
 	filename clipart/Bearbeiten-Symbol-klein.jpg
@@ -6944,12 +7061,12 @@ Sie können eine erforderliche Mehrheit festlegen.
 
 \end_inset
 
- können Sie das Abstimmungsergebnis eintragen.
- Wenn Sie 
+ kann man das Abstimmungsergebnis eintragen.
+ Wenn man 
 \family sans
 -1
 \family default
- eintragen, wird später das Wort „Mehrheit“ ausgegeben.
+ einträgt, wird später das Wort „Mehrheit“ ausgegeben.
  
 \family sans
 -2
@@ -6959,8 +7076,7 @@ Sie können eine erforderliche Mehrheit festlegen.
 \end_inset
 
 erfasst“.
- Sollten Sie bei den abgegebenen Stimmen einen Wert eintragen, berechnet
- 
+ Trägt man bei den abgegebenen Stimmen einen Wert ein, berechnet 
 \begin_inset Flex Noun
 status collapsed
 
@@ -6971,7 +7087,7 @@ OpenSlides
 \end_inset
 
  automatisch die prozentualen Anteile der übrigen Stimmzahlen.
- Klicken Sie am Ende auf 
+ Klickt man auf 
 \begin_inset Flex Menu Name
 status collapsed
 
@@ -6981,9 +7097,10 @@ Speichern
 
 \end_inset
 
-.
- Das Ergebnis wird sofort projiziert, wenn der Antrag gerade projiziert
+, wird das Ergebnis sofort projiziert, wenn der Antrag gerade projiziert
  wird.
+ Man kann die erforderliche Mehrheit nach der Eingabe des Ergebnisses einstellen.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -7076,6 +7193,27 @@ reference "subsec:Einstellungen-Anträge"
  Es erscheint in der Übersicht zuerst die Liste aller Sachgebiete, dann
  die Liste der Anträge und schlussendlich jeder Antrag komplett mit Begründung.
  Die Anträge können so auch ausgedruckt und verteilt werden.
+\end_layout
+
+\begin_layout Standard
+Ist eine Datei als 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+PDF-Logo Kopfzeile
+\end_layout
+
+\end_inset
+
+ gesetzt, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Logos-festlegen"
+
+\end_inset
+
+, erscheint das Logo in der Kopfzeile jedes Antrags.
 \end_layout
 
 \begin_layout Subsection
@@ -7232,7 +7370,7 @@ Voreingestellte Zeilennummerierung
 \end_layout
 
 \begin_layout Description
-aus keine Nummerierung
+Deaktiviert keine Nummerierung
 \end_layout
 
 \begin_layout Description
@@ -7290,26 +7428,30 @@ Mit der Option
 status collapsed
 
 \begin_layout Plain Layout
-Einreichen von neuen Anträgen stoppen für Nutzer ohne Verwaltungsrechte
+Begründung auf dem Projektor ausblenden
 \end_layout
 
 \end_inset
 
- kann Teilnehmern, die nicht in der Gruppe 
-\emph on
-Mitarbeitende
-\emph default
- sind, das Recht auf das Anlagen neuer Anträge genommen werden.
- Siehe 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Gruppen"
+ wird die Antragsbegründung nicht mit projiziert.
+ Dies kann für mehr Übersicht sorgen, denn die Begründungen sind oft zu
+ lang oder sie sollen mündlich vorgebracht werden und die Teilnehmer sollen
+ nicht durch die projizierte Begründung von der mündlichen abgelenkt werden.
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Empfehlung auf dem Projektor ausblenden
+\end_layout
 
 \end_inset
 
- für Teilnehmergruppen.
- Dies ist sinnvoll, wenn der Antragsschluss bereits verstrichen ist oder
- die Versammlungsleitung einen Antragsschluss verkündet.
+ wird die Empfehlung für einen Antrag mit projiziert.
+ Gibt es noch keine Empfehlung, wird nichts zusätzlich zum Antrag projiziert.
 \end_layout
 
 \begin_layout Standard
@@ -7338,6 +7480,34 @@ reference "subsec:Versionierung"
 \end_layout
 
 \begin_layout Standard
+Mit der Option 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Einreichen von neuen Anträgen stoppen für Nutzer ohne Verwaltungsrechte
+\end_layout
+
+\end_inset
+
+ kann Teilnehmern, die nicht in der Gruppe 
+\emph on
+Mitarbeitende
+\emph default
+ sind, das Recht auf das Anlagen neuer Anträge genommen werden.
+ Siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Gruppen"
+
+\end_inset
+
+ für Teilnehmergruppen.
+ Dies ist sinnvoll, wenn der Antragsschluss bereits verstrichen ist oder
+ die Versammlungsleitung einen Antragsschluss verkündet.
+\end_layout
+
+\begin_layout Standard
 Im Feld 
 \begin_inset Flex Menu Name
 status collapsed
@@ -7358,6 +7528,49 @@ reference "subsec:Empfehlung"
 \end_inset
 
  beschrieben ist.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Voreingestellte Fassung für Änderungsempfehlungen
+\end_layout
+
+\end_inset
+
+ kann man festlegen, welche Fassung von Anträgen mit Änderungsempfehlungen
+ standardmäßig angezeigt wird, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Änderungsempfehlung"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Description
+Originalfassung Die Originalfassung des Antrags
+\end_layout
+
+\begin_layout Description
+Geänderte
+\begin_inset space ~
+\end_inset
+
+Fassung Die Fassung mit den Änderungen
+\end_layout
+
+\begin_layout Description
+Änderungsdarstellung Eine Fassung, bei der die Änderungen grafisch hervorgehoben
+ werden
+\end_layout
+
+\begin_layout Description
+Beschlussfassung Die finale, beschlossene Fassung
 \end_layout
 
 \begin_layout Subsubsection*
@@ -7398,7 +7611,7 @@ Mit der Option
 status collapsed
 
 \begin_layout Plain Layout
-Titel und Text für neuen Änderungsantrag übernehmen
+Text für neuen Änderungsantrag übernehmen
 \end_layout
 
 \end_inset
@@ -7532,7 +7745,15 @@ Stimmzettel auf allen abgegebenen Stimmen beruht.
 \end_layout
 
 \begin_layout Description
-Deaktiviert deaktiviert ist.
+Deaktiviert
+\begin_inset space ~
+\end_inset
+
+(keine
+\begin_inset space ~
+\end_inset
+
+Prozente) deaktiviert ist.
  Es werden dann nur die Anzahlen der Stimmen als Ergebnis einer Wahl projiziert.
 \end_layout
 
@@ -7692,6 +7913,43 @@ Einleitungstext für PDF- und DOCX-Dokumente (alle Anträge)
 
  wird der Text eingegeben, der in der Ausgabe mit der Übersicht aller Anträge
  erscheint.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Sachgebiete sortieren nach
+\end_layout
+
+\end_inset
+
+ wird festgelegt, ob die Sachgebiete im PDF- oder DOCX-Export sortiert werden
+ nach deren
+\end_layout
+
+\begin_layout Description
+Präfix
+\end_layout
+
+\begin_layout Description
+Name
+\end_layout
+
+\begin_layout Standard
+Mit der Option 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Laufende Nummer im PDF und DOCX anzeigen
+\end_layout
+
+\end_inset
+
+ wird in der Export-Datei jeder Antrag mit einer fortlaufenden Nummer versehen.
 \end_layout
 
 \begin_layout Standard
@@ -7925,6 +8183,24 @@ Um Stimmzettel zu erstellen, klickt man auf
 .
  Der Stimmzettel ist so ausgelegt, dass er ausgedruckt und verteilt werden
  kann.
+ Ist eine Datei als 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+PDF-Stimmzettel-Logo
+\end_layout
+
+\end_inset
+
+ gesetzt, siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Logos-festlegen"
+
+\end_inset
+
+, erscheint das Logo in der Kopfzeile jedes Stimmzettels.
 \end_layout
 
 \begin_layout Standard
@@ -7954,8 +8230,21 @@ Erforderliche Mehrheit
 
  festlegen, welche Mehrheit für eine gültige Wahl erreicht werden muss.
  Dementsprechend erscheint in der Tabelle, ob dieses Quorum erreicht wurde.
- Um anschließend Kandidaten als gewählt zu markieren, klickt man in die
- Box vor dem Namen des Kandidaten.
+ Hat man bei der Eingabe des Wahlergebnisses einen Fehler gemacht oder wurden
+ Werte vergessen einzugeben, kann man einfach noch einmal auf 
+\begin_inset Graphics
+	filename clipart/Stimmen-eingeben.jpg
+	scale 60
+	BoundingBox 0bp 7bp 141bp 0bp
+
+\end_inset
+
+ klicken und das korrigieren.
+\end_layout
+
+\begin_layout Standard
+Um Kandidaten als gewählt zu markieren, klickt man in die Box vor dem Namen
+ des Kandidaten.
  Kandidaten können unabhängig vom Quorum als gewählt markiert werden.
  Um die Wahl zu veröffentlichen, klickt man auf 
 \begin_inset Graphics
@@ -7989,7 +8278,7 @@ Falls weitere Wahlgänge nötig sind, kann man diese mit
 \end_inset
 
  anlegen.
- Ist die Wahl abgeschlossen ändert man deren Phase auf 
+ Ist die Wahl abgeschlossen, ändert man deren Phase auf 
 \begin_inset Flex Menu Name
 status collapsed
 
@@ -8202,6 +8491,20 @@ Im Feld
 status collapsed
 
 \begin_layout Plain Layout
+Erforderliche Mehrheit
+\end_layout
+
+\end_inset
+
+ kann ein Quorum für die Mehrheit bei Wahlen voreingestellt werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
 Anzahl der Stimmzettel (Vorauswahl)
 \end_layout
 
@@ -8375,7 +8678,7 @@ Hochladen von Dateien
 \end_layout
 
 \begin_layout Standard
-Wechseln Sie zum Menüpunkt 
+Wechseln Sie zum Menü 
 \begin_inset Flex Menu Name
 status collapsed
 
@@ -8397,36 +8700,12 @@ Dateien
 \end_layout
 
 \begin_layout Standard
-Laden Sie eine Datei hoch, indem Sie mit 
-\begin_inset Flex Menu Name
-status collapsed
-
-\begin_layout Plain Layout
-Durchsuchen
-\end_layout
-
-\end_inset
-
- die Datei aus dem Dateisystem ihres Computers auswählen.
- Außerdem können Sie noch einen ergänzenden Titel angeben, sowie die Person,
+Laden Sie eine Datei hoch, indem Sie eine Datei aus dem Dateisystem ihres
+ Computers auswählen.
+ Nach der Auswahl der Datei können Sie einen Titel angeben, sowie die Person,
  die die Datei hochlädt.
  Wird keine Person angegeben, wird automatisch der aktuell eingeloggte Benutzer
  eingetragen.
-\end_layout
-
-\begin_layout Standard
-Die Datei ist nun auf den Server geladen und unter ihrem Namen auf der Übersicht
-sseite des Menüpunkts 
-\begin_inset Flex Menu Name
-status collapsed
-
-\begin_layout Plain Layout
-Dateien
-\end_layout
-
-\end_inset
-
- verlinkt.
 \end_layout
 
 \begin_layout Subsection
@@ -8543,6 +8822,79 @@ Als Tagesordnungspunkt anzeigen
 Des Weiteren ist es möglich, hochgeladene Bilder auf dieselbe Weise in Antragste
 xten zu verwenden.
  Dateien können auch an Anträge angehängt werden.
+\end_layout
+
+\begin_layout Subsection
+Logos festlegen
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Logos-festlegen"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hochgeladene Datei können als Logo verwendet werden.
+ In der Dateiübersicht fährt man dazu mit der Maus über die gewünschte Bilddatei
+ und klickt im erscheinenden Kontextmenü auf 
+\begin_inset Graphics
+	filename clipart/Logos-verwalten.jpg
+
+\end_inset
+
+.
+ Nun kann man festlegen, für welche Logos das Bild verwendet wird.
+ Eine Datei kann für mehrere Logo-Arten verwendet werden.
+ Es gibt folgende Arten:
+\end_layout
+
+\begin_layout Description
+Projektor-Logo erscheint im Projektor oben links in der Ecke.
+\end_layout
+
+\begin_layout Description
+Projektor-Kopfgrafik nimmt den komplette Kopfbereich des Projektors ein.
+ Das Logo sollte eine Bildgröße von 
+\begin_inset Formula $1024\times70\thinspace$
+\end_inset
+
+px haben.
+\end_layout
+
+\begin_layout Description
+Web-Interface-Kopfzeilen-Logo erscheint in der Kopfzeile von 
+\begin_inset Flex Noun
+status collapsed
+
+\begin_layout Plain Layout
+OpenSlides
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+PDF-Logo
+\begin_inset space ~
+\end_inset
+
+Kopfzeile erscheint in der Kopfzeile von exportierten PDFs.
+\end_layout
+
+\begin_layout Description
+PDF-Logo
+\begin_inset space ~
+\end_inset
+
+Fußzeile erscheint in der Fußzeile von exportierten PDFs.
+\end_layout
+
+\begin_layout Description
+PDF-Stimmzettel-Logo erscheint in der Kopfzeile von Wahlzetteln.
 \end_layout
 
 \begin_layout Standard
@@ -8769,6 +9121,7 @@ OpenSlides
 \begin_layout Standard
 Klickt man darauf, wird eine Liste aller Reden, den Rednern und der tatsächlich
  geredeten Zeit in eine CSV-Datei exportiert.
+ Dessen Zeichenkodierung ist Unicode (UTF-8).
  CSV-Dateien können mit allen gängigen Tabellenkalkulationen wie z.
 \begin_inset space \thinspace{}
 \end_inset
@@ -8830,7 +9183,8 @@ OpenSlides
 \end_layout
 
 \begin_layout Standard
-Klickt man darauf, öffnet sich eine Chatbox:
+Klickt man darauf, öffnet sich eine Chatbox in der man die Nachrichten der
+ anderen Nutzer sehen kann:
 \end_layout
 
 \begin_layout Standard
@@ -8844,8 +9198,7 @@ Klickt man darauf, öffnet sich eine Chatbox:
 \end_layout
 
 \begin_layout Standard
-in der man die Nachrichten der anderen Nutzer sehen kann.
- Man kann dort eigene Nachrichten schreiben, die mit Klicken auf 
+Man kann dort eigene Nachrichten schreiben, die mit Klicken auf 
 \begin_inset Graphics
 	filename clipart/Chat-senden.jpg
 	scale 60
@@ -8902,11 +9255,10 @@ Einstellungen
 \end_inset
 
  finden sich verschiedene Einstellmöglichkeiten.
- Bei allen Einstellungen, die auch die Projektoransicht betreffen, zum Beispiel
- dem Titel der Veranstaltung, ist zu beachten, dass die Projektoransicht
- sich im Kopfbereich nicht automatisch aktualisiert.
- Man muss das Browserfenster der Projektoransicht an dem Computer, an dem
- der Projektor angeschlossen ist, manuell mit der Taste 
+ Falls sich die Projektoransicht sich im Kopfbereich nach geänderten Einstellung
+en nicht automatisch aktualisiert, muss man das Browserfenster der Projektoransi
+cht an dem Computer, an dem der Projektor angeschlossen ist, manuell mit
+ der Taste 
 \begin_inset Flex Code
 status collapsed
 
@@ -8994,20 +9346,6 @@ Im Feld
 status collapsed
 
 \begin_layout Plain Layout
-Veranstalter
-\end_layout
-
-\end_inset
-
- wird der Veranstalter angegeben.
-\end_layout
-
-\begin_layout Standard
-Im Feld 
-\begin_inset Flex Menu Name
-status collapsed
-
-\begin_layout Plain Layout
 Impressum
 \end_layout
 
@@ -9015,7 +9353,6 @@ Impressum
 
  wird das Impressum des Veranstalters angegeben.
  Dieses erscheint in der Fußzeile der Startseite.
- Weblinks müssen als HTML-Code eingegeben werden.
 \end_layout
 
 \begin_layout Standard
@@ -9044,11 +9381,6 @@ Text der Startseite
 \end_inset
 
  wird der Text für die Startseite eingegeben.
- Weblinks, Bilder, usw.
-\begin_inset space \space{}
-\end_inset
-
-müssen als HTML-Code eingegeben werden.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -9107,7 +9439,7 @@ Diesen Text auf der Login-Seite anzeigen
 \end_layout
 
 \begin_layout Subsubsection*
-Rubrik CSV
+Rubrik Export
 \end_layout
 
 \begin_layout Standard
@@ -9121,8 +9453,37 @@ Feldtrenner für alle CSV-Exports und -Beispiele
 
 \end_inset
 
- können Sie das Trennzeichen für alle Exporte und Beispiele im CSV-Format
+ kann man das Trennzeichen für alle Exporte und Beispiele im CSV-Format
  festlegen.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Seitenzahl-Ausrichtung im PDF
+\end_layout
+
+\end_inset
+
+ kann die Ausrichtung der Seitennummer in exportierten PDFs eingestellt
+ werden.
+\end_layout
+
+\begin_layout Standard
+Im Feld 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Standard-Schriftgröße im PDF
+\end_layout
+
+\end_inset
+
+ kann die Standard-Schriftgröße in exportierten PDFs festgelegt werden.
 \end_layout
 
 \begin_layout Subsection
@@ -9200,6 +9561,75 @@ reference "subsec:Einstellungen-Teilnehmer"
  erläutert.
 \end_layout
 
+\begin_layout Subsection
+Benutzerdefinierte Übersetzungen
+\end_layout
+
+\begin_layout Standard
+Klickt man auf 
+\begin_inset Graphics
+	filename clipart/Neue-Übersetzung.jpg
+	scale 80
+	BoundingBox 0bp 7bp 223bp 0bp
+
+\end_inset
+
+, kann man einzelne Worte neu übersetzen.
+ Z.
+\begin_inset space \thinspace{}
+\end_inset
+
+B.
+ werden die Berechtigungen für Teilnehmer mit dem Knopf 
+\begin_inset Graphics
+	filename clipart/Gruppen-Symbol.jpg
+	scale 60
+	BoundingBox 0bp 7bp 92bp 0bp
+
+\end_inset
+
+ festgelegt.
+ 
+\emph on
+Gruppen
+\emph default
+ ist vielleicht nicht der optimale Begriff, den alle Mitarbeitende verstehen.
+ Daher kann man dies eingeben:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename clipart/Beispielübersetzung.jpg
+	width 100col%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+und der Knopf im Menü 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Teilnehmende
+\end_layout
+
+\end_inset
+
+ sieht nun so aus: 
+\begin_inset Graphics
+	filename clipart/Berechtigungen.jpg
+	scale 80
+	BoundingBox 0bp 7bp 100bp 0bp
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Branch EinzelnesDokument
 status collapsed
@@ -9251,7 +9681,73 @@ ommentar,
 \begin_inset Newline newline
 \end_inset
 
-Bericht des Vorstands,,0:20,,1
+Bericht des Vorstands,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+0:20,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+1
+\family default
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Die geschweiften Klammern verhindern, dass \SpecialChar LaTeX
+ aus zwei aufeinanderfolgenden
+ Kommas ein Anführungszeichen macht.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -9276,29 +9772,448 @@ Teilnehmern:
 \begin_layout Standard
 
 \family sans
-Titel,Vorname,Nachname,Gliederungsebene,Teilnehmernummer,Gruppen,Kommentar,Ist
- aktiv,Ist anwesend,Ist ein Gremium
+Titel,Vorname,Nachname,Gliederungsebene,Teilnehmernummer,Gruppen,Kommentar,
+\begin_inset Newline newline
+\end_inset
+
+Ist aktiv,Ist anwesend,Ist ein Gremium,Initiales Passwort,E-Mail
 \begin_inset Newline newline
 \end_inset
 
 Prof.
- Dr.,Max,Käßmann,,,Delegierte,,1,,
+ Dr.,Max,Käßmann,,,Delegierte,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+1,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+kaessmann@abc.abc
 \begin_inset Newline newline
 \end_inset
 
-,John,Doe,,,Delegierte,abc,1,,
+,John,Doe,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,Delegierte,abc,1,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+doe@abc.abc
 \begin_inset Newline newline
 \end_inset
 
-,Fred,Bloggs,,,Delegierte,,,,
+,Fred,Bloggs,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,Delegierte,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+bloggs@abc.abc
 \begin_inset Newline newline
 \end_inset
 
-,Žusan,Oltrán,Vorstand,,"Delegierte,Mitarbeitende",kommt 15 Minuten später,1,,
+,Žusan,Oltrán,Vorstand,,"Delegierte,Mitarbeitende",kommt 15 Minuten später,1,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+oltran@abc.abc
 \begin_inset Newline newline
 \end_inset
 
-,,Wahlkommision,,,Gremien,,1,1,1
+,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+Wahlkommision,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,Gremien,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+1,1,1,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+wahlkommision@abc.abc
 \end_layout
 
 \begin_layout Section
@@ -9339,7 +10254,33 @@ B1,Titel 2,Text 2,Begründung 2,Antragsteller 2,Kategorie B,
 \begin_inset Newline newline
 \end_inset
 
-,Titel 3,Text 3,Begründung 3,,,
+,Titel 3,Text 3,Begründung 3,
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family sans
+,
 \end_layout
 
 \end_inset

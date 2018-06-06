@@ -107,7 +107,7 @@ End
 \pdf_bookmarks true
 \pdf_bookmarksnumbered true
 \pdf_bookmarksopen true
-\pdf_bookmarksopenlevel 2
+\pdf_bookmarksopenlevel 1
 \pdf_breaklinks true
 \pdf_pdfborder false
 \pdf_colorlinks true
@@ -177,7 +177,7 @@ OpenSlides
 
 \end_inset
 
- 2.1
+ 2.2
 \end_layout
 
 \begin_layout Standard
@@ -246,7 +246,7 @@ März
 \begin_inset space ~
 \end_inset
 
-2017 seine jährliche Mitgliederversammlung ab.
+2018 seine jährliche Mitgliederversammlung ab.
  Auf der Versammlung werden verschiedene Berichte gehalten und über eine
  Satzungsänderung abgestimmt.
  Außerdem finden Wahlen zum Vorstand und zum Beirat statt.
@@ -452,15 +452,11 @@ Mai
 \begin_inset space ~
 \end_inset
 
-2017
+2018
 \end_layout
 
 \begin_layout Description
 Veranstaltungsort: Leipzig
-\end_layout
-
-\begin_layout Description
-Veranstalter: Schreberverein Nord e.V.
 \end_layout
 
 \begin_layout Description
@@ -710,12 +706,10 @@ reference "sec:Dateien"
 \end_inset
 
 Klicken Sie abschließend auf 
-\begin_inset Flex Menu Name
-status collapsed
-
-\begin_layout Plain Layout
-Speichern
-\end_layout
+\begin_inset Graphics
+	filename clipart/Speichern.jpg
+	scale 60
+	BoundingBox 0bp 7bp 70bp 0bp
 
 \end_inset
 
@@ -888,7 +882,7 @@ Besuchen Sie in der Zeit bitte auch die Stände der Vereine im Foyer.
 \end_layout
 
 \begin_layout Plain Layout
-Bitte kommen die pünktlich um 16:00 Uhr zurück in den Saal!
+Bitte kommen Sie pünktlich um 16:00 Uhr zurück in den Saal!
 \end_layout
 
 \end_inset
@@ -934,7 +928,7 @@ nicht
 
 \begin_layout Standard
 Interne Einträge erscheinen in der Tagesordnungsübersicht mit einem kleinen
- Verbotsschild vor dem Titel.
+ Verbotszeichen vor dem Titel.
 \end_layout
 
 \begin_layout Subsection
@@ -1086,7 +1080,7 @@ Bericht des Vorstandes
 
 \end_inset
 
- auf 0:20h.
+ auf 00:20.
  Titel und Text können Sie nach Klick auf 
 \begin_inset Flex Menu Name
 status collapsed
@@ -1176,6 +1170,20 @@ reference "subsec:Anlegen-eines-Teilnehmers"
 \end_layout
 
 \begin_layout Standard
+Die Reihenfolge der Redeliste kann jederzeit geändert werden.
+ Dazu klicken Sie auf das Symbol 
+\begin_inset Graphics
+	filename clipart/Redner-verschieben.jpg
+	scale 60
+	BoundingBox 0bp 7bp 28bp 0bp
+
+\end_inset
+
+ vor dem Rednernamen, halten die Maustaste gedrückt und verschieben den
+ Redner an die gewünschte Stelle.
+\end_layout
+
+\begin_layout Standard
 Projizieren Sie die Redeliste nun durch Klicken auf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol-Redeliste.jpg
@@ -1193,14 +1201,6 @@ Projizieren Sie die Redeliste nun durch Klicken auf
 
 \end_inset
 
- oder 
-\begin_inset Graphics
-	filename clipart/Nächste-Rede-beginnen.jpg
-	scale 60
-	BoundingBox 0bp 7bp 167bp 0bp
-
-\end_inset
-
 .
  Ihr Name wird nun im Projektor angezeigt.
  Um die Rede zu beenden, klicken Sie auf 
@@ -1208,14 +1208,6 @@ Projizieren Sie die Redeliste nun durch Klicken auf
 	filename clipart/Rede-beenden.jpg
 	scale 60
 	BoundingBox 0bp 7bp 67bp 0bp
-
-\end_inset
-
- oder 
-\begin_inset Graphics
-	filename clipart/Aktuelle-Rede-beenden.jpg
-	scale 60
-	BoundingBox 0bp 7bp 165bp 0bp
 
 \end_inset
 
@@ -1273,12 +1265,26 @@ Jede Redeliste ist grundsätzlich erst einmal offen.
 \align center
 \begin_inset Graphics
 	filename clipart/Redeliste-ist-geschlossen.jpg
-	lyxscale 50
-	scale 47.5
+	lyxscale 66
+	scale 75
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Unterhalb der Live-Vorschau gibt es die Rubrik 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+Redeliste
+\end_layout
+
+\end_inset
+
+ in der die aktuelle Liste projiziert und verwaltet werden kann.
 \end_layout
 
 \begin_layout Standard
@@ -1374,6 +1380,10 @@ Dr.
 \end_layout
 
 \begin_layout Plain Layout
+mustermann@test.de
+\end_layout
+
+\begin_layout Plain Layout
 Vorstand
 \end_layout
 
@@ -1465,6 +1475,26 @@ reference "subsec:Gruppen"
 \end_inset
 
  beschrieben.
+ Die Angabe der 
+\begin_inset Flex Menu Name
+status collapsed
+
+\begin_layout Plain Layout
+E-Mail
+\end_layout
+
+\end_inset
+
+ ist wichtig, wenn die Teilnehmer ihre Zugangsdaten per E-Mail bekommen
+ sollen.
+ Mehr zu E-Mails siehe 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Einstellungen-Teilnehmer"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1578,12 +1608,9 @@ Beim Anlegen eines Teilnehmers wird automatisch ein zufälliges initiales
 \end_inset
 
  und dann auf 
-\begin_inset Flex Menu Name
-status collapsed
-
-\begin_layout Plain Layout
-Zugangsdatenliste
-\end_layout
+\begin_inset Graphics
+	filename clipart/Zugangsdatenliste.jpg
+	scale 80
 
 \end_inset
 
@@ -1704,7 +1731,7 @@ Stock, Aufgang
 \begin_inset space ~
 \end_inset
 
-B.
+B
 \begin_inset Quotes grd
 \end_inset
 
@@ -1796,7 +1823,15 @@ Startzeit
 \begin_inset Quotes grd
 \end_inset
 
- ein und speichern Sie anschließend den Countdown .
+ ein und klicken auf 
+\begin_inset Graphics
+	filename clipart/Haken-Symbol-weiss.jpg
+	scale 60
+	BoundingBox 0bp 7bp 34bp 0bp
+
+\end_inset
+
+ um zu speichern.
  Klicken Sie nun auf 
 \begin_inset Graphics
 	filename clipart/Projektorsymbol.jpg
@@ -1806,15 +1841,6 @@ Startzeit
 \end_inset
 
  um den Countdown zu projizieren.
- Mit dem Klick auf 
-\begin_inset Graphics
-	filename clipart/Projektorsymbol-laufend.jpg
-	scale 60
-	BoundingBox 0bp 7bp 34bp 0bp
-
-\end_inset
-
- wird die aktuelle Mitteilung wieder vom Projektor entfernt.
  Mit 
 \begin_inset Graphics
 	filename clipart/Countdown-Start-Symbol.jpg
@@ -1899,8 +1925,8 @@ Anträge
 \end_layout
 
 \begin_layout Standard
-Geben Sie als Beispiel einen Antrag, mit dem die Vereinssatzung so geändert
- werden soll, dass der Beirat mehr Mitglieder hat, wie folgt ein:
+Geben Sie als Beispiel einen Antrag, mit dem die Vereinssatzung geändert
+ werden soll, wie folgt ein:
 \begin_inset Note Note
 status collapsed
 
@@ -1909,7 +1935,8 @@ Satzungsänderung
 \end_layout
 
 \begin_layout Plain Layout
-in §8 Absatz 1 der Vereinssatzung die Zahl fünf durch sieben zu ersetzen.
+Die Versammlung möge beschließen in §8 Absatz 1 der Vereinssatzung die Zahl
+ fünf durch sieben zu ersetzen.
 \end_layout
 
 \begin_layout Plain Layout
@@ -1935,7 +1962,7 @@ Die vielen Aufgaben erfordern eine Erweiterung des Beirats auf sieben Mitglieder
 \end_layout
 
 \begin_layout Standard
-Wie Sie sehen, gibt schon eine Einleitung 
+Eine typische Antragseinleitung wie 
 \begin_inset Quotes gld
 \end_inset
 
@@ -1943,8 +1970,7 @@ Die Versammlung möge beschließen,
 \begin_inset Quotes grd
 \end_inset
 
-.
- Diese können Sie ändern oder abschalten, siehe dazu 
+ kann man auch automatisch einfügen lassen, siehe dazu 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Einstellungen-Anträge"
@@ -1956,7 +1982,7 @@ reference "subsec:Einstellungen-Anträge"
 \end_layout
 
 \begin_layout Standard
-Erstellen Sie auf gleiche Weise eine weiteren Antrag mit dem Titel 
+Erstellen Sie auf gleiche Weise einen weiteren Antrag mit dem Titel 
 \begin_inset Quotes gld
 \end_inset
 
@@ -2250,7 +2276,7 @@ wählenden
 \begin_inset space ~
 \end_inset
 
-Posten: 7
+Posten: 5
 \end_layout
 
 \begin_layout Standard
@@ -2332,6 +2358,20 @@ OpenSlides
 \end_layout
 
 \begin_layout Standard
+Wenn Sie die die Reihenfolge der Kandidaten in der Liste und auf dem Stimmzettel
+n verändern wollen, klicken Sie auf das Symbol 
+\begin_inset Graphics
+	filename clipart/Redner-verschieben.jpg
+	scale 60
+	BoundingBox 0bp 7bp 28bp 0bp
+
+\end_inset
+
+ vor dem Namen, halten die Maustaste gedrückt und verschieben den Kandidaten
+ an die gewünschte Stelle.
+\end_layout
+
+\begin_layout Standard
 Wir gehen nun davon aus, dass die Kandidatenliste feststeht.
  Um die Wahl zu beginnen, klicken Sie unten auf 
 \begin_inset Graphics
@@ -2397,7 +2437,19 @@ reference "subsec:Redelisten"
 \begin_layout Standard
 Da die Wahl von Personen eine geheime Wahl ist, müssen Stimmzettel erstellt
  werden.
- Klicken Sie dafür auf 
+ Gehen Sie dazu mit 
+\begin_inset Graphics
+	filename clipart/Zurück-Wahl.jpg
+	scale 60
+	BoundingBox 0bp 7bp 61bp 0bp
+
+\end_inset
+
+ zurück zur Wahlansicht und klicken dort unten auf
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Graphics
 	filename clipart/Stimmzettel-drucken.jpg
 	scale 60
@@ -2423,7 +2475,7 @@ Da die Wahl von Personen eine geheime Wahl ist, müssen Stimmzettel erstellt
 \end_layout
 
 \begin_layout Standard
-Wir nehmen nun an, dass die Wahl ausgezählt wurde und die Ergebnisse vorliegen.
+Wir nehmen an, dass die Wahl ausgezählt wurde und die Ergebnisse vorliegen.
  Tragen Sie daher nun die Ergebnisse dieses 1.
 \begin_inset space ~
 \end_inset
@@ -2515,7 +2567,8 @@ Personen an der Wahl teilgenommen haben und dass die Satzung vorsieht, dass
 \end_inset
 
 Wahlgang nur Frau Meyer gewählt.
- Klicken Sie daher nur bei ihr in die Box vor ihrem Namen.
+ Klicken Sie daher nur bei ihr in die Box vor dem Namen, um sie als gewählt
+ zu markieren.
  Um die Wahl zu veröffentlichen, klicken Sie auf 
 \begin_inset Graphics
 	filename clipart/Wahl-veröffentlichen.jpg
@@ -2532,7 +2585,7 @@ Wahlgang nur Frau Meyer gewählt.
 \begin_layout Standard
 Sie können nun entscheiden, ob auch die Stimmenanzahlen projiziert werden
  sollen.
- Da das gewünscht ist, klicken Sie auf 
+ Da das gewünscht wird, klicken Sie auf 
 \begin_inset Graphics
 	filename clipart/Wahl-projizieren.jpg
 	scale 60
@@ -2542,10 +2595,6 @@ Sie können nun entscheiden, ob auch die Stimmenanzahlen projiziert werden
 
 .
  Am Projektor erscheint folgendes Bild:
-\begin_inset Newpage newpage
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2599,7 +2648,7 @@ or als gewählt.
 
 \end_inset
 
- und ändern die Phase der Wahl auf 
+ und ändern oben die Phase der Wahl auf 
 \begin_inset Flex Menu Name
 status collapsed
 
